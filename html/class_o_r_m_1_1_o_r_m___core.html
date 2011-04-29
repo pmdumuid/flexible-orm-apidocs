@@ -124,12 +124,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739">clearValidationErrors</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653">changedFields</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00">originalValue</a> ($property)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">originalValues</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">setOriginalValue</a> ($property, $value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a562ec4d13464ce01612f6ce2fbdf703d">setValues</a> ($values)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a> (array $values=null)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a29d7b705912043e6ae092a448053cb6f">$_errorMessages</a> = array()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">$_originalValues</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">$_originalValues</a> = array()</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An abstract class which defines the actions of an ORM-like object.</p>
@@ -183,6 +184,8 @@ Protected Attributes</h2></td></tr>
 <p>Array of all the attributes of this object</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">values()</a> </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">ORMModelSDB</a>.</p>
 
 <p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00052">52</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
@@ -336,6 +339,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a21e35e3d910de7cc7ee8d5d6d59f607a"></a><!-- doxytag: member="ORM::ORM_Core::originalValues" ref="a21e35e3d910de7cc7ee8d5d6d59f607a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">originalValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Get the original values of this object </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00194">194</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a56c3eb251d223df0b6586573bd01118e"></a><!-- doxytag: member="ORM::ORM_Core::setOriginalValue" ref="a56c3eb251d223df0b6586573bd01118e" args="($property, $value)" -->
 <div class="memitem">
 <div class="memproto">
@@ -369,19 +392,19 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00198">198</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00206">206</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a562ec4d13464ce01612f6ce2fbdf703d"></a><!-- doxytag: member="ORM::ORM_Core::setValues" ref="a562ec4d13464ce01612f6ce2fbdf703d" args="($values)" -->
+<a class="anchor" id="a77d38b697cce83b1e385102cdf4957f9"></a><!-- doxytag: member="ORM::ORM_Core::setValues" ref="a77d38b697cce83b1e385102cdf4957f9" args="(array $values=null)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">setValues </td>
           <td>(</td>
-          <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
+          <td class="paramtype">array $&#160;</td>
+          <td class="paramname"><em>values</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -395,7 +418,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00208">208</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">ORMModelSDB</a>.</p>
+
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00216">216</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -488,7 +513,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">array $_originalValues<code> [protected]</code></td>
+          <td class="memname">array $_originalValues = array()<code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -508,7 +533,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html">ORM_Core</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:42 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:25 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="_s_d_b_response_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
 <a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\SDB;
 <a name="l00019"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">00019</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> <span class="keyword">extends</span> \CFResponse implements \Iterator, \ArrayAccess, \Countable {
-<a name="l00024"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab4245160c23666d9aa52d9718c8796c0">00024</a>     <span class="keyword">const</span> MAX_QUERIES = 10;
+<a name="l00024"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab4245160c23666d9aa52d9718c8796c0">00024</a>     <span class="keyword">const</span> MAX_QUERIES = 30;
 <a name="l00029"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a7bd28e0b68c9cd1497ce1302a77a9d5d">00029</a>     <span class="keyword">private</span> $_items = array();
 <a name="l00030"></a>00030 
 <a name="l00039"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">00039</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">$_currentKey</a>;
@@ -140,25 +140,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00119"></a>00119         <span class="keywordflow">return</span> $this-&gt;_items;
 <a name="l00120"></a>00120     }
 <a name="l00121"></a>00121     
-<a name="l00139"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aba0d5b303383fb5b1fabb5fd01cd3800">00139</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aba0d5b303383fb5b1fabb5fd01cd3800">getAll</a>() {
-<a name="l00140"></a>00140         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;SelectResult) ) {
-<a name="l00141"></a>00141             $result = $this;
-<a name="l00142"></a>00142             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $this-&gt;getQuery();
-<a name="l00143"></a>00143             $count  = 0;
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145             <span class="keywordflow">while</span>( $result-&gt;nextToken() ) {
-<a name="l00146"></a>00146                 $result = SDBStatement::Query( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>, <span class="keyword">true</span>, $result-&gt;nextToken() );
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148                 <span class="keywordflow">foreach</span>( $result as $key =&gt; $item ) {
-<a name="l00149"></a>00149                     $this-&gt;_items[$key] = $item;
-<a name="l00150"></a>00150                 }
-<a name="l00151"></a>00151                 
-<a name="l00152"></a>00152                 <span class="keywordflow">if</span>( ++$count &gt; self::MAX_QUERIES )
-<a name="l00153"></a>00153                     <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMException(<span class="stringliteral">&quot;Get all has exceeded MAX_QUERIES&quot;</span>);
-<a name="l00154"></a>00154             }
-<a name="l00155"></a>00155         }
-<a name="l00156"></a>00156         
-<a name="l00157"></a>00157 
+<a name="l00141"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">00141</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">getAll</a>($consistentRead = <span class="keyword">false</span>) {
+<a name="l00142"></a>00142         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;SelectResult) ) {
+<a name="l00143"></a>00143             $result = $this;
+<a name="l00144"></a>00144             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $this-&gt;getQuery();
+<a name="l00145"></a>00145             $count  = 0;
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147             <span class="keywordflow">while</span>( $result-&gt;nextToken() ) {
+<a name="l00148"></a>00148                 $result = SDBStatement::Query( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>, $consistentRead, $result-&gt;nextToken() );
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150                 <span class="keywordflow">foreach</span>( $result as $key =&gt; $item ) {
+<a name="l00151"></a>00151                     $this-&gt;_items[$key] = $item;
+<a name="l00152"></a>00152                 }
+<a name="l00153"></a>00153                 
+<a name="l00154"></a>00154                 <span class="keywordflow">if</span>( ++$count &gt; self::MAX_QUERIES ) <span class="keywordflow">break</span>;
+<a name="l00155"></a>00155             }
+<a name="l00156"></a>00156         }
+<a name="l00157"></a>00157         
 <a name="l00158"></a>00158         <span class="keywordflow">return</span> $this;
 <a name="l00159"></a>00159     }
 <a name="l00160"></a>00160 
@@ -229,7 +227,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_response_8php.html">SDBResponse.php</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:41 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:24 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

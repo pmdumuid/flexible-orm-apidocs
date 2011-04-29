@@ -94,11 +94,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">load</a> ($class)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8">loadZend</a> ($class)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608">locate</a> ($class)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de">locatePackage</a> ($class)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">Get</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d">RegisterAutoloaders</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a946f0934b6d4dce0bc46dbdb9119a624">EXTENSION</a> = '.php'</td></tr>
@@ -121,6 +123,7 @@ Static Private Attributes</h2></td></tr>
 <li>If the namespace begins with a package name that is recorded in the Configuration (see below) then it will attempt to load it from the specified location</li>
 <li>Case must either match exactly or be all lowercase</li>
 </ul>
+<p>Also includes a Zend style loader (loadZend) which searches the include path for the class, replacing underscores with "/".</p>
 <p><br/>
 <b>Packages</b></p>
 <p>In the application configuration, you can include a "packages" group which identifies where the autoloader should look for classes. For example:</p>
@@ -131,7 +134,7 @@ Static Private Attributes</h2></td></tr>
 </pre></div><p>This INI file defines that if the root namespace of a class is <code><a class="el" href="namespace_o_r_m.html">ORM</a></code>, then look in <code>/path/to/orm</code>. It will then use further namespaces as folders within this path. For example it would look for <code><a class="el" href="namespace_o_r_m.html">ORM</a>\Mock\<a class="el" href="class_car.html">Car</a></code> in <code>/path/to/orm/Mock/Car.php</code> (or <code>/path/to/orm/mock/car.php</code> if the former does not exist).</p>
 <p>For more information see the <a class="el" href="autoloader_tut.html">Autoloader Tutorial</a>. </p>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00039">39</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00042">42</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a095c5d389db211932136b53f25f39685"></a><!-- doxytag: member="ORM::AutoLoader::__construct" ref="a095c5d389db211932136b53f25f39685" args="()" -->
 <div class="memitem">
@@ -149,7 +152,7 @@ Static Private Attributes</h2></td></tr>
 <p><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> is a singleton class</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">Get()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00055">55</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00058">58</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -177,7 +180,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00146">146</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00163">163</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -205,7 +208,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00135">135</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00152">152</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -233,7 +236,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00171">171</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00188">188</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -253,7 +256,7 @@ Static Private Attributes</h2></td></tr>
 <p>Get the <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> instance</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00062">62</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00065">65</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -281,6 +284,7 @@ Static Private Attributes</h2></td></tr>
 <li>If the namespace begins with a package name that is recorded in the Configuration (see below) then it will attempt to load it from the specified location</li>
 <li>Case must either match exactly or be all lowercase</li>
 </ul>
+<p>Also includes a Zend style loader (loadZend) which searches the include path for the class, replacing underscores with "/".</p>
 <p><br/>
 <b>Packages</b></p>
 <p>In the application configuration, you can include a "packages" group which identifies where the autoloader should look for classes. For example:</p>
@@ -297,7 +301,33 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00079">79</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00082">82</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8011242eb4fcbeae8d237b3a769137c8"></a><!-- doxytag: member="ORM::AutoLoader::loadZend" ref="a8011242eb4fcbeae8d237b3a769137c8" args="($class)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">loadZend </td>
+          <td>(</td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>class</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>An alternative loader that loads classes using the Zend method where underscores are folder names</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$class</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00096">96</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -325,7 +355,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00094">94</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00111">111</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -353,7 +383,26 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false Returns path or false if unknown package </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00115">115</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00132">132</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af84c79888af6984bf124befe26fabe1d"></a><!-- doxytag: member="ORM::AutoLoader::RegisterAutoloaders" ref="af84c79888af6984bf124befe26fabe1d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static RegisterAutoloaders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Register the autoloaders </p>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00199">199</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -369,7 +418,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00048">48</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00051">51</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -385,7 +434,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The extensions to add to the class name for finding class files </p>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00043">43</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00046">46</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -398,7 +447,7 @@ Static Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:41 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:25 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

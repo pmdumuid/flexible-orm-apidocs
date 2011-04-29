@@ -155,66 +155,8 @@ Find</h3>
 </p>
 <h3><a class="anchor" id="intro_step4_find_save"></a>
 Save</h3>
-<p>Save an object to the database</p>
-<p>Either creates a new item or updates an existing one. First checks that the object is valid (see <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>). Returns false if not valid and will not attempt to save the object.</p>
-<p><b>Usage:</b> </p>
-<div class="fragment"><pre class="fragment">&lt;?php
-<span class="comment">// Update existing record</span>
-<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 3 );
-$car-&gt;age++;
-$car-&gt;save();
-
-<span class="comment">// Create new record</span>
-$car = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
-$car-&gt;brand = <span class="stringliteral">&#39;Toyota&#39;</span>;
-$car-&gt;age   = 3;
-$car-&gt;save();
-
-<span class="comment">// Assuming the Car model has an &quot;autoincrement&quot; primary key, it should now be</span>
-<span class="comment">// populated</span>
-echo <span class="stringliteral">&quot;New car id: &quot;</span>, $car-&gt;id();
-
-<span class="comment">// It&#39;s also possible to create an item with its primary key set</span>
-<span class="comment">// Be careful though: if the key exists already it will update the existing record</span>
-$car = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
-$car-&gt;id    = 100;
-$car-&gt;brand = <span class="stringliteral">&#39;Ferrari&#39;</span>;
-$car-&gt;age   = 30;
-$car-&gt;save();
-
-<span class="comment">// Alternative method of creating a model class:</span>
-$car = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>(array(
-    <span class="stringliteral">&#39;brand&#39;</span> =&gt; <span class="stringliteral">&#39;Toyota&#39;</span>,
-    <span class="stringliteral">&#39;age&#39;</span>   =&gt; 3,
-));
-
-$car-&gt;save();
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Changing the primary key on an existing object will create a new record and leave the old one still in the database. If you want to change the primary key, first call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">delete()</a> then change the key and call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a></dd></dl>
-<p><br/>
- <b>Pre- or Post-Processing Hooks</b></p>
-<p>There are 6 pre and post processing hooks available for this method, to allow for special processing to be done before or after saving. They are called in the following order:</p>
-<ul>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">beforeSave()</a> <p>Override this method to perform an action <em>before</em> an object is saved to the database (creating and updating).</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when saving </dd></dl>
-</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">beforeUpdate()</a> <p>Override this method to perform an action <em>before</em> an existing object is updated in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when updating </dd></dl>
-</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">beforeCreate()</a> <p>Override this method to perform an action <em>before</em> a new object is created in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when creating </dd></dl>
-</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">afterUpdate()</a> <p>Override this method to perform an action <em>after</em> an existing object is updated in the database. Only called on success. </p>
-</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">afterCreate()</a> <p>Override this method to perform an <em>after</em> before a new object is created in the database. Only called on success. The object will have its $_id field populated. </p>
-</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">afterSave()</a> <p>Override this method to perform an action <em>after</em> an object is saved to the database (creating and updating). Only called on success. </p>
-</li>
-</ul>
-<p><br/>
-<br/>
-</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#af9983414374dd40b269e6a94177e5f08">_update()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57">_create()</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>boolean True if successful </dd></dl>
+<p>Save the changes to (or create) this object</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>mixed </dd></dl>
  <br/>
 <br/>
 </p>
@@ -224,7 +166,7 @@ Delete</h3>
 <p>The object will remain populated.</p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Fetch a car and delete it</span>
-$car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
+<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
 $car-&gt;delete();
 
 <span class="comment">// will still output the details of car[4]</span>
@@ -314,7 +256,7 @@ save()</h3>
 </p>
 <h2><a class="anchor" id="intro_step4_moreinfo"></a>
 For More Information</h2>
-<dl class="see"><dt><b>See also:</b></dt><dd>Single objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">ORM_Model::FindBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afc8a3c62679cf00ade9f15fb2a6d6132">ORM_Model::save()</a> <br/>
+<dl class="see"><dt><b>See also:</b></dt><dd>Single objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">ORM_Model::FindBy()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">ORM_Model::save()</a> <br/>
  Multiple objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">ORM_Model::FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">ORM_Model::FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a></dd></dl>
 <h2><a class="anchor" id="intro_step4_nav"></a>
 Getting Started</h2>
@@ -329,7 +271,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to ORM 2.0</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:41 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:25 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

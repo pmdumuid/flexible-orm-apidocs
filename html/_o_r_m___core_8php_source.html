@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html">00020</a> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_o_r_m___core.html">ORM_Core</a> {
 <a name="l00025"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a29d7b705912043e6ae092a448053cb6f">00025</a>     <span class="keyword">protected</span>                       $_errorMessages = array();
 <a name="l00026"></a>00026 
-<a name="l00032"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">00032</a>     <span class="keyword">protected</span>                       <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">$_originalValues</a>;
+<a name="l00032"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">00032</a>     <span class="keyword">protected</span>                       $_originalValues = array();
 <a name="l00033"></a>00033 
 <a name="l00042"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">00042</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">__construct</a>( $values = array() ) {
 <a name="l00043"></a>00043         $this-&gt;setValues( $values );
@@ -154,23 +154,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00187"></a>00187         <span class="keywordflow">return</span> array_key_exists( $property, $this-&gt;_originalValues ) ? $this-&gt;_originalValues[$property] : null;
 <a name="l00188"></a>00188     }
 <a name="l00189"></a>00189 
-<a name="l00198"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">00198</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">setOriginalValue</a>( $property, $value ) {
-<a name="l00199"></a>00199         $this-&gt;_originalValues[$property] = $value;
-<a name="l00200"></a>00200     }
-<a name="l00201"></a>00201 
-<a name="l00208"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a562ec4d13464ce01612f6ce2fbdf703d">00208</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a562ec4d13464ce01612f6ce2fbdf703d">setValues</a>( $values ) {
-<a name="l00209"></a>00209         <span class="keywordflow">foreach</span>( $values as $field =&gt; $value ) {
-<a name="l00210"></a>00210             $this-&gt;$field = $value;
-<a name="l00211"></a>00211             $this-&gt;_originalValues[$field] = $value;
-<a name="l00212"></a>00212         }
-<a name="l00213"></a>00213     }
-<a name="l00214"></a>00214 }
+<a name="l00194"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">00194</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">originalValues</a>() {
+<a name="l00195"></a>00195         <span class="keywordflow">return</span> $this-&gt;_originalValues;
+<a name="l00196"></a>00196     }
+<a name="l00197"></a>00197 
+<a name="l00206"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">00206</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">setOriginalValue</a>( $property, $value ) {
+<a name="l00207"></a>00207         $this-&gt;_originalValues[$property] = $value;
+<a name="l00208"></a>00208     }
+<a name="l00209"></a>00209 
+<a name="l00216"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">00216</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a>( array $values = null ) {
+<a name="l00217"></a>00217         <span class="keywordflow">if</span>( !is_null($values) ) {
+<a name="l00218"></a>00218             <span class="keywordflow">foreach</span>( $values as $field =&gt; $value ) {
+<a name="l00219"></a>00219                 $this-&gt;$field = $value;
+<a name="l00220"></a>00220             }
+<a name="l00221"></a>00221         }
+<a name="l00222"></a>00222     }
+<a name="l00223"></a>00223 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m___core_8php.html">ORM_Core.php</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:41 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:24 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

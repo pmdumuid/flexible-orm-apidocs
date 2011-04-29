@@ -101,79 +101,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00032"></a>00032         );
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034         $this-&gt;<span class="keywordtype">object</span> = <span class="keyword">new</span> Mock\Staff($this-&gt;_initialValues);
-<a name="l00035"></a>00035     }
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a456290380a80a0e026095d662d7eac29">00037</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a456290380a80a0e026095d662d7eac29">testAttributes</a>() {
-<a name="l00038"></a>00038         $this-&gt;assertEquals(array_keys($this-&gt;_initialValues), $this-&gt;object-&gt;attributes() );
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036         <span class="keywordflow">foreach</span>($this-&gt;_initialValues as $property =&gt; $value ) {
+<a name="l00037"></a>00037             $this-&gt;<span class="keywordtype">object</span>-&gt;setOriginalValue($property, $value);
+<a name="l00038"></a>00038         }
 <a name="l00039"></a>00039     }
 <a name="l00040"></a>00040 
-<a name="l00041"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#abef1816fca8c0fe9646ff89041daa82f">00041</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#abef1816fca8c0fe9646ff89041daa82f">testValues</a>() {
-<a name="l00042"></a>00042         $this-&gt;assertEquals($this-&gt;_initialValues, $this-&gt;object-&gt;values() );
+<a name="l00041"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a456290380a80a0e026095d662d7eac29">00041</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a456290380a80a0e026095d662d7eac29">testAttributes</a>() {
+<a name="l00042"></a>00042         $this-&gt;assertEquals(array_keys($this-&gt;_initialValues), $this-&gt;object-&gt;attributes() );
 <a name="l00043"></a>00043     }
 <a name="l00044"></a>00044 
-<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#ac9087ccdf43d26c6d16b4addbaa6d3e2">00045</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#ac9087ccdf43d26c6d16b4addbaa6d3e2">testErrorMessages</a>() {
-<a name="l00046"></a>00046         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048         $this-&gt;assertEquals(
-<a name="l00049"></a>00049             array( <span class="stringliteral">&#39;age&#39;</span> =&gt; <span class="stringliteral">&#39;must be greater than 100&#39;</span> ),
-<a name="l00050"></a>00050             $this-&gt;object-&gt;errorMessages()
-<a name="l00051"></a>00051         );
-<a name="l00052"></a>00052     }
-<a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a153a1c287df2ccabb762b2263c587e7f">00054</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a153a1c287df2ccabb762b2263c587e7f">testErrorMessagesString</a>() {
-<a name="l00055"></a>00055         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be less than 100&#39;</span>);
-<a name="l00056"></a>00056         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
-<a name="l00057"></a>00057         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;should be Fred&#39;</span>);
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059         $this-&gt;assertEquals(
-<a name="l00060"></a>00060             <span class="charliteral">&#39;\&#39;</span><a class="code" href="orm__model_8save_8example_8php.html#ae3c47a96a44bbe83d878ac6b5d16da5c">age</a>\<span class="stringliteral">&#39; must be greater than 100, \&#39;name\&#39; should be Fred&#39;</span>,
-<a name="l00061"></a>00061             $this-&gt;object-&gt;errorMessagesString()
-<a name="l00062"></a>00062         );
-<a name="l00063"></a>00063     }
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a485152e29d964ed6354ae98192a5b84a">00065</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a485152e29d964ed6354ae98192a5b84a">testErrorMessage</a>() {
-<a name="l00066"></a>00066         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068         $this-&gt;assertEquals(
-<a name="l00069"></a>00069             <span class="stringliteral">&#39;must be greater than 100&#39;</span>,
-<a name="l00070"></a>00070             $this-&gt;object-&gt;errorMessage(<span class="stringliteral">&#39;age&#39;</span>)
-<a name="l00071"></a>00071         );
-<a name="l00072"></a>00072     }
-<a name="l00073"></a>00073 
-<a name="l00074"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4eb9b5ad52c6da1ab14cf1b00eda5298">00074</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4eb9b5ad52c6da1ab14cf1b00eda5298">testChangedFields</a>() {
-<a name="l00075"></a>00075         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077         $this-&gt;assertEquals(
-<a name="l00078"></a>00078             array(<span class="stringliteral">&#39;name&#39;</span>),
-<a name="l00079"></a>00079             $this-&gt;object-&gt;changedFields()
-<a name="l00080"></a>00080         );
-<a name="l00081"></a>00081     }
-<a name="l00082"></a>00082 
-<a name="l00083"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4568a647bd9a31f6929a9b28ddd11f1d">00083</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4568a647bd9a31f6929a9b28ddd11f1d">testOriginalValue</a>() {
-<a name="l00084"></a>00084         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086         $this-&gt;assertEquals(
-<a name="l00087"></a>00087             $this-&gt;_initialValues[<span class="stringliteral">&#39;name&#39;</span>],
-<a name="l00088"></a>00088             $this-&gt;object-&gt;originalValue( <span class="stringliteral">&#39;name&#39;</span> )
-<a name="l00089"></a>00089         );
-<a name="l00090"></a>00090     }
-<a name="l00091"></a>00091 
-<a name="l00092"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a6c1ea31fecdb7697c588c71bc7dbcef2">00092</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a6c1ea31fecdb7697c588c71bc7dbcef2">testSetOriginalValue</a>() {
-<a name="l00093"></a>00093         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
-<a name="l00094"></a>00094         $this-&gt;<span class="keywordtype">object</span>-&gt;setOriginalValue(<span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;Fred&#39;</span>);
+<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#abef1816fca8c0fe9646ff89041daa82f">00045</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#abef1816fca8c0fe9646ff89041daa82f">testValues</a>() {
+<a name="l00046"></a>00046         $this-&gt;assertEquals($this-&gt;_initialValues, $this-&gt;object-&gt;values() );
+<a name="l00047"></a>00047     }
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#ac9087ccdf43d26c6d16b4addbaa6d3e2">00049</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#ac9087ccdf43d26c6d16b4addbaa6d3e2">testErrorMessages</a>() {
+<a name="l00050"></a>00050         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         $this-&gt;assertEquals(
+<a name="l00053"></a>00053             array( <span class="stringliteral">&#39;age&#39;</span> =&gt; <span class="stringliteral">&#39;must be greater than 100&#39;</span> ),
+<a name="l00054"></a>00054             $this-&gt;object-&gt;errorMessages()
+<a name="l00055"></a>00055         );
+<a name="l00056"></a>00056     }
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a153a1c287df2ccabb762b2263c587e7f">00058</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a153a1c287df2ccabb762b2263c587e7f">testErrorMessagesString</a>() {
+<a name="l00059"></a>00059         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be less than 100&#39;</span>);
+<a name="l00060"></a>00060         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
+<a name="l00061"></a>00061         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;should be Fred&#39;</span>);
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063         $this-&gt;assertEquals(
+<a name="l00064"></a>00064             <span class="charliteral">&#39;\&#39;</span><a class="code" href="orm__model_8save_8example_8php.html#ae3c47a96a44bbe83d878ac6b5d16da5c">age</a>\<span class="stringliteral">&#39; must be greater than 100, \&#39;name\&#39; should be Fred&#39;</span>,
+<a name="l00065"></a>00065             $this-&gt;object-&gt;errorMessagesString()
+<a name="l00066"></a>00066         );
+<a name="l00067"></a>00067     }
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a485152e29d964ed6354ae98192a5b84a">00069</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a485152e29d964ed6354ae98192a5b84a">testErrorMessage</a>() {
+<a name="l00070"></a>00070         $this-&gt;<span class="keywordtype">object</span>-&gt;validationError(<span class="stringliteral">&#39;age&#39;</span>, <span class="stringliteral">&#39;must be greater than 100&#39;</span>);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072         $this-&gt;assertEquals(
+<a name="l00073"></a>00073             <span class="stringliteral">&#39;must be greater than 100&#39;</span>,
+<a name="l00074"></a>00074             $this-&gt;object-&gt;errorMessage(<span class="stringliteral">&#39;age&#39;</span>)
+<a name="l00075"></a>00075         );
+<a name="l00076"></a>00076     }
+<a name="l00077"></a>00077 
+<a name="l00078"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4eb9b5ad52c6da1ab14cf1b00eda5298">00078</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4eb9b5ad52c6da1ab14cf1b00eda5298">testChangedFields</a>() {
+<a name="l00079"></a>00079         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         $this-&gt;assertEquals(
+<a name="l00082"></a>00082             array(<span class="stringliteral">&#39;name&#39;</span>),
+<a name="l00083"></a>00083             $this-&gt;object-&gt;changedFields()
+<a name="l00084"></a>00084         );
+<a name="l00085"></a>00085     }
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4568a647bd9a31f6929a9b28ddd11f1d">00087</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4568a647bd9a31f6929a9b28ddd11f1d">testOriginalValue</a>() {
+<a name="l00088"></a>00088         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         $this-&gt;assertEquals(
+<a name="l00091"></a>00091             $this-&gt;_initialValues[<span class="stringliteral">&#39;name&#39;</span>],
+<a name="l00092"></a>00092             $this-&gt;object-&gt;originalValue( <span class="stringliteral">&#39;name&#39;</span> )
+<a name="l00093"></a>00093         );
+<a name="l00094"></a>00094     }
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096         $this-&gt;assertEquals(array(), $this-&gt;object-&gt;changedFields() );
-<a name="l00097"></a>00097     }
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 }
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 ?&gt;
+<a name="l00096"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a6c1ea31fecdb7697c588c71bc7dbcef2">00096</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a6c1ea31fecdb7697c588c71bc7dbcef2">testSetOriginalValue</a>() {
+<a name="l00097"></a>00097         $this-&gt;<span class="keywordtype">object</span>-&gt;name = <span class="stringliteral">&quot;Fred&quot;</span>;
+<a name="l00098"></a>00098         $this-&gt;<span class="keywordtype">object</span>-&gt;setOriginalValue(<span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;Fred&#39;</span>);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100         $this-&gt;assertEquals(array(), $this-&gt;object-&gt;changedFields() );
+<a name="l00101"></a>00101     }
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m___core_test_8php.html">ORM_CoreTest.php</a>      </li>
-      <li class="footer">Generated on Tue Apr 12 2011 13:56:41 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Fri Apr 29 2011 09:31:24 for ORM 2.0 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
