@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ORM 2.0: ORMModelSDBTest Class Reference</title>
+<title>flexible-orm: ORMModelSDBTest Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ORM 2.0</div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
   </td>
  </tr>
  </tbody>
@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <h1>ORMModelSDBTest Class Reference</h1>  </div>
@@ -123,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a42406febd9b8969b2028ee6d0607187f">testEscapeCreate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ade9c9463013c570e5919daa0218634fa">testEscapeUpdate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a4f1643d66a0da3af9bd7d669cfa49b90">testCreateWithID</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a42bd84e3bd3d9fbcc62d38f0db749e84">testFindWith</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a5a5839aa27d9dd63afa3c1864d7cf59a">testFindAllWith</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a0072cad57908d8c25492f1057dbc4058">DOMAIN</a> = 'cars'</td></tr>
@@ -133,6 +136,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a35e2cee2c1b9511c8347893791dab73e">$object</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ac9ba148b575bea2b3b24612f9d950903">_setupForeignKeysTest</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#aa34c1baba788abc5b921cfeff1d677a6">$_testCars</a></td></tr>
@@ -141,6 +147,24 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html#l00008">8</a> of file <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html">ORMModelSDBTest.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac9ba148b575bea2b3b24612f9d950903"></a><!-- doxytag: member="ORM::Tests::ORMModelSDBTest::_setupForeignKeysTest" ref="ac9ba148b575bea2b3b24612f9d950903" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_setupForeignKeysTest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html#l00304">304</a> of file <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html">ORMModelSDBTest.php</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0bc688732d2b3b162ffebaf7812e78da"></a><!-- doxytag: member="ORM::Tests::ORMModelSDBTest::setUp" ref="a0bc688732d2b3b162ffebaf7812e78da" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -393,6 +417,24 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5a5839aa27d9dd63afa3c1864d7cf59a"></a><!-- doxytag: member="ORM::Tests::ORMModelSDBTest::testFindAllWith" ref="a5a5839aa27d9dd63afa3c1864d7cf59a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">testFindAllWith </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html#l00295">295</a> of file <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html">ORMModelSDBTest.php</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6d790f9955c0c7e1bcc549cd2571f7db"></a><!-- doxytag: member="ORM::Tests::ORMModelSDBTest::testFindBy" ref="a6d790f9955c0c7e1bcc549cd2571f7db" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -445,6 +487,24 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html#l00195">195</a> of file <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html">ORMModelSDBTest.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a42bd84e3bd3d9fbcc62d38f0db749e84"></a><!-- doxytag: member="ORM::Tests::ORMModelSDBTest::testFindWith" ref="a42bd84e3bd3d9fbcc62d38f0db749e84" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">testFindWith </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html#l00287">287</a> of file <a class="el" href="_o_r_m_model_s_d_b_test_8php_source.html">ORMModelSDBTest.php</a>.</p>
 
 </div>
 </div>
@@ -617,7 +677,7 @@ Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_tests.html">Tests</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html">ORMModelSDBTest</a>      </li>
-      <li class="footer">Generated on Fri Apr 29 2011 09:31:26 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Thu May 5 2011 11:52:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

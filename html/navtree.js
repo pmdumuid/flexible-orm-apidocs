@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "ORM 2.0", "index.html", [
+  [ "flexible-orm", "index.html", [
     [ "Introduction to ORM 2.0", "index.html", [
       [ "Define Data Structures", "intro_step1.html", null ],
       [ "Define Model Classes", "intro_step2.html", null ],
@@ -48,6 +48,7 @@ var NAVTREE =
       [ "Manufacturer", "class_manufacturer.html", null ],
       [ "ModelCollection", "class_o_r_m_1_1_model_collection.html", null ],
       [ "ModelCollectionTest", "class_o_r_m_1_1_tests_1_1_model_collection_test.html", null ],
+      [ "ModelLog", "class_o_r_m_1_1_undoable_1_1_model_log.html", null ],
       [ "ObjectCollection", "class_o_r_m_1_1_object_collection.html", null ],
       [ "ObjectCollectionTest", "class_o_r_m_1_1_tests_1_1_object_collection_test.html", null ],
       [ "ORM_Core", "class_o_r_m_1_1_o_r_m___core.html", null ],
@@ -82,6 +83,9 @@ var NAVTREE =
       [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ],
       [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html", null ],
       [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ],
+      [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ],
+      [ "UndoableModel", "class_o_r_m_1_1_undoable_1_1_undoable_model.html", null ],
+      [ "UndoableModelTest", "class_o_r_m_1_1_tests_1_1_undoable_model_test.html", null ],
       [ "Window", "class_o_r_m_1_1_tests_1_1_mock_1_1_window.html", null ]
     ] ],
     [ "Data Structure Index", "classes.html", null ],
@@ -129,6 +133,10 @@ var NAVTREE =
           [ "Manufacturer", "class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html", null ],
           [ "Owner", "class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html", null ],
           [ "Window", "class_o_r_m_1_1_tests_1_1_mock_1_1_window.html", null ],
+          [ "ModelLog", "class_o_r_m_1_1_undoable_1_1_model_log.html", null ],
+          [ "UndoableModel", "class_o_r_m_1_1_undoable_1_1_undoable_model.html", [
+            [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ]
+          ] ],
           [ "Owner", "class_owner.html", null ]
         ] ],
         [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ]
@@ -161,7 +169,8 @@ var NAVTREE =
         [ "PDOFactoryTest", "class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html", null ],
         [ "SDBResponseTest", "class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html", null ],
         [ "SDBSessionHandlerTest", "class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html", null ],
-        [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html", null ]
+        [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html", null ],
+        [ "UndoableModelTest", "class_o_r_m_1_1_tests_1_1_undoable_model_test.html", null ]
       ] ],
       [ "SDBResponse", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html", null ],
       [ "SDBSessionHandler", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html", null ]
@@ -174,6 +183,7 @@ var NAVTREE =
       [ "ORM::SDB", "namespace_o_r_m_1_1_s_d_b.html", null ],
       [ "ORM::Tests", "namespace_o_r_m_1_1_tests.html", null ],
       [ "ORM::Tests::Mock", "namespace_o_r_m_1_1_tests_1_1_mock.html", null ],
+      [ "ORM::Undoable", "namespace_o_r_m_1_1_undoable.html", null ],
       [ "ORM::Utilities", "namespace_o_r_m_1_1_utilities.html", null ],
       [ "ORM::Utilities::Cache", "namespace_o_r_m_1_1_utilities_1_1_cache.html", null ],
       [ "Utilities", "namespace_utilities.html", null ]
@@ -220,6 +230,7 @@ var NAVTREE =
       [ "C:/server/projects/orm.2.0/tests/SDBResponseTest.php", "_s_d_b_response_test_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/SDBSessionHandlerTest.php", "_s_d_b_session_handler_test_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/SDBStatementTest.php", "_s_d_b_statement_test_8php.html", null ],
+      [ "C:/server/projects/orm.2.0/tests/UndoableModelTest.php", "_undoable_model_test_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/WindowTest.php", "_window_test_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/Mock/AlternateCar.php", "_alternate_car_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/Mock/BadModel.php", "_bad_model_8php.html", null ],
@@ -233,6 +244,7 @@ var NAVTREE =
       [ "C:/server/projects/orm.2.0/tests/Mock/SDBCar.php", "_s_d_b_car_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/Mock/SDBOwner.php", "_s_d_b_owner_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/Mock/Staff.php", "_staff_8php.html", null ],
+      [ "C:/server/projects/orm.2.0/tests/Mock/UndoableCar.php", "_undoable_car_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tests/Mock/Window.php", "_window_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tutorials/introduction.php", "introduction_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tutorials/utilities.php", "utilities_8php.html", null ],
@@ -256,6 +268,8 @@ var NAVTREE =
       [ "C:/server/projects/orm.2.0/tutorials/utilities/debug.php", "tutorials_2utilities_2debug_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tutorials/utilities/orm_pdo.php", "orm__pdo_8php.html", null ],
       [ "C:/server/projects/orm.2.0/tutorials/utilities/sdb.php", "sdb_8php.html", null ],
+      [ "C:/server/projects/orm.2.0/Undoable/ModelLog.php", "_model_log_8php.html", null ],
+      [ "C:/server/projects/orm.2.0/Undoable/UndoableModel.php", "_undoable_model_8php.html", null ],
       [ "C:/server/projects/orm.2.0/Utilities/Configuration.php", "_utilities_2configuration_8php.html", null ],
       [ "C:/server/projects/orm.2.0/Utilities/ConfigurationGroup.php", "_configuration_group_8php.html", null ],
       [ "C:/server/projects/orm.2.0/Utilities/db.php", "db_8php.html", null ],

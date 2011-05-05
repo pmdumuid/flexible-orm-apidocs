@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ORM 2.0: Data Fields</title>
+<title>flexible-orm: Data Fields</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ORM 2.0</div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
   </td>
  </tr>
  </tbody>
@@ -94,6 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_0x72.html#index_r"><span>r</span></a></li>
       <li><a href="functions_0x73.html#index_s"><span>s</span></a></li>
       <li><a href="functions_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_0x75.html#index_u"><span>u</span></a></li>
       <li><a href="functions_0x76.html#index_v"><span>v</span></a></li>
       <li><a href="functions_0x77.html#index_w"><span>w</span></a></li>
     </ul>
@@ -159,6 +160,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_BuildSQL()
 : <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a69bce9b5c3b0d30ad6dadb4619b1c44d">ORM_Model</a>
 </li>
+<li>_BuildSQLFindWith()
+: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a29677eb271ebb0d147de7674c241f2da">ORM_Model</a>
+, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a29677eb271ebb0d147de7674c241f2da">ORMModelSDB</a>
+</li>
 <li>_cache()
 : <a class="el" href="class_o_r_m_1_1_cached_o_r_m_model.html#a48ba6a3fa98018e37c16b39a3d359966">CachedORMModel</a>
 </li>
@@ -173,6 +178,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>_emulateUpdate()
 : <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a08b4f899eba01b6b6a24acdb2830ac7f">SDBStatement</a>
+</li>
+<li>_fetchWith()
+: <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aba855717769a19473a028b3c0029be0b">SDBStatement</a>
 </li>
 <li>_generateItemName()
 : <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#abd2dbc5d81eb925a0c8adec9ac8fbd2a">SDBStatement</a>
@@ -223,8 +231,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">ORM_Model</a>
 </li>
 <li>_output()
-: <a class="el" href="class_o_r_m_1_1_debug.html#aaffbfcd6f329805020e4f8fe3d731110">Debug</a>
-, <a class="el" href="class_o_r_m_1_1_h_t_m_l_debug.html#aaffbfcd6f329805020e4f8fe3d731110">HTMLDebug</a>
+: <a class="el" href="class_o_r_m_1_1_h_t_m_l_debug.html#aaffbfcd6f329805020e4f8fe3d731110">HTMLDebug</a>
+, <a class="el" href="class_o_r_m_1_1_debug.html#aaffbfcd6f329805020e4f8fe3d731110">Debug</a>
 </li>
 <li>_outputSimple()
 : <a class="el" href="class_o_r_m_1_1_h_t_m_l_debug.html#a071eba23dc1a5b887c76d300a6085773">HTMLDebug</a>
@@ -254,6 +262,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_setToLowerCaseIfRequired()
 : <a class="el" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc">AutoLoader</a>
 </li>
+<li>_setupForeignKeysTest()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ac9ba148b575bea2b3b24612f9d950903">ORMModelSDBTest</a>
+</li>
 <li>_simplifyQuery()
 : <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aaf5f79e0235c6fc14ccaca8494c947b8">SDBStatement</a>
 </li>
@@ -265,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Fri Apr 29 2011 09:31:25 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Thu May 5 2011 11:52:38 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

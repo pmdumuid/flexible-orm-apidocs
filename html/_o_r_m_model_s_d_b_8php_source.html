@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ORM 2.0: C:/server/projects/orm.2.0/SDB/ORMModelSDB.php Source File</title>
+<title>flexible-orm: C:/server/projects/orm.2.0/SDB/ORMModelSDB.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ORM 2.0</div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
   </td>
  </tr>
  </tbody>
@@ -97,41 +97,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00035"></a>00035         <span class="comment">// to ensure it only gets the publicly accessible attributes</span>
 <a name="l00036"></a>00036         $publicPropertiesFunction = (function() use( $item ) {
 <a name="l00037"></a>00037             $vars = get_object_vars($item);
-<a name="l00038"></a>00038 <span class="comment">//            unset($vars[&#39;itemName()&#39;]);</span>
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040             <span class="keywordflow">return</span> array_keys($vars);
-<a name="l00041"></a>00041         });
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043         <span class="keywordflow">return</span> $publicPropertiesFunction();
-<a name="l00044"></a>00044     }
-<a name="l00045"></a>00045 
-<a name="l00062"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770">00062</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770">EnforceReadConsistency</a>() {
-<a name="l00063"></a>00063         $enforce = defined(<span class="stringliteral">&quot;static::ENFORCE_READ_CONSISTENCY&quot;</span>) ? static::ENFORCE_READ_CONSISTENCY : <span class="keyword">true</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065         <span class="keywordflow">return</span> $enforce ? <span class="stringliteral">&#39;true&#39;</span> : <span class="stringliteral">&#39;false&#39;</span>;
-<a name="l00066"></a>00066     }
-<a name="l00067"></a>00067 
-<a name="l00076"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">00076</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a>( array $values = null) {
-<a name="l00077"></a>00077         <span class="keywordflow">if</span>( !is_null($values) ) {
-<a name="l00078"></a>00078             <span class="keywordflow">foreach</span>( $values as $field =&gt; $sanitizedValue ) {
-<a name="l00079"></a>00079                 $decodedValue = SDBStatement::DecodeValue($sanitizedValue);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081                 $this-&gt;$field = $decodedValue;
-<a name="l00082"></a>00082             }
-<a name="l00083"></a>00083         }
-<a name="l00084"></a>00084     }
-<a name="l00085"></a>00085 
-<a name="l00090"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">00090</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">attributes</a>() {
-<a name="l00091"></a>00091         <span class="keywordflow">return</span> empty($this-&gt;_originalValues) ? self::DescribeTable() : array_keys($this-&gt;_originalValues);
-<a name="l00092"></a>00092     }
-<a name="l00093"></a>00093 }
-<a name="l00094"></a>00094 ?&gt;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039             <span class="keywordflow">return</span> array_keys($vars);
+<a name="l00040"></a>00040         });
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042         <span class="keywordflow">return</span> $publicPropertiesFunction();
+<a name="l00043"></a>00043     }
+<a name="l00044"></a>00044 
+<a name="l00061"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770">00061</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770">EnforceReadConsistency</a>() {
+<a name="l00062"></a>00062         $enforce = defined(<span class="stringliteral">&quot;static::ENFORCE_READ_CONSISTENCY&quot;</span>) ? static::ENFORCE_READ_CONSISTENCY : <span class="keyword">true</span>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064         <span class="keywordflow">return</span> $enforce ? <span class="stringliteral">&#39;true&#39;</span> : <span class="stringliteral">&#39;false&#39;</span>;
+<a name="l00065"></a>00065     }
+<a name="l00066"></a>00066 
+<a name="l00078"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a7377e1dfbfefc33feda9047ade14a1cb">00078</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a7377e1dfbfefc33feda9047ade14a1cb">CreateDomain</a>() {
+<a name="l00079"></a>00079         $domain_name = static::TableName();
+<a name="l00080"></a>00080         SDBStatement::GetSDBConnection()-&gt;create_domain($domain_name);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082         <span class="keywordflow">return</span> $domain_name;
+<a name="l00083"></a>00083     }
+<a name="l00084"></a>00084 
+<a name="l00093"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">00093</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a>( array $values = null) {
+<a name="l00094"></a>00094         <span class="keywordflow">if</span>( !is_null($values) ) {
+<a name="l00095"></a>00095             <span class="keywordflow">foreach</span>( $values as $field =&gt; $sanitizedValue ) {
+<a name="l00096"></a>00096                 $decodedValue = SDBStatement::DecodeValue($sanitizedValue);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098                 $this-&gt;$field = $decodedValue;
+<a name="l00099"></a>00099             }
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101     }
+<a name="l00102"></a>00102 
+<a name="l00107"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">00107</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">attributes</a>() {
+<a name="l00108"></a>00108         <span class="keywordflow">return</span> empty($this-&gt;_originalValues) ? self::DescribeTable() : array_keys($this-&gt;_originalValues);
+<a name="l00109"></a>00109     }
+<a name="l00110"></a>00110 
+<a name="l00122"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a29677eb271ebb0d147de7674c241f2da">00122</a>     <span class="keyword">protected</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a29677eb271ebb0d147de7674c241f2da">_BuildSQLFindWith</a>( $table, $findWith ) {
+<a name="l00123"></a>00123         SDBStatement::$findWith = (array)$findWith;
+<a name="l00124"></a>00124         $className  = static::ClassName();
+<a name="l00125"></a>00125         
+<a name="l00126"></a>00126         <span class="keywordflow">return</span> <span class="stringliteral">&quot;SELECT `$className`.* FROM `$table` AS `$className` &quot;</span>;
+<a name="l00127"></a>00127     }
+<a name="l00128"></a>00128 }
+<a name="l00129"></a>00129 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m_model_s_d_b_8php.html">ORMModelSDB.php</a>      </li>
-      <li class="footer">Generated on Fri Apr 29 2011 09:31:24 for ORM 2.0 by&#160;
+      <li class="footer">Generated on Thu May 5 2011 11:52:37 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
