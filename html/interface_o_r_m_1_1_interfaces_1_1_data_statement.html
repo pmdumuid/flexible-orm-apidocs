@@ -26,7 +26,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
  </tbody>
@@ -102,19 +103,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a4985a1ab789aa8781189efd6f9ec42ba">execute</a> ($values)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#abd1a00690a1eef41bf504fae746118b0">bindParam</a> ($placeholder, &amp;$value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a9cb32669ccc2a9cfbca144010316e4cd">bindValue</a> ($placeholder, $param)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#adfe1cfce40442b3b25f269625d0eee43">bindObject</a> ($className, array $params)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#af7e56efc2efb9eb68ef5e56534185700">bindObject</a> ($object, array $params)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">fetchInto</a> ($className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#acc2b78f55ad595459f24778071daebf3">fetchAllInto</a> ($className)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>All prepared statements returned by a <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a> class must implement this interface</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a7b568b26c20726b2e9a8986a2ba245f8">DataFactory::Get()</a> </dd></dl>
-<dl class="author"><dt><b>Author:</b></dt><dd>jarrod.swift</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Document the required methods </dd></dl>
+<dl class="author"><dt><b>Author:</b></dt><dd>jarrod.swift </dd></dl>
 
-<p>Definition at line <a class="el" href="_data_statement_8php_source.html#l00016">16</a> of file <a class="el" href="_data_statement_8php_source.html">DataStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_data_statement_8php_source.html#l00015">15</a> of file <a class="el" href="_data_statement_8php_source.html">DataStatement.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adfe1cfce40442b3b25f269625d0eee43"></a><!-- doxytag: member="ORM::Interfaces::DataStatement::bindObject" ref="adfe1cfce40442b3b25f269625d0eee43" args="($className, array $params)" -->
+<a class="anchor" id="af7e56efc2efb9eb68ef5e56534185700"></a><!-- doxytag: member="ORM::Interfaces::DataStatement::bindObject" ref="af7e56efc2efb9eb68ef5e56534185700" args="($object, array $params)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bindObject </td>
           <td>(</td>
           <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>className</em>, </td>
+          <td class="paramname"><em>object</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -138,6 +138,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Bind all placeholders to the corresponding object properties</p>
+<p>e.g. </p>
+<div class="fragment"><pre class="fragment"> UPDATE car SET doors = :doors, name = :name
+</pre></div><p>Would attempt to bind <code>$object-&gt;doors</code> to :doors and <code>$object-&gt;name</code> to :name </p>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a75192514fe1e2a784634fc1b4b03450a">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a75192514fe1e2a784634fc1b4b03450a">SDBStatement</a>.</p>
 
@@ -167,6 +171,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Bind a variable to a placeholder</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.php.net/manual/en/pdostatement.bindparam.php">http://www.php.net/manual/en/pdostatement.bindparam.php</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a2443f5f49be6e2857d08de0b58dcfd55">SDBStatement</a>.</p>
 
@@ -196,6 +202,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Bind a value to a placeholder </p>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a87d6f14af0fa990c1a134f66c643d5d4">SDBStatement</a>.</p>
 
@@ -215,6 +222,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Execute the prepared statement</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.php.net/manual/en/pdostatement.execute.php">http://www.php.net/manual/en/pdostatement.execute.php</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a6126d2e92c3a78174fc47cc926e60c10">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a51e40fdec623e19423410cb52d70710a">SDBStatement</a>.</p>
 
@@ -234,6 +243,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Fetch all rows returned as instances of class $className</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#acc2b78f55ad595459f24778071daebf3">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#acc2b78f55ad595459f24778071daebf3">SDBStatement</a>.</p>
 
@@ -253,13 +264,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Fetch the results of the query in to an object of this classname </p>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">SDBStatement</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>C:/server/projects/orm.2.0/Interfaces/<a class="el" href="_data_statement_8php_source.html">DataStatement.php</a></li>
+<li>C:/server/projects/flexible-orm/Interfaces/<a class="el" href="_data_statement_8php_source.html">DataStatement.php</a></li>
 </ul>
 </div>
 </div>
@@ -268,7 +280,7 @@ Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_interfaces.html">Interfaces</a>      </li>
       <li class="navelem"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a>      </li>
-      <li class="footer">Generated on Thu May 5 2011 11:52:38 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 13 2011 10:29:32 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

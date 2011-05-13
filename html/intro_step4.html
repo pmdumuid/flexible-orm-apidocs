@@ -26,7 +26,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
  </tbody>
@@ -177,7 +178,7 @@ $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a9
 
 <span class="comment">// will now output FALSE, as there is not database record</span>
 var_dump($car); 
-</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>what happens if it's not saved? Probably should do nothing</dd></dl>
+</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>what happens if it's not saved? Probably should do nothing</dd></dl>
 <h2><a class="anchor" id="intro_step4_findall"></a>
 Finding &amp; Manipulating Many Objects</h2>
 <p>The same options exist for finding a number of objects as for finding a single one. All the find function names are named starting with <em>FindAll</em>.</p>
@@ -224,7 +225,7 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
 
 <span class="comment">// We could now create an array of owners</span>
 <a class="code" href="orm__model_8find_all_by_8example_8php.html#aa83755b1a609d683cbae030d2e406659">$owners</a> = $cars-&gt;map( <span class="stringliteral">&#39;Owner&#39;</span> ); 
-</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd><p class="startdd">if operator is IN then allow $value to be an array </p>
+</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><p class="startdd">if operator is IN then allow $value to be an array </p>
 <p class="enddd">verify operator type</p>
 </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -270,8 +271,8 @@ Getting Started</h2>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="main.html">Introduction to ORM 2.0</a>      </li>
-      <li class="footer">Generated on Thu May 5 2011 11:52:38 for flexible-orm by&#160;
+      <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
+      <li class="footer">Generated on Fri May 13 2011 10:29:31 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>flexible-orm: C:/server/projects/orm.2.0/SDB/SDBResponse.php Source File</title>
+<title>flexible-orm: C:/server/projects/flexible-orm/SDB/SDBResponse.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -26,7 +26,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
  </tbody>
@@ -79,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<h1>C:/server/projects/orm.2.0/SDB/SDBResponse.php</h1>  </div>
+<h1>C:/server/projects/flexible-orm/SDB/SDBResponse.php</h1>  </div>
 </div>
 <div class="contents">
 <a href="_s_d_b_response_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
@@ -111,123 +112,147 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079         <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> ) {
 <a name="l00080"></a>00080             <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> as $item ) {
-<a name="l00081"></a>00081                 $att_array = array();
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083                 <span class="keywordflow">foreach</span>($item-&gt;Attribute as $attribute ) {
-<a name="l00084"></a>00084                     $att_array[(string)$attribute-&gt;Name] = (<span class="keywordtype">string</span>)$attribute-&gt;Value;
-<a name="l00085"></a>00085                 }
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087                 $this-&gt;_items[(string)$item-&gt;Name] = $att_array;
-<a name="l00088"></a>00088             }
-<a name="l00089"></a>00089         }
-<a name="l00090"></a>00090     }
-<a name="l00091"></a>00091 
-<a name="l00096"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">00096</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult</a>() {
-<a name="l00097"></a>00097         <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $this-&gt;body-&gt;GetAttributesResult-&gt;Attribute();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099         <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
-<a name="l00100"></a>00100             <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $attribute ) {
-<a name="l00101"></a>00101                 $this-&gt;_items[(string)$attribute-&gt;Name] = (<span class="keywordtype">string</span>)$attribute-&gt;Value;
-<a name="l00102"></a>00102             }
-<a name="l00103"></a>00103         }
-<a name="l00104"></a>00104     }
-<a name="l00105"></a>00105 
-<a name="l00110"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">00110</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">itemNames</a>() {
-<a name="l00111"></a>00111         <span class="keywordflow">return</span> $this-&gt;_itemNames;
-<a name="l00112"></a>00112     }
-<a name="l00113"></a>00113 
-<a name="l00118"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">00118</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">items</a>() {
-<a name="l00119"></a>00119         <span class="keywordflow">return</span> $this-&gt;_items;
-<a name="l00120"></a>00120     }
-<a name="l00121"></a>00121     
-<a name="l00141"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">00141</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">getAll</a>($consistentRead = <span class="keyword">false</span>) {
-<a name="l00142"></a>00142         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;SelectResult) ) {
-<a name="l00143"></a>00143             $result = $this;
-<a name="l00144"></a>00144             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $this-&gt;getQuery();
-<a name="l00145"></a>00145             $count  = 0;
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147             <span class="keywordflow">while</span>( $result-&gt;nextToken() ) {
-<a name="l00148"></a>00148                 $result = SDBStatement::Query( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>, $consistentRead, $result-&gt;nextToken() );
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150                 <span class="keywordflow">foreach</span>( $result as $key =&gt; $item ) {
-<a name="l00151"></a>00151                     $this-&gt;_items[$key] = $item;
-<a name="l00152"></a>00152                 }
-<a name="l00153"></a>00153                 
-<a name="l00154"></a>00154                 <span class="keywordflow">if</span>( ++$count &gt; self::MAX_QUERIES ) <span class="keywordflow">break</span>;
-<a name="l00155"></a>00155             }
-<a name="l00156"></a>00156         }
-<a name="l00157"></a>00157         
-<a name="l00158"></a>00158         <span class="keywordflow">return</span> $this;
-<a name="l00159"></a>00159     }
-<a name="l00160"></a>00160 
-<a name="l00166"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">00166</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">nextToken</a>() {
-<a name="l00167"></a>00167         <span class="keywordflow">return</span> empty($this-&gt;body-&gt;SelectResult-&gt;NextToken) ?
-<a name="l00168"></a>00168                     null : (string)$this-&gt;body-&gt;SelectResult-&gt;NextToken;
-<a name="l00169"></a>00169     }
-<a name="l00170"></a>00170 
-<a name="l00177"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">00177</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a>() {
-<a name="l00178"></a>00178         $marker         = <span class="stringliteral">&#39;&amp;SelectExpression=&#39;</span>;
-<a name="l00179"></a>00179         $pos            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], $marker );
-<a name="l00180"></a>00180         $end            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], <span class="charliteral">&#39;&amp;&#39;</span>, $pos+10 );
-<a name="l00181"></a>00181         $queryStringLen = $end - $pos - strlen($marker);
-<a name="l00182"></a>00182         $encodedQuery   = substr($this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], $pos+strlen($marker), $queryStringLen);
-<a name="l00183"></a>00183         
-<a name="l00184"></a>00184         <span class="keywordflow">return</span> urldecode($encodedQuery);
-<a name="l00185"></a>00185     }
-<a name="l00186"></a>00186 
-<a name="l00192"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">00192</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">current</a>() {
-<a name="l00193"></a>00193         <span class="keywordflow">return</span> $this-&gt;_items[$this-&gt;_currentKey];
-<a name="l00194"></a>00194     }
-<a name="l00195"></a>00195 
-<a name="l00202"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">00202</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">key</a>() {
-<a name="l00203"></a>00203         <span class="keywordflow">return</span> $this-&gt;_currentKey;
-<a name="l00204"></a>00204     }
-<a name="l00205"></a>00205 
-<a name="l00210"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">00210</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">next</a>() {
-<a name="l00211"></a>00211         $this-&gt;_currentKey = ++$this-&gt;_position &gt;= count($this-&gt;_items) ? null : $this-&gt;_itemNames[$this-&gt;_position];
-<a name="l00212"></a>00212         <span class="keywordflow">return</span> $this-&gt;_currentKey;
-<a name="l00213"></a>00213     }
-<a name="l00214"></a>00214 
-<a name="l00220"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">00220</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind</a>() {
-<a name="l00221"></a>00221         $this-&gt;_position    = 0;
-<a name="l00222"></a>00222         $this-&gt;_itemNames   = array_keys($this-&gt;_items);
-<a name="l00223"></a>00223         <span class="keywordflow">if</span>( count($this-&gt;_items) ) {
-<a name="l00224"></a>00224             $this-&gt;_currentKey  = $this-&gt;_itemNames[$this-&gt;_position];
-<a name="l00225"></a>00225         }
-<a name="l00226"></a>00226     }
-<a name="l00227"></a>00227 
-<a name="l00232"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">00232</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
-<a name="l00233"></a>00233         <span class="keywordflow">return</span> $this-&gt;offsetExists($this-&gt;_currentKey);
-<a name="l00234"></a>00234     }
-<a name="l00235"></a>00235 
-<a name="l00245"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">00245</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">offsetExists</a>($offset) {
-<a name="l00246"></a>00246         <span class="keywordflow">return</span> array_key_exists($offset, $this-&gt;_items);
-<a name="l00247"></a>00247     }
-<a name="l00248"></a>00248 
-<a name="l00265"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">00265</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">offsetGet</a>($offset) {
-<a name="l00266"></a>00266         <span class="keywordflow">return</span> $this-&gt;_items[$offset];
-<a name="l00267"></a>00267     }
-<a name="l00268"></a>00268 
-<a name="l00272"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">00272</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">offsetSet</a>($offset, $value) {
-<a name="l00273"></a>00273         $this-&gt;_items[$offset]  = $value;
-<a name="l00274"></a>00274         $this-&gt;_itemNames       = array_keys($this-&gt;_items);
-<a name="l00275"></a>00275     }
-<a name="l00276"></a>00276 
-<a name="l00286"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">00286</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">offsetUnset</a>($offset) {
-<a name="l00287"></a>00287         <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Can&#39;t change values of SDB Result!&quot;</span>);
-<a name="l00288"></a>00288     }
-<a name="l00289"></a>00289 
-<a name="l00296"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">00296</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count</a>() {
-<a name="l00297"></a>00297         <span class="keywordflow">return</span> count( $this-&gt;_items );
+<a name="l00081"></a>00081                 $this-&gt;_items[(string)$item-&gt;Name] = $this-&gt;_getObject($item-&gt;Attribute);
+<a name="l00082"></a>00082             }
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084     }
+<a name="l00085"></a>00085 
+<a name="l00093"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">00093</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">_getObject</a>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
+<a name="l00094"></a>00094         $att_array = array();
+<a name="l00095"></a>00095         $toFlatten = array();
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097         <span class="keywordflow">foreach</span>(<a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $attribute ) {
+<a name="l00098"></a>00098             $name = (string)$attribute-&gt;Name;
+<a name="l00099"></a>00099             <span class="keywordflow">if</span>( isset($att_array[$name]) ) {
+<a name="l00100"></a>00100                 $att_array[$name]   = (array)$att_array[$name];
+<a name="l00101"></a>00101                 $att_array[$name][] = (string)$attribute-&gt;Value;
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103             } elseif( preg_match(<span class="stringliteral">&#39;/(\w+)\[(\d+)\]/&#39;</span>, $name, $matches) ) {
+<a name="l00104"></a>00104                 <span class="comment">// Large attributes are chunked into multiple items &lt;fieldname&gt;_&lt;i&gt;</span>
+<a name="l00105"></a>00105                 <span class="keywordflow">if</span>( !isset($att_array[$matches[1]]) ) {
+<a name="l00106"></a>00106                     $att_array[$matches[1]] = array();
+<a name="l00107"></a>00107                     $toFlatten[] = $matches[1];
+<a name="l00108"></a>00108                 }
+<a name="l00109"></a>00109                 
+<a name="l00110"></a>00110                 $att_array[$matches[1]][$matches[2]] = (string)$attribute-&gt;Value;
+<a name="l00111"></a>00111                 
+<a name="l00112"></a>00112             } <span class="keywordflow">else</span> {
+<a name="l00113"></a>00113                 $att_array[$name] = (string)$attribute-&gt;Value;
+<a name="l00114"></a>00114             }
+<a name="l00115"></a>00115         }
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117         <span class="keywordflow">foreach</span>($toFlatten as $key ) {
+<a name="l00118"></a>00118             ksort($att_array[$key]);
+<a name="l00119"></a>00119             $att_array[$key] = implode(<span class="stringliteral">&#39;&#39;</span>, $att_array[$key]);
+<a name="l00120"></a>00120         }
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="keywordflow">return</span> $att_array;
+<a name="l00123"></a>00123     }
+<a name="l00124"></a>00124 
+<a name="l00129"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">00129</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult</a>() {
+<a name="l00130"></a>00130         <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $this-&gt;body-&gt;GetAttributesResult-&gt;Attribute();
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132         <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
+<a name="l00133"></a>00133             $this-&gt;_items = $this-&gt;_getObject(<a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a>);
+<a name="l00134"></a>00134         }
+<a name="l00135"></a>00135     }
+<a name="l00136"></a>00136 
+<a name="l00141"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">00141</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">itemNames</a>() {
+<a name="l00142"></a>00142         <span class="keywordflow">return</span> $this-&gt;_itemNames;
+<a name="l00143"></a>00143     }
+<a name="l00144"></a>00144 
+<a name="l00149"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">00149</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">items</a>() {
+<a name="l00150"></a>00150         <span class="keywordflow">return</span> $this-&gt;_items;
+<a name="l00151"></a>00151     }
+<a name="l00152"></a>00152     
+<a name="l00172"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">00172</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a85e9c205cefd585fbe9093155f3e39c6">getAll</a>($consistentRead = <span class="keyword">false</span>) {
+<a name="l00173"></a>00173         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;SelectResult) ) {
+<a name="l00174"></a>00174             $result = $this;
+<a name="l00175"></a>00175             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $this-&gt;getQuery();
+<a name="l00176"></a>00176             $count  = 0;
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178             <span class="keywordflow">while</span>( $result-&gt;nextToken() ) {
+<a name="l00179"></a>00179                 $result = SDBStatement::Query( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>, $consistentRead, $result-&gt;nextToken() );
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181                 <span class="keywordflow">foreach</span>( $result as $key =&gt; $item ) {
+<a name="l00182"></a>00182                     $this-&gt;_items[$key] = $item;
+<a name="l00183"></a>00183                 }
+<a name="l00184"></a>00184                 
+<a name="l00185"></a>00185                 <span class="keywordflow">if</span>( ++$count &gt; self::MAX_QUERIES ) <span class="keywordflow">break</span>;
+<a name="l00186"></a>00186             }
+<a name="l00187"></a>00187         }
+<a name="l00188"></a>00188         
+<a name="l00189"></a>00189         <span class="keywordflow">return</span> $this;
+<a name="l00190"></a>00190     }
+<a name="l00191"></a>00191 
+<a name="l00197"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">00197</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">nextToken</a>() {
+<a name="l00198"></a>00198         <span class="keywordflow">return</span> empty($this-&gt;body-&gt;SelectResult-&gt;NextToken) ?
+<a name="l00199"></a>00199                     null : (string)$this-&gt;body-&gt;SelectResult-&gt;NextToken;
+<a name="l00200"></a>00200     }
+<a name="l00201"></a>00201 
+<a name="l00208"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">00208</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a>() {
+<a name="l00209"></a>00209         $marker         = <span class="stringliteral">&#39;&amp;SelectExpression=&#39;</span>;
+<a name="l00210"></a>00210         $pos            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], $marker );
+<a name="l00211"></a>00211         $end            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], <span class="charliteral">&#39;&amp;&#39;</span>, $pos+10 );
+<a name="l00212"></a>00212         $queryStringLen = $end - $pos - strlen($marker);
+<a name="l00213"></a>00213         $encodedQuery   = substr($this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], $pos+strlen($marker), $queryStringLen);
+<a name="l00214"></a>00214         
+<a name="l00215"></a>00215         <span class="keywordflow">return</span> urldecode($encodedQuery);
+<a name="l00216"></a>00216     }
+<a name="l00217"></a>00217 
+<a name="l00223"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">00223</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">current</a>() {
+<a name="l00224"></a>00224         <span class="keywordflow">return</span> $this-&gt;_items[$this-&gt;_currentKey];
+<a name="l00225"></a>00225     }
+<a name="l00226"></a>00226 
+<a name="l00233"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">00233</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">key</a>() {
+<a name="l00234"></a>00234         <span class="keywordflow">return</span> $this-&gt;_currentKey;
+<a name="l00235"></a>00235     }
+<a name="l00236"></a>00236 
+<a name="l00241"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">00241</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">next</a>() {
+<a name="l00242"></a>00242         $this-&gt;_currentKey = ++$this-&gt;_position &gt;= count($this-&gt;_items) ? null : $this-&gt;_itemNames[$this-&gt;_position];
+<a name="l00243"></a>00243         <span class="keywordflow">return</span> $this-&gt;_currentKey;
+<a name="l00244"></a>00244     }
+<a name="l00245"></a>00245 
+<a name="l00251"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">00251</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind</a>() {
+<a name="l00252"></a>00252         $this-&gt;_position    = 0;
+<a name="l00253"></a>00253         $this-&gt;_itemNames   = array_keys($this-&gt;_items);
+<a name="l00254"></a>00254         <span class="keywordflow">if</span>( count($this-&gt;_items) ) {
+<a name="l00255"></a>00255             $this-&gt;_currentKey  = $this-&gt;_itemNames[$this-&gt;_position];
+<a name="l00256"></a>00256         }
+<a name="l00257"></a>00257     }
+<a name="l00258"></a>00258 
+<a name="l00263"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">00263</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
+<a name="l00264"></a>00264         <span class="keywordflow">return</span> $this-&gt;offsetExists($this-&gt;_currentKey);
+<a name="l00265"></a>00265     }
+<a name="l00266"></a>00266 
+<a name="l00276"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">00276</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">offsetExists</a>($offset) {
+<a name="l00277"></a>00277         <span class="keywordflow">return</span> array_key_exists($offset, $this-&gt;_items);
+<a name="l00278"></a>00278     }
+<a name="l00279"></a>00279 
+<a name="l00296"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">00296</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">offsetGet</a>($offset) {
+<a name="l00297"></a>00297         <span class="keywordflow">return</span> $this-&gt;_items[$offset];
 <a name="l00298"></a>00298     }
-<a name="l00299"></a>00299 }
-<a name="l00300"></a>00300 ?&gt;
+<a name="l00299"></a>00299 
+<a name="l00303"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">00303</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">offsetSet</a>($offset, $value) {
+<a name="l00304"></a>00304         $this-&gt;_items[$offset]  = $value;
+<a name="l00305"></a>00305         $this-&gt;_itemNames       = array_keys($this-&gt;_items);
+<a name="l00306"></a>00306     }
+<a name="l00307"></a>00307 
+<a name="l00317"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">00317</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">offsetUnset</a>($offset) {
+<a name="l00318"></a>00318         <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Can&#39;t change values of SDB Result!&quot;</span>);
+<a name="l00319"></a>00319     }
+<a name="l00320"></a>00320 
+<a name="l00327"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">00327</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count</a>() {
+<a name="l00328"></a>00328         <span class="keywordflow">return</span> count( $this-&gt;_items );
+<a name="l00329"></a>00329     }
+<a name="l00330"></a>00330 }
+<a name="l00331"></a>00331 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_response_8php.html">SDBResponse.php</a>      </li>
-      <li class="footer">Generated on Thu May 5 2011 11:52:37 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 13 2011 10:29:30 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

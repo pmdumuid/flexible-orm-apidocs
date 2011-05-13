@@ -26,7 +26,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.2</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
  </tbody>
@@ -114,6 +115,7 @@ Data Fields</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">_getSelectResult</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">_getObject</a> ($attributes)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -156,7 +158,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
      <span class="comment">// Print out all the attributes of this item</span>
      print_r( $itemAttributes );
 }
-</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>work with tagged values (multiple values for single attribute)</dd></dl>
+</pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>work with tagged values (multiple values for single attribute)</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html">SDBFactory</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00019">19</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -214,7 +216,35 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <div class="memdoc">
 <p>Interpret the result of a get_attributes() operation into an associative array of attribute names and values </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00096">96</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00129">129</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa52f7962e3d3efefdfdc6fd2a7929c3a"></a><!-- doxytag: member="ORM::SDB::SDBResponse::_getObject" ref="aa52f7962e3d3efefdfdc6fd2a7929c3a" args="($attributes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_getObject </td>
+          <td>(</td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>attributes</em></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Convert an XML attribute tree to array of key-value pairs</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">_getSelectResult()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult()</a> </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">SimpleXMLElement</td><td class="paramname">$attributes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00093">93</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -254,7 +284,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Can also be called using the inbuilt <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count()</a> method </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00296">296</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00327">327</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -274,7 +304,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get the current item array</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00192">192</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00223">223</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -303,7 +333,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00141">141</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00172">172</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -324,7 +354,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Only works with select queries (obviously) </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00177">177</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00208">208</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -344,7 +374,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get a list of itemName() values from <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00110">110</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00141">141</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -364,7 +394,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get the returned items as an array </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00118">118</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00149">149</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -385,7 +415,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>This will also be the itemName for the current item </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00202">202</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00233">233</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -405,7 +435,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Advance the internal pointer and return the new key </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00210">210</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00241">241</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -425,7 +455,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get the nextToken if it exists for completing this <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> request</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|null </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00166">166</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00197">197</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -453,7 +483,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00245">245</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00276">276</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -483,7 +513,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00265">265</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00296">296</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -513,7 +543,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <div class="memdoc">
 <p>Add or modify an array item </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00272">272</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00303">303</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -546,7 +576,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00286">286</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00317">317</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -566,7 +596,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Reset the internal pointer to the start</p>
 <p>Also ensure the _itemNames array correctly contains all the item names </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00220">220</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00251">251</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -586,7 +616,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Ensure the the current key position is valid </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00232">232</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00263">263</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -673,7 +703,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/server/projects/orm.2.0/SDB/<a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a></li>
+<li>C:/server/projects/flexible-orm/SDB/<a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a></li>
 </ul>
 </div>
 </div>
@@ -682,7 +712,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a>      </li>
-      <li class="footer">Generated on Thu May 5 2011 11:52:38 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 13 2011 10:29:32 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
