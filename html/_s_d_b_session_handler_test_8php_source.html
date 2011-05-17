@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -117,11 +117,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00040"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">00040</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">testWrite</a>() {
 <a name="l00041"></a>00041         $data = array(<span class="stringliteral">&#39;my&#39;</span> =&gt; <span class="stringliteral">&#39;data&#39;</span>, <span class="stringliteral">&#39;for&#39;</span> =&gt; <span class="stringliteral">&#39;testing&#39;</span> );
 <a name="l00042"></a>00042         $id   = <span class="stringliteral">&quot;testWrite-&quot;</span>.rand();
-<a name="l00043"></a>00043         SDB\SDBSessionHandler::Get()-&gt;write($id, $data);
+<a name="l00043"></a>00043         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data) );
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045         $session = SDB\SDBSession::Find($id);
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047         $this-&gt;assertEquals( $id, $session-&gt;id() );
+<a name="l00047"></a>00047         $this-&gt;assertEquals( serialize($data), $session-&gt;data );
 <a name="l00048"></a>00048     }
 <a name="l00049"></a>00049 
 <a name="l00050"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">00050</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">testRead</a>() {
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_session_handler_test_8php.html">SDBSessionHandlerTest.php</a>      </li>
-      <li class="footer">Generated on Fri May 13 2011 10:29:30 for flexible-orm by&#160;
+      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

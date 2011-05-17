@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -87,86 +87,96 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00007"></a>00007 <span class="keyword">namespace </span>ORM;
 <a name="l00008"></a>00008 use ORM\Utilities\Configuration;
 <a name="l00009"></a>00009 
-<a name="l00022"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">00022</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a> <span class="keyword">implements</span> Interfaces\DataFactory {
-<a name="l00027"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a668b71363f2038a5597cc84956da5557">00027</a>     <span class="keyword">const</span> DEFAULT_DATABASE = <span class="stringliteral">&#39;database&#39;</span>;
-<a name="l00028"></a>00028 
-<a name="l00036"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ad322c57a12972406c03ae0f1a69fc936">00036</a>     <span class="keyword">private</span> <span class="keyword">static</span> $_factories = array();
-<a name="l00037"></a>00037 
-<a name="l00047"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8ed5ed4c1fe0d21d5de9b02e7e2092d5">00047</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8ed5ed4c1fe0d21d5de9b02e7e2092d5">$_statements</a>;
-<a name="l00048"></a>00048 
-<a name="l00053"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a37e4821867a3a4c6a834c03a9bdb1317">00053</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a37e4821867a3a4c6a834c03a9bdb1317">$_db</a>;
-<a name="l00054"></a>00054 
-<a name="l00087"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ac298d32eecb995eda89a65301e786b0b">00087</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ac298d32eecb995eda89a65301e786b0b">__construct</a>( $databaseConfig ) {
-<a name="l00088"></a>00088         $db_name = Configuration::$databaseConfig()-&gt;name;
-<a name="l00089"></a>00089         $db_host = Configuration::$databaseConfig()-&gt;host ?: <span class="stringliteral">&#39;localhost&#39;</span>;
-<a name="l00090"></a>00090         $db_user = Configuration::$databaseConfig()-&gt;user;
-<a name="l00091"></a>00091         $db_pswd = Configuration::$databaseConfig()-&gt;pass;
-<a name="l00092"></a>00092         $dsn     = <span class="stringliteral">&quot;mysql:host={$db_host};dbname={$db_name};&quot;</span>;
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094         $this-&gt;_db = <span class="keyword">new</span> \PDO( $dsn, $db_user, $db_pswd );
-<a name="l00095"></a>00095         $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_EMULATE_PREPARES, TRUE);
-<a name="l00096"></a>00096         $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-<a name="l00097"></a>00097         $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_STATEMENT_CLASS, array(__NAMESPACE__.<span class="stringliteral">&#39;\ORM_PDOStatement&#39;</span>));
-<a name="l00098"></a>00098     }
-<a name="l00099"></a>00099 
-<a name="l00127"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">00127</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">Get</a>( $sql, $database = self::DEFAULT_DATABASE ) {
-<a name="l00128"></a>00128         $factory = self::GetFactory( $database );
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130         <span class="keywordflow">return</span> $factory-&gt;statementPrepared($sql) ?
-<a name="l00131"></a>00131                     $factory-&gt;getStatement($sql) :
-<a name="l00132"></a>00132                     $factory-&gt;setStatement($sql);
-<a name="l00133"></a>00133     }
-<a name="l00134"></a>00134 
-<a name="l00143"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ade5ea812208475a865ace01552fc9810">00143</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ade5ea812208475a865ace01552fc9810">statementPrepared</a>( $sql ) {
-<a name="l00144"></a>00144         <span class="keywordflow">return</span> isset($this-&gt;_statements[$sql]);
-<a name="l00145"></a>00145     }
-<a name="l00146"></a>00146 
-<a name="l00154"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8013b66d626af4c2c62ff920b8b5b07a">00154</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8013b66d626af4c2c62ff920b8b5b07a">setStatement</a>( $sql ) {
-<a name="l00155"></a>00155         $this-&gt;_statements[$sql] = $this-&gt;_db-&gt;prepare($sql);
-<a name="l00156"></a>00156 
-<a name="l00157"></a>00157         <span class="keywordflow">return</span> $this-&gt;getStatement($sql);
-<a name="l00158"></a>00158     }
-<a name="l00159"></a>00159 
-<a name="l00167"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a774f7234370bd21f8c5d1b7405feabc5">00167</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a774f7234370bd21f8c5d1b7405feabc5">getStatement</a>( $sql ) {
-<a name="l00168"></a>00168         <span class="keywordflow">return</span> $this-&gt;_statements[$sql];
-<a name="l00169"></a>00169     }
-<a name="l00170"></a>00170 
-<a name="l00180"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">00180</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a>() {
-<a name="l00181"></a>00181         <span class="keywordflow">return</span> self::GetFactory()-&gt;_db-&gt;lastInsertId();
-<a name="l00182"></a>00182     }
-<a name="l00183"></a>00183 
-<a name="l00193"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">00193</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">GetFactory</a>( $database = self::DEFAULT_DATABASE ) {
-<a name="l00194"></a>00194         <span class="keywordflow">if</span>( !isset(self::$_factories[$database]) ) {
-<a name="l00195"></a>00195             self::$_factories[$database] = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a>($database);
-<a name="l00196"></a>00196         }
-<a name="l00197"></a>00197         
-<a name="l00198"></a>00198         <span class="keywordflow">return</span> self::$_factories[$database];
-<a name="l00199"></a>00199     }
-<a name="l00200"></a>00200 
-<a name="l00206"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae91816c8ca9cc7a425f88687a4acc7d9">00206</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae91816c8ca9cc7a425f88687a4acc7d9">startProfiling</a>() {
-<a name="l00207"></a>00207         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query(<span class="stringliteral">&quot;SET profiling=1, profiling_history_size = 50&quot;</span>);
-<a name="l00208"></a>00208         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00209"></a>00209     }
-<a name="l00210"></a>00210 
-<a name="l00219"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#abfc25ec9545bfee35877db62d8f87401">00219</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#abfc25ec9545bfee35877db62d8f87401">getProfile</a>() {
-<a name="l00220"></a>00220         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query( <span class="stringliteral">&#39;SHOW profiles&#39;</span> );
-<a name="l00221"></a>00221         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00222"></a>00222         $profiles = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll( \PDO::FETCH_ASSOC);
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query( <span class="stringliteral">&#39;SELECT COUNT(DISTINCT(QUERY_ID)), SUM(Duration) as duration, \&#39;\&#39; FROM information_schema.profiling&#39;</span> );
-<a name="l00225"></a>00225         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00226"></a>00226         $profiles[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch( \PDO::FETCH_ASSOC);
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228         <span class="keywordflow">return</span> $profiles;
-<a name="l00229"></a>00229     }
-<a name="l00230"></a>00230 }
-<a name="l00231"></a>00231 ?&gt;
+<a name="l00020"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">00020</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a> <span class="keyword">implements</span> Interfaces\DataFactory {
+<a name="l00025"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a668b71363f2038a5597cc84956da5557">00025</a>     <span class="keyword">const</span> DEFAULT_DATABASE = <span class="stringliteral">&#39;database&#39;</span>;
+<a name="l00026"></a>00026 
+<a name="l00034"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ad322c57a12972406c03ae0f1a69fc936">00034</a>     <span class="keyword">private</span> <span class="keyword">static</span> $_factories = array();
+<a name="l00035"></a>00035 
+<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8ed5ed4c1fe0d21d5de9b02e7e2092d5">00045</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8ed5ed4c1fe0d21d5de9b02e7e2092d5">$_statements</a>;
+<a name="l00046"></a>00046 
+<a name="l00051"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a37e4821867a3a4c6a834c03a9bdb1317">00051</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a37e4821867a3a4c6a834c03a9bdb1317">$_db</a>;
+<a name="l00052"></a>00052 
+<a name="l00086"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ac298d32eecb995eda89a65301e786b0b">00086</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ac298d32eecb995eda89a65301e786b0b">__construct</a>( $databaseConfig ) {
+<a name="l00087"></a>00087         <span class="keywordflow">if</span>( !Configuration::GroupExists($databaseConfig) ) {
+<a name="l00088"></a>00088             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOInvalidDatabaseConfigurationException(
+<a name="l00089"></a>00089                 <span class="stringliteral">&quot;No database configuration details for $databaseConfig&quot;</span>
+<a name="l00090"></a>00090             );
+<a name="l00091"></a>00091         }
+<a name="l00092"></a>00092         
+<a name="l00093"></a>00093         $db_name = Configuration::$databaseConfig()-&gt;name;
+<a name="l00094"></a>00094         $db_host = Configuration::$databaseConfig()-&gt;host ?: <span class="stringliteral">&#39;localhost&#39;</span>;
+<a name="l00095"></a>00095         $db_user = Configuration::$databaseConfig()-&gt;user;
+<a name="l00096"></a>00096         $db_pswd = Configuration::$databaseConfig()-&gt;pass;
+<a name="l00097"></a>00097         $dsn     = <span class="stringliteral">&quot;mysql:host={$db_host};dbname={$db_name};&quot;</span>;
+<a name="l00098"></a>00098         
+<a name="l00099"></a>00099         <span class="keywordflow">try</span> {
+<a name="l00100"></a>00100             $this-&gt;_db = <span class="keyword">new</span> \PDO( $dsn, $db_user, $db_pswd );
+<a name="l00101"></a>00101             $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_EMULATE_PREPARES, TRUE);
+<a name="l00102"></a>00102             $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+<a name="l00103"></a>00103             $this-&gt;_db-&gt;setAttribute( \PDO::ATTR_STATEMENT_CLASS, array(__NAMESPACE__.<span class="stringliteral">&#39;\ORM_PDOStatement&#39;</span>));
+<a name="l00104"></a>00104         } <span class="keywordflow">catch</span>( \PDOException $e ) {
+<a name="l00105"></a>00105             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOInvalidDatabaseConfigurationException( $e-&gt;getMessage() );
+<a name="l00106"></a>00106         }
+<a name="l00107"></a>00107     }
+<a name="l00108"></a>00108 
+<a name="l00136"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">00136</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">Get</a>( $sql, $database = self::DEFAULT_DATABASE ) {
+<a name="l00137"></a>00137         $factory = self::GetFactory( $database );
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139         <span class="keywordflow">return</span> $factory-&gt;statementPrepared($sql) ?
+<a name="l00140"></a>00140                     $factory-&gt;getStatement($sql) :
+<a name="l00141"></a>00141                     $factory-&gt;setStatement($sql);
+<a name="l00142"></a>00142     }
+<a name="l00143"></a>00143 
+<a name="l00152"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ade5ea812208475a865ace01552fc9810">00152</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ade5ea812208475a865ace01552fc9810">statementPrepared</a>( $sql ) {
+<a name="l00153"></a>00153         <span class="keywordflow">return</span> isset($this-&gt;_statements[$sql]);
+<a name="l00154"></a>00154     }
+<a name="l00155"></a>00155 
+<a name="l00163"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8013b66d626af4c2c62ff920b8b5b07a">00163</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a8013b66d626af4c2c62ff920b8b5b07a">setStatement</a>( $sql ) {
+<a name="l00164"></a>00164         $this-&gt;_statements[$sql] = $this-&gt;_db-&gt;prepare($sql);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         <span class="keywordflow">return</span> $this-&gt;getStatement($sql);
+<a name="l00167"></a>00167     }
+<a name="l00168"></a>00168 
+<a name="l00176"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a774f7234370bd21f8c5d1b7405feabc5">00176</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a774f7234370bd21f8c5d1b7405feabc5">getStatement</a>( $sql ) {
+<a name="l00177"></a>00177         <span class="keywordflow">return</span> $this-&gt;_statements[$sql];
+<a name="l00178"></a>00178     }
+<a name="l00179"></a>00179 
+<a name="l00189"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">00189</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a>() {
+<a name="l00190"></a>00190         <span class="keywordflow">return</span> self::GetFactory()-&gt;_db-&gt;lastInsertId();
+<a name="l00191"></a>00191     }
+<a name="l00192"></a>00192 
+<a name="l00202"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">00202</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">GetFactory</a>( $database = self::DEFAULT_DATABASE ) {
+<a name="l00203"></a>00203         <span class="keywordflow">if</span>( !isset(self::$_factories[$database]) ) {
+<a name="l00204"></a>00204             self::$_factories[$database] = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a>($database);
+<a name="l00205"></a>00205         }
+<a name="l00206"></a>00206         
+<a name="l00207"></a>00207         <span class="keywordflow">return</span> self::$_factories[$database];
+<a name="l00208"></a>00208     }
+<a name="l00209"></a>00209 
+<a name="l00215"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae91816c8ca9cc7a425f88687a4acc7d9">00215</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae91816c8ca9cc7a425f88687a4acc7d9">startProfiling</a>() {
+<a name="l00216"></a>00216         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query(<span class="stringliteral">&quot;SET profiling=1, profiling_history_size = 50&quot;</span>);
+<a name="l00217"></a>00217         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00218"></a>00218     }
+<a name="l00219"></a>00219 
+<a name="l00228"></a><a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#abfc25ec9545bfee35877db62d8f87401">00228</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#abfc25ec9545bfee35877db62d8f87401">getProfile</a>() {
+<a name="l00229"></a>00229         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query( <span class="stringliteral">&#39;SHOW profiles&#39;</span> );
+<a name="l00230"></a>00230         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00231"></a>00231         $profiles = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll( \PDO::FETCH_ASSOC);
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $this-&gt;_db-&gt;query( <span class="stringliteral">&#39;SELECT COUNT(DISTINCT(QUERY_ID)), SUM(Duration) as duration, \&#39;\&#39; FROM information_schema.profiling&#39;</span> );
+<a name="l00234"></a>00234         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00235"></a>00235         $profiles[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch( \PDO::FETCH_ASSOC);
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237         <span class="keywordflow">return</span> $profiles;
+<a name="l00238"></a>00238     }
+<a name="l00239"></a>00239 }
+<a name="l00240"></a>00240 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_p_d_o_factory_8php.html">PDOFactory.php</a>      </li>
-      <li class="footer">Generated on Fri May 13 2011 10:29:30 for flexible-orm by&#160;
+      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
