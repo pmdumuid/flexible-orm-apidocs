@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -126,11 +126,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_object_collection.html#a3f8c01134058d73dbc4fb90b763f9267">ObjectCollection</a>
 </li>
 <li>set()
-: <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">Cache</a>
+: <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">NullCache</a>
+, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">Cache</a>
 , <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">APCCache</a>
 </li>
-<li>SetDefaultDebugClass()
-: <a class="el" href="class_o_r_m_1_1_debug.html#a02b588a3481779cd44f27bf3edcd5299">Debug</a>
+<li>SetCacheClass()
+: <a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">Configuration</a>
 </li>
 <li>setOriginalValue()
 : <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">ORM_Core</a>
@@ -140,22 +141,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>setUp()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a0bc688732d2b3b162ffebaf7812e78da">ORMModelSDBTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_object_collection_test.html#a0bc688732d2b3b162ffebaf7812e78da">ObjectCollectionTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a0bc688732d2b3b162ffebaf7812e78da">ORM_CoreTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html#a0bc688732d2b3b162ffebaf7812e78da">SDBResponseTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___p_d_o_test.html#a0bc688732d2b3b162ffebaf7812e78da">ORM_PDOTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_model_collection_test.html#a0bc688732d2b3b162ffebaf7812e78da">ModelCollectionTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html#a0bc688732d2b3b162ffebaf7812e78da">SDBResponseTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#a0bc688732d2b3b162ffebaf7812e78da">ORMSDBTests</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a0bc688732d2b3b162ffebaf7812e78da">SDBSessionHandlerTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_a_p_c_cache_test.html#a0bc688732d2b3b162ffebaf7812e78da">APCCacheTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_configuration_test.html#a0bc688732d2b3b162ffebaf7812e78da">ConfigurationTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_model_collection_test.html#a0bc688732d2b3b162ffebaf7812e78da">ModelCollectionTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_object_collection_test.html#a0bc688732d2b3b162ffebaf7812e78da">ObjectCollectionTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#a0bc688732d2b3b162ffebaf7812e78da">DebugTest</a>
 </li>
 <li>setValues()
-: <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">ORM_Core</a>
-, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">ORMModelSDB</a>
-</li>
-<li>show()
-: <a class="el" href="class_o_r_m_1_1_debug.html#abfba39fcb4a1ce1b454b1ea22570abec">Debug</a>
+: <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">ORMModelSDB</a>
+, <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">ORM_Core</a>
 </li>
 <li>startProfiling()
 : <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#ae91816c8ca9cc7a425f88687a4acc7d9">PDOFactory</a>
@@ -163,12 +162,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>statementPrepared()
 : <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#ade5ea812208475a865ace01552fc9810">PDOFactory</a>
 </li>
+<li>store()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#a6221a0139063da1d2b1fa70d1d1fbe9c">DebugCorrectLog</a>
+, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_debug_log.html#a6221a0139063da1d2b1fa70d1d1fbe9c">DebugLog</a>
+</li>
+<li>Store()
+: <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#af2bd86088d71135e6e4d24d05adb1064">NextTokenCache</a>
+</li>
 </ul>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:52 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -116,6 +116,14 @@ Options Array</h3>
 <li><em>order</em><br/>
  The SQL <code>ORDER</code> <code>BY</code> value.</li>
 </ul>
+<ul>
+<li><em>limit</em><br/>
+ (Only for findAll statements). Limit the number of results to the specified maximum.</li>
+</ul>
+<ul>
+<li><em>offset</em><br/>
+ (Only for findAll statements). Offset rows to skip (used with <em>limit</em> to create pagination.</li>
+</ul>
 <p><br/>
 <br/>
  </p>
@@ -198,7 +206,7 @@ FindAll()</h3>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>An array of options for finding objects. If not supplied, this will return all objects of this type stored in the database. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>[optional] An array of options for finding objects. If not supplied, this will return all objects of this type stored in the database. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
     <tr><td class="paramtype">string&#160;|&#160;array</td><td class="paramname">$findWith</td><td>[optional] A string or array of strings defining the related model names to also fetch (see <a class="el" href="intro_step3.html">Define Foreign Keys</a>) </td></tr>
   </table>
   </dd>
@@ -271,7 +279,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:52 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

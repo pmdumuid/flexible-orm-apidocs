@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -168,8 +168,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testChangedFields()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4eb9b5ad52c6da1ab14cf1b00eda5298">ORM_CoreTest</a>
 </li>
+<li>testCoundFindAll()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#a0cacfaad88cbb3bd71849d1779f799cf">ORMSDBTests</a>
+</li>
 <li>testCountable()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_object_collection_test.html#a78263e447f752a54ac97c19fd3c04c11">ObjectCollectionTest</a>
+</li>
+<li>testCountFindAll()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a4b37ae3e62efcdd5ed332948c7495d30">ORM_ModelTest</a>
+</li>
+<li>testCountFindAllBy()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#acd15e45e7f84f0f451b0e34a0c323bc2">ORM_ModelTest</a>
 </li>
 <li>testCreate()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a01b0e1f0559ad137431680aa564b84d3">CachedORMModelTest</a>
@@ -182,8 +191,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a174a96ff105c58d71f590d8458125ab4">ORMModelSDBTest</a>
 </li>
 <li>testCreateWithAutoIncrement()
-: <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a9aee05b0164e471db4045555cce82cc6">CachedORMModelTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a9aee05b0164e471db4045555cce82cc6">ORM_ModelTest</a>
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a9aee05b0164e471db4045555cce82cc6">ORM_ModelTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a9aee05b0164e471db4045555cce82cc6">CachedORMModelTest</a>
 </li>
 <li>testCreateWithDefaults()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aea09e73fb70164a853f599fb27e3f4b9">ORM_ModelTest</a>
@@ -250,10 +259,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_second_database_test.html#a2f24b1f8d5714cbbd4c5f2e2f95b3e68">ORMSecondDatabaseTest</a>
 </li>
 <li>testFindAllBy()
-: <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#ab188bb7364e5a036a1c018945a093ffe">CachedORMModelTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#ab188bb7364e5a036a1c018945a093ffe">ORM_ModelTest</a>
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#ab188bb7364e5a036a1c018945a093ffe">ORM_ModelTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ab188bb7364e5a036a1c018945a093ffe">ORMModelSDBTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_second_database_test.html#ab188bb7364e5a036a1c018945a093ffe">ORMSecondDatabaseTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#ab188bb7364e5a036a1c018945a093ffe">CachedORMModelTest</a>
 </li>
 <li>testFindAllByForeign()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#ad5381eb34afc292226994c1deccc5dd4">ORM_ModelTest</a>
@@ -276,6 +285,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testFindAllWith()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a5a5839aa27d9dd63afa3c1864d7cf59a">ORM_ModelTest</a>
 , <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a5a5839aa27d9dd63afa3c1864d7cf59a">ORMModelSDBTest</a>
+</li>
+<li>testFindAllWithLimit()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a854294448d3361e3cc1ac7b00f8f97b9">ORM_ModelTest</a>
 </li>
 <li>testFindBy()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a6d790f9955c0c7e1bcc549cd2571f7db">CachedORMModelTest</a>
@@ -326,8 +338,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html#ac713ec63d779c787e8aa0d62f4b30862">PDOFactoryTest</a>
 </li>
 <li>testFindWithOptions()
-: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aeb7a758290c41b5c2aa9c96415716751">ORM_ModelTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#aeb7a758290c41b5c2aa9c96415716751">CachedORMModelTest</a>
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#aeb7a758290c41b5c2aa9c96415716751">CachedORMModelTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aeb7a758290c41b5c2aa9c96415716751">ORM_ModelTest</a>
 </li>
 <li>testForeignKey()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aec1b85294a45b09970fd13291a45effa">ORM_ModelTest</a>
@@ -357,6 +369,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testInjection()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a11bf6502abca44318234c84cab12fcee">SDBStatementTest</a>
 </li>
+<li>testInvalidDebugStore()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#a77f9929f5f018b95b65fc713b0c7a1b7">DebugTest</a>
+</li>
 <li>testInvalidDetails()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html#a438b6a1953a9d38db9b1b8d3f7ecb39e">PDOFactoryTest</a>
 </li>
@@ -365,6 +380,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>testLargeAttribute()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#ab7220df384d38c16111cb0c5b64b2f28">ORMSDBTests</a>
+</li>
+<li>testLimit()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#a064071b5a4d15d688457b28686e0ee63">ORMSDBTests</a>
 </li>
 <li>testLoad()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a0f933e014a448086f3a146751b71d93a">CachedORMModelTest</a>
@@ -383,6 +401,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testLocateUnknownPackage()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_auto_loader_test.html#a9b07349587799d937271ec6650c857d2">AutoLoaderTest</a>
 </li>
+<li>testLogStore()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#afbc0094034bac67b2210b8d58d50c0db">DebugTest</a>
+</li>
 <li>testMapFunction()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_object_collection_test.html#aa11470fde4a49a916c87051e76845b54">ObjectCollectionTest</a>
 </li>
@@ -398,8 +419,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testNotAllBound()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#aad789551523cc53c8c83addab9971d66">SDBStatementTest</a>
 </li>
+<li>testOffset()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#ac33cdcd314fbdc17d3e8956503809928">ORMSDBTests</a>
+</li>
 <li>testOriginalValue()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a4568a647bd9a31f6929a9b28ddd11f1d">ORM_CoreTest</a>
+</li>
+<li>testOutput()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#aebcfd7af3483f21f0bf2d8c1be6c89c9">DebugTest</a>
+</li>
+<li>testOutputSuppression()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#a32715181d7d007f4d0a0962dda152e31">DebugTest</a>
 </li>
 <li>testPlaceholders()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___p_d_o_test.html#a28f4509aeaeb0a0a6b0cba1323f39469">ORM_PDOTest</a>
@@ -432,8 +462,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#af501e0914fbcef99ef9e161b370c81da">CachedORMModelTest</a>
 </li>
 <li>testReturnsSDBResponse()
-: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a17b80911ca790fd9b19bef67642ba892">ORMModelSDBTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html#a17b80911ca790fd9b19bef67642ba892">SDBResponseTest</a>
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html#a17b80911ca790fd9b19bef67642ba892">SDBResponseTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a17b80911ca790fd9b19bef67642ba892">ORMModelSDBTest</a>
 </li>
 <li>testReverse()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_object_collection_test.html#ac82f54107e475e0f1615ae895446ec0f">ObjectCollectionTest</a>
@@ -469,12 +499,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testSet()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_a_p_c_cache_test.html#a7990f383174edbd4b04ea9298e6be80b">APCCacheTest</a>
 </li>
+<li>testSetDebugStore()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_debug_test.html#ade71f3cf9c1893d0e7cd610ecfb92c05">DebugTest</a>
+</li>
 <li>testSetOriginalValue()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___core_test.html#a6c1ea31fecdb7697c588c71bc7dbcef2">ORM_CoreTest</a>
 </li>
+<li>testSmallLimit()
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html#a9fe3641e92e10e13d4c32346c7f256d4">ORMSDBTests</a>
+</li>
 <li>testTableName()
-: <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">CachedORMModelTest</a>
-, <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">ORM_ModelTest</a>
+: <a class="el" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">ORM_ModelTest</a>
+, <a class="el" href="class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">CachedORMModelTest</a>
 </li>
 <li>testTooManyBound()
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a9c2e5112e74de088efd9acefe848c233">SDBStatementTest</a>
@@ -524,7 +560,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:52 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

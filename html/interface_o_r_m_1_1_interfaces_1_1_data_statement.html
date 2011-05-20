@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -100,10 +100,11 @@ Inheritance diagram for DataStatement:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a4985a1ab789aa8781189efd6f9ec42ba">execute</a> ($values)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a32d1c2c8578cef899ad5a9ed77b767e4">execute</a> (array $values=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#abd1a00690a1eef41bf504fae746118b0">bindParam</a> ($placeholder, &amp;$value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a9cb32669ccc2a9cfbca144010316e4cd">bindValue</a> ($placeholder, $param)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#af7e56efc2efb9eb68ef5e56534185700">bindObject</a> ($object, array $params)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a28ba8f891b525bde19b82e7907d630c9">fetch</a> ($fetch_style)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">fetchInto</a> ($className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#acc2b78f55ad595459f24778071daebf3">fetchAllInto</a> ($className)</td></tr>
 </table>
@@ -208,15 +209,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4985a1ab789aa8781189efd6f9ec42ba"></a><!-- doxytag: member="ORM::Interfaces::DataStatement::execute" ref="a4985a1ab789aa8781189efd6f9ec42ba" args="($values)" -->
+<a class="anchor" id="a32d1c2c8578cef899ad5a9ed77b767e4"></a><!-- doxytag: member="ORM::Interfaces::DataStatement::execute" ref="a32d1c2c8578cef899ad5a9ed77b767e4" args="(array $values=null)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">execute </td>
           <td>(</td>
-          <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
+          <td class="paramtype">array $&#160;</td>
+          <td class="paramname"><em>values</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -225,7 +226,27 @@ Public Member Functions</h2></td></tr>
 <p>Execute the prepared statement</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.php.net/manual/en/pdostatement.execute.php">http://www.php.net/manual/en/pdostatement.execute.php</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a6126d2e92c3a78174fc47cc926e60c10">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a51e40fdec623e19423410cb52d70710a">SDBStatement</a>.</p>
+<p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#ad36cfe4840d97203ac9f24505b6075f8">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a32d1c2c8578cef899ad5a9ed77b767e4">SDBStatement</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28ba8f891b525bde19b82e7907d630c9"></a><!-- doxytag: member="ORM::Interfaces::DataStatement::fetch" ref="a28ba8f891b525bde19b82e7907d630c9" args="($fetch_style)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fetch </td>
+          <td>(</td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>fetch_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fetch a row from the database  <a href="http://www.php.net/manual/en/pdostatement.fetch.php">http://www.php.net/manual/en/pdostatement.fetch.php</a> </p>
+
+<p>Implemented in <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#ac957ca032246782ee960fe0394ea70a6">ORM_PDOStatement</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a49cb1f03384be3e7b34591dfdd4c63d7">SDBStatement</a>.</p>
 
 </div>
 </div>
@@ -280,7 +301,7 @@ Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_interfaces.html">Interfaces</a>      </li>
       <li class="navelem"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a>      </li>
-      <li class="footer">Generated on Tue May 17 2011 17:26:38 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:52 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

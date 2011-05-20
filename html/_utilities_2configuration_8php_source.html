@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#ae5924e504917fd81ca2aba835ff0d03f">00025</a>     <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#ae5924e504917fd81ca2aba835ff0d03f">$_settings</a>;
 <a name="l00026"></a>00026 
 <a name="l00031"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#ab0cd304a53a2640dc4f15e8d6100612f">00031</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#ab0cd304a53a2640dc4f15e8d6100612f">$_options</a>;
-<a name="l00032"></a>00032 
+<a name="l00032"></a>00032     
 <a name="l00037"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a095c5d389db211932136b53f25f39685">00037</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a095c5d389db211932136b53f25f39685">__construct</a>() {
 <a name="l00038"></a>00038         $this-&gt;_options  = array();
 <a name="l00039"></a>00039     }
@@ -138,39 +138,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00153"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a6cdcf3f729832371ad436e144fee7fe1">00153</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a6cdcf3f729832371ad436e144fee7fe1">Get</a>() {
 <a name="l00154"></a>00154         <span class="keywordflow">return</span> self::$_settings;
 <a name="l00155"></a>00155     }
-<a name="l00156"></a>00156 
-<a name="l00163"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a4875e7b78cb82e196a33b92e77d8f9db">00163</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a4875e7b78cb82e196a33b92e77d8f9db">Clear</a>() {
-<a name="l00164"></a>00164         self::$_settings = null;
-<a name="l00165"></a>00165     }
-<a name="l00166"></a>00166 
-<a name="l00176"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a15226b44c7a017f660ad260b15d0bd3e">00176</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a15226b44c7a017f660ad260b15d0bd3e">_add</a>( $options ) {
-<a name="l00177"></a>00177         $this-&gt;_options = array_merge( $this-&gt;_options, $options );
-<a name="l00178"></a>00178     }
-<a name="l00179"></a>00179 
-<a name="l00189"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a21937dc9c233eaa07dfdb0be423e9f59">00189</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a21937dc9c233eaa07dfdb0be423e9f59">Remove</a>( $attribute, $group = null ) {
-<a name="l00190"></a>00190         self::$_settings-&gt;_removeValue( $attribute, $group );
-<a name="l00191"></a>00191     }
-<a name="l00192"></a>00192 
-<a name="l00221"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44d85eee3ee5689b9f0b20aa32341a8b">00221</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44d85eee3ee5689b9f0b20aa32341a8b">__callStatic</a>( $group, $arguments ) {
-<a name="l00222"></a>00222         <span class="keywordflow">if</span>( is_null(self::$_settings) ) self::$_settings = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html">Configuration</a>();
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224         <span class="keywordflow">if</span>( isset($arguments[0]) ) {
-<a name="l00225"></a>00225             <span class="keywordflow">return</span> self::$_settings-&gt;_getValue( $arguments[0], $group );
-<a name="l00226"></a>00226         } <span class="keywordflow">else</span> {
-<a name="l00227"></a>00227             <span class="keywordflow">return</span> self::$_settings-&gt;_getGroup( $group );
-<a name="l00228"></a>00228         }
-<a name="l00229"></a>00229     }
-<a name="l00230"></a>00230 
-<a name="l00234"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a89ddc868682e7a7d9785c75ef61b649d">00234</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a89ddc868682e7a7d9785c75ef61b649d">Debug</a>() {
-<a name="l00235"></a>00235         DEBUG::dump(self::$_settings);
-<a name="l00236"></a>00236     }
-<a name="l00237"></a>00237 }
+<a name="l00156"></a>00156     
+<a name="l00165"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44805f0447dfddfbac4540512b1cfbee">00165</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44805f0447dfddfbac4540512b1cfbee">GetCache</a>() {
+<a name="l00166"></a>00166         <span class="keywordflow">if</span>( $cacheClass = self::Value(<span class="stringliteral">&#39;cacheClass&#39;</span>, <span class="stringliteral">&#39;Cache&#39;</span>) ) {
+<a name="l00167"></a>00167             <span class="keywordflow">return</span> <span class="keyword">new</span> $cacheClass;
+<a name="l00168"></a>00168         }
+<a name="l00169"></a>00169         
+<a name="l00170"></a>00170         <span class="keywordflow">return</span> <span class="keyword">new</span> \ORM\Utilities\Cache\NullCache();
+<a name="l00171"></a>00171     }
+<a name="l00172"></a>00172     
+<a name="l00177"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">00177</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">SetCacheClass</a>( $className ) {
+<a name="l00178"></a>00178         self::$_settings-&gt;_options[<span class="stringliteral">&#39;Cache&#39;</span>] = array(<span class="stringliteral">&#39;cacheClass&#39;</span> =&gt; $className);
+<a name="l00179"></a>00179     }
+<a name="l00180"></a>00180 
+<a name="l00187"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a4875e7b78cb82e196a33b92e77d8f9db">00187</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a4875e7b78cb82e196a33b92e77d8f9db">Clear</a>() {
+<a name="l00188"></a>00188         self::$_settings = null;
+<a name="l00189"></a>00189     }
+<a name="l00190"></a>00190 
+<a name="l00200"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a15226b44c7a017f660ad260b15d0bd3e">00200</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a15226b44c7a017f660ad260b15d0bd3e">_add</a>( $options ) {
+<a name="l00201"></a>00201         $this-&gt;_options = array_merge( $this-&gt;_options, $options );
+<a name="l00202"></a>00202     }
+<a name="l00203"></a>00203 
+<a name="l00213"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a21937dc9c233eaa07dfdb0be423e9f59">00213</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a21937dc9c233eaa07dfdb0be423e9f59">Remove</a>( $attribute, $group = null ) {
+<a name="l00214"></a>00214         self::$_settings-&gt;_removeValue( $attribute, $group );
+<a name="l00215"></a>00215     }
+<a name="l00216"></a>00216 
+<a name="l00245"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44d85eee3ee5689b9f0b20aa32341a8b">00245</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44d85eee3ee5689b9f0b20aa32341a8b">__callStatic</a>( $group, $arguments ) {
+<a name="l00246"></a>00246         <span class="keywordflow">if</span>( is_null(self::$_settings) ) self::$_settings = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html">Configuration</a>();
+<a name="l00247"></a>00247 
+<a name="l00248"></a>00248         <span class="keywordflow">if</span>( isset($arguments[0]) ) {
+<a name="l00249"></a>00249             <span class="keywordflow">return</span> self::$_settings-&gt;_getValue( $arguments[0], $group );
+<a name="l00250"></a>00250         } <span class="keywordflow">else</span> {
+<a name="l00251"></a>00251             <span class="keywordflow">return</span> self::$_settings-&gt;_getGroup( $group );
+<a name="l00252"></a>00252         }
+<a name="l00253"></a>00253     }
+<a name="l00254"></a>00254 
+<a name="l00258"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a89ddc868682e7a7d9785c75ef61b649d">00258</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a89ddc868682e7a7d9785c75ef61b649d">Debug</a>() {
+<a name="l00259"></a>00259         Debug::Dump(self::$_settings);
+<a name="l00260"></a>00260     }
+<a name="l00261"></a>00261 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_utilities_2configuration_8php.html">Configuration.php</a>      </li>
-      <li class="footer">Generated on Tue May 17 2011 17:26:37 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:51 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

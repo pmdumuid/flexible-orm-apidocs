@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.4</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -97,6 +97,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#ab1b022d9b7e3d9de5534d55307508f44">Value</a> ($attribute, $group=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a3260a6b443401a87d9c867c9d835f939">Load</a> ($ini_file)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a6cdcf3f729832371ad436e144fee7fe1">Get</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44805f0447dfddfbac4540512b1cfbee">GetCache</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">SetCacheClass</a> ($className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a4875e7b78cb82e196a33b92e77d8f9db">Clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a21937dc9c233eaa07dfdb0be423e9f59">Remove</a> ($attribute, $group=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a44d85eee3ee5689b9f0b20aa32341a8b">__callStatic</a> ($group, $arguments)</td></tr>
@@ -191,7 +193,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The requested property value </dd></dl>
 
-<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00221">221</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00245">245</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -219,7 +221,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00176">176</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00200">200</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -342,7 +344,7 @@ Static Private Attributes</h2></td></tr>
 <p>Clear all the configuration settings</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a3260a6b443401a87d9c867c9d835f939">Load()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00163">163</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00187">187</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -351,7 +353,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_o_r_m_1_1_debug.html">Debug</a> </td>
+          <td class="memname">static Debug </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -359,9 +361,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Send the current settings to the <a class="el" href="class_o_r_m_1_1_debug.html">Debug</a> class </p>
+<p>Send the current settings to the Debug class </p>
 
-<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00234">234</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00258">258</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -382,6 +384,27 @@ Static Private Attributes</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html">Configuration</a> Returns the single <a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html">Configuration</a> instance </dd></dl>
 
 <p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00153">153</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44805f0447dfddfbac4540512b1cfbee"></a><!-- doxytag: member="ORM::Utilities::Configuration::GetCache" ref="a44805f0447dfddfbac4540512b1cfbee" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static GetCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Get an instance of the configured cache object</p>
+<p>To alter the cache object, add <code>[<a class="el" href="namespace_o_r_m_1_1_utilities_1_1_cache.html">Cache</a>]class = ""</code> to your ini file or call <a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">SetCacheClass()</a></p>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="namespace_o_r_m_1_1_utilities_1_1_cache.html">Cache</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00165">165</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -476,7 +499,33 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00189">189</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00213">213</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0193e5a12492f863516d16a22cc239ef"></a><!-- doxytag: member="ORM::Utilities::Configuration::SetCacheClass" ref="a0193e5a12492f863516d16a22cc239ef" args="($className)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SetCacheClass </td>
+          <td>(</td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>className</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the cache class for the whole system to use </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string&#160;|&#160;null</td><td class="paramname">$className</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_utilities_2configuration_8php_source.html#l00177">177</a> of file <a class="el" href="_utilities_2configuration_8php_source.html">Configuration.php</a>.</p>
 
 </div>
 </div>
@@ -567,7 +616,7 @@ Static Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_utilities.html">Utilities</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html">Configuration</a>      </li>
-      <li class="footer">Generated on Tue May 17 2011 17:26:39 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 20 2011 10:50:53 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
