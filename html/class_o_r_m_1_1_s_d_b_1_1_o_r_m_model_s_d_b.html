@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.5</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -124,9 +124,12 @@ Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a29677eb271ebb0d147de7674c241f2da">_BuildSQLFindWith</a> ($table, $findWith)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Description of <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a> </p>
+<div class="textblock"><p>An model class where the backend is the Amazon simpleDB service.</p>
+<p>Almost identical to the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> class with a few exceptions: # Primary key is always itemName() # Foreign keys (ie FindWith requests) require extra lookups, as there are no joins in SimpleDB # Requests that return a lot of results or use large offset values may be slow</p>
+<p>If you are using Amazon Web Services, you might want to consider using the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html">SDBSessionHandler</a> also.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html">SDBSessionHandler</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00011">11</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00023">23</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a29677eb271ebb0d147de7674c241f2da"></a><!-- doxytag: member="ORM::SDB::ORMModelSDB::_BuildSQLFindWith" ref="a29677eb271ebb0d147de7674c241f2da" args="($table, $findWith)" -->
 <div class="memitem">
@@ -165,7 +168,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a29677eb271ebb0d147de7674c241f2da">ORM_Model</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00122">122</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00134">134</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -187,7 +190,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">ORM_Core</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00107">107</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00119">119</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -208,7 +211,7 @@ Static Protected Member Functions</h2></td></tr>
 <p>This action is idempotent (can be called repeatedly with no ill-effect) though it should not be called every time the script is run, since it may be slightly slower.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string Returns the domain name created (will be the same as calling <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">ORM_Model::TableName()</a>) </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00078">78</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00090">90</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -231,7 +234,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">ORM_Model</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00030">30</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00042">42</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -254,7 +257,7 @@ Static Protected Member Functions</h2></td></tr>
 <div class="fragment"><pre class="fragment"> <span class="keyword">const</span> ENFORCE_READ_CONSISTENCY = <span class="keyword">true</span>
 </pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>string Either 'true' or 'false' for use with AmazonSDB </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00061">61</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00073">73</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -283,7 +286,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">ORM_Core</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00093">93</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00105">105</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -300,7 +303,7 @@ Static Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 <p>Set the datafactor class to <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html">SDBFactory</a> </p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00015">15</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00027">27</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -316,7 +319,7 @@ Static Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 <p>The primary key for an <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> object is always 'itemName()' </p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00020">20</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00032">32</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -330,7 +333,7 @@ Static Protected Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a>      </li>
-      <li class="footer">Generated on Fri May 20 2011 10:50:53 for flexible-orm by&#160;
+      <li class="footer">Generated on Fri May 27 2011 16:45:27 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
