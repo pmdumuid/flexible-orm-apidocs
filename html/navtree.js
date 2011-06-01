@@ -125,6 +125,7 @@ var NAVTREE =
         [ "ORM_Model", "class_o_r_m_1_1_o_r_m___model.html", [
           [ "Car", "class_car.html", null ],
           [ "Car", "class_car.html", null ],
+          [ "Car", "class_car.html", null ],
           [ "Elephant", "class_elephant.html", null ],
           [ "Manufacturer", "class_manufacturer.html", null ],
           [ "CachedORMModel", "class_o_r_m_1_1_cached_o_r_m_model.html", [
@@ -276,12 +277,14 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tutorials/utilities.php", "utilities_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/validation.php", "validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/advanced/advanced.php", "advanced_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.check_validation.php", "orm__model_8check__validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.delete.example.php", "orm__model_8delete_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.example.php", "orm__model_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.findAllBy.example.php", "orm__model_8find_all_by_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.load.example.php", "orm__model_8load_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.pagination.example.php", "orm__model_8pagination_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.save.example.php", "orm__model_8save_8example_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.validation.php", "orm__model_8validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model_custom.example.php", "orm__model__custom_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model_foreign.example.php", "orm__model__foreign_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/sdb.sdbresponse.example.php", "sdb_8sdbresponse_8example_8php.html", null ],

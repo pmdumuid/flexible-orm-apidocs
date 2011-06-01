@@ -81,11 +81,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">Car Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Car" --><!-- doxytag: inherits="ORM::ORM_Model,ORM::ORM_Model" --><div class="dynheader">
+<!-- doxytag: class="Car" --><!-- doxytag: inherits="ORM::ORM_Model,ORM::ORM_Model,ORM::ORM_Model" --><div class="dynheader">
 Inheritance diagram for Car:</div>
 <div class="dyncontent">
  <div class="center">
@@ -93,26 +96,108 @@ Inheritance diagram for Car:</div>
   <map id="Car_map" name="Car_map">
 <area href="class_o_r_m_1_1_o_r_m___model.html" alt="ORM_Model" shape="rect" coords="50,56,141,80"/>
 <area href="class_o_r_m_1_1_o_r_m___model.html" alt="ORM_Model" shape="rect" coords="252,56,343,80"/>
+<area href="class_o_r_m_1_1_o_r_m___model.html" alt="ORM_Model" shape="rect" coords="454,56,545,80"/>
 <area href="class_o_r_m_1_1_o_r_m___core.html" alt="ORM_Core" shape="rect" coords="0,0,91,24"/>
 <area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" alt="ORMInterface" shape="rect" coords="101,0,192,24"/>
 <area href="class_o_r_m_1_1_o_r_m___core.html" alt="ORM_Core" shape="rect" coords="202,0,293,24"/>
 <area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" alt="ORMInterface" shape="rect" coords="303,0,394,24"/>
+<area href="class_o_r_m_1_1_o_r_m___core.html" alt="ORM_Core" shape="rect" coords="404,0,495,24"/>
+<area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" alt="ORMInterface" shape="rect" coords="505,0,596,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#a4086b1a341b7c8462a47fb1b25fd49ab">$colour</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#aa5eada18c22778af97fee9f6605b1458">$doors</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car.html#a83b05bfc16797f4cd5b75ccccfd15875">$manufacturer</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="orm__model_8example_8php_source.html#l00011">11</a> of file <a class="el" href="orm__model_8example_8php_source.html">orm_model.example.php</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="abb9f0d6adf1eb9b3b55712056861a247"></a><!-- doxytag: member="Car::valid" ref="abb9f0d6adf1eb9b3b55712056861a247" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The default validity check (none) .</p>
+<p>Override this for individual models to check for validity. The default implementation looks for error messages that have been set by <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935">validationError()</a></p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>boolean If this method returns false for a particular object, it is considered not in a "valid" state and so it cannot be saved using <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">ORM_Model</a>.</p>
+
+<p>Definition at line <a class="el" href="orm__model_8validation_8php_source.html#l00014">14</a> of file <a class="el" href="orm__model_8validation_8php_source.html">orm_model.validation.php</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a4086b1a341b7c8462a47fb1b25fd49ab"></a><!-- doxytag: member="Car::$colour" ref="a4086b1a341b7c8462a47fb1b25fd49ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$<a class="el" href="sdb_8sdbstatement_8example_8php.html#a1befbc7fcbea5818f529aa4557cfd050">colour</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="orm__model_8validation_8php_source.html#l00003">3</a> of file <a class="el" href="orm__model_8validation_8php_source.html">orm_model.validation.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5eada18c22778af97fee9f6605b1458"></a><!-- doxytag: member="Car::$doors" ref="aa5eada18c22778af97fee9f6605b1458" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$<a class="el" href="orm__model_8check__validation_8php.html#a2fbf81c65488fad173a009abb2046a19">doors</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="orm__model_8validation_8php_source.html#l00004">4</a> of file <a class="el" href="orm__model_8validation_8php_source.html">orm_model.validation.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83b05bfc16797f4cd5b75ccccfd15875"></a><!-- doxytag: member="Car::$manufacturer" ref="a83b05bfc16797f4cd5b75ccccfd15875" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$manufacturer</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="orm__model_8validation_8php_source.html#l00005">5</a> of file <a class="el" href="orm__model_8validation_8php_source.html">orm_model.validation.php</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/server/projects/flexible-orm/tutorials/examples/<a class="el" href="orm__model_8example_8php_source.html">orm_model.example.php</a></li>
+<li>C:/server/projects/flexible-orm/tutorials/examples/<a class="el" href="orm__model_8validation_8php_source.html">orm_model.validation.php</a></li>
 </ul>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_car.html">Car</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:02 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:40 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

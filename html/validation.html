@@ -77,12 +77,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Model Validation </div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>Write extended documentation for model validation </dd></dl>
+<div class="textblock"><h2><a class="anchor" id="validation_intro"></a>
+Introduction</h2>
+<p>The <a class="el" href="namespace_o_r_m.html">ORM</a> contains a basic framework for validating models. Models are validated before the object is saved.</p>
+<h2><a class="anchor" id="validation_rules"></a>
+Rules</h2>
+<p>First you need to set the rules for a valid object. There are 4 things the model needs for validation:</p>
+<ol type="1">
+<li>Override the <code>valid()</code> method in your model class</li>
+<li>Check each rule you need</li>
+<li>Call <code>validationError()</code> when a rule fails</li>
+<li>Return <code>TRUE</code> on success or <code>FAIL</code> when not valid</li>
+</ol>
+<div class="fragment"><pre class="fragment">&lt;?php
+<span class="keyword">class </span><a class="code" href="class_car.html">Car</a> <span class="keyword">extends</span> \ORM\ORM_Model {
+    <span class="keyword">public</span> $colour;
+    <span class="keyword">public</span> $doors;
+    <span class="keyword">public</span> <a class="code" href="orm__model__foreign_8example_8php.html#a83b05bfc16797f4cd5b75ccccfd15875">$manufacturer</a>;
+    
+    <span class="comment">/*</span>
+<span class="comment">     * Check if this Car object is valid</span>
+<span class="comment">     * </span>
+<span class="comment">     * Rules:</span>
+<span class="comment">     *   Doors must be  &gt; 0</span>
+<span class="comment">     *   Manufacturer must be set</span>
+<span class="comment">     */</span>
+    <span class="keyword">public</span> function valid() {
+        <span class="keywordflow">if</span>( $this-&gt;<a class="code" href="orm__model_8check__validation_8php.html#a2fbf81c65488fad173a009abb2046a19">doors</a> &lt;= 0 ) {
+            $this-&gt;validationError(<span class="stringliteral">&#39;doors&#39;</span>, <span class="stringliteral">&#39;must be greater than zero&#39;</span>);
+        }
+        <span class="keywordflow">if</span>( strlen($this-&gt;manufacturer) == 0 ) {
+            $this-&gt;validationError(<span class="stringliteral">&#39;manufacturer&#39;</span>, <span class="stringliteral">&#39;must be set&#39;</span>);
+        }
+        
+        <span class="comment">// Model is valid if there are no error messages</span>
+        <span class="keywordflow">return</span> count( $this-&gt;errorMessages() ) === 0;
+    }
+}
+</pre></div><h2><a class="anchor" id="validation_check"></a>
+Checking and Using Errors</h2>
+<p>Model validation occurs when you attempt to save an object. You can check whether the save was successful (which it won't be if there are errors) by testing the output of save(). The example below shows a very simple error checking process.</p>
+<div class="fragment"><pre class="fragment">&lt;?php
+$car            = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
+$car-&gt;doors     = 3;
+$car-&gt;colour    = <span class="stringliteral">&#39;red&#39;</span>;
+
+<span class="keywordflow">if</span>( $car-&gt;save() ) {
+    <span class="comment">// Car is valid</span>
+    
+} <span class="keywordflow">else</span> {
+    <span class="comment">// Car is NOT valid</span>
+    <span class="keywordflow">foreach</span>( $car-&gt;errorMessages() as $property =&gt; $message ) { 
+        echo <span class="stringliteral">&quot;Error with the $property field - $message \n&quot;</span>;
+    }
+}
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Save may fail for reasons other than validation, such as database configuration problems. </dd></dl>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:02 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

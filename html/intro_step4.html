@@ -139,7 +139,7 @@ Find</h3>
  $brand    = <span class="stringliteral">&#39;Alfa Romeo&#39;</span>;
 
  <span class="comment">// Find the first car that is not an Alfa Romeo where doors is greater than 3</span>
- <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>      = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>(array(
+ <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>      = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>(array(
       <span class="stringliteral">&#39;where&#39;</span> =&gt; <span class="stringliteral">&#39;doors &gt; ? AND brand NOT LIKE ?&#39;</span>,
       <span class="stringliteral">&#39;order&#39;</span> =&gt; <span class="stringliteral">&#39;colour DESC&#39;</span>,
       <span class="stringliteral">&#39;values&#39;</span> =&gt; array( $minDoors, $brand ),
@@ -149,7 +149,7 @@ Find</h3>
 <p>It is possible to fetch an object with related object(s) in a single query. This only works for the model that has the foreign key in it. For more information, on configuring foreign keys, see <a class="el" href="intro_step3.html">Define Foreign Keys</a>.</p>
 <div class="fragment"><pre class="fragment"> <span class="comment">// Fetch the car with id 1 and include the Owner object</span>
  @car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 1, <span class="stringliteral">&#39;Owner&#39;</span> );
- echo <span class="stringliteral">&quot;This car is owned by &quot;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;Owner-&gt;name;
+ echo <span class="stringliteral">&quot;This car is owned by &quot;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;Owner-&gt;name;
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -175,7 +175,7 @@ Delete</h3>
 <p>The object will remain populated. Calls <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340">beforeDelete()</a> before the object is removed.</p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Fetch a car and delete it</span>
-<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
+<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
 $car-&gt;delete();
 
 <span class="comment">// will still output the details of car[4]</span>
@@ -279,7 +279,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:02 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

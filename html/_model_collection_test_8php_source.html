@@ -150,17 +150,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00076"></a>00076         $blackCars = $this-&gt;<span class="keywordtype">object</span>-&gt;select(<span class="stringliteral">&#39;colour&#39;</span>, <span class="stringliteral">&#39;black&#39;</span>);
 <a name="l00077"></a>00077         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\ModelCollection&#39;</span>, get_class( $blackCars ) );
 <a name="l00078"></a>00078         $this-&gt;assertEquals( 2, count($blackCars) );
-<a name="l00079"></a>00079         $this-&gt;assertFalse( $blackCars-&gt;detect(function(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
-<a name="l00080"></a>00080             <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour != <span class="stringliteral">&#39;black&#39;</span>;
+<a name="l00079"></a>00079         $this-&gt;assertFalse( $blackCars-&gt;detect(function(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
+<a name="l00080"></a>00080             <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour != <span class="stringliteral">&#39;black&#39;</span>;
 <a name="l00081"></a>00081         }));
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083         $notVolkswagens = $this-&gt;<span class="keywordtype">object</span>-&gt;select(function(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
-<a name="l00084"></a>00084             <span class="keywordflow">return</span> <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand != <span class="stringliteral">&#39;Volkswagen&#39;</span>;
+<a name="l00083"></a>00083         $notVolkswagens = $this-&gt;<span class="keywordtype">object</span>-&gt;select(function(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
+<a name="l00084"></a>00084             <span class="keywordflow">return</span> <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand != <span class="stringliteral">&#39;Volkswagen&#39;</span>;
 <a name="l00085"></a>00085         });
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087         $this-&gt;assertEquals( 2, count($notVolkswagens) );
-<a name="l00088"></a>00088         $this-&gt;assertFalse( $blackCars-&gt;detect(function(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
-<a name="l00089"></a>00089             <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour == <span class="stringliteral">&#39;Volkswagen&#39;</span>;
+<a name="l00088"></a>00088         $this-&gt;assertFalse( $blackCars-&gt;detect(function(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>){
+<a name="l00089"></a>00089             <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour == <span class="stringliteral">&#39;Volkswagen&#39;</span>;
 <a name="l00090"></a>00090         }));
 <a name="l00091"></a>00091     }
 <a name="l00092"></a>00092 }
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_model_collection_test_8php.html">ModelCollectionTest.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:01 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

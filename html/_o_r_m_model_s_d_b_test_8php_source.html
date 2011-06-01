@@ -132,19 +132,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00050"></a>00050     }
 <a name="l00051"></a>00051 
 <a name="l00052"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#aa986dacbb6e23b7d9d88119c24aa6657">00052</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#aa986dacbb6e23b7d9d88119c24aa6657">testFind</a>() {
-<a name="l00053"></a>00053         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::Find(3);
+<a name="l00053"></a>00053         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::Find(3);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\Tests\Mock\SDBCar&#39;</span>, get_class(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>) );
-<a name="l00056"></a>00056         $this-&gt;assertEquals( <span class="stringliteral">&#39;Volkswagen&#39;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand );
-<a name="l00057"></a>00057         $this-&gt;assertEquals( <span class="charliteral">&#39;3&#39;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
+<a name="l00055"></a>00055         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\Tests\Mock\SDBCar&#39;</span>, get_class(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>) );
+<a name="l00056"></a>00056         $this-&gt;assertEquals( <span class="stringliteral">&#39;Volkswagen&#39;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand );
+<a name="l00057"></a>00057         $this-&gt;assertEquals( <span class="charliteral">&#39;3&#39;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
 <a name="l00058"></a>00058     }
 <a name="l00059"></a>00059 
 <a name="l00060"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a6d790f9955c0c7e1bcc549cd2571f7db">00060</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a6d790f9955c0c7e1bcc549cd2571f7db">testFindBy</a>() {
-<a name="l00061"></a>00061         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::FindByBrand(<span class="stringliteral">&#39;Alfa Romeo&#39;</span>);
+<a name="l00061"></a>00061         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::FindByBrand(<span class="stringliteral">&#39;Alfa Romeo&#39;</span>);
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\Tests\Mock\SDBCar&#39;</span>, get_class(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>) );
-<a name="l00064"></a>00064         $this-&gt;assertEquals( <span class="stringliteral">&#39;Alfa Romeo&#39;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand );
-<a name="l00065"></a>00065         $this-&gt;assertEquals( <span class="charliteral">&#39;1&#39;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
+<a name="l00063"></a>00063         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\Tests\Mock\SDBCar&#39;</span>, get_class(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>) );
+<a name="l00064"></a>00064         $this-&gt;assertEquals( <span class="stringliteral">&#39;Alfa Romeo&#39;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand );
+<a name="l00065"></a>00065         $this-&gt;assertEquals( <span class="charliteral">&#39;1&#39;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
 <a name="l00066"></a>00066     }
 <a name="l00067"></a>00067 
 <a name="l00068"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a2f24b1f8d5714cbbd4c5f2e2f95b3e68">00068</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a2f24b1f8d5714cbbd4c5f2e2f95b3e68">testFindAll</a>() {
@@ -161,13 +161,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00079"></a>00079         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\ModelCollection&#39;</span>, get_class(<a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a>) );
 <a name="l00080"></a>00080         $this-&gt;assertEquals( 2, count(<a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a>) );
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082         <span class="keywordflow">foreach</span>( <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> as <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> ) {
+<a name="l00082"></a>00082         <span class="keywordflow">foreach</span>( <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> as <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> ) {
 <a name="l00083"></a>00083             $this-&gt;assertEquals( <span class="stringliteral">&#39;Volkswagen&#39;</span>, $car-&gt;brand );
 <a name="l00084"></a>00084         }
 <a name="l00085"></a>00085     }
 <a name="l00086"></a>00086 
 <a name="l00091"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#af338fc637d6ae604496f34f1739ab4e0">00091</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#af338fc637d6ae604496f34f1739ab4e0">testFindBySimilarPlaceholderNames</a>() {
-<a name="l00092"></a>00092         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::Find(array(
+<a name="l00092"></a>00092         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::Find(array(
 <a name="l00093"></a>00093             <span class="stringliteral">&#39;where&#39;</span>     =&gt; <span class="stringliteral">&#39;name = :brand OR brand = :brandname&#39;</span>,
 <a name="l00094"></a>00094             <span class="stringliteral">&#39;values&#39;</span>    =&gt; array(
 <a name="l00095"></a>00095                 <span class="stringliteral">&#39;:brand&#39;</span>     =&gt; <span class="stringliteral">&#39;Volkswagen&#39;</span>,
@@ -175,78 +175,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00097"></a>00097             )
 <a name="l00098"></a>00098         ));
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100         $this-&gt;assertEquals( <span class="stringliteral">&#39;Volkswagen&#39;</span>, <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand);
+<a name="l00100"></a>00100         $this-&gt;assertEquals( <span class="stringliteral">&#39;Volkswagen&#39;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand);
 <a name="l00101"></a>00101     }
 <a name="l00102"></a>00102 
 <a name="l00103"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ac24ef863bc895f59bc043fe8f042fdeb">00103</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#ac24ef863bc895f59bc043fe8f042fdeb">testSaveCreate</a>() {
-<a name="l00104"></a>00104         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
-<a name="l00105"></a>00105         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
-<a name="l00106"></a>00106         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Black&#39;</span>;
-<a name="l00107"></a>00107         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 2;
-<a name="l00108"></a>00108         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;privateTest( <span class="stringliteral">&#39;changing private attribute&#39;</span> );
+<a name="l00104"></a>00104         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
+<a name="l00105"></a>00105         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
+<a name="l00106"></a>00106         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Black&#39;</span>;
+<a name="l00107"></a>00107         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 2;
+<a name="l00108"></a>00108         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;privateTest( <span class="stringliteral">&#39;changing private attribute&#39;</span> );
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save() );
-<a name="l00111"></a>00111         $this-&gt;assertNotNull( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
+<a name="l00110"></a>00110         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save() );
+<a name="l00111"></a>00111         $this-&gt;assertNotNull( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113         $storedCar = Mock\SDBCar::Find(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id());
-<a name="l00114"></a>00114         $this-&gt;assertEquals(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand,    $storedCar-&gt;brand, 
+<a name="l00113"></a>00113         $storedCar = Mock\SDBCar::Find(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id());
+<a name="l00114"></a>00114         $this-&gt;assertEquals(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand,    $storedCar-&gt;brand, 
 <a name="l00115"></a>00115                 <span class="stringliteral">&quot;Stored Car ($car) brand does not match created one&quot;</span> );
-<a name="l00116"></a>00116         $this-&gt;assertEquals(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour,   $storedCar-&gt;colour,
+<a name="l00116"></a>00116         $this-&gt;assertEquals(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour,   $storedCar-&gt;colour,
 <a name="l00117"></a>00117                 <span class="stringliteral">&quot;Stored Car ($car) colour does not match created one&quot;</span> );
-<a name="l00118"></a>00118         $this-&gt;assertEquals(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors,    $storedCar-&gt;doors,
+<a name="l00118"></a>00118         $this-&gt;assertEquals(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors,    $storedCar-&gt;doors,
 <a name="l00119"></a>00119                 <span class="stringliteral">&quot;Stored Car ($car) doors do not match created one&quot;</span> );
-<a name="l00120"></a>00120         $this-&gt;assertEquals(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id(),     $storedCar-&gt;id(),
+<a name="l00120"></a>00120         $this-&gt;assertEquals(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id(),     $storedCar-&gt;id(),
 <a name="l00121"></a>00121                 <span class="stringliteral">&quot;Stored Car ($car) id() does not match created one&quot;</span> );
 <a name="l00122"></a>00122         $this-&gt;assertNotEquals(<span class="stringliteral">&#39;changing private attribute&#39;</span>, $storedCar-&gt;privateTest() );
 <a name="l00123"></a>00123     }
 <a name="l00124"></a>00124 
 <a name="l00125"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a037f94e2aac066ec6996800944f44b8b">00125</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a037f94e2aac066ec6996800944f44b8b">testSaveUpdate</a>() {
-<a name="l00126"></a>00126         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
-<a name="l00127"></a>00127         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
-<a name="l00128"></a>00128         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
-<a name="l00129"></a>00129         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
-<a name="l00130"></a>00130         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Failed to save: &quot;</span>.$car-&gt;errorMessagesString() );
+<a name="l00126"></a>00126         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
+<a name="l00127"></a>00127         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
+<a name="l00128"></a>00128         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
+<a name="l00129"></a>00129         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
+<a name="l00130"></a>00130         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Failed to save: &quot;</span>.$car-&gt;errorMessagesString() );
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132         $this-&gt;assertEquals( <span class="stringliteral">&#39;Blue&#39;</span>, Mock\SDBCar::Find(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id())-&gt;<a class="code" href="sdb_8sdbstatement_8example_8php.html#a1befbc7fcbea5818f529aa4557cfd050">colour</a> );
+<a name="l00132"></a>00132         $this-&gt;assertEquals( <span class="stringliteral">&#39;Blue&#39;</span>, Mock\SDBCar::Find(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id())-&gt;<a class="code" href="orm__model_8check__validation_8php.html#a1befbc7fcbea5818f529aa4557cfd050">colour</a> );
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour = <span class="stringliteral">&#39;Red&#39;</span>;
-<a name="l00135"></a>00135         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors  = 6;
-<a name="l00136"></a>00136         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Failed to save: &quot;</span>.$car-&gt;errorMessagesString() );
+<a name="l00134"></a>00134         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour = <span class="stringliteral">&#39;Red&#39;</span>;
+<a name="l00135"></a>00135         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors  = 6;
+<a name="l00136"></a>00136         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Failed to save: &quot;</span>.$car-&gt;errorMessagesString() );
 <a name="l00137"></a>00137 
-<a name="l00138"></a>00138         $storedCar = Mock\SDBCar::Find(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id());
-<a name="l00139"></a>00139         $this-&gt;assertEquals( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id(), $storedCar-&gt;id() );
-<a name="l00140"></a>00140         $this-&gt;assertEquals( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand, $storedCar-&gt;brand ); <span class="comment">// check the unchanged value</span>
+<a name="l00138"></a>00138         $storedCar = Mock\SDBCar::Find(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id());
+<a name="l00139"></a>00139         $this-&gt;assertEquals( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id(), $storedCar-&gt;id() );
+<a name="l00140"></a>00140         $this-&gt;assertEquals( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand, $storedCar-&gt;brand ); <span class="comment">// check the unchanged value</span>
 <a name="l00141"></a>00141         $this-&gt;assertEquals( <span class="stringliteral">&#39;Red&#39;</span>, $storedCar-&gt;colour ); <span class="comment">// Check the updated values</span>
 <a name="l00142"></a>00142         $this-&gt;assertEquals( <span class="charliteral">&#39;6&#39;</span>, $storedCar-&gt;doors );
 <a name="l00143"></a>00143     }
 <a name="l00144"></a>00144 
 <a name="l00145"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a503b698d28d234a2e1a700e9836af922">00145</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a503b698d28d234a2e1a700e9836af922">testDelete</a>() {
-<a name="l00146"></a>00146         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
-<a name="l00147"></a>00147         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
-<a name="l00148"></a>00148         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
-<a name="l00149"></a>00149         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
-<a name="l00150"></a>00150         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Unable to save car for deletion!&quot;</span> );
+<a name="l00146"></a>00146         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
+<a name="l00147"></a>00147         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
+<a name="l00148"></a>00148         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
+<a name="l00149"></a>00149         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
+<a name="l00150"></a>00150         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Unable to save car for deletion!&quot;</span> );
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;delete();
-<a name="l00153"></a>00153         $this-&gt;assertFalse( Mock\SDBCar::Find(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id()), <span class="stringliteral">&quot;Found car when it should not exist&quot;</span> );
+<a name="l00152"></a>00152         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;delete();
+<a name="l00153"></a>00153         $this-&gt;assertFalse( Mock\SDBCar::Find(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id()), <span class="stringliteral">&quot;Found car when it should not exist&quot;</span> );
 <a name="l00154"></a>00154     }
 <a name="l00155"></a>00155 
 <a name="l00156"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a307010c15ba5977805260eb512feabec">00156</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a307010c15ba5977805260eb512feabec">testDestroy</a>() {
-<a name="l00157"></a>00157         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
-<a name="l00158"></a>00158         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
-<a name="l00159"></a>00159         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
-<a name="l00160"></a>00160         <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
-<a name="l00161"></a>00161         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Unable to save car for deletion!&quot;</span> );
+<a name="l00157"></a>00157         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>            = <span class="keyword">new</span> Mock\SDBCar();
+<a name="l00158"></a>00158         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
+<a name="l00159"></a>00159         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour    = <span class="stringliteral">&#39;Blue&#39;</span>;
+<a name="l00160"></a>00160         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors     = 8;
+<a name="l00161"></a>00161         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(), <span class="stringliteral">&quot;Unable to save car for deletion!&quot;</span> );
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163         $car2            = <span class="keyword">new</span> Mock\SDBCar();
 <a name="l00164"></a>00164         $car2-&gt;brand     = <span class="stringliteral">&#39;Ford&#39;</span>;
 <a name="l00165"></a>00165         $car2-&gt;colour    = <span class="stringliteral">&#39;Red&#39;</span>;
 <a name="l00166"></a>00166         $car2-&gt;doors     = 6;
-<a name="l00167"></a>00167         $car2-&gt;id( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
-<a name="l00168"></a>00168         $this-&gt;assertTrue( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(<span class="keyword">true</span>), <span class="stringliteral">&quot;Unable to save 2nd lot of car attributes for deletion!&quot;</span> );
+<a name="l00167"></a>00167         $car2-&gt;id( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
+<a name="l00168"></a>00168         $this-&gt;assertTrue( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;save(<span class="keyword">true</span>), <span class="stringliteral">&quot;Unable to save 2nd lot of car attributes for deletion!&quot;</span> );
 <a name="l00169"></a>00169 
-<a name="l00170"></a>00170         Mock\SDBCar::Destroy( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
-<a name="l00171"></a>00171         $this-&gt;assertFalse( Mock\SDBCar::Find(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id()), <span class="stringliteral">&quot;Found car when it should not exist&quot;</span> );
+<a name="l00170"></a>00170         Mock\SDBCar::Destroy( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id() );
+<a name="l00171"></a>00171         $this-&gt;assertFalse( Mock\SDBCar::Find(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;id()), <span class="stringliteral">&quot;Found car when it should not exist&quot;</span> );
 <a name="l00172"></a>00172     }
 <a name="l00173"></a>00173 
 <a name="l00174"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a09099953a29db7926be15d2a61faa509">00174</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_model_s_d_b_test.html#a09099953a29db7926be15d2a61faa509">testUpdateChangeItemName</a>() {
@@ -371,7 +371,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00296"></a>00296         $this-&gt;_setupForeignKeysTest();
 <a name="l00297"></a>00297         $carsWithOwners = Mock\SDBCar::FindAll(array(), <span class="stringliteral">&#39;\ORM\Tests\Mock\SDBOwner&#39;</span>);
 <a name="l00298"></a>00298 
-<a name="l00299"></a>00299         <span class="keywordflow">foreach</span>($carsWithOwners as <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> ) {
+<a name="l00299"></a>00299         <span class="keywordflow">foreach</span>($carsWithOwners as <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> ) {
 <a name="l00300"></a>00300             $this-&gt;assertEquals( <span class="stringliteral">&#39;MyCarsOwner&#39;</span>, $car-&gt;SDBOwner-&gt;name );
 <a name="l00301"></a>00301         }
 <a name="l00302"></a>00302     }
@@ -384,8 +384,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00309"></a>00309 
 <a name="l00310"></a>00310         $this-&gt;assertTrue( <a class="code" href="orm__model__foreign_8example_8php.html#a9aabf46bdb166877480b2094d7ca01a7">$owner</a>-&gt;save(<span class="keyword">true</span>), <span class="stringliteral">&quot;Failed saving: &quot;</span>.$owner-&gt;errorMessagesString() );
 <a name="l00311"></a>00311         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\SDBCar::FindAll();
-<a name="l00312"></a>00312         $cars-&gt;each(function(<a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>)use($id){
-<a name="l00313"></a>00313             <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;owner_id = $id;
+<a name="l00312"></a>00312         $cars-&gt;each(function(<a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>)use($id){
+<a name="l00313"></a>00313             <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;owner_id = $id;
 <a name="l00314"></a>00314         });
 <a name="l00315"></a>00315         
 <a name="l00316"></a>00316         $cars-&gt;save();
@@ -397,7 +397,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m_model_s_d_b_test_8php.html">ORMModelSDBTest.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:02 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

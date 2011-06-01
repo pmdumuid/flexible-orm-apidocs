@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">00015</a> <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAllInto( <span class="stringliteral">&#39;Car&#39;</span> );
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="comment">// If we only wanted the first car returned</span>
-<a name="l00018"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">00018</a> <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchInto( <span class="stringliteral">&#39;Car&#39;</span> );
+<a name="l00018"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">00018</a> <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchInto( <span class="stringliteral">&#39;Car&#39;</span> );
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 <span class="comment">// -------</span>
@@ -108,15 +108,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00023"></a>00023 <span class="comment">// -------</span>
 <a name="l00024"></a>00024 <span class="comment">// Create an object for using with bindObject (although we could bind each value</span>
 <a name="l00025"></a>00025 <span class="comment">// individually if we prefer</span>
-<a name="l00026"></a>00026 <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
-<a name="l00027"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#a1befbc7fcbea5818f529aa4557cfd050">00027</a> <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour = <span class="stringliteral">&#39;red&#39;</span>;
-<a name="l00028"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#aea5848cdcb092cc370bb68b8c8cef5bb">00028</a> <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand  = <span class="stringliteral">&#39;Alfa Romeo&#39;</span>;
+<a name="l00026"></a>00026 <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
+<a name="l00027"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#a1befbc7fcbea5818f529aa4557cfd050">00027</a> <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour = <span class="stringliteral">&#39;red&#39;</span>;
+<a name="l00028"></a><a class="code" href="sdb_8sdbstatement_8example_8php.html#aea5848cdcb092cc370bb68b8c8cef5bb">00028</a> <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand  = <span class="stringliteral">&#39;Alfa Romeo&#39;</span>;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="comment">// &quot;Prepare&quot; an sql statement</span>
 <a name="l00031"></a>00031 <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = <span class="keyword">new</span> SDBStatement( <span class="stringliteral">&quot;INSERT INTO cars (colour, brand) VALUES (:colour, :brand)&quot;</span> );
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="comment">// Bind the object&#39;s properties to the query placeholders</span>
-<a name="l00034"></a>00034 <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindObject( <a class="code" href="orm__model_8delete_8example_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> );
+<a name="l00034"></a>00034 <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindObject( <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> );
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="comment">// Execute the statement</span>
 <a name="l00037"></a>00037 <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="sdb_8sdbstatement_8example_8php.html">sdb.sdbstatement.example.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:12:02 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
