@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.7</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -119,7 +119,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>fetch()
 : <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a28ba8f891b525bde19b82e7907d630c9">DataStatement</a>
 , <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#ac957ca032246782ee960fe0394ea70a6">ORM_PDOStatement</a>
-, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a49cb1f03384be3e7b34591dfdd4c63d7">SDBStatement</a>
+, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">SDBStatement</a>
+</li>
+<li>fetchAll()
+: <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">SDBStatement</a>
 </li>
 <li>fetchAllInto()
 : <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#acc2b78f55ad595459f24778071daebf3">DataStatement</a>
@@ -127,9 +130,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#acc2b78f55ad595459f24778071daebf3">SDBStatement</a>
 </li>
 <li>fetchInto()
-: <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">ORM_PDOStatement</a>
+: <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">DataStatement</a>
+, <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">ORM_PDOStatement</a>
 , <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">SDBStatement</a>
-, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">DataStatement</a>
 </li>
 <li>Find()
 : <a class="el" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505">CachedORMModel</a>
@@ -137,8 +140,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model</a>
 </li>
 <li>FindAll()
-: <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#acdee03ec017b98eaa1a51f43e3dc0d9a">ORMInterface</a>
-, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">ORM_Model</a>
+: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">ORM_Model</a>
+, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#acdee03ec017b98eaa1a51f43e3dc0d9a">ORMInterface</a>
 </li>
 <li>FindAllBy()
 : <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">ORM_Model</a>
@@ -153,8 +156,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_window.html#affb3cdab534e042014f234bab06c80d7">Window</a>
 </li>
 <li>flush()
-: <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38">Cache</a>
-, <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">NullCache</a>
+: <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">NullCache</a>
+, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38">Cache</a>
 , <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html#a7751f77b5263bcf940ece6e824a05b38">APCCache</a>
 </li>
 <li>ForeignKey()
@@ -165,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Fri May 27 2011 16:45:26 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 10:50:40 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

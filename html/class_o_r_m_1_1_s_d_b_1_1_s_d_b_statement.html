@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.7</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -114,7 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a32d1c2c8578cef899ad5a9ed77b767e4">execute</a> (array $values=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583">queryType</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">fetchInto</a> ($className)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a49cb1f03384be3e7b34591dfdd4c63d7">fetch</a> ($fetch_style=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch</a> ($fetch_style=self::FETCH_BOTH)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll</a> ($fetch_style=self::FETCH_BOTH)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#acc2b78f55ad595459f24778071daebf3">fetchAllInto</a> ($className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a7516ca30af0db3cdbf9a7739b48ce91d">__toString</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -126,6 +127,9 @@ Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af3d54ad6d21ba560b2aba58334b23000">MAX_ATTRIBUTE_SIZE</a> = 1024</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a0e5b2dc9c31f9998c7ac85676507a23e">FETCH_BOTH</a> = 1</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a8ce33098aa8472004be871503377a577">FETCH_ASSOC</a> = 2</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ae89584ce14ce525aafb653b3e9aa2c02">FETCH_ARRAY</a> = 3</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a6068e3086cc1c2b1e54fda74cafca201">$findWith</a> = array()</td></tr>
@@ -146,6 +150,7 @@ Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#abd2dbc5d81eb925a0c8adec9ac8fbd2a">_generateItemName</a> ($domain)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aba855717769a19473a028b3c0029be0b">_fetchWith</a> (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a> &amp;$object)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aaf5f79e0235c6fc14ccaca8494c947b8">_simplifyQuery</a> ($className= '')</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af25065ede73d7646b87dcb7e3997fdd1">_executeSelect</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af0eb4703ac047bf96b08f9057cd30a04">_executeFetchQuery</a> ($consistentRead)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a801dc2a92597b8a6cbbdbe6278038a6c">_bind</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-methods"></a>
@@ -158,6 +163,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a335c145f1aa356dc65e1bef8215b0853">$_queryString</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a680b43aa8dbc8f14530a0dc1789bd827">$_binds</a> = array()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ade114fe364b4f22eede3939996134df6">$_result</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a7bd28e0b68c9cd1497ce1302a77a9d5d">$_items</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af6dd6b9e4ba64ed4eb99b6864b971a54">$_queryType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad7f01bddcb334e5854624bc75d695bb9">$_findWith</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a92ee111c96951dba1b1b6e12ab87d616">$_limit</a></td></tr>
@@ -275,7 +281,7 @@ $query-&gt;execute();
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00117">117</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00142">142</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -296,7 +302,7 @@ $query-&gt;execute();
 <p>The queryString value is output when this class is cast to string</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string The SQL with bound placeholders if they have been replaced already </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00894">894</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00993">993</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -316,7 +322,7 @@ $query-&gt;execute();
 <p>Bind all the placeholders</p>
 <p>Should be called before executing the fetch* functions </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00882">882</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00981">981</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -354,7 +360,7 @@ $query-&gt;execute();
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00259">259</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00284">284</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -392,7 +398,7 @@ $query-&gt;execute();
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00232">232</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00257">257</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -419,7 +425,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array An array of key pairs where values that are larger than MAX_ATTRIBUTE_SIZE have been split into multiple values and an index number applied to their key name (ie "name" would become "name[1]", "name[2]", etc) </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00273">273</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00298">298</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -441,7 +447,7 @@ $query-&gt;execute();
 <dl class="note"><dt><b>Note:</b></dt><dd>Only has very primative support for deleting items using constraints other than itemName (primary key). Will only delete a maximum of 25 results at a time.</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on success </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00635">635</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00661">661</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -469,7 +475,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on success </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00470">470</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00496">496</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -490,7 +496,7 @@ $query-&gt;execute();
 <p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> does not natively support <code>UPDATE</code>, so we emulate it here. Converts the <code>UPDATE</code> string into a put_attributes() operation.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on success </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00607">607</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00633">633</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -518,7 +524,32 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00853">853</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00952">952</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af25065ede73d7646b87dcb7e3997fdd1"></a><!-- doxytag: member="ORM::SDB::SDBStatement::_executeSelect" ref="af25065ede73d7646b87dcb7e3997fdd1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_executeSelect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Execute a SQL-like select query and populate the $_items array</p>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">\ORM\Exceptions\ORMFetchException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00886">886</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -545,7 +576,7 @@ $query-&gt;execute();
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00726">726</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00752">752</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -574,7 +605,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00666">666</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00692">692</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -602,7 +633,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array Associative array where keys will be used as field names </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00505">505</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00531">531</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -622,7 +653,7 @@ $query-&gt;execute();
 <p>Convert a SQL UPDATE statment to an array for use with AmazonSDB</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array Associative array where keys will be used as field names. Large values will be split over mutiple keys </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00540">540</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00566">566</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -647,7 +678,7 @@ $query-&gt;execute();
  secret_key = <span class="stringliteral">&quot;aaaaa&quot;</span>
 </pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>array public, private </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00180">180</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00205">205</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -668,7 +699,7 @@ $query-&gt;execute();
 <dl class="note"><dt><b>Note:</b></dt><dd>Currently only works for INSERT and UPDATE statements (because it is not needed for SELECT or DELETE</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00573">573</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00599">599</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -688,7 +719,7 @@ $query-&gt;execute();
 <p>Get the itemName from the query</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false The itemName value or false if it is not discoverable from the current query string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00588">588</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00614">614</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -708,7 +739,7 @@ $query-&gt;execute();
 <p>Setup the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> connection</p>
 <p>* Use the configuration value AWS-&gt;region to set the region for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> * Use the configuration value AWS-&gt;apc_enabled to enable/disable APC </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00131">131</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00156">156</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -732,7 +763,7 @@ $query-&gt;execute();
 <p><p>&lt; ensure that the tokeniser is destroyed </p>
 </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00383">383</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00408">408</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -759,7 +790,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00297">297</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00322">322</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -777,7 +808,7 @@ $query-&gt;execute();
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00149">149</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00174">174</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -804,7 +835,7 @@ $query-&gt;execute();
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00754">754</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00780">780</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -848,7 +879,7 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#af7e56efc2efb9eb68ef5e56534185700">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00340">340</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00365">365</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -888,7 +919,7 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#abd1a00690a1eef41bf504fae746118b0">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00199">199</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00224">224</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -929,7 +960,7 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a9cb32669ccc2a9cfbca144010316e4cd">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00216">216</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00241">241</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -957,7 +988,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string That should match the originally saved data </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00320">320</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00345">345</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -991,11 +1022,11 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a32d1c2c8578cef899ad5a9ed77b767e4">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00418">418</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00443">443</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a49cb1f03384be3e7b34591dfdd4c63d7"></a><!-- doxytag: member="ORM::SDB::SDBStatement::fetch" ref="a49cb1f03384be3e7b34591dfdd4c63d7" args="($fetch_style=1)" -->
+<a class="anchor" id="a60e210ba538280f02821f18db821f00b"></a><!-- doxytag: member="ORM::SDB::SDBStatement::fetch" ref="a60e210ba538280f02821f18db821f00b" args="($fetch_style=self::FETCH_BOTH)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1003,13 +1034,14 @@ $query-&gt;execute();
           <td class="memname">fetch </td>
           <td>(</td>
           <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>fetch_style</em> = <code>1</code></td><td>)</td>
+          <td class="paramname"><em>fetch_style</em> = <code>self::FETCH_BOTH</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Fetch a row from simpleDB</p>
+<p>Does not return itemName() properties</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Does not use ConsistentRead, so may be inaccurate by faster than fetchInto</dd></dl>
 <dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
@@ -1017,17 +1049,46 @@ $query-&gt;execute();
   </table>
   </dd>
 </dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">int</td><td class="paramname">$fetch_style</td><td>Currently does nothing </td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$fetch_style</td><td>[optional] What type of array to return. Defaults to <code>FETCH_BOTH</code> <code>FETCH_ASSOC</code> An associative array where keys are attributes. <code>FETCH_BOTH</code> Both associative keys and zero-indexed keys returned <code>FETCH_ARRAY</code> Return a zero-indexed array of attributes. Since the attribute order is unpredictable on a "*" request, only use when you know the return order. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>array In the same format as PDOStatement::Fetch(PDO::FETCH_BOTH) </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>array|false </dd></dl>
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a28ba8f891b525bde19b82e7907d630c9">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00783">783</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00819">819</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a298aff4588eb149cc0c6988858d064ab"></a><!-- doxytag: member="ORM::SDB::SDBStatement::fetchAll" ref="a298aff4588eb149cc0c6988858d064ab" args="($fetch_style=self::FETCH_BOTH)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fetchAll </td>
+          <td>(</td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>fetch_style</em> = <code>self::FETCH_BOTH</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fetch all returned results in an array</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a> </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$fetch_style</td><td>[optional] What type of array to return. Defaults to <code>FETCH_BOTH</code> <code>FETCH_ASSOC</code> An associative array where keys are attributes. Each row will have it's itemName as key <code>FETCH_BOTH</code> Both associative keys and zero-indexed keys returned <code>FETCH_ARRAY</code> Return a zero-indexed array of attributes. Since the attribute order is unpredictable on a "*" request, only use when you know the return order. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>array An array of results, each one the same as calling <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>. If there are no results, an empty array is returned. The array will be associative with keys being itemNames if the fetch type is <code>FETCH_ASSOC</code>, otherwise it will be zero-indexed </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00867">867</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1126,7 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#acc2b78f55ad595459f24778071daebf3">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00816">816</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00915">915</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1102,7 +1163,7 @@ $query-&gt;execute();
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">DataStatement</a>.</p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00691">691</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00717">717</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1183,7 @@ $query-&gt;execute();
 <p>Get the active <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> connection </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>AmazonSDB </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00933">933</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l01032">1032</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1204,7 @@ $query-&gt;execute();
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad130c8a887a5dc651321a6e771b1b7eb">SDBStatement::_emulateInsert()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|null If there has been an <code>INSERT</code> statement executed, this will return the autogenerated id. </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00906">906</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l01005">1005</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1224,7 @@ $query-&gt;execute();
 <p>Get all the placeholders in the current query string </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array of placeholder names </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00356">356</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00381">381</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1269,7 @@ $query-&gt;execute();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00921">921</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l01020">1020</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1289,7 @@ $query-&gt;execute();
 <p>Get the type of SQL statement</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string Either 'DELETE', 'INSERT', 'UPDATE' or 'SELECT' </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00448">448</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00474">474</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1306,7 @@ $query-&gt;execute();
 <div class="memdoc">
 <p>An associative array of placeholders and values </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00055">55</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00073">73</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1261,7 +1322,24 @@ $query-&gt;execute();
 <div class="memdoc">
 <p>The instance property version of the static $findWith, this is used internally to represent the statically set array of models when the objec is intantiated </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00094">94</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00119">119</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd28e0b68c9cd1497ce1302a77a9d5d"></a><!-- doxytag: member="ORM::SDB::SDBStatement::$_items" ref="a7bd28e0b68c9cd1497ce1302a77a9d5d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">array $_items<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Used to store the results. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00090">90</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1355,7 @@ $query-&gt;execute();
 <div class="memdoc">
 <p>The last inserted itemName() </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00077">77</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00102">102</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1370,7 @@ $query-&gt;execute();
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00100">100</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00125">125</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1386,7 @@ $query-&gt;execute();
 <div class="memdoc">
 <p>The number of records to skip (for pagination in combination with LIMIT </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00106">106</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00131">131</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1403,7 @@ $query-&gt;execute();
 <p>SQL statement</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> only supports a simple subset of SQL. See class description for more details. </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00049">49</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00067">67</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1419,7 @@ $query-&gt;execute();
 <div class="memdoc">
 <p>Used to reduce the number of regular expressions executed in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583">queryType()</a> </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00071">71</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00096">96</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1434,7 @@ $query-&gt;execute();
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00065">65</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00083">83</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1449,7 @@ $query-&gt;execute();
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00060">60</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00078">78</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1388,7 +1466,58 @@ $query-&gt;execute();
 <p>Ugly method of implementing the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> findWith option</p>
 <p>Set this value to an array of models to fetch for each base model class fetched. It will be reset to a blank array after fetching. </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00087">87</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00112">112</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae89584ce14ce525aafb653b3e9aa2c02"></a><!-- doxytag: member="ORM::SDB::SDBStatement::FETCH_ARRAY" ref="ae89584ce14ce525aafb653b3e9aa2c02" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ae89584ce14ce525aafb653b3e9aa2c02">FETCH_ARRAY</a> = 3</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fetch as indexed array </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00057">57</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ce33098aa8472004be871503377a577"></a><!-- doxytag: member="ORM::SDB::SDBStatement::FETCH_ASSOC" ref="a8ce33098aa8472004be871503377a577" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a8ce33098aa8472004be871503377a577">FETCH_ASSOC</a> = 2</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fetch as associative array </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00051">51</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e5b2dc9c31f9998c7ac85676507a23e"></a><!-- doxytag: member="ORM::SDB::SDBStatement::FETCH_BOTH" ref="a0e5b2dc9c31f9998c7ac85676507a23e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a0e5b2dc9c31f9998c7ac85676507a23e">FETCH_BOTH</a> = 1</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fetch as both associative and indexed array </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00045">45</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
 </div>
 </div>
@@ -1418,7 +1547,7 @@ $query-&gt;execute();
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>      </li>
-      <li class="footer">Generated on Fri May 27 2011 16:45:27 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 1 2011 10:50:41 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
