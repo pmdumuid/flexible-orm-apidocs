@@ -113,8 +113,9 @@ var NAVTREE =
         [ "ORM_PDOStatement", "class_o_r_m_1_1_o_r_m___p_d_o_statement.html", null ],
         [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ]
       ] ],
-      [ "DebugCorrectLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html", null ],
-      [ "DebugLog", "interface_o_r_m_1_1_interfaces_1_1_debug_log.html", null ],
+      [ "DebugLog", "interface_o_r_m_1_1_interfaces_1_1_debug_log.html", [
+        [ "DebugCorrectLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html", null ]
+      ] ],
       [ "DebugTestLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_test_log.html", null ],
       [ "NextTokenCache", "class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html", null ],
       [ "ObjectCollection", "class_o_r_m_1_1_object_collection.html", [
@@ -133,6 +134,7 @@ var NAVTREE =
           ] ],
           [ "ORMModelSDB", "class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html", [
             [ "SDBSession", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_session.html", null ],
+            [ "DebugCorrectLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html", null ],
             [ "File", "class_o_r_m_1_1_tests_1_1_mock_1_1_file.html", null ],
             [ "SDBCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_s_d_b_car.html", null ],
             [ "SDBOwner", "class_o_r_m_1_1_tests_1_1_mock_1_1_s_d_b_owner.html", null ]
