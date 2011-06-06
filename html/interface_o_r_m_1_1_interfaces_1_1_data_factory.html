@@ -100,7 +100,7 @@ Inheritance diagram for DataFactory:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a7b568b26c20726b2e9a8986a2ba245f8">Get</a> ($sql, $database)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a56c88768135657349a2ce5a3b8082703">Get</a> ($sql, $database, $callingClass)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -110,7 +110,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_data_factory_8php_source.html#l00013">13</a> of file <a class="el" href="_data_factory_8php_source.html">DataFactory.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7b568b26c20726b2e9a8986a2ba245f8"></a><!-- doxytag: member="ORM::Interfaces::DataFactory::Get" ref="a7b568b26c20726b2e9a8986a2ba245f8" args="($sql, $database)" -->
+<a class="anchor" id="a56c88768135657349a2ce5a3b8082703"></a><!-- doxytag: member="ORM::Interfaces::DataFactory::Get" ref="a56c88768135657349a2ce5a3b8082703" args="($sql, $database, $callingClass)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -124,7 +124,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>database</em>&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>callingClass</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -135,9 +141,17 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Get a prepared statement that can be executed / bound</p>
-<p>return <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> A <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a> should return a prepared statement class that implements the <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> interface. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$sql</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$database</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$callingClass</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> A <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a> should return a prepared statement class that implements the <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> interface. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html#a19f66eae1b43c4fdfb5c8ffca939651a">SDBFactory</a>.</p>
+<p>Implemented in <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html#a2ef93d1408c18b32da5ee23f2f6c4e87">SDBFactory</a>.</p>
 
 </div>
 </div>
@@ -155,7 +169,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver.</p>
-<p>return mixed Key value </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>mixed Key value </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">PDOFactory</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html#a11d223633dcff325658bab3969c0b158">SDBFactory</a>.</p>
 
@@ -171,7 +185,7 @@ Static Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_interfaces.html">Interfaces</a>      </li>
       <li class="navelem"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:40 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:09 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

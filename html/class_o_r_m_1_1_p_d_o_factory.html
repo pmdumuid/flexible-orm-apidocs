@@ -111,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#abfc25ec9545bfee35877db62d8f87401">getProfile</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">Get</a> ($sql, $database=self::DEFAULT_DATABASE)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">Get</a> ($sql, $database=self::DEFAULT_DATABASE, $callingClass=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">GetFactory</a> ($database=self::DEFAULT_DATABASE)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
@@ -130,15 +130,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A singleton database managing class that acts as a factory for prepared statements.</p>
-<p>To use, simply call <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>( $yourSQLstring );</p>
+<p>To use, simply call <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>( $yourSQLstring );</p>
 <p>Get a prepared PDOStatement matching the supplied string</p>
 <p>If the SQL matches an already prepared statement, return that statement instead of preparing a new one. This is useful when a query is run multiple times with different bound parameters.</p>
 <p><em>For Example:</em> </p>
-<div class="fragment"><pre class="fragment"> $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
+<div class="fragment"><pre class="fragment"> $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
  $query-&gt;bindValue( <span class="stringliteral">&#39;:id&#39;</span>, 1 );
  $query-&gt;execute();
 
- $anotherQuery = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
+ $anotherQuery = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
  $query-&gt;bindValue( <span class="stringliteral">&#39;:id&#39;</span>, 2 );
  $query-&gt;execute();
  <span class="comment">// at this point $query === $anotherQuery</span>
@@ -181,7 +181,7 @@ Static Private Attributes</h2></td></tr>
 <div class="fragment"><pre class="fragment"> <a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a3260a6b443401a87d9c867c9d835f939">Configuration::Load</a>(<span class="stringliteral">&#39;test.ini&#39;</span>);
 
  <span class="comment">// Note database is not specified as this uses the default &quot;database&quot;</span>
- $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM rabbits&quot;</span>);
+ $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM rabbits&quot;</span>);
 </pre></div><dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
     <tr><td class="paramname">\ORM\Exceptions\ORMPDOInvalidDatabaseConfigurationException</td><td>if configuration details are not present or invalid</td></tr>
@@ -201,7 +201,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a89a2ebb591e365f2b6108c8acead6e52"></a><!-- doxytag: member="ORM::PDOFactory::Get" ref="a89a2ebb591e365f2b6108c8acead6e52" args="($sql, $database=self::DEFAULT_DATABASE)" -->
+<a class="anchor" id="a0b01f3c995380c8f3a6eada85c8a496a"></a><!-- doxytag: member="ORM::PDOFactory::Get" ref="a0b01f3c995380c8f3a6eada85c8a496a" args="($sql, $database=self::DEFAULT_DATABASE, $callingClass=null)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -215,7 +215,13 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>database</em> = <code>self::DEFAULT_DATABASE</code>&#160;</td>
+          <td class="paramname"><em>database</em> = <code>self::DEFAULT_DATABASE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">$&#160;</td>
+          <td class="paramname"><em>callingClass</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,11 +234,11 @@ Static Private Attributes</h2></td></tr>
 <p>Get a prepared PDOStatement matching the supplied string</p>
 <p>If the SQL matches an already prepared statement, return that statement instead of preparing a new one. This is useful when a query is run multiple times with different bound parameters.</p>
 <p><em>For Example:</em> </p>
-<div class="fragment"><pre class="fragment"> $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
+<div class="fragment"><pre class="fragment"> $query = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
  $query-&gt;bindValue( <span class="stringliteral">&#39;:id&#39;</span>, 1 );
  $query-&gt;execute();
 
- $anotherQuery = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
+ $anotherQuery = <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE id = :id&quot;</span>);
  $query-&gt;bindValue( <span class="stringliteral">&#39;:id&#39;</span>, 2 );
  $query-&gt;execute();
  <span class="comment">// at this point $query === $anotherQuery</span>
@@ -245,7 +251,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html">ORM_PDOStatement</a> </dd></dl>
 
-<p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a7b568b26c20726b2e9a8986a2ba245f8">DataFactory</a>.</p>
+<p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a56c88768135657349a2ce5a3b8082703">DataFactory</a>.</p>
 
 <p>Definition at line <a class="el" href="_p_d_o_factory_8php_source.html#l00136">136</a> of file <a class="el" href="_p_d_o_factory_8php_source.html">PDOFactory.php</a>.</p>
 
@@ -500,7 +506,7 @@ Static Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:40 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:09 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

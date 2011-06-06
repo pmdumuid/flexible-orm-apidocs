@@ -132,8 +132,9 @@ Data Fields</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The default validity check (none) .</p>
+<p>Validity check to be called before saving.</p>
 <p>Override this for individual models to check for validity. The default implementation looks for error messages that have been set by <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935">validationError()</a></p>
+<p>See <a class="el" href="validation.html">Model Validation</a> for more information.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean If this method returns false for a particular object, it is considered not in a "valid" state and so it cannot be saved using <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">ORM_Model</a>.</p>
@@ -197,7 +198,7 @@ Data Fields</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_car.html">Car</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:40 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:09 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

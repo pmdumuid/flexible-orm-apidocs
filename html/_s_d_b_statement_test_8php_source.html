@@ -107,111 +107,130 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00029"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a0450df29390ef898874d850d83818fbe">00029</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a0450df29390ef898874d850d83818fbe">testBindParam</a>() {
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031     }
-<a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a52b04b55d04b51dd77c601f267a302af">00033</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a52b04b55d04b51dd77c601f267a302af">testHybridBind</a>() {
-<a name="l00034"></a>00034         
-<a name="l00035"></a>00035     }
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a9c2e5112e74de088efd9acefe848c233">00037</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a9c2e5112e74de088efd9acefe848c233">testTooManyBound</a>() {
-<a name="l00038"></a>00038         
-<a name="l00039"></a>00039     }
-<a name="l00040"></a>00040 
-<a name="l00041"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#ad6ee1fb80f9bf2766a4432aa37c8a392">00041</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#ad6ee1fb80f9bf2766a4432aa37c8a392">testDeleteRange</a>() {
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043     }
-<a name="l00044"></a>00044     
-<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a59f852902f18df3a0f95625fe19c7646">00045</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a59f852902f18df3a0f95625fe19c7646">testFetchArray</a>() {
-<a name="l00046"></a>00046         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners&quot;</span>);
-<a name="l00047"></a>00047         
-<a name="l00048"></a>00048         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ARRAY);
-<a name="l00049"></a>00049         
-<a name="l00050"></a>00050         $this-&gt;assertTrue(is_array($result));
-<a name="l00051"></a>00051         $this-&gt;assertEquals( 1, count($result) );
-<a name="l00052"></a>00052     }
-<a name="l00053"></a>00053     
-<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#affd6276d3a60acbbac1fd3dec187a8bc">00054</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#affd6276d3a60acbbac1fd3dec187a8bc">testFetchAssoc</a>() {
-<a name="l00055"></a>00055         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners&quot;</span>);
-<a name="l00056"></a>00056         
-<a name="l00057"></a>00057         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC);
-<a name="l00058"></a>00058         
-<a name="l00059"></a>00059         $this-&gt;assertTrue(is_array($result));
-<a name="l00060"></a>00060         $this-&gt;assertEquals( 1, count($result) );
-<a name="l00061"></a>00061         $keys = array_keys($result);
-<a name="l00062"></a>00062         $this-&gt;assertEquals( <span class="stringliteral">&#39;name&#39;</span>, $keys[0] );
-<a name="l00063"></a>00063     }
-<a name="l00064"></a>00064     
-<a name="l00065"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1f32b4b3e8b7c371a49e03887665a05f">00065</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1f32b4b3e8b7c371a49e03887665a05f">testFetchBoth</a>() {
-<a name="l00066"></a>00066         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners&quot;</span>);
-<a name="l00067"></a>00067         
-<a name="l00068"></a>00068         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch();
-<a name="l00069"></a>00069         
-<a name="l00070"></a>00070         $this-&gt;assertTrue(is_array($result));
-<a name="l00071"></a>00071         $this-&gt;assertEquals( 2, count($result) );
-<a name="l00072"></a>00072         $keys = array_keys($result);
-<a name="l00073"></a>00073         $this-&gt;assertTrue( array_key_exists(<span class="stringliteral">&#39;name&#39;</span>, $result) );
-<a name="l00074"></a>00074         $this-&gt;assertEquals( $result[0], $result[<span class="stringliteral">&#39;name&#39;</span>] );
-<a name="l00075"></a>00075     }
-<a name="l00076"></a>00076     
-<a name="l00077"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1b409e6eb3e57baf5a412dfc0ce40b4e">00077</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1b409e6eb3e57baf5a412dfc0ce40b4e">testFetchMultiple</a>() {
-<a name="l00078"></a>00078         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners&quot;</span>);
-<a name="l00079"></a>00079         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00080"></a>00080         
-<a name="l00081"></a>00081         $lastName   = <span class="stringliteral">&#39;&#39;</span>;
-<a name="l00082"></a>00082         $count      = 0;
-<a name="l00083"></a>00083         
-<a name="l00084"></a>00084         <span class="keywordflow">while</span>( $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC) ) {
-<a name="l00085"></a>00085             $this-&gt;assertNotEquals( $lastName, $result[<span class="stringliteral">&#39;name&#39;</span>] );
-<a name="l00086"></a>00086             $lastName = $result[<span class="stringliteral">&#39;name&#39;</span>];
-<a name="l00087"></a>00087             $count++;
-<a name="l00088"></a>00088         }
-<a name="l00089"></a>00089         
-<a name="l00090"></a>00090         $this-&gt;assertGreaterThan(10, $count);
-<a name="l00091"></a>00091     }
-<a name="l00092"></a>00092     
-<a name="l00093"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a3788dc8750fb7fda19fb9a41f74b7c78">00093</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a3788dc8750fb7fda19fb9a41f74b7c78">testFetchAllAssoc</a>() {
-<a name="l00094"></a>00094         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners&quot;</span>);
-<a name="l00095"></a>00095         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00096"></a>00096         $count      = 0;
-<a name="l00097"></a>00097         $results    = array();
-<a name="l00098"></a>00098         
-<a name="l00099"></a>00099         <span class="keywordflow">while</span>( $results[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC) ) {
-<a name="l00100"></a>00100             $count++;
-<a name="l00101"></a>00101         }
+<a name="l00032"></a>00032     
+<a name="l00033"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a290079a8772074eaa196a26f28ff4d5b">00033</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a290079a8772074eaa196a26f28ff4d5b">testBindNonNamed</a>() {
+<a name="l00034"></a>00034         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>(<span class="stringliteral">&quot;SELECT * FROM cars WHERE doors &gt; ? AND colour = ? LIMIT 10&quot;</span>);
+<a name="l00035"></a>00035         
+<a name="l00036"></a>00036         $this-&gt;assertTrue( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute(array(1, <span class="stringliteral">&#39;black&#39;</span>)) );
+<a name="l00037"></a>00037         $this-&gt;assertEquals( <span class="stringliteral">&#39;SELECT * FROM cars WHERE doors &gt; \&#39;1\&#39; AND colour = \&#39;black\&#39;&#39;</span>, (<span class="keywordtype">string</span>)<a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> );
+<a name="l00038"></a>00038     }
+<a name="l00039"></a>00039     
+<a name="l00040"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#afc2fc29fd17b00f7c90a9b9433ec6d6c">00040</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#afc2fc29fd17b00f7c90a9b9433ec6d6c">testBindInsertNotNamed</a>() {
+<a name="l00041"></a>00041         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>(<span class="stringliteral">&quot;INSERT INTO cars (brand, colour, doors) VALUES ( ?, &#39;black&#39;, ? )&quot;</span>);
+<a name="l00042"></a>00042         $this-&gt;assertTrue( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute(array(<span class="stringliteral">&#39;Dodge&#39;</span>, 2)) );
+<a name="l00043"></a>00043         
+<a name="l00044"></a>00044         $id = SDBStatement::LastInsertId();
+<a name="l00045"></a>00045         
+<a name="l00046"></a>00046         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = Mock\SDBCar::Find( $id );
+<a name="l00047"></a>00047         $this-&gt;assertEquals( <span class="stringliteral">&#39;Dodge&#39;</span>,   <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;brand );
+<a name="l00048"></a>00048         $this-&gt;assertEquals( <span class="stringliteral">&#39;black&#39;</span>,   <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;colour );
+<a name="l00049"></a>00049         $this-&gt;assertEquals( 2,         <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;doors );
+<a name="l00050"></a>00050     }
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a52b04b55d04b51dd77c601f267a302af">00052</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a52b04b55d04b51dd77c601f267a302af">testHybridBind</a>() {
+<a name="l00053"></a>00053         
+<a name="l00054"></a>00054     }
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a9c2e5112e74de088efd9acefe848c233">00056</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a9c2e5112e74de088efd9acefe848c233">testTooManyBound</a>() {
+<a name="l00057"></a>00057         
+<a name="l00058"></a>00058     }
+<a name="l00059"></a>00059 
+<a name="l00060"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#ad6ee1fb80f9bf2766a4432aa37c8a392">00060</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#ad6ee1fb80f9bf2766a4432aa37c8a392">testDeleteRange</a>() {
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     }
+<a name="l00063"></a>00063     
+<a name="l00064"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a59f852902f18df3a0f95625fe19c7646">00064</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a59f852902f18df3a0f95625fe19c7646">testFetchArray</a>() {
+<a name="l00065"></a>00065         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners LIMIT 200&quot;</span>);
+<a name="l00066"></a>00066         
+<a name="l00067"></a>00067         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ARRAY);
+<a name="l00068"></a>00068         
+<a name="l00069"></a>00069         $this-&gt;assertTrue(is_array($result));
+<a name="l00070"></a>00070         $this-&gt;assertEquals( 1, count($result) );
+<a name="l00071"></a>00071     }
+<a name="l00072"></a>00072     
+<a name="l00073"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#affd6276d3a60acbbac1fd3dec187a8bc">00073</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#affd6276d3a60acbbac1fd3dec187a8bc">testFetchAssoc</a>() {
+<a name="l00074"></a>00074         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners LIMIT 10&quot;</span>);
+<a name="l00075"></a>00075         
+<a name="l00076"></a>00076         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC);
+<a name="l00077"></a>00077         
+<a name="l00078"></a>00078         $this-&gt;assertTrue(is_array($result));
+<a name="l00079"></a>00079         $this-&gt;assertEquals( 1, count($result) );
+<a name="l00080"></a>00080         $keys = array_keys($result);
+<a name="l00081"></a>00081         $this-&gt;assertEquals( <span class="stringliteral">&#39;name&#39;</span>, $keys[0] );
+<a name="l00082"></a>00082     }
+<a name="l00083"></a>00083     
+<a name="l00084"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1f32b4b3e8b7c371a49e03887665a05f">00084</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1f32b4b3e8b7c371a49e03887665a05f">testFetchBoth</a>() {
+<a name="l00085"></a>00085         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT * FROM owners LIMIT 10&quot;</span>);
+<a name="l00086"></a>00086         
+<a name="l00087"></a>00087         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch();
+<a name="l00088"></a>00088         
+<a name="l00089"></a>00089         $this-&gt;assertTrue(is_array($result));
+<a name="l00090"></a>00090         $this-&gt;assertEquals( 2, count($result) );
+<a name="l00091"></a>00091         $keys = array_keys($result);
+<a name="l00092"></a>00092         $this-&gt;assertTrue( array_key_exists(<span class="stringliteral">&#39;name&#39;</span>, $result) );
+<a name="l00093"></a>00093         $this-&gt;assertEquals( $result[0], $result[<span class="stringliteral">&#39;name&#39;</span>] );
+<a name="l00094"></a>00094     }
+<a name="l00095"></a>00095     
+<a name="l00096"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1b409e6eb3e57baf5a412dfc0ce40b4e">00096</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a1b409e6eb3e57baf5a412dfc0ce40b4e">testFetchMultiple</a>() {
+<a name="l00097"></a>00097         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners LIMIT 10&quot;</span>);
+<a name="l00098"></a>00098         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00099"></a>00099         
+<a name="l00100"></a>00100         $lastName   = <span class="stringliteral">&#39;&#39;</span>;
+<a name="l00101"></a>00101         $count      = 0;
 <a name="l00102"></a>00102         
-<a name="l00103"></a>00103         array_pop($results);
-<a name="l00104"></a>00104         
-<a name="l00105"></a>00105         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00106"></a>00106         $fetchAllResult = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll(SDBStatement::FETCH_ASSOC );
-<a name="l00107"></a>00107         $this-&gt;assertEquals( $count, count($fetchAllResult) );
-<a name="l00108"></a>00108         $this-&gt;assertNotEquals( $results, $fetchAllResult);
-<a name="l00109"></a>00109         $this-&gt;assertEquals( $results, array_values($fetchAllResult));
+<a name="l00103"></a>00103         <span class="keywordflow">while</span>( $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC) ) {
+<a name="l00104"></a>00104             $this-&gt;assertNotEquals( $lastName, $result[<span class="stringliteral">&#39;name&#39;</span>] );
+<a name="l00105"></a>00105             $lastName = $result[<span class="stringliteral">&#39;name&#39;</span>];
+<a name="l00106"></a>00106             $count++;
+<a name="l00107"></a>00107         }
+<a name="l00108"></a>00108         
+<a name="l00109"></a>00109         $this-&gt;assertGreaterThan(10, $count);
 <a name="l00110"></a>00110     }
 <a name="l00111"></a>00111     
-<a name="l00112"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a365627cca92e50daf20e74eec1ac9785">00112</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a365627cca92e50daf20e74eec1ac9785">testFetchAll</a>() {
-<a name="l00113"></a>00113         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners&quot;</span>);
+<a name="l00112"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a3788dc8750fb7fda19fb9a41f74b7c78">00112</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a3788dc8750fb7fda19fb9a41f74b7c78">testFetchAllAssoc</a>() {
+<a name="l00113"></a>00113         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners LIMIT 10&quot;</span>);
 <a name="l00114"></a>00114         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
 <a name="l00115"></a>00115         $count      = 0;
 <a name="l00116"></a>00116         $results    = array();
 <a name="l00117"></a>00117         
-<a name="l00118"></a>00118         <span class="keywordflow">while</span>( $results[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ARRAY) ) {
+<a name="l00118"></a>00118         <span class="keywordflow">while</span>( $results[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ASSOC) ) {
 <a name="l00119"></a>00119             $count++;
 <a name="l00120"></a>00120         }
 <a name="l00121"></a>00121         
 <a name="l00122"></a>00122         array_pop($results);
 <a name="l00123"></a>00123         
 <a name="l00124"></a>00124         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00125"></a>00125         $fetchAllResult = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll(SDBStatement::FETCH_ARRAY );
-<a name="l00126"></a>00126         $this-&gt;assertEquals( $results, $fetchAllResult);
-<a name="l00127"></a>00127     }
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 }
-<a name="l00130"></a>00130 ?&gt;
+<a name="l00125"></a>00125         $fetchAllResult = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll(SDBStatement::FETCH_ASSOC );
+<a name="l00126"></a>00126         $this-&gt;assertEquals( $count, count($fetchAllResult) );
+<a name="l00127"></a>00127         $this-&gt;assertNotEquals( $results, $fetchAllResult);
+<a name="l00128"></a>00128         $this-&gt;assertEquals( $results, array_values($fetchAllResult));
+<a name="l00129"></a>00129     }
+<a name="l00130"></a>00130     
+<a name="l00131"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a365627cca92e50daf20e74eec1ac9785">00131</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html#a365627cca92e50daf20e74eec1ac9785">testFetchAll</a>() {
+<a name="l00132"></a>00132         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = \ORM\SDB\SDBFactory::Get(<span class="stringliteral">&quot;SELECT name FROM owners LIMIT 10&quot;</span>);
+<a name="l00133"></a>00133         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00134"></a>00134         $count      = 0;
+<a name="l00135"></a>00135         $results    = array();
+<a name="l00136"></a>00136         
+<a name="l00137"></a>00137         <span class="keywordflow">while</span>( $results[] = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch(SDBStatement::FETCH_ARRAY) ) {
+<a name="l00138"></a>00138             $count++;
+<a name="l00139"></a>00139         }
+<a name="l00140"></a>00140         
+<a name="l00141"></a>00141         array_pop($results);
+<a name="l00142"></a>00142         
+<a name="l00143"></a>00143         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00144"></a>00144         $fetchAllResult = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll(SDBStatement::FETCH_ARRAY );
+<a name="l00145"></a>00145         $this-&gt;assertEquals( $results, $fetchAllResult);
+<a name="l00146"></a>00146     }
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 }
+<a name="l00149"></a>00149 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_statement_test_8php.html">SDBStatementTest.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:08 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

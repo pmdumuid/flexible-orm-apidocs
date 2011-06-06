@@ -122,7 +122,7 @@ Multiple Databases</h2>
  name = <span class="stringliteral">&quot;test2_db&quot;</span>
  user = <span class="stringliteral">&quot;test2&quot;</span>
  pass = <span class="stringliteral">&quot;none&quot;</span>
-</pre></div><p>To create a prepared statement on an alternative database, simply call <code><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a89a2ebb591e365f2b6108c8acead6e52">PDOFactory::Get</a>( $sql, 'secondDatabase' )</code>.</p>
+</pre></div><p>To create a prepared statement on an alternative database, simply call <code><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>( $sql, 'secondDatabase' )</code>.</p>
 <p>To get a model class to use a separate database, simple define the <code>DATABASE</code> constant to match the config group name. For example:</p>
 <div class="fragment"><pre class="fragment"> <span class="keyword">class </span>ExternalJobs <span class="keyword">extends</span> \ORM\ORM_Model {
       <span class="keyword">const</span> DATABASE = <span class="stringliteral">&#39;secondDatabase&#39;</span>;
@@ -148,7 +148,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:09 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00174"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">00174</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll</a>( $optionsArray = array(), $findWith = <span class="keyword">false</span> ) {
 <a name="l00175"></a>00175         $df     = static::DataFactory();
 <a name="l00176"></a>00176         $sql    = static::_BuildSQL( $optionsArray, static::TableName(), $findWith );
-<a name="l00177"></a>00177         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName() );
+<a name="l00177"></a>00177         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() );
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute( isset($optionsArray[<span class="stringliteral">&#39;values&#39;</span>]) ? $optionsArray[<span class="stringliteral">&#39;values&#39;</span>] : null);
 <a name="l00180"></a>00180 
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00214"></a>00214             $findWith
 <a name="l00215"></a>00215         );
 <a name="l00216"></a>00216         
-<a name="l00217"></a>00217         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName() );
+<a name="l00217"></a>00217         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() );
 <a name="l00218"></a>00218 
 <a name="l00219"></a>00219         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindParam( <span class="stringliteral">&quot;:$field&quot;</span>, $value );
 <a name="l00220"></a>00220 
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00238"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">00238</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">CountFindAll</a>( $optionsArray = array() ) {
 <a name="l00239"></a>00239         $df     = static::DataFactory();
 <a name="l00240"></a>00240         $sql    = static::_BuildSQL( $optionsArray, static::TableName(), <span class="keyword">false</span>, self::QUERY_COUNT_ONLY );
-<a name="l00241"></a>00241         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName() );
+<a name="l00241"></a>00241         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() );
 <a name="l00242"></a>00242         
 <a name="l00243"></a>00243         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute( isset($optionsArray[<span class="stringliteral">&#39;values&#39;</span>]) ? $optionsArray[<span class="stringliteral">&#39;values&#39;</span>] : null);
 <a name="l00244"></a>00244 
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00269"></a>00269             self::QUERY_COUNT_ONLY
 <a name="l00270"></a>00270         );
 <a name="l00271"></a>00271         
-<a name="l00272"></a>00272         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName() );
+<a name="l00272"></a>00272         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() );
 <a name="l00273"></a>00273 
 <a name="l00274"></a>00274         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindParam( <span class="stringliteral">&quot;:$field&quot;</span>, $value );
 <a name="l00275"></a>00275 
@@ -207,7 +207,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00363"></a>00363             $findWith
 <a name="l00364"></a>00364         );
 <a name="l00365"></a>00365 
-<a name="l00366"></a>00366         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>      = $df::Get( <span class="stringliteral">&quot;$sql LIMIT 1&quot;</span>, static::DatabaseConfigName() );
+<a name="l00366"></a>00366         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>      = $df::Get( <span class="stringliteral">&quot;$sql LIMIT 1&quot;</span>, static::DatabaseConfigName(), get_called_class() );
 <a name="l00367"></a>00367         
 <a name="l00368"></a>00368         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindValue( <span class="stringliteral">&quot;:$field&quot;</span>, $value );
 <a name="l00369"></a>00369         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
@@ -219,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00389"></a>00389         $df     = static::DataFactory();
 <a name="l00390"></a>00390         $sql    = static::_BuildSQL( $optionsArray, static::TableName(), $findWith );
 <a name="l00391"></a>00391         $sql    .= <span class="stringliteral">&quot;LIMIT 1&quot;</span>;
-<a name="l00392"></a>00392         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName() );
+<a name="l00392"></a>00392         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() );
 <a name="l00393"></a>00393 
 <a name="l00394"></a>00394         <span class="keywordflow">if</span>( isset($optionsArray[<span class="stringliteral">&#39;values&#39;</span>]) ) {
 <a name="l00395"></a>00395             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute($optionsArray[<span class="stringliteral">&#39;values&#39;</span>]);
@@ -283,7 +283,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00498"></a>00498         $df         = static::DataFactory();
 <a name="l00499"></a>00499         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>      = $df::Get(
 <a name="l00500"></a>00500                 <span class="stringliteral">&quot;DELETE FROM `$tableName` WHERE `$key` = :id&quot;</span>,
-<a name="l00501"></a>00501                 static::DatabaseConfigName()
+<a name="l00501"></a>00501                 static::DatabaseConfigName(), get_called_class()
 <a name="l00502"></a>00502         );
 <a name="l00503"></a>00503 
 <a name="l00504"></a>00504         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindParam( <span class="stringliteral">&#39;:id&#39;</span>, $id );
@@ -298,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00523"></a>00523         $df         = static::DataFactory();
 <a name="l00524"></a>00524         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>      = $df::Get(
 <a name="l00525"></a>00525                 <span class="stringliteral">&quot;DELETE FROM `$tableName` WHERE `$key` = :id&quot;</span>,
-<a name="l00526"></a>00526                 static::DatabaseConfigName()
+<a name="l00526"></a>00526                 static::DatabaseConfigName(), get_called_class()
 <a name="l00527"></a>00527         );
 <a name="l00528"></a>00528 
 <a name="l00529"></a>00529         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;bindParam( <span class="stringliteral">&#39;:id&#39;</span>, $this-&gt;_id );
@@ -343,7 +343,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00634"></a>00634 
 <a name="l00635"></a>00635             $changedFields[] = $key;
 <a name="l00636"></a>00636             $df              = static::DataFactory();
-<a name="l00637"></a>00637             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName() )-&gt;bindObject($this, $changedFields);
+<a name="l00637"></a>00637             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() )-&gt;bindObject($this, $changedFields);
 <a name="l00638"></a>00638 
 <a name="l00639"></a>00639             <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute() ) {
 <a name="l00640"></a>00640                 $this-&gt;afterUpdate();
@@ -372,7 +372,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00689"></a>00689 
 <a name="l00690"></a>00690         $sql    = <span class="stringliteral">&quot;INSERT INTO `$table` (`&quot;</span>.implode(<span class="stringliteral">&#39;`, `&#39;</span>,$fields).<span class="stringliteral">&quot;`)&quot;</span>;
 <a name="l00691"></a>00691         $sql    .= <span class="stringliteral">&quot; VALUES ( :&quot;</span>.implode(<span class="stringliteral">&#39;, :&#39;</span>,$fields).<span class="stringliteral">&quot; )&quot;</span>;
-<a name="l00692"></a>00692         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName() )-&gt;bindObject($this, $fields);
+<a name="l00692"></a>00692         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( $sql, static::DatabaseConfigName(), get_called_class() )-&gt;bindObject($this, $fields);
 <a name="l00693"></a>00693 
 <a name="l00694"></a>00694         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
 <a name="l00695"></a>00695         
@@ -400,7 +400,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00736"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">00736</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">DescribeTable</a>() {
 <a name="l00737"></a>00737         $table  = static::TableName();
 <a name="l00738"></a>00738         $df     = static::DataFactory();
-<a name="l00739"></a>00739         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( <span class="stringliteral">&quot;DESCRIBE `$table`&quot;</span>, static::DatabaseConfigName() );
+<a name="l00739"></a>00739         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $df::Get( <span class="stringliteral">&quot;DESCRIBE `$table`&quot;</span>, static::DatabaseConfigName(), get_called_class() );
 <a name="l00740"></a>00740         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
 <a name="l00741"></a>00741         $result = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetchAll( \PDO::FETCH_ASSOC );
 <a name="l00742"></a>00742 
@@ -417,107 +417,107 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00760"></a>00760         <span class="keywordflow">return</span> $this-&gt;_id;
 <a name="l00761"></a>00761     }
 <a name="l00762"></a>00762 
-<a name="l00773"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">00773</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
-<a name="l00774"></a>00774         <span class="keywordflow">return</span> count($this-&gt;_errorMessages) == 0;
-<a name="l00775"></a>00775     }
-<a name="l00776"></a>00776 
-<a name="l00784"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ac8f3b167a3abd9e7bbc7e6eabf2d1961">00784</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ac8f3b167a3abd9e7bbc7e6eabf2d1961">DatabaseConfigName</a>() {
-<a name="l00785"></a>00785         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::DATABASE&quot;</span>) ? static::DATABASE : PDOFactory::DEFAULT_DATABASE;
-<a name="l00786"></a>00786     }
-<a name="l00787"></a>00787 
-<a name="l00797"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">00797</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">DataFactory</a>() {
-<a name="l00798"></a>00798         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::DATAFACTORY&quot;</span>) ?  __NAMESPACE__.<span class="stringliteral">&quot;\\&quot;</span>.static::DATAFACTORY : __NAMESPACE__.<span class="stringliteral">&#39;\PDOFactory&#39;</span>;
-<a name="l00799"></a>00799     }
-<a name="l00800"></a>00800 
-<a name="l00812"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">00812</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">TableName</a>() {
-<a name="l00813"></a>00813         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::TABLE&quot;</span>) ? static::TABLE : self::_makeTableName(get_called_class());
-<a name="l00814"></a>00814     }
-<a name="l00815"></a>00815 
-<a name="l00826"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">00826</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">PrimaryKeyName</a>() {
-<a name="l00827"></a>00827         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::PRIMARY_KEY&quot;</span>) ? static::PRIMARY_KEY : <span class="stringliteral">&#39;id&#39;</span>;
-<a name="l00828"></a>00828     }
-<a name="l00829"></a>00829 
-<a name="l00843"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">00843</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">ForeignKey</a>( $modelName ) {
-<a name="l00844"></a>00844         $model = basename( str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="stringliteral">&#39;//&#39;</span>, $modelName) );
-<a name="l00845"></a>00845 
-<a name="l00846"></a>00846         $constName = <span class="stringliteral">&quot;FOREIGN_KEY_&quot;</span>.strtoupper( $model );
-<a name="l00847"></a>00847         $defaultFK = strtolower($model).<span class="charliteral">&#39;_&#39;</span>.$modelName::PrimaryKeyName();
-<a name="l00848"></a>00848         
-<a name="l00849"></a>00849         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::$constName&quot;</span>) ? constant(<span class="stringliteral">&quot;static::$constName&quot;</span>) : $defaultFK;
-<a name="l00850"></a>00850     }
-<a name="l00851"></a>00851 
-<a name="l00864"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">00864</a>     <span class="keyword">private</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">_makeTableName</a>( $model_name ) {
-<a name="l00865"></a>00865         $class = strtolower( basename(str_replace( <span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $model_name)) );
-<a name="l00866"></a>00866 
-<a name="l00867"></a>00867         <span class="keywordflow">if</span>( substr($class, -1) == <span class="charliteral">&#39;y&#39;</span> ) {
-<a name="l00868"></a>00868             <span class="keywordflow">return</span> substr($class, 0, -1).<span class="stringliteral">&quot;ies&quot;</span>;
-<a name="l00869"></a>00869         } <span class="keywordflow">else</span> {
-<a name="l00870"></a>00870             <span class="keywordflow">return</span> <span class="stringliteral">&quot;{$class}s&quot;</span>;
-<a name="l00871"></a>00871         }
-<a name="l00872"></a>00872     }
-<a name="l00873"></a>00873 
-<a name="l00880"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a062da757939285c507c9ff3f455446b3">00880</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a062da757939285c507c9ff3f455446b3">ClassName</a>() {
-<a name="l00881"></a>00881         <span class="keywordflow">return</span> basename(str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="stringliteral">&#39;//&#39;</span>, get_called_class()));
-<a name="l00882"></a>00882     }
-<a name="l00883"></a>00883 
-<a name="l00901"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">00901</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">PossibleValues</a>( $fieldName ) {
-<a name="l00902"></a>00902         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = PDOFactory::Get(<span class="stringliteral">&#39;SHOW COLUMNS FROM `&#39;</span> . static::TableName() . <span class="stringliteral">&#39;` LIKE &quot;&#39;</span> . $fieldName . <span class="charliteral">&#39;&quot;&#39;</span>);
-<a name="l00903"></a>00903         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
-<a name="l00904"></a>00904 
-<a name="l00905"></a>00905         $results = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch();
-<a name="l00906"></a>00906         $fields  = array();
-<a name="l00907"></a>00907 
-<a name="l00908"></a>00908         <span class="keywordflow">if</span>( preg_match_all(<span class="stringliteral">&#39;/\&#39;(.*?)\&#39;/&#39;</span>, $results[1], $fieldsZeroIndexed) ) {
-<a name="l00909"></a>00909             <span class="comment">// Convert to 1-indexed array</span>
-<a name="l00910"></a>00910             $fields = array_combine(
-<a name="l00911"></a>00911                     range( 1 ,count($fieldsZeroIndexed[1])),
-<a name="l00912"></a>00912                     $fieldsZeroIndexed[1]
-<a name="l00913"></a>00913             );
-<a name="l00914"></a>00914         }
-<a name="l00915"></a>00915 
-<a name="l00916"></a>00916         <span class="keywordflow">return</span> $fields;
-<a name="l00917"></a>00917     }
-<a name="l00918"></a>00918 
-<a name="l00935"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">00935</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">load</a>() {
-<a name="l00936"></a>00936         <span class="keywordflow">if</span>( $stored_object = static::Find( $this-&gt;_id ) ) {
-<a name="l00937"></a>00937             <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $stored_object-&gt;attributes();
-<a name="l00938"></a>00938 
-<a name="l00939"></a>00939             <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $attribute ) {
-<a name="l00940"></a>00940                 <span class="keywordflow">if</span>( !isset($this-&gt;$attribute) ) {
-<a name="l00941"></a>00941                     $this-&gt;$attribute = $stored_object-&gt;$attribute;
-<a name="l00942"></a>00942                 }
-<a name="l00943"></a>00943 
-<a name="l00944"></a>00944                 $this-&gt;setOriginalValue($attribute, $stored_object-&gt;$attribute);
-<a name="l00945"></a>00945             }
-<a name="l00946"></a>00946 
-<a name="l00947"></a>00947             <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00948"></a>00948         }
-<a name="l00949"></a>00949 
-<a name="l00950"></a>00950         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00951"></a>00951     }
-<a name="l00952"></a>00952 
-<a name="l00959"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7516ca30af0db3cdbf9a7739b48ce91d">00959</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7516ca30af0db3cdbf9a7739b48ce91d">__toString</a>() {
-<a name="l00960"></a>00960         <span class="keywordflow">return</span> get_called_class().<span class="stringliteral">&quot; [{$this-&gt;id()}]&quot;</span>;
-<a name="l00961"></a>00961     }
-<a name="l00962"></a>00962 
-<a name="l00970"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">00970</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">beforeSave</a>() {}
-<a name="l00971"></a>00971 
-<a name="l00979"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">00979</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">beforeUpdate</a>() {}
-<a name="l00980"></a>00980 
-<a name="l00988"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">00988</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">beforeCreate</a>() {}
-<a name="l00989"></a>00989 
-<a name="l00995"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">00995</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">afterCreate</a>() {}
-<a name="l00996"></a>00996 
-<a name="l01001"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">01001</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">afterUpdate</a>() {}
-<a name="l01002"></a>01002 
-<a name="l01007"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">01007</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">afterSave</a>() {}
-<a name="l01008"></a>01008 }
+<a name="l00775"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">00775</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
+<a name="l00776"></a>00776         <span class="keywordflow">return</span> count($this-&gt;_errorMessages) == 0;
+<a name="l00777"></a>00777     }
+<a name="l00778"></a>00778 
+<a name="l00786"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ac8f3b167a3abd9e7bbc7e6eabf2d1961">00786</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ac8f3b167a3abd9e7bbc7e6eabf2d1961">DatabaseConfigName</a>() {
+<a name="l00787"></a>00787         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::DATABASE&quot;</span>) ? static::DATABASE : PDOFactory::DEFAULT_DATABASE;
+<a name="l00788"></a>00788     }
+<a name="l00789"></a>00789 
+<a name="l00799"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">00799</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">DataFactory</a>() {
+<a name="l00800"></a>00800         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::DATAFACTORY&quot;</span>) ?  __NAMESPACE__.<span class="stringliteral">&quot;\\&quot;</span>.static::DATAFACTORY : __NAMESPACE__.<span class="stringliteral">&#39;\PDOFactory&#39;</span>;
+<a name="l00801"></a>00801     }
+<a name="l00802"></a>00802 
+<a name="l00814"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">00814</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">TableName</a>() {
+<a name="l00815"></a>00815         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::TABLE&quot;</span>) ? static::TABLE : self::_makeTableName(get_called_class());
+<a name="l00816"></a>00816     }
+<a name="l00817"></a>00817 
+<a name="l00828"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">00828</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">PrimaryKeyName</a>() {
+<a name="l00829"></a>00829         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::PRIMARY_KEY&quot;</span>) ? static::PRIMARY_KEY : <span class="stringliteral">&#39;id&#39;</span>;
+<a name="l00830"></a>00830     }
+<a name="l00831"></a>00831 
+<a name="l00845"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">00845</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">ForeignKey</a>( $modelName ) {
+<a name="l00846"></a>00846         $model = basename( str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="stringliteral">&#39;//&#39;</span>, $modelName) );
+<a name="l00847"></a>00847 
+<a name="l00848"></a>00848         $constName = <span class="stringliteral">&quot;FOREIGN_KEY_&quot;</span>.strtoupper( $model );
+<a name="l00849"></a>00849         $defaultFK = strtolower($model).<span class="charliteral">&#39;_&#39;</span>.$modelName::PrimaryKeyName();
+<a name="l00850"></a>00850         
+<a name="l00851"></a>00851         <span class="keywordflow">return</span> defined(<span class="stringliteral">&quot;static::$constName&quot;</span>) ? constant(<span class="stringliteral">&quot;static::$constName&quot;</span>) : $defaultFK;
+<a name="l00852"></a>00852     }
+<a name="l00853"></a>00853 
+<a name="l00866"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">00866</a>     <span class="keyword">private</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">_makeTableName</a>( $model_name ) {
+<a name="l00867"></a>00867         $class = strtolower( basename(str_replace( <span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $model_name)) );
+<a name="l00868"></a>00868 
+<a name="l00869"></a>00869         <span class="keywordflow">if</span>( substr($class, -1) == <span class="charliteral">&#39;y&#39;</span> ) {
+<a name="l00870"></a>00870             <span class="keywordflow">return</span> substr($class, 0, -1).<span class="stringliteral">&quot;ies&quot;</span>;
+<a name="l00871"></a>00871         } <span class="keywordflow">else</span> {
+<a name="l00872"></a>00872             <span class="keywordflow">return</span> <span class="stringliteral">&quot;{$class}s&quot;</span>;
+<a name="l00873"></a>00873         }
+<a name="l00874"></a>00874     }
+<a name="l00875"></a>00875 
+<a name="l00882"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a062da757939285c507c9ff3f455446b3">00882</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a062da757939285c507c9ff3f455446b3">ClassName</a>() {
+<a name="l00883"></a>00883         <span class="keywordflow">return</span> basename(str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="stringliteral">&#39;//&#39;</span>, get_called_class()));
+<a name="l00884"></a>00884     }
+<a name="l00885"></a>00885 
+<a name="l00903"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">00903</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">PossibleValues</a>( $fieldName ) {
+<a name="l00904"></a>00904         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a> = PDOFactory::Get(<span class="stringliteral">&#39;SHOW COLUMNS FROM `&#39;</span> . static::TableName() . <span class="stringliteral">&#39;` LIKE &quot;&#39;</span> . $fieldName . <span class="charliteral">&#39;&quot;&#39;</span>);
+<a name="l00905"></a>00905         <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;execute();
+<a name="l00906"></a>00906 
+<a name="l00907"></a>00907         $results = <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>-&gt;fetch();
+<a name="l00908"></a>00908         $fields  = array();
+<a name="l00909"></a>00909 
+<a name="l00910"></a>00910         <span class="keywordflow">if</span>( preg_match_all(<span class="stringliteral">&#39;/\&#39;(.*?)\&#39;/&#39;</span>, $results[1], $fieldsZeroIndexed) ) {
+<a name="l00911"></a>00911             <span class="comment">// Convert to 1-indexed array</span>
+<a name="l00912"></a>00912             $fields = array_combine(
+<a name="l00913"></a>00913                     range( 1 ,count($fieldsZeroIndexed[1])),
+<a name="l00914"></a>00914                     $fieldsZeroIndexed[1]
+<a name="l00915"></a>00915             );
+<a name="l00916"></a>00916         }
+<a name="l00917"></a>00917 
+<a name="l00918"></a>00918         <span class="keywordflow">return</span> $fields;
+<a name="l00919"></a>00919     }
+<a name="l00920"></a>00920 
+<a name="l00937"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">00937</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">load</a>() {
+<a name="l00938"></a>00938         <span class="keywordflow">if</span>( $stored_object = static::Find( $this-&gt;_id ) ) {
+<a name="l00939"></a>00939             <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $stored_object-&gt;attributes();
+<a name="l00940"></a>00940 
+<a name="l00941"></a>00941             <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $attribute ) {
+<a name="l00942"></a>00942                 <span class="keywordflow">if</span>( !isset($this-&gt;$attribute) ) {
+<a name="l00943"></a>00943                     $this-&gt;$attribute = $stored_object-&gt;$attribute;
+<a name="l00944"></a>00944                 }
+<a name="l00945"></a>00945 
+<a name="l00946"></a>00946                 $this-&gt;setOriginalValue($attribute, $stored_object-&gt;$attribute);
+<a name="l00947"></a>00947             }
+<a name="l00948"></a>00948 
+<a name="l00949"></a>00949             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00950"></a>00950         }
+<a name="l00951"></a>00951 
+<a name="l00952"></a>00952         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00953"></a>00953     }
+<a name="l00954"></a>00954 
+<a name="l00961"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7516ca30af0db3cdbf9a7739b48ce91d">00961</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7516ca30af0db3cdbf9a7739b48ce91d">__toString</a>() {
+<a name="l00962"></a>00962         <span class="keywordflow">return</span> get_called_class().<span class="stringliteral">&quot; [{$this-&gt;id()}]&quot;</span>;
+<a name="l00963"></a>00963     }
+<a name="l00964"></a>00964 
+<a name="l00972"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">00972</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">beforeSave</a>() {}
+<a name="l00973"></a>00973 
+<a name="l00981"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">00981</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">beforeUpdate</a>() {}
+<a name="l00982"></a>00982 
+<a name="l00990"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">00990</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">beforeCreate</a>() {}
+<a name="l00991"></a>00991 
+<a name="l00997"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">00997</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">afterCreate</a>() {}
+<a name="l00998"></a>00998 
+<a name="l01003"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">01003</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">afterUpdate</a>() {}
+<a name="l01004"></a>01004 
+<a name="l01009"></a><a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">01009</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">afterSave</a>() {}
+<a name="l01010"></a>01010 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m___model_8php.html">ORM_Model.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:08 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

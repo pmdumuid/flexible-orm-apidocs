@@ -219,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00255"></a>00255     
 <a name="l00260"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">00260</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">_setItems</a>( <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> $response ) {
 <a name="l00261"></a>00261         <span class="keywordflow">if</span>( !$response-&gt;isOK() ) {
-<a name="l00262"></a>00262             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOException( $response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">errorMessage</a>() );
+<a name="l00262"></a>00262             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOException( $response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">errorMessage</a>().<span class="stringliteral">&#39; - &#39;</span>.$response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a>() );
 <a name="l00263"></a>00263         }
 <a name="l00264"></a>00264         
 <a name="l00265"></a>00265         <span class="keywordflow">foreach</span>( $response as $key =&gt; $item ) {
@@ -301,7 +301,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_response_8php.html">SDBResponse.php</a>      </li>
-      <li class="footer">Generated on Wed Jun 1 2011 12:37:39 for flexible-orm by&#160;
+      <li class="footer">Generated on Mon Jun 6 2011 12:28:08 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
