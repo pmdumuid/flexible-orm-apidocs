@@ -78,8 +78,8 @@ var NAVTREE =
       [ "ORMSecondDatabaseTest", "class_o_r_m_1_1_tests_1_1_o_r_m_second_database_test.html", null ],
       [ "ORMTest", "class_o_r_m_1_1_tests_1_1_o_r_m_test.html", null ],
       [ "ORMUpdateException", "class_o_r_m_1_1_exceptions_1_1_o_r_m_update_exception.html", null ],
-      [ "Owner", "class_owner.html", null ],
       [ "Owner", "class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html", null ],
+      [ "Owner", "class_owner.html", null ],
       [ "PDOFactory", "class_o_r_m_1_1_p_d_o_factory.html", null ],
       [ "PDOFactoryTest", "class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html", null ],
       [ "SDBCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_s_d_b_car.html", null ],
@@ -91,7 +91,8 @@ var NAVTREE =
       [ "SDBSessionHandler", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html", null ],
       [ "SDBSessionHandlerTest", "class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html", null ],
       [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ],
-      [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html", null ],
+      [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_1_1_s_d_b_statement_test.html", null ],
+      [ "SDBWrapper", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html", null ],
       [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ],
       [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ],
       [ "Window", "class_o_r_m_1_1_tests_1_1_mock_1_1_window.html", null ]
@@ -184,12 +185,15 @@ var NAVTREE =
         [ "ORMSDBTests", "class_o_r_m_1_1_tests_1_1_o_r_m_s_d_b_tests.html", null ],
         [ "ORMSecondDatabaseTest", "class_o_r_m_1_1_tests_1_1_o_r_m_second_database_test.html", null ],
         [ "PDOFactoryTest", "class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html", null ],
+        [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_1_1_s_d_b_statement_test.html", null ],
         [ "SDBResponseTest", "class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html", null ],
-        [ "SDBSessionHandlerTest", "class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html", null ],
-        [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_statement_test.html", null ]
+        [ "SDBSessionHandlerTest", "class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html", null ]
       ] ],
       [ "SDBResponse", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html", null ],
       [ "SDBSessionHandler", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html", null ],
+      [ "SDBWrapper", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html", [
+        [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ]
+      ] ],
       [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ]
     ] ],
     [ "Data Fields", "functions.html", null ],
@@ -200,6 +204,7 @@ var NAVTREE =
       [ "ORM::SDB", "namespace_o_r_m_1_1_s_d_b.html", null ],
       [ "ORM::Tests", "namespace_o_r_m_1_1_tests.html", null ],
       [ "ORM::Tests::Mock", "namespace_o_r_m_1_1_tests_1_1_mock.html", null ],
+      [ "ORM::Tests::SDB", "namespace_o_r_m_1_1_tests_1_1_s_d_b.html", null ],
       [ "ORM::Utilities", "namespace_o_r_m_1_1_utilities.html", null ],
       [ "ORM::Utilities::Cache", "namespace_o_r_m_1_1_utilities_1_1_cache.html", null ],
       [ "Utilities", "namespace_utilities.html", null ]
@@ -236,6 +241,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/SDB/SDBSession.php", "_s_d_b_session_8php.html", null ],
       [ "C:/server/projects/flexible-orm/SDB/SDBSessionHandler.php", "_s_d_b_session_handler_8php.html", null ],
       [ "C:/server/projects/flexible-orm/SDB/SDBStatement.php", "_s_d_b_statement_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/SDB/SDBWrapper.php", "_s_d_b_wrapper_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/APCCacheTest.php", "_a_p_c_cache_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/AutoloadTest.php", "_autoload_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/CachedORMModelTest.php", "_cached_o_r_m_model_test_8php.html", null ],
@@ -254,7 +260,6 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tests/PDOFactoryTest.php", "_p_d_o_factory_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/SDBResponseTest.php", "_s_d_b_response_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/SDBSessionHandlerTest.php", "_s_d_b_session_handler_test_8php.html", null ],
-      [ "C:/server/projects/flexible-orm/tests/SDBStatementTest.php", "_s_d_b_statement_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/AlternateCar.php", "_alternate_car_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/BadModel.php", "_bad_model_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/CachedCar.php", "_cached_car_8php.html", null ],
@@ -273,6 +278,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tests/Mock/Staff.php", "_staff_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/UndoableCar.php", "_undoable_car_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/Window.php", "_window_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/SDB/SDBStatementTest.php", "_s_d_b_statement_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/introduction.php", "introduction_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities.php", "utilities_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/validation.php", "validation_8php.html", null ],
