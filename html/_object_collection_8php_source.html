@@ -212,14 +212,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00408"></a>00408 
 <a name="l00409"></a>00409         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00410"></a>00410     }
-<a name="l00411"></a>00411 }
-<a name="l00412"></a>00412 ?&gt;
+<a name="l00411"></a>00411     
+<a name="l00419"></a><a class="code" href="class_o_r_m_1_1_object_collection.html#a658defb34762c8f40085aec87e16ba1a">00419</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_object_collection.html#a658defb34762c8f40085aec87e16ba1a">toArray</a>() {
+<a name="l00420"></a>00420         <span class="keywordflow">return</span> $this-&gt;_collection;
+<a name="l00421"></a>00421     }
+<a name="l00422"></a>00422     
+<a name="l00451"></a><a class="code" href="class_o_r_m_1_1_object_collection.html#a41a8d5257813a21e0cd30fa7649bbb46">00451</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_object_collection.html#a41a8d5257813a21e0cd30fa7649bbb46">reduce</a>( $function, $initial = null ) {
+<a name="l00452"></a>00452         <span class="keywordflow">return</span> array_reduce( $this-&gt;toArray(), $function, $initial );
+<a name="l00453"></a>00453     }
+<a name="l00454"></a>00454 }
+<a name="l00455"></a>00455 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_object_collection_8php.html">ObjectCollection.php</a>      </li>
-      <li class="footer">Generated on Mon Jun 6 2011 12:28:08 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 8 2011 16:07:30 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
