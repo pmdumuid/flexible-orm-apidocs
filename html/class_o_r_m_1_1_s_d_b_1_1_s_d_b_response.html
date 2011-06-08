@@ -96,7 +96,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717">__construct</a> ($header, $body, $status=null)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">itemNames</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">items</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a726684c26c6b474e878c39b5145bd186">getAll</a> ($consistentRead=false, $limit=null, $offset=0, $currentOffset=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll</a> ($consistentRead=false, $resultsLimit=null, $offset=0, $currentOffset=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505">clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">nextToken</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a> ()</td></tr>
@@ -301,7 +301,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Helper function to tidy up the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a726684c26c6b474e878c39b5145bd186">getAll()</a> function</p>
+<p>Helper function to tidy up the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> function</p>
 <p>Determine how many more items are required. Removes items if the target offset has not yet been reached</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -313,7 +313,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00247">247</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00248">248</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00260">260</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00261">261</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Also calls <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind()</a></p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00231">231</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00232">232</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -381,7 +381,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Can also be called using the inbuilt <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count()</a> method </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00417">417</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00418">418</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -401,7 +401,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get the current item array</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00313">313</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00314">314</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -421,11 +421,11 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Get the error details (if there are errors)</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00301">301</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00302">302</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a726684c26c6b474e878c39b5145bd186"></a><!-- doxytag: member="ORM::SDB::SDBResponse::getAll" ref="a726684c26c6b474e878c39b5145bd186" args="($consistentRead=false, $limit=null, $offset=0, $currentOffset=0)" -->
+<a class="anchor" id="a66a42e88aca321e256b8e790d0bd2b30"></a><!-- doxytag: member="ORM::SDB::SDBResponse::getAll" ref="a66a42e88aca321e256b8e790d0bd2b30" args="($consistentRead=false, $resultsLimit=null, $offset=0, $currentOffset=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -439,7 +439,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">$&#160;</td>
-          <td class="paramname"><em>limit</em> = <code>null</code>, </td>
+          <td class="paramname"><em>resultsLimit</em> = <code>null</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -466,11 +466,11 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
 <p>Additionally returned items are appended to this response object's items array.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Only works with Select statements. It should not be neccasary for others, except maybe getAttributes if you have a large number of attributes or listDomains if you have a lot.</dd>
 <dd>
-The $consistentRead parameter must have the same value as the original command, if the original query was run with consistentRead==true, then <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a726684c26c6b474e878c39b5145bd186">getAll()</a> must be called as getAll(true)</dd></dl>
+The $consistentRead parameter must have the same value as the original command, if the original query was run with consistentRead==true, then <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> must be called as getAll(true)</dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">boolean</td><td class="paramname">$consistentRead</td><td>[optional] defaults to false. Tell <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> whether or not to force consistency. This must be the same as the original query (ie if the original query enforced consistent read, this must be true) </td></tr>
-    <tr><td class="paramtype">int</td><td class="paramname">$limit</td><td>[optional] Maximum number of records to return (including the original items) Defaults to no limit (other than those imposed by MAX_QUERIES). </td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$resultsLimit</td><td>[optional] Maximum number of records to return (including the original items) Defaults to no limit (other than those imposed by MAX_QUERIES). </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$offset</td><td>[optional] Number of rows to skip from beinging when used with limit. Defaults to 0 (start from beginning). </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$currentOffset</td><td>The number of rows already skipped. Defaults to 0 (started from beginning). </td></tr>
   </table>
@@ -499,7 +499,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>Only works with select queries (obviously) </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00286">286</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00287">287</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -560,7 +560,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>This will also be the itemName for the current item </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00323">323</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00324">324</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -580,7 +580,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>Advance the internal pointer and return the new key </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00331">331</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00332">332</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -600,7 +600,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>Get the nextToken if it exists for completing this <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> request</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|null </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00275">275</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00276">276</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -628,7 +628,7 @@ The $consistentRead parameter must have the same value as the original command, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00366">366</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00367">367</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -658,7 +658,7 @@ The $consistentRead parameter must have the same value as the original command, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00386">386</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00387">387</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -688,7 +688,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <div class="memdoc">
 <p>Add or modify an array item </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00393">393</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00394">394</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -721,7 +721,7 @@ The $consistentRead parameter must have the same value as the original command, 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00407">407</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00408">408</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -741,7 +741,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>Reset the internal pointer to the start</p>
 <p>Also ensure the _itemNames array correctly contains all the item names </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00341">341</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00342">342</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -761,7 +761,7 @@ The $consistentRead parameter must have the same value as the original command, 
 <p>Ensure the the current key position is valid </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00353">353</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00354">354</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
 </div>
 </div>
@@ -841,7 +841,7 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>The maximum number of consecutive "nextToken" queries run when <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a726684c26c6b474e878c39b5145bd186">getAll()</a> is called. </p>
+<p>The maximum number of consecutive "nextToken" queries run when <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> is called. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00024">24</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -857,7 +857,7 @@ The $consistentRead parameter must have the same value as the original command, 
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a>      </li>
-      <li class="footer">Generated on Mon Jun 6 2011 12:28:10 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 8 2011 16:07:32 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
