@@ -90,46 +90,77 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SDBResponse Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::SDB::SDBResponse" --><table class="memberdecls">
+<!-- doxytag: class="ORM::SDB::SDBResponse" -->
+<p>Represent retrieved items and attributes from AmazonSDB as an array.  
+ <a href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#details">More...</a></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717">__construct</a> ($header, $body, $status=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the XML response into the $_items array if this is a supported action.  <a href="#a68f82c5d0ede4dcee8705afbfe630717"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">itemNames</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of itemName() values from <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>.  <a href="#afdef380a732927764a0e29dfbba1cf6b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">items</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the returned items as an array.  <a href="#a5d2c6ea97e26121f29be3601d32af982"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll</a> ($consistentRead=false, $resultsLimit=null, $offset=0, $currentOffset=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure the query is complete.  <a href="#a66a42e88aca321e256b8e790d0bd2b30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505">clear</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all the items in the _items array.  <a href="#aa821bec12eaa7e0f649397c9675ff505"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">nextToken</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the nextToken if it exists for completing this <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> request.  <a href="#a28f33aeda1185cf6afaddf8d0a5c10c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SELECT query used to generate this reponse.  <a href="#a55f162785567258fe5138af282e588c2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">errorMessage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error details (if there are errors)  <a href="#a01effa419e1a208366c688d817379f1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">current</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current item array.  <a href="#af343507d1926e6ecf964625d41db528c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">key</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current (in iteration) key.  <a href="#a729e946b4ef600e71740113c6d4332c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">next</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance the internal pointer and return the new key.  <a href="#acea62048bfee7b3cd80ed446c86fb78a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the internal pointer to the start.  <a href="#ae619dcf2218c21549cb65d875bbc6c9c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure the the current key position is valid.  <a href="#abb9f0d6adf1eb9b3b55712056861a247"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">offsetExists</a> ($offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the requested key exists in the result set.  <a href="#a24ff257ec0c2221bc6fd7b1b4388e26e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">offsetGet</a> ($offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an item's key pairs.  <a href="#a59aee6e89465b48f014699f41b521f87"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">offsetSet</a> ($offset, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add or modify an array item.  <a href="#ac6bde6b1eb50eb5377e91771fe46b7a3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">offsetUnset</a> ($offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a value from a resultset - will throw error.  <a href="#a2411227ea7118b13495de9839fd4b563"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of items returned.  <a href="#ac751e87b3d4c4bf2feb03bee8b092755"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab4245160c23666d9aa52d9718c8796c0">MAX_QUERIES</a> = 30</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of consecutive "nextToken" queries run when <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll()</a> is called.  <a href="#ab4245160c23666d9aa52d9718c8796c0"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">_getSelectResult</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterpret the result of a select operation into a 2-dimensional array of items and their attributes.  <a href="#ac8723974466341091b9be51b0fc89880"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">_getObject</a> ($attributes)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an XML attribute tree to array of key-value pairs.  <a href="#aa52f7962e3d3efefdfdc6fd2a7929c3a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpret the result of a get_attributes() operation into an associative array of attribute names and values.  <a href="#aa6255d0ff1ffd3a5018762ffb1d5b48a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a8f45779ba67e1fbf259c99cec1f539fb">_limitRemaining</a> ($limit, $targetOffset, $currentOffset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to tidy up the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll()</a> function.  <a href="#a8f45779ba67e1fbf259c99cec1f539fb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">_setItems</a> (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> $response)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get items from a query and add them to this query.  <a href="#a6db21e51ce46e2984b7adf65b23b4238"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a7bd28e0b68c9cd1497ce1302a77a9d5d">$_items</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the returned results as arrau.  <a href="#a7bd28e0b68c9cd1497ce1302a77a9d5d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">$_currentKey</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The current key from the $_items array.  <a href="#a6822cb5dc5f37d0b74609a40fc7de997"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab79a49ee0d8173b40aafa1599b39a5f6">$_itemNames</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of keys from $_items.  <a href="#ab79a49ee0d8173b40aafa1599b39a5f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afe1d43000525a1f23884931bf7d6c98d">$_position</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The numerical position of the key within the $_itemNames array.  <a href="#afe1d43000525a1f23884931bf7d6c98d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Represent retrieved items and attributes from AmazonSDB as an array</p>
+<div class="textblock"><p>Represent retrieved items and attributes from AmazonSDB as an array. </p>
 <p>Works for both get_attributes and select.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment">&lt;?php
@@ -154,7 +185,7 @@ echo <span class="stringliteral">&quot;My item {$attributes[&#39;id&#39;]} has t
 <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> = $sdb-&gt;select( <span class="stringliteral">&#39;SELECT * FROM myDomain&#39;</span> );
 
 <span class="comment">// Count will work</span>
-echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count</a>(<a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a>), <span class="stringliteral">&quot; items.&quot;</span>;
+echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755" title="The total number of items returned.">count</a>(<a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a>), <span class="stringliteral">&quot; items.&quot;</span>;
 
 <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> as $itemName =&gt; $itemAttributes ) {
      echo <span class="stringliteral">&quot;Item: $itemName\n&quot;</span>;
@@ -163,7 +194,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
      print_r( $itemAttributes );
 }
 </pre></div><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>test working with tagged values (multiple values for single attribute)</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html">SDBFactory</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html" title="An alternative DataFactory for use with Amazon SDB backed models.">SDBFactory</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service.">ORMModelSDB</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00019">19</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -197,8 +228,9 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Read the XML response into the $_items array if this is a supported action.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Currently this only supports AWS <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> actions: GetAttributesResult and SelectResult </dd></dl>
+
+<p>Read the XML response into the $_items array if this is a supported action. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Currently this only supports AWS <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> actions: GetAttributesResult and SelectResult </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00060">60</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -218,7 +250,8 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Interpret the result of a get_attributes() operation into an associative array of attribute names and values </p>
+
+<p>Interpret the result of a get_attributes() operation into an associative array of attribute names and values. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00129">129</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -238,8 +271,9 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Convert an XML attribute tree to array of key-value pairs</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">_getSelectResult()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult()</a> </dd></dl>
+
+<p>Convert an XML attribute tree to array of key-value pairs. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880" title="Iterpret the result of a select operation into a 2-dimensional array of items and their attributes...">_getSelectResult()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a" title="Interpret the result of a get_attributes() operation into an associative array of attribute names and...">_getAttributesResult()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">SimpleXMLElement</td><td class="paramname">$attributes</td><td></td></tr>
@@ -265,6 +299,7 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
+
 <p>Iterpret the result of a select operation into a 2-dimensional array of items and their attributes. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00076">76</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -301,7 +336,8 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Helper function to tidy up the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> function</p>
+
+<p>Helper function to tidy up the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll()</a> function. </p>
 <p>Determine how many more items are required. Removes items if the target offset has not yet been reached</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -331,10 +367,11 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Get items from a query and add them to this query </p>
+
+<p>Get items from a query and add them to this query. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a></td><td class="paramname">$response</td><td></td></tr>
+    <tr><td class="paramtype"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a></td><td class="paramname">$response</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -356,8 +393,9 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Clear all the items in the _items array</p>
-<p>Also calls <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind()</a></p>
+
+<p>Clear all the items in the _items array. </p>
+<p>Also calls <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c" title="Reset the internal pointer to the start.">rewind()</a></p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00232">232</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -377,8 +415,9 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>The total number of items returned</p>
-<p>Can also be called using the inbuilt <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count()</a> method </p>
+
+<p>The total number of items returned. </p>
+<p>Can also be called using the inbuilt <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755" title="The total number of items returned.">count()</a> method </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00418">418</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -398,7 +437,8 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Get the current item array</p>
+
+<p>Get the current item array. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00314">314</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -418,7 +458,8 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Get the error details (if there are errors)</p>
+
+<p>Get the error details (if there are errors) </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00302">302</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -461,22 +502,23 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, <a class="code" h
       </table>
 </div>
 <div class="memdoc">
-<p>Ensure the query is complete</p>
-<p>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> only returns a limited set of data (usually around 100 results). Calling this method will ensure that <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> is queried until all results are returned. It will stop retrieving results when MAX_QUERIES is reached.</p>
+
+<p>Ensure the query is complete. </p>
+<p>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> only returns a limited set of data (usually around 100 results). Calling this method will ensure that <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> is queried until all results are returned. It will stop retrieving results when MAX_QUERIES is reached.</p>
 <p>Additionally returned items are appended to this response object's items array.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Only works with Select statements. It should not be neccasary for others, except maybe getAttributes if you have a large number of attributes or listDomains if you have a lot.</dd>
 <dd>
-The $consistentRead parameter must have the same value as the original command, if the original query was run with consistentRead==true, then <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> must be called as getAll(true)</dd></dl>
+The $consistentRead parameter must have the same value as the original command, if the original query was run with consistentRead==true, then <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll()</a> must be called as getAll(true)</dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">boolean</td><td class="paramname">$consistentRead</td><td>[optional] defaults to false. Tell <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> whether or not to force consistency. This must be the same as the original query (ie if the original query enforced consistent read, this must be true) </td></tr>
+    <tr><td class="paramtype">boolean</td><td class="paramname">$consistentRead</td><td>[optional] defaults to false. Tell <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> whether or not to force consistency. This must be the same as the original query (ie if the original query enforced consistent read, this must be true) </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$resultsLimit</td><td>[optional] Maximum number of records to return (including the original items) Defaults to no limit (other than those imposed by MAX_QUERIES). </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$offset</td><td>[optional] Number of rows to skip from beinging when used with limit. Defaults to 0 (start from beginning). </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$currentOffset</td><td>The number of rows already skipped. Defaults to 0 (started from beginning). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> The current <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> item is returned for convenience </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> The current <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> item is returned for convenience </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00186">186</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -495,7 +537,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the SELECT query used to generate this reponse</p>
+
+<p>Get the SELECT query used to generate this reponse. </p>
 <p>Only works with select queries (obviously) </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
@@ -516,7 +559,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get a list of itemName() values from <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> </p>
+
+<p>Get a list of itemName() values from <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00141">141</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -536,7 +580,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the returned items as an array </p>
+
+<p>Get the returned items as an array. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00149">149</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -556,7 +601,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the current (in iteration) key</p>
+
+<p>Get the current (in iteration) key. </p>
 <p>This will also be the itemName for the current item </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
@@ -577,7 +623,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Advance the internal pointer and return the new key </p>
+
+<p>Advance the internal pointer and return the new key. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00332">332</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -597,7 +644,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the nextToken if it exists for completing this <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> request</p>
+
+<p>Get the nextToken if it exists for completing this <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> request. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|null </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00276">276</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -618,7 +666,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Check if the requested key exists in the result set</p>
+
+<p>Check if the requested key exists in the result set. </p>
 <p>Because the key is the itemName, this tells you whether a particular item was present in the results</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -646,8 +695,9 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get an item's key pairs</p>
-<p>Allows the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> result to be accessed like an array</p>
+
+<p>Get an item's key pairs. </p>
+<p>Allows the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> result to be accessed like an array</p>
 <p><b>Usage:</b> <code> $sdb = new AmazonSDB(); $result = AmazonSDBResult( $sdb-&gt;select("SELECT * FROM stuff") );</code></p>
 <p><code> print_r( $result['mykey'] ); </code></p>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -686,7 +736,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Add or modify an array item </p>
+
+<p>Add or modify an array item. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00394">394</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -706,7 +757,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Delete a value from a resultset - will throw error</p>
+
+<p>Delete a value from a resultset - will throw error. </p>
 <p>This has to exist for the ArrayAccess interface, but it does not make sense to use it. As a result, it will through an Exception if it is called.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -738,7 +790,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Reset the internal pointer to the start</p>
+
+<p>Reset the internal pointer to the start. </p>
 <p>Also ensure the _itemNames array correctly contains all the item names </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00342">342</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -758,7 +811,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Ensure the the current key position is valid </p>
+
+<p>Ensure the the current key position is valid. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00354">354</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -776,7 +830,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>The current key from the $_items array</p>
+
+<p>The current key from the $_items array. </p>
 <p>Maintains the internal pointer to the $_items array so this class can be used with foreach loops. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00039">39</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
@@ -793,7 +848,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Array of keys from $_items </p>
+
+<p>Array of keys from $_items. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00045">45</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -809,7 +865,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>Store the returned results as arrau </p>
+
+<p>Store the returned results as arrau. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00029">29</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -825,7 +882,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>The numerical position of the key within the $_itemNames array </p>
+
+<p>The numerical position of the key within the $_itemNames array. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00051">51</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -841,7 +899,8 @@ The $consistentRead parameter must have the same value as the original command, 
       </table>
 </div>
 <div class="memdoc">
-<p>The maximum number of consecutive "nextToken" queries run when <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll()</a> is called. </p>
+
+<p>The maximum number of consecutive "nextToken" queries run when <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll()</a> is called. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_response_8php_source.html#l00024">24</a> of file <a class="el" href="_s_d_b_response_8php_source.html">SDBResponse.php</a>.</p>
 
@@ -857,7 +916,7 @@ The $consistentRead parameter must have the same value as the original command, 
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

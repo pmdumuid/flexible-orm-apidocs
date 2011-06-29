@@ -84,112 +84,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="_auto_loader_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00002"></a><a class="code" href="namespace_o_r_m.html">00002</a> <span class="keyword">namespace </span>ORM;
-<a name="l00003"></a>00003 
-<a name="l00004"></a>00004 require <span class="stringliteral">&#39;Utilities/Configuration.php&#39;</span>;
-<a name="l00005"></a>00005 require <span class="stringliteral">&#39;Utilities/ConfigurationGroup.php&#39;</span>;
-<a name="l00006"></a>00006 
-<a name="l00042"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html">00042</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> {
-<a name="l00046"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a946f0934b6d4dce0bc46dbdb9119a624">00046</a>     <span class="keyword">const</span> EXTENSION = <span class="stringliteral">&#39;.php&#39;</span>;
-<a name="l00047"></a>00047 
-<a name="l00051"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a1ecea745525a7c8335b9e5dda79a1ab9">00051</a>     <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_o_r_m_1_1_auto_loader.html#a1ecea745525a7c8335b9e5dda79a1ab9">$_autoLoader</a>;
-<a name="l00052"></a>00052 
-<a name="l00058"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a095c5d389db211932136b53f25f39685">00058</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a095c5d389db211932136b53f25f39685">__construct</a>() {}
-<a name="l00059"></a>00059 
-<a name="l00065"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">00065</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">Get</a>() {
-<a name="l00066"></a>00066         <span class="keywordflow">if</span>( is_null(self::$_autoLoader) ) {
-<a name="l00067"></a>00067             self::$_autoLoader = <span class="keyword">new</span> Autoloader();
-<a name="l00068"></a>00068         }
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070         <span class="keywordflow">return</span> self::$_autoLoader;
-<a name="l00071"></a>00071     }
-<a name="l00072"></a>00072 
-<a name="l00082"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">00082</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">load</a>( $class ) {
-<a name="l00083"></a>00083         $pathName = $this-&gt;locate($class);
-<a name="l00084"></a>00084         
-<a name="l00085"></a>00085         <span class="keywordflow">if</span>( $pathName &amp;&amp; file_exists($pathName) ) {
-<a name="l00086"></a>00086             require $pathName;
-<a name="l00087"></a>00087         }
-<a name="l00088"></a>00088     }
-<a name="l00089"></a>00089 
-<a name="l00096"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8">00096</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8">loadZend</a>( $class ) {
-<a name="l00097"></a>00097         $pathName = str_replace( array(<span class="charliteral">&#39;_&#39;</span>, <span class="charliteral">&#39;\\&#39;</span>),<span class="charliteral">&#39;/&#39;</span>, $class );
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099         <span class="keywordflow">if</span>( $this-&gt;_locateInIncludePath($pathName) ) {
-<a name="l00100"></a>00100             require <span class="stringliteral">&quot;$pathName.php&quot;</span>;
-<a name="l00101"></a>00101         }
-<a name="l00102"></a>00102     }
-<a name="l00103"></a>00103 
-<a name="l00111"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608">00111</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608">locate</a>( $class ) {
-<a name="l00112"></a>00112         <span class="keywordflow">if</span>( $this-&gt;_rootNamespace( $class ) == <span class="charliteral">&#39;.&#39;</span> ) {
-<a name="l00113"></a>00113             <span class="keywordflow">return</span> $this-&gt;_setToLowerCaseIfRequired($class.self::EXTENSION);
-<a name="l00114"></a>00114         }
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116         $packageLocation = $this-&gt;locatePackage($class);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118         <span class="keywordflow">return</span> $packageLocation ? 
-<a name="l00119"></a>00119                 $this-&gt;_setToLowerCaseIfRequired($packageLocation.self::EXTENSION)
-<a name="l00120"></a>00120                 : $this-&gt;_locateInIncludePath( $class );
-<a name="l00121"></a>00121     }
-<a name="l00122"></a>00122 
-<a name="l00132"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de">00132</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de">locatePackage</a>( $class ) {
-<a name="l00133"></a>00133         $packages = Utilities\Configuration::packages();
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135         <span class="keywordflow">foreach</span>( $packages as $package =&gt; $path ) {
-<a name="l00136"></a>00136             <span class="keywordflow">if</span>( preg_match(<span class="stringliteral">&quot;/^\\\?$package\\\(.*)$/&quot;</span>, $class, $matches ) ) {
-<a name="l00137"></a>00137                 <span class="keywordflow">return</span> $path.<span class="charliteral">&#39;/&#39;</span>.str_replace(<span class="charliteral">&#39;\\&#39;</span>,<span class="charliteral">&#39;/&#39;</span>, $matches[1]);
-<a name="l00138"></a>00138             }
-<a name="l00139"></a>00139         }
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00142"></a>00142     }
-<a name="l00143"></a>00143 
-<a name="l00152"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#ab3fb0a7bf0e14fc961a395c85985879a">00152</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#ab3fb0a7bf0e14fc961a395c85985879a">_rootNamespace</a>( $class ) {
-<a name="l00153"></a>00153         <span class="keywordflow">return</span> dirname(str_replace( <span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $class));
-<a name="l00154"></a>00154     }
-<a name="l00155"></a>00155 
-<a name="l00163"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a10c8da1b8748ecf0bb56bc13e89b4e52">00163</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a10c8da1b8748ecf0bb56bc13e89b4e52">_locateInIncludePath</a>( $class ) {
-<a name="l00164"></a>00164         $paths      = explode( PATH_SEPARATOR, get_include_path() );
-<a name="l00165"></a>00165         $classPath  = str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $class );
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167         <span class="keywordflow">foreach</span>( $paths as $path ) {
-<a name="l00168"></a>00168             $fullPath = <span class="stringliteral">&quot;$path/$classPath.php&quot;</span>;
-<a name="l00169"></a>00169             <span class="keywordflow">if</span>( file_exists($fullPath) ) {
-<a name="l00170"></a>00170                 <span class="keywordflow">return</span> $fullPath;
-<a name="l00171"></a>00171             }
-<a name="l00172"></a>00172         }
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00175"></a>00175     }
-<a name="l00176"></a>00176 
-<a name="l00188"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc">00188</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc">_setToLowerCaseIfRequired</a>( $pathName ) {
-<a name="l00189"></a>00189         <span class="keywordflow">if</span>( file_exists($pathName) ) {
-<a name="l00190"></a>00190             <span class="keywordflow">return</span> $pathName;
-<a name="l00191"></a>00191         } <span class="keywordflow">else</span> {
-<a name="l00192"></a>00192             <span class="keywordflow">return</span> strtolower($pathName);
-<a name="l00193"></a>00193         }
-<a name="l00194"></a>00194     }
-<a name="l00195"></a>00195 
-<a name="l00199"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d">00199</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d">RegisterAutoloaders</a>() {
-<a name="l00200"></a>00200         spl_autoload_register(function($class){
-<a name="l00201"></a>00201             AutoLoader::Get()-&gt;load($class);
-<a name="l00202"></a>00202         });
-<a name="l00203"></a>00203 
+<a name="l00006"></a><a class="code" href="namespace_o_r_m.html">00006</a> <span class="keyword">namespace </span>ORM;
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 require <span class="stringliteral">&#39;Utilities/Configuration.php&#39;</span>;
+<a name="l00009"></a>00009 require <span class="stringliteral">&#39;Utilities/ConfigurationGroup.php&#39;</span>;
+<a name="l00010"></a>00010 
+<a name="l00046"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html">00046</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> {
+<a name="l00050"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a946f0934b6d4dce0bc46dbdb9119a624">00050</a>     <span class="keyword">const</span> EXTENSION = <span class="stringliteral">&#39;.php&#39;</span>;
+<a name="l00051"></a>00051 
+<a name="l00055"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a1ecea745525a7c8335b9e5dda79a1ab9">00055</a>     <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_o_r_m_1_1_auto_loader.html#a1ecea745525a7c8335b9e5dda79a1ab9">$_autoLoader</a>;
+<a name="l00056"></a>00056 
+<a name="l00062"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a095c5d389db211932136b53f25f39685">00062</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a095c5d389db211932136b53f25f39685" title="AutoLoader is a singleton class.">__construct</a>() {}
+<a name="l00063"></a>00063 
+<a name="l00069"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">00069</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1" title="Get the AutoLoader instance.">Get</a>() {
+<a name="l00070"></a>00070         <span class="keywordflow">if</span>( is_null(self::$_autoLoader) ) {
+<a name="l00071"></a>00071             self::$_autoLoader = <span class="keyword">new</span> Autoloader();
+<a name="l00072"></a>00072         }
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074         <span class="keywordflow">return</span> self::$_autoLoader;
+<a name="l00075"></a>00075     }
+<a name="l00076"></a>00076 
+<a name="l00086"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">00086</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246" title="Load the class files if they can be found.">load</a>( $class ) {
+<a name="l00087"></a>00087         $pathName = $this-&gt;locate($class);
+<a name="l00088"></a>00088         
+<a name="l00089"></a>00089         <span class="keywordflow">if</span>( $pathName &amp;&amp; file_exists($pathName) ) {
+<a name="l00090"></a>00090             require $pathName;
+<a name="l00091"></a>00091         }
+<a name="l00092"></a>00092     }
+<a name="l00093"></a>00093 
+<a name="l00100"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8">00100</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8" title="An alternative loader that loads classes using the Zend method where underscores are folder names...">loadZend</a>( $class ) {
+<a name="l00101"></a>00101         $pathName = str_replace( array(<span class="charliteral">&#39;_&#39;</span>, <span class="charliteral">&#39;\\&#39;</span>),<span class="charliteral">&#39;/&#39;</span>, $class );
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         <span class="keywordflow">if</span>( $this-&gt;_locateInIncludePath($pathName) ) {
+<a name="l00104"></a>00104             require <span class="stringliteral">&quot;$pathName.php&quot;</span>;
+<a name="l00105"></a>00105         }
+<a name="l00106"></a>00106     }
+<a name="l00107"></a>00107 
+<a name="l00115"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608">00115</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608" title="Locate where the files would be if this autoloader could locate them.">locate</a>( $class ) {
+<a name="l00116"></a>00116         <span class="keywordflow">if</span>( $this-&gt;_rootNamespace( $class ) == <span class="charliteral">&#39;.&#39;</span> ) {
+<a name="l00117"></a>00117             <span class="keywordflow">return</span> $this-&gt;_setToLowerCaseIfRequired($class.self::EXTENSION);
+<a name="l00118"></a>00118         }
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120         $packageLocation = $this-&gt;locatePackage($class);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="keywordflow">return</span> $packageLocation ? 
+<a name="l00123"></a>00123                 $this-&gt;_setToLowerCaseIfRequired($packageLocation.self::EXTENSION)
+<a name="l00124"></a>00124                 : $this-&gt;_locateInIncludePath( $class );
+<a name="l00125"></a>00125     }
+<a name="l00126"></a>00126 
+<a name="l00136"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de">00136</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de" title="Get the path of a package.">locatePackage</a>( $class ) {
+<a name="l00137"></a>00137         $packages = Utilities\Configuration::packages();
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139         <span class="keywordflow">foreach</span>( $packages as $package =&gt; $path ) {
+<a name="l00140"></a>00140             <span class="keywordflow">if</span>( preg_match(<span class="stringliteral">&quot;/^\\\?$package\\\(.*)$/&quot;</span>, $class, $matches ) ) {
+<a name="l00141"></a>00141                 <span class="keywordflow">return</span> $path.<span class="charliteral">&#39;/&#39;</span>.str_replace(<span class="charliteral">&#39;\\&#39;</span>,<span class="charliteral">&#39;/&#39;</span>, $matches[1]);
+<a name="l00142"></a>00142             }
+<a name="l00143"></a>00143         }
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00146"></a>00146     }
+<a name="l00147"></a>00147 
+<a name="l00156"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#ab3fb0a7bf0e14fc961a395c85985879a">00156</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#ab3fb0a7bf0e14fc961a395c85985879a" title="Get the root namespace of a class name.">_rootNamespace</a>( $class ) {
+<a name="l00157"></a>00157         <span class="keywordflow">return</span> dirname(str_replace( <span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $class));
+<a name="l00158"></a>00158     }
+<a name="l00159"></a>00159 
+<a name="l00167"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#a10c8da1b8748ecf0bb56bc13e89b4e52">00167</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#a10c8da1b8748ecf0bb56bc13e89b4e52" title="Locate a file using the include path as it was not in the known package locations.">_locateInIncludePath</a>( $class ) {
+<a name="l00168"></a>00168         $paths      = explode( PATH_SEPARATOR, get_include_path() );
+<a name="l00169"></a>00169         $classPath  = str_replace(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>, $class );
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171         <span class="keywordflow">foreach</span>( $paths as $path ) {
+<a name="l00172"></a>00172             $fullPath = <span class="stringliteral">&quot;$path/$classPath.php&quot;</span>;
+<a name="l00173"></a>00173             <span class="keywordflow">if</span>( file_exists($fullPath) ) {
+<a name="l00174"></a>00174                 <span class="keywordflow">return</span> $fullPath;
+<a name="l00175"></a>00175             }
+<a name="l00176"></a>00176         }
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00179"></a>00179     }
+<a name="l00180"></a>00180 
+<a name="l00192"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc">00192</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc" title="Checks if the file name with match case exists, if it does not then return a lowercase version...">_setToLowerCaseIfRequired</a>( $pathName ) {
+<a name="l00193"></a>00193         <span class="keywordflow">if</span>( file_exists($pathName) ) {
+<a name="l00194"></a>00194             <span class="keywordflow">return</span> $pathName;
+<a name="l00195"></a>00195         } <span class="keywordflow">else</span> {
+<a name="l00196"></a>00196             <span class="keywordflow">return</span> strtolower($pathName);
+<a name="l00197"></a>00197         }
+<a name="l00198"></a>00198     }
+<a name="l00199"></a>00199 
+<a name="l00203"></a><a class="code" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d">00203</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d" title="Register the autoloaders.">RegisterAutoloaders</a>() {
 <a name="l00204"></a>00204         spl_autoload_register(function($class){
-<a name="l00205"></a>00205             AutoLoader::Get()-&gt;loadZend($class);
+<a name="l00205"></a>00205             AutoLoader::Get()-&gt;load($class);
 <a name="l00206"></a>00206         });
-<a name="l00207"></a>00207     }
-<a name="l00208"></a>00208 }
-<a name="l00209"></a>00209 
-<a name="l00210"></a>00210 AutoLoader::RegisterAutoloaders();
-<a name="l00211"></a>00211 
-<a name="l00212"></a>00212 ?&gt;
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208         spl_autoload_register(function($class){
+<a name="l00209"></a>00209             AutoLoader::Get()-&gt;loadZend($class);
+<a name="l00210"></a>00210         });
+<a name="l00211"></a>00211     }
+<a name="l00212"></a>00212 }
+<a name="l00213"></a>00213 
+<a name="l00214"></a>00214 AutoLoader::RegisterAutoloaders();
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_auto_loader_8php.html">AutoLoader.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

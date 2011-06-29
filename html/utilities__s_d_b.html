@@ -74,13 +74,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">AmazonSDB <a class="el" href="namespace_o_r_m_1_1_utilities.html">Utilities</a> </div>  </div>
+<div class="title">AmazonSDB <a class="el" href="namespace_o_r_m_1_1_utilities.html" title="Utility classes for configuration, caching, debug etc.">Utilities</a> </div>  </div>
 </div>
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="utilities_SDB_intro"></a>
 Introduction</h2>
-<p>Amazon SimpleDB (<a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>) is a scalable non-relational simple SQL service. For more information on the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> service, see <a href="http://http://aws.amazon.com/simpledb/">http://http://aws.amazon.com/simpledb/</a></p>
-<p>This package provides a few <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> utilities that build on the AWS-SDK for PHP (<a href="http://http://aws.amazon.com/sdkforphp/">http://http://aws.amazon.com/sdkforphp/</a>). They include a response class that allows you to get <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> items as an array (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a>) and a pair of classes that allow <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> to be used like a PDO prepared statement (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>). More details of these classes is provided below.</p>
+<p>Amazon SimpleDB (<a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>) is a scalable non-relational simple SQL service. For more information on the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> service, see <a href="http://http://aws.amazon.com/simpledb/">http://http://aws.amazon.com/simpledb/</a></p>
+<p>This package provides a few <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> utilities that build on the AWS-SDK for PHP (<a href="http://http://aws.amazon.com/sdkforphp/">http://http://aws.amazon.com/sdkforphp/</a>). They include a response class that allows you to get <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> items as an array (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a>) and a pair of classes that allow <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> to be used like a PDO prepared statement (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a>). More details of these classes is provided below.</p>
 <p>There is also a model class that allows models to use AmazonSDB as its datastore. For more information on this see <a class="el" href="advanced_features.html#advanced_models_SDB">Advanced Features: AmazonSDB Models</a>.</p>
 <p><br/>
 <br/>
@@ -88,7 +88,7 @@ Introduction</h2>
 <h2><a class="anchor" id="utilities_SDB_response"></a>
 SDBResponse Class</h2>
 <p>By default the AWS SDK returns CFResponse objects, which (among other things) contains an XML response with the returned data. For many uses this is a little cumbersome, we really just want an array or object containing the results.</p>
-<p>The <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> class provides this abstraction without removing any of the features of CFResponse (see <a href="http://docs.amazonwebservices.com/AWSSDKforPHP/latest/index.html#i=CFResponse">http://docs.amazonwebservices.com/AWSSDKforPHP/latest/index.html#i=CFResponse</a> for documentation). To use it, you must set the response class of the AmazonSDB object.</p>
+<p>The <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> class provides this abstraction without removing any of the features of CFResponse (see <a href="http://docs.amazonwebservices.com/AWSSDKforPHP/latest/index.html#i=CFResponse">http://docs.amazonwebservices.com/AWSSDKforPHP/latest/index.html#i=CFResponse</a> for documentation). To use it, you must set the response class of the AmazonSDB object.</p>
 <p><b>Example</b> </p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Set the response class on a new AmazonSDB object</span>
@@ -125,8 +125,8 @@ echo <span class="stringliteral">&quot;Returned &quot;</span>, count(<a class="c
  </p>
 <h2><a class="anchor" id="utilities_SDB_statement"></a>
 SDBStatement Class</h2>
-<p>The <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a> adds some additional SQL functionality to <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> and also presents the same basic interface as <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html">ORM_PDOStatement</a> (see the DataStatement interface).</p>
-<p>Together with the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html">SDBFactory</a> class it is used as a replacement for the <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a> and <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html">ORM_PDOStatement</a> classes for <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a>.</p>
+<p>The <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a> adds some additional SQL functionality to <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> and also presents the same basic interface as <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html" title="Custom PDOStatement class allowing better integration with ORM_Model.">ORM_PDOStatement</a> (see the DataStatement interface).</p>
+<p>Together with the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html" title="An alternative DataFactory for use with Amazon SDB backed models.">SDBFactory</a> class it is used as a replacement for the <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html" title="A singleton database managing class that acts as a factory for prepared statements.">PDOFactory</a> and <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html" title="Custom PDOStatement class allowing better integration with ORM_Model.">ORM_PDOStatement</a> classes for <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service.">ORMModelSDB</a>.</p>
 <p><br/>
 <br/>
  </p>
@@ -181,7 +181,7 @@ $query-&gt;bindObject( $car );
 $query-&gt;execute();
 
 <span class="comment">// The autogenerated itemName is</span>
-echo <span class="stringliteral">&quot;ID: &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158">SDBStatement::LastInsertId</a>();
+echo <span class="stringliteral">&quot;ID: &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158" title="Get the autogenerated itemName value from the last insert operation.">SDBStatement::LastInsertId</a>();
 
 
 <span class="comment">// -------</span>
@@ -217,14 +217,14 @@ $query-&gt;execute();
 <li><b><a class="el" href="configuration.html">Configuration - Managing Settings</a></b></li>
 <li><b><a class="el" href="orm_pdo_tutorial.html">ORM_PDO Extension - Database Helper</a></b></li>
 <li><b><a class="el" href="autoloader_tut.html">AutoLoader - Managing Packages</a></b></li>
-<li><b>AmazonSDB <a class="el" href="namespace_o_r_m_1_1_utilities.html">Utilities</a></b> </li>
+<li><b>AmazonSDB <a class="el" href="namespace_o_r_m_1_1_utilities.html" title="Utility classes for configuration, caching, debug etc.">Utilities</a></b> </li>
 </ul>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="utilities_tutorial.html">Utilities Tutorial</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

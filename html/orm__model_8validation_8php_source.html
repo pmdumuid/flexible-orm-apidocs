@@ -96,16 +96,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 <span class="comment">     *   Doors must be  &gt; 0</span>
 <a name="l00012"></a>00012 <span class="comment">     *   Manufacturer must be set</span>
 <a name="l00013"></a>00013 <span class="comment">     */</span>
-<a name="l00014"></a><a class="code" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247">00014</a>     <span class="keyword">public</span> function <a class="code" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
+<a name="l00014"></a><a class="code" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247">00014</a>     <span class="keyword">public</span> function <a class="code" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid</a>() {
 <a name="l00015"></a>00015         <span class="keywordflow">if</span>( $this-&gt;<a class="code" href="orm__model_8check__validation_8php.html#a2fbf81c65488fad173a009abb2046a19">doors</a> &lt;= 0 ) {
-<a name="l00016"></a>00016             $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935">validationError</a>(<span class="stringliteral">&#39;doors&#39;</span>, <span class="stringliteral">&#39;must be greater than zero&#39;</span>);
+<a name="l00016"></a>00016             $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error regarding validation.">validationError</a>(<span class="stringliteral">&#39;doors&#39;</span>, <span class="stringliteral">&#39;must be greater than zero&#39;</span>);
 <a name="l00017"></a>00017         }
 <a name="l00018"></a>00018         <span class="keywordflow">if</span>( strlen($this-&gt;manufacturer) == 0 ) {
-<a name="l00019"></a>00019             $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935">validationError</a>(<span class="stringliteral">&#39;manufacturer&#39;</span>, <span class="stringliteral">&#39;must be set&#39;</span>);
+<a name="l00019"></a>00019             $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error regarding validation.">validationError</a>(<span class="stringliteral">&#39;manufacturer&#39;</span>, <span class="stringliteral">&#39;must be set&#39;</span>);
 <a name="l00020"></a>00020         }
 <a name="l00021"></a>00021         
 <a name="l00022"></a>00022         <span class="comment">// Model is valid if there are no error messages</span>
-<a name="l00023"></a>00023         <span class="keywordflow">return</span> count( $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#ad6aba19a2f147b330598fc2051bf3103">errorMessages</a>() ) === 0;
+<a name="l00023"></a>00023         <span class="keywordflow">return</span> count( $this-&gt;<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#ad6aba19a2f147b330598fc2051bf3103" title="Return current error messages.">errorMessages</a>() ) === 0;
 <a name="l00024"></a>00024     }
 <a name="l00025"></a>00025 }
 </pre></div></div>
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="orm__model_8validation_8php.html">orm_model.validation.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

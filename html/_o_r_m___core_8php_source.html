@@ -84,99 +84,99 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="_o_r_m___core_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00009"></a>00009 <span class="keyword">namespace </span>ORM;
-<a name="l00010"></a>00010 
-<a name="l00020"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html">00020</a> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_o_r_m___core.html">ORM_Core</a> {
-<a name="l00027"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a29d7b705912043e6ae092a448053cb6f">00027</a>     <span class="keyword">protected</span>                       $_errorMessages = array();
-<a name="l00028"></a>00028 
-<a name="l00034"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">00034</a>     <span class="keyword">protected</span>                       $_originalValues = array();
-<a name="l00035"></a>00035 
-<a name="l00044"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">00044</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">__construct</a>( $values = array() ) {
-<a name="l00045"></a>00045         $this-&gt;setValues( $values );
-<a name="l00046"></a>00046     }
-<a name="l00047"></a>00047 
-<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">00054</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">attributes</a>() {
-<a name="l00055"></a>00055         <span class="keywordflow">return</span> array_keys( $this-&gt;_originalValues );
-<a name="l00056"></a>00056     }
-<a name="l00057"></a>00057 
-<a name="l00066"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">00066</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">values</a>() {
-<a name="l00067"></a>00067         $properties = $this-&gt;attributes();
-<a name="l00068"></a>00068         $values     = array();
-<a name="l00069"></a>00069         
-<a name="l00070"></a>00070         <span class="keywordflow">foreach</span>( $properties as $property ) {
-<a name="l00071"></a>00071             $values[$property] = property_exists( $this, $property ) ? $this-&gt;$property : null;
-<a name="l00072"></a>00072         }
+<a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM;
+<a name="l00007"></a>00007 
+<a name="l00017"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html">00017</a> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_o_r_m___core.html" title="An abstract class which defines the actions of an ORM-like object.">ORM_Core</a> {
+<a name="l00024"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a29d7b705912043e6ae092a448053cb6f">00024</a>     <span class="keyword">protected</span>                       $_errorMessages = array();
+<a name="l00025"></a>00025 
+<a name="l00031"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">00031</a>     <span class="keyword">protected</span>                       $_originalValues = array();
+<a name="l00032"></a>00032 
+<a name="l00041"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">00041</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144" title="Instantiate the object with supplied default values.">__construct</a>( $values = array() ) {
+<a name="l00042"></a>00042         $this-&gt;setValues( $values );
+<a name="l00043"></a>00043     }
+<a name="l00044"></a>00044 
+<a name="l00051"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">00051</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88" title="Array of all the attributes of this object.">attributes</a>() {
+<a name="l00052"></a>00052         <span class="keywordflow">return</span> array_keys( $this-&gt;_originalValues );
+<a name="l00053"></a>00053     }
+<a name="l00054"></a>00054 
+<a name="l00063"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">00063</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb" title="Get an associative array of all the values of the public attributes of this object.">values</a>() {
+<a name="l00064"></a>00064         $properties = $this-&gt;attributes();
+<a name="l00065"></a>00065         $values     = array();
+<a name="l00066"></a>00066         
+<a name="l00067"></a>00067         <span class="keywordflow">foreach</span>( $properties as $property ) {
+<a name="l00068"></a>00068             $values[$property] = property_exists( $this, $property ) ? $this-&gt;$property : null;
+<a name="l00069"></a>00069         }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         <span class="keywordflow">return</span> $values;
+<a name="l00072"></a>00072     }
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074         <span class="keywordflow">return</span> $values;
-<a name="l00075"></a>00075     }
-<a name="l00076"></a>00076 
-<a name="l00104"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">00104</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">errorMessages</a>() {
-<a name="l00105"></a>00105         <span class="keywordflow">if</span>( !is_array($this-&gt;_errorMessages) )  $this-&gt;_errorMessages = array();
-<a name="l00106"></a>00106         <span class="keywordflow">return</span> $this-&gt;_errorMessages;
-<a name="l00107"></a>00107     }
-<a name="l00108"></a>00108 
-<a name="l00119"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ab2418f87284e617c3ed8c6767be0130e">00119</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ab2418f87284e617c3ed8c6767be0130e">errorMessagesString</a>() {
-<a name="l00120"></a>00120         $msgs = array();
-<a name="l00121"></a>00121         <span class="keywordflow">foreach</span>( $this-&gt;_errorMessages as $key =&gt; $value ) {
-<a name="l00122"></a>00122             $msgs[] = <span class="stringliteral">&quot;&#39;$key&#39; $value&quot;</span>;
-<a name="l00123"></a>00123         }
+<a name="l00101"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">00101</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103" title="Return array of all error messages.">errorMessages</a>() {
+<a name="l00102"></a>00102         <span class="keywordflow">if</span>( !is_array($this-&gt;_errorMessages) )  $this-&gt;_errorMessages = array();
+<a name="l00103"></a>00103         <span class="keywordflow">return</span> $this-&gt;_errorMessages;
+<a name="l00104"></a>00104     }
+<a name="l00105"></a>00105 
+<a name="l00116"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ab2418f87284e617c3ed8c6767be0130e">00116</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#ab2418f87284e617c3ed8c6767be0130e" title="Return a string of error messages.">errorMessagesString</a>() {
+<a name="l00117"></a>00117         $msgs = array();
+<a name="l00118"></a>00118         <span class="keywordflow">foreach</span>( $this-&gt;_errorMessages as $key =&gt; $value ) {
+<a name="l00119"></a>00119             $msgs[] = <span class="stringliteral">&quot;&#39;$key&#39; $value&quot;</span>;
+<a name="l00120"></a>00120         }
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="keywordflow">return</span> implode( <span class="stringliteral">&#39;, &#39;</span>, $msgs );
+<a name="l00123"></a>00123     }
 <a name="l00124"></a>00124 
-<a name="l00125"></a>00125         <span class="keywordflow">return</span> implode( <span class="stringliteral">&#39;, &#39;</span>, $msgs );
-<a name="l00126"></a>00126     }
-<a name="l00127"></a>00127 
-<a name="l00147"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">00147</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">errorMessage</a>( $field ) {
-<a name="l00148"></a>00148         <span class="keywordflow">return</span> isset($this-&gt;_errorMessages[$field]) ? $this-&gt;_errorMessages[$field] : <span class="keyword">false</span>;
-<a name="l00149"></a>00149     }
-<a name="l00150"></a>00150 
-<a name="l00172"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">00172</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">validationError</a>( $field, $message ) {
-<a name="l00173"></a>00173         <span class="keywordflow">if</span>( !is_array($this-&gt;_errorMessages) )                 $this-&gt;_errorMessages = array();
-<a name="l00174"></a>00174         $this-&gt;_errorMessages[$field] = $message;
-<a name="l00175"></a>00175     }
-<a name="l00176"></a>00176 
-<a name="l00182"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739">00182</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739">clearValidationErrors</a>() {
-<a name="l00183"></a>00183         $this-&gt;_errorMessages = array();
-<a name="l00184"></a>00184     }
-<a name="l00185"></a>00185 
-<a name="l00201"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653">00201</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653">changedFields</a>() {
-<a name="l00202"></a>00202         $changed = array();
-<a name="l00203"></a>00203         $original_values = count($this-&gt;_originalValues) ? $this-&gt;_originalValues : array();
-<a name="l00204"></a>00204 
-<a name="l00205"></a>00205         <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $this-&gt;values();
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207         <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $key =&gt; $value ) {
-<a name="l00208"></a>00208             <span class="keywordflow">if</span>( !isset($original_values[$key]) || $original_values[$key] != $value ) {
-<a name="l00209"></a>00209                 $changed[] = $key;
-<a name="l00210"></a>00210             }
-<a name="l00211"></a>00211         }
-<a name="l00212"></a>00212         <span class="keywordflow">return</span> $changed;
-<a name="l00213"></a>00213     }
-<a name="l00214"></a>00214 
-<a name="l00223"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00">00223</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00">originalValue</a>( $property ) {
-<a name="l00224"></a>00224         <span class="keywordflow">return</span> array_key_exists( $property, $this-&gt;_originalValues ) ? $this-&gt;_originalValues[$property] : null;
-<a name="l00225"></a>00225     }
-<a name="l00226"></a>00226 
-<a name="l00231"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">00231</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">originalValues</a>() {
-<a name="l00232"></a>00232         <span class="keywordflow">return</span> $this-&gt;_originalValues;
-<a name="l00233"></a>00233     }
-<a name="l00234"></a>00234 
-<a name="l00243"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">00243</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">setOriginalValue</a>( $property, $value ) {
-<a name="l00244"></a>00244         $this-&gt;_originalValues[$property] = $value;
-<a name="l00245"></a>00245     }
-<a name="l00246"></a>00246 
-<a name="l00253"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">00253</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a>( array $values = null ) {
-<a name="l00254"></a>00254         <span class="keywordflow">if</span>( !is_null($values) ) {
-<a name="l00255"></a>00255             <span class="keywordflow">foreach</span>( $values as $field =&gt; $value ) {
-<a name="l00256"></a>00256                 $this-&gt;$field = $value;
-<a name="l00257"></a>00257             }
-<a name="l00258"></a>00258         }
-<a name="l00259"></a>00259     }
-<a name="l00260"></a>00260 }
+<a name="l00144"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">00144</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc" title="Return the error message for a specific field.">errorMessage</a>( $field ) {
+<a name="l00145"></a>00145         <span class="keywordflow">return</span> isset($this-&gt;_errorMessages[$field]) ? $this-&gt;_errorMessages[$field] : <span class="keyword">false</span>;
+<a name="l00146"></a>00146     }
+<a name="l00147"></a>00147 
+<a name="l00169"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">00169</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error to the array of error messages.">validationError</a>( $field, $message ) {
+<a name="l00170"></a>00170         <span class="keywordflow">if</span>( !is_array($this-&gt;_errorMessages) )                 $this-&gt;_errorMessages = array();
+<a name="l00171"></a>00171         $this-&gt;_errorMessages[$field] = $message;
+<a name="l00172"></a>00172     }
+<a name="l00173"></a>00173 
+<a name="l00179"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739">00179</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739" title="Clear all existing validation errors.">clearValidationErrors</a>() {
+<a name="l00180"></a>00180         $this-&gt;_errorMessages = array();
+<a name="l00181"></a>00181     }
+<a name="l00182"></a>00182 
+<a name="l00198"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653">00198</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653" title="Get array of field names that have changed.">changedFields</a>() {
+<a name="l00199"></a>00199         $changed = array();
+<a name="l00200"></a>00200         $original_values = count($this-&gt;_originalValues) ? $this-&gt;_originalValues : array();
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202         <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $this-&gt;values();
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204         <span class="keywordflow">foreach</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> as $key =&gt; $value ) {
+<a name="l00205"></a>00205             <span class="keywordflow">if</span>( !isset($original_values[$key]) || $original_values[$key] != $value ) {
+<a name="l00206"></a>00206                 $changed[] = $key;
+<a name="l00207"></a>00207             }
+<a name="l00208"></a>00208         }
+<a name="l00209"></a>00209         <span class="keywordflow">return</span> $changed;
+<a name="l00210"></a>00210     }
+<a name="l00211"></a>00211 
+<a name="l00220"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00">00220</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00" title="Get the originally fetched value of a property.">originalValue</a>( $property ) {
+<a name="l00221"></a>00221         <span class="keywordflow">return</span> array_key_exists( $property, $this-&gt;_originalValues ) ? $this-&gt;_originalValues[$property] : null;
+<a name="l00222"></a>00222     }
+<a name="l00223"></a>00223 
+<a name="l00228"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">00228</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a" title="Get the original values of this object.">originalValues</a>() {
+<a name="l00229"></a>00229         <span class="keywordflow">return</span> $this-&gt;_originalValues;
+<a name="l00230"></a>00230     }
+<a name="l00231"></a>00231 
+<a name="l00240"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">00240</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e" title="Set an individual properties &quot;original&quot; value.">setOriginalValue</a>( $property, $value ) {
+<a name="l00241"></a>00241         $this-&gt;_originalValues[$property] = $value;
+<a name="l00242"></a>00242     }
+<a name="l00243"></a>00243 
+<a name="l00250"></a><a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">00250</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9" title="(re)sets the all the attribute values for this object">setValues</a>( array $values = null ) {
+<a name="l00251"></a>00251         <span class="keywordflow">if</span>( !is_null($values) ) {
+<a name="l00252"></a>00252             <span class="keywordflow">foreach</span>( $values as $field =&gt; $value ) {
+<a name="l00253"></a>00253                 $this-&gt;$field = $value;
+<a name="l00254"></a>00254             }
+<a name="l00255"></a>00255         }
+<a name="l00256"></a>00256     }
+<a name="l00257"></a>00257 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m___core_8php.html">ORM_Core.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

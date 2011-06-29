@@ -87,31 +87,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Cache Interface Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::Interfaces::Cache" --><div class="dynheader">
+<!-- doxytag: class="ORM::Interfaces::Cache" -->
+<p>Very simple cache interface, the main purpose of which is to allow simple switching between alternative caching methods, such as APCCache and Memcached.  
+ <a href="interface_o_r_m_1_1_interfaces_1_1_cache.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for Cache:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="interface_o_r_m_1_1_interfaces_1_1_cache.png" usemap="#Cache_map" alt=""/>
   <map id="Cache_map" name="Cache_map">
-<area href="class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html" alt="APCCache" shape="rect" coords="0,56,75,80"/>
-<area href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html" alt="NullCache" shape="rect" coords="85,56,160,80"/>
+<area href="class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html" title="Object-oriented wrapper for APCcache." alt="APCCache" shape="rect" coords="0,56,75,80"/>
+<area href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html" title="This is an empty cache object, ie it implements the interface but does not cache except for within a ..." alt="NullCache" shape="rect" coords="85,56,160,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">set</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>, $object, $ttl=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save an object, replacing the existing cache entry (if it exists)  <a href="#adc437b0f4f69ccd1ea8c4ad8df8759b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">get</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve an object from cache, returning false if it does not exist.  <a href="#af5ea6a083ddb07beb8a30dd32e309ceb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">add</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>, $object, $ttl=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a value to cache if the key does not exist.  <a href="#a60eb3b1ba4d26a359b2f48ce212b7717"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38">flush</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the cache.  <a href="#a7751f77b5263bcf940ece6e824a05b38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af7c3ea3150164bc92700134803f277be">delete</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a particular cached item.  <a href="#af7c3ea3150164bc92700134803f277be"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Very simple cache interface, the main purpose of which is to allow simple switching between alternative caching methods, such as APCCache and Memcached.</p>
-<p>To add custom caching abilities that will work with the <a class="el" href="namespace_o_r_m.html">ORM</a>, simply implement this interface in your new class.</p>
+<div class="textblock"><p>Very simple cache interface, the main purpose of which is to allow simple switching between alternative caching methods, such as APCCache and Memcached. </p>
+<p>To add custom caching abilities that will work with the <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>, simply implement this interface in your new class.</p>
 <p><b>Add</b></p>
-<p>Add a value to cache if the key does not exist</p>
-<p>This should be used when retrieving a value from the database to store. When editing a value, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">set()</a> should be used to prevent race condition problems.</p>
+<p>Add a value to cache if the key does not exist. </p>
+<p>This should be used when retrieving a value from the database to store. When editing a value, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1" title="Save an object, replacing the existing cache entry (if it exists)">set()</a> should be used to prevent race condition problems.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function get_item( $item_id ) {
       $cache = <span class="keyword">new</span> Cache();
@@ -123,7 +131,7 @@ Public Member Functions</h2></td></tr>
           <span class="keywordflow">return</span> $item;
       }
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">set()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">get()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1" title="Save an object, replacing the existing cache entry (if it exists)">set()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb" title="Retrieve an object from cache, returning false if it does not exist.">get()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -134,7 +142,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p><b>Set</b></p>
-<p>Save an object, replacing the existing cache entry (if it exists)</p>
+<p>Save an object, replacing the existing cache entry (if it exists) </p>
 <p>This should be used when editing values and recaching (not when retrieving items from the database to read)</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function save_item( $item ) {
@@ -142,18 +150,18 @@ Public Member Functions</h2></td></tr>
       $cache-&gt;set( $item-&gt;id, $item, 60 );
       $item-&gt;save();
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">get()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">add()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb" title="Retrieve an object from cache, returning false if it does not exist.">get()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717" title="Add a value to cache if the key does not exist.">add()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html">Cache</a> id </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html" title="Very simple cache interface, the main purpose of which is to allow simple switching between alternati...">Cache</a> id </td></tr>
     <tr><td class="paramtype">object</td><td class="paramname">$object</td><td>Object to store </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$ttl</td><td>Seconds until cache expires (0 == never) </td></tr>
   </table>
   </dd>
 </dl>
 <p><b>Get</b></p>
-<p>Retrieve an object from cache, returning false if it does not exist</p>
+<p>Retrieve an object from cache, returning false if it does not exist. </p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function get_item( $item_id ) {
       $cache = <span class="keyword">new</span> Cache();
@@ -173,7 +181,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p><b>Delete</b></p>
-<p>Delete a particular cached item</p>
+<p>Delete a particular cached item. </p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment"> function delete_item( $id ) {
       delete_from_db( $id );
@@ -181,7 +189,7 @@ Public Member Functions</h2></td></tr>
       $cache-&gt;delete( $id );
       <span class="comment">// $cache-&gt;get( $id ) will now return false</span>
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38">flush()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38" title="Clear the cache.">flush()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -190,7 +198,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
  
-<p>Definition at line <a class="el" href="_cache_8php_source.html#l00033">33</a> of file <a class="el" href="_cache_8php_source.html">Cache.php</a>.</p>
+<p>Definition at line <a class="el" href="_cache_8php_source.html#l00034">34</a> of file <a class="el" href="_cache_8php_source.html">Cache.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a60eb3b1ba4d26a359b2f48ce212b7717"></a><!-- doxytag: member="ORM::Interfaces::Cache::add" ref="a60eb3b1ba4d26a359b2f48ce212b7717" args="($name, $object, $ttl=0)" -->
 <div class="memitem">
@@ -222,8 +230,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Add a value to cache if the key does not exist</p>
-<p>This should be used when retrieving a value from the database to store. When editing a value, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">set()</a> should be used to prevent race condition problems.</p>
+
+<p>Add a value to cache if the key does not exist. </p>
+<p>This should be used when retrieving a value from the database to store. When editing a value, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1" title="Save an object, replacing the existing cache entry (if it exists)">set()</a> should be used to prevent race condition problems.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function get_item( $item_id ) {
       $cache = <span class="keyword">new</span> Cache();
@@ -235,7 +244,7 @@ Public Member Functions</h2></td></tr>
           <span class="keywordflow">return</span> $item;
       }
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">set()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">get()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1" title="Save an object, replacing the existing cache entry (if it exists)">set()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb" title="Retrieve an object from cache, returning false if it does not exist.">get()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -264,7 +273,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Delete a particular cached item</p>
+
+<p>Delete a particular cached item. </p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment"> function delete_item( $id ) {
       delete_from_db( $id );
@@ -272,7 +282,7 @@ Public Member Functions</h2></td></tr>
       $cache-&gt;delete( $id );
       <span class="comment">// $cache-&gt;get( $id ) will now return false</span>
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38">flush()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a7751f77b5263bcf940ece6e824a05b38" title="Clear the cache.">flush()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -298,8 +308,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Clear the cache</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af7c3ea3150164bc92700134803f277be">delete()</a> </dd></dl>
+
+<p>Clear the cache. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af7c3ea3150164bc92700134803f277be" title="Delete a particular cached item.">delete()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html#a7751f77b5263bcf940ece6e824a05b38">APCCache</a>, and <a class="el" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">NullCache</a>.</p>
@@ -320,7 +331,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Retrieve an object from cache, returning false if it does not exist</p>
+
+<p>Retrieve an object from cache, returning false if it does not exist. </p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function get_item( $item_id ) {
       $cache = <span class="keyword">new</span> Cache();
@@ -374,7 +386,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Save an object, replacing the existing cache entry (if it exists)</p>
+
+<p>Save an object, replacing the existing cache entry (if it exists) </p>
 <p>This should be used when editing values and recaching (not when retrieving items from the database to read)</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> function save_item( $item ) {
@@ -382,11 +395,11 @@ Public Member Functions</h2></td></tr>
       $cache-&gt;set( $item-&gt;id, $item, 60 );
       $item-&gt;save();
  }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">get()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">add()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb" title="Retrieve an object from cache, returning false if it does not exist.">get()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717" title="Add a value to cache if the key does not exist.">add()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html">Cache</a> id </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html" title="Very simple cache interface, the main purpose of which is to allow simple switching between alternati...">Cache</a> id </td></tr>
     <tr><td class="paramtype">object</td><td class="paramname">$object</td><td>Object to store </td></tr>
     <tr><td class="paramtype">int</td><td class="paramname">$ttl</td><td>Seconds until cache expires (0 == never) </td></tr>
   </table>
@@ -407,7 +420,7 @@ Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_interfaces.html">Interfaces</a>      </li>
       <li class="navelem"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_cache.html">Cache</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

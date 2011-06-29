@@ -84,41 +84,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="_null_cache_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00009"></a>00009 <span class="keyword">namespace </span>ORM\Utilities\Cache;
-<a name="l00010"></a>00010 
-<a name="l00018"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html">00018</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html">NullCache</a> <span class="keyword">implements</span> \ORM\Interfaces\<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_cache.html">Cache</a> {
-<a name="l00019"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#aa72d2f5c3cd474cf77c1c9802870ec50">00019</a>     <span class="keyword">private</span> <span class="keyword">static</span> $_store = array();
-<a name="l00020"></a>00020     
-<a name="l00021"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">00021</a>     <span class="keyword">public</span> function <span class="keyword">set</span>( $name, $object, $ttl = 0 ) {
-<a name="l00022"></a>00022         self::$_store[$name] = $object;
+<a name="l00005"></a>00005 <span class="keyword">namespace </span>ORM\Utilities\Cache;
+<a name="l00006"></a>00006 
+<a name="l00014"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html">00014</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html" title="This is an empty cache object, ie it implements the interface but does not cache except for within a ...">NullCache</a> <span class="keyword">implements</span> \ORM\Interfaces\<a class="code" href="interface_o_r_m_1_1_interfaces_1_1_cache.html" title="Very simple cache interface, the main purpose of which is to allow simple switching between alternati...">Cache</a> {
+<a name="l00015"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#aa72d2f5c3cd474cf77c1c9802870ec50">00015</a>     <span class="keyword">private</span> <span class="keyword">static</span> $_store = array();
+<a name="l00016"></a>00016     
+<a name="l00017"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#adc437b0f4f69ccd1ea8c4ad8df8759b1">00017</a>     <span class="keyword">public</span> function <span class="keyword">set</span>( $name, $object, $ttl = 0 ) {
+<a name="l00018"></a>00018         self::$_store[$name] = $object;
+<a name="l00019"></a>00019     }
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">00021</a>     <span class="keyword">public</span> function <span class="keyword">get</span>( $name ) {
+<a name="l00022"></a>00022         <span class="keywordflow">return</span> isset(self::$_store[$name]) ? self::$_store[$name] : <span class="keyword">false</span>;
 <a name="l00023"></a>00023     }
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#af5ea6a083ddb07beb8a30dd32e309ceb">00025</a>     <span class="keyword">public</span> function <span class="keyword">get</span>( $name ) {
-<a name="l00026"></a>00026         <span class="keywordflow">return</span> isset(self::$_store[$name]) ? self::$_store[$name] : <span class="keyword">false</span>;
-<a name="l00027"></a>00027     }
-<a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">00029</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">add</a>( $name, $object, $ttl = 0 ) {
-<a name="l00030"></a>00030         <span class="keywordflow">if</span>( !array_key_exists( $name, self::$_store) ) {
-<a name="l00031"></a>00031             self::$_store[$name] = $object;
-<a name="l00032"></a>00032         }
+<a name="l00025"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717">00025</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a60eb3b1ba4d26a359b2f48ce212b7717" title="Add a value to cache if the key does not exist.">add</a>( $name, $object, $ttl = 0 ) {
+<a name="l00026"></a>00026         <span class="keywordflow">if</span>( !array_key_exists( $name, self::$_store) ) {
+<a name="l00027"></a>00027             self::$_store[$name] = $object;
+<a name="l00028"></a>00028         }
+<a name="l00029"></a>00029     }
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">00031</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38" title="Clear the cache.">flush</a>() {
+<a name="l00032"></a>00032         self::$_store = array();
 <a name="l00033"></a>00033     }
-<a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">00035</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#a7751f77b5263bcf940ece6e824a05b38">flush</a>() {
-<a name="l00036"></a>00036         self::$_store = array();
+<a name="l00034"></a>00034     
+<a name="l00035"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#af7c3ea3150164bc92700134803f277be">00035</a>     <span class="keyword">public</span> function <span class="keyword">delete</span>( $name ) {
+<a name="l00036"></a>00036         unset(self::$_store[$name]);
 <a name="l00037"></a>00037     }
-<a name="l00038"></a>00038     
-<a name="l00039"></a><a class="code" href="class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html#af7c3ea3150164bc92700134803f277be">00039</a>     <span class="keyword">public</span> function <span class="keyword">delete</span>( $name ) {
-<a name="l00040"></a>00040         unset(self::$_store[$name]);
-<a name="l00041"></a>00041     }
-<a name="l00042"></a>00042 }
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 ?&gt;
+<a name="l00038"></a>00038 }
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_null_cache_8php.html">NullCache.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

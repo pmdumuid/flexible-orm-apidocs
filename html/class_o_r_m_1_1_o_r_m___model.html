@@ -93,29 +93,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ORM_Model Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::ORM_Model" --><!-- doxytag: inherits="ORM::ORM_Core,ORM::Interfaces::ORMInterface" --><div class="dynheader">
+<!-- doxytag: class="ORM::ORM_Model" --><!-- doxytag: inherits="ORM::ORM_Core,ORM::Interfaces::ORMInterface" -->
+<p>Base class for ordinary <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> classes.  
+ <a href="class_o_r_m_1_1_o_r_m___model.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for ORM_Model:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_o_r_m___model.png" usemap="#ORM_Model_map" alt=""/>
   <map id="ORM_Model_map" name="ORM_Model_map">
-<area href="class_o_r_m_1_1_o_r_m___core.html" alt="ORM_Core" shape="rect" coords="0,0,120,24"/>
-<area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" alt="ORMInterface" shape="rect" coords="130,0,250,24"/>
+<area href="class_o_r_m_1_1_o_r_m___core.html" title="An abstract class which defines the actions of an ORM-like object." alt="ORM_Core" shape="rect" coords="0,0,120,24"/>
+<area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" title="The interface to define the minimum external methods implemented by an ORM object." alt="ORMInterface" shape="rect" coords="130,0,250,24"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="195,112,315,136"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="195,168,315,192"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="195,224,315,248"/>
 <area href="class_elephant.html" alt="Elephant" shape="rect" coords="195,280,315,304"/>
 <area href="class_manufacturer.html" alt="Manufacturer" shape="rect" coords="195,336,315,360"/>
-<area href="class_o_r_m_1_1_cached_o_r_m_model.html" alt="CachedORMModel" shape="rect" coords="195,392,315,416"/>
-<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" alt="ORMModelSDB" shape="rect" coords="195,448,315,472"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_alternate_car.html" alt="AlternateCar" shape="rect" coords="195,504,315,528"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_bad_model.html" alt="BadModel" shape="rect" coords="195,560,315,584"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_canary.html" alt="Canary" shape="rect" coords="195,616,315,640"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_car.html" alt="Car" shape="rect" coords="195,672,315,696"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html" alt="Elephant" shape="rect" coords="195,728,315,752"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html" alt="Manufacturer" shape="rect" coords="195,784,315,808"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html" alt="Owner" shape="rect" coords="195,840,315,864"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_window.html" alt="Window" shape="rect" coords="195,896,315,920"/>
+<area href="class_o_r_m_1_1_cached_o_r_m_model.html" title="An ORM Model class that implements caching on Find/FindAll actions and keeps the cache updated on sav..." alt="CachedORMModel" shape="rect" coords="195,392,315,416"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service." alt="ORMModelSDB" shape="rect" coords="195,448,315,472"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_alternate_car.html" title="Description of AlternateCar." alt="AlternateCar" shape="rect" coords="195,504,315,528"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_bad_model.html" title="Description of Car." alt="BadModel" shape="rect" coords="195,560,315,584"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_canary.html" title="Description of Canary." alt="Canary" shape="rect" coords="195,616,315,640"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_car.html" title="Description of Car." alt="Car" shape="rect" coords="195,672,315,696"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html" title="Description of Elephant." alt="Elephant" shape="rect" coords="195,728,315,752"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html" title="Description of Manufacturer." alt="Manufacturer" shape="rect" coords="195,784,315,808"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html" title="Description of Owner." alt="Owner" shape="rect" coords="195,840,315,864"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_window.html" title="Description of AlternateCar." alt="Window" shape="rect" coords="195,896,315,920"/>
 <area href="class_owner.html" alt="Owner" shape="rect" coords="195,952,315,976"/>
 </map>
  </div></div>
@@ -123,67 +126,108 @@ Inheritance diagram for ORM_Model:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa04f3da25ef86f670a4094c4fe6da144">__construct</a> ($values=array())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a>, optionally with some preset options.  <a href="#aa04f3da25ef86f670a4094c4fe6da144"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">delete</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a single item from the database.  <a href="#a13bdffdd926f26b825ea57066334ff01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340">beforeDelete</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-delete hook.  <a href="#a9439df4bc17e08751f6571b30397c340"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#af538ec5d04f3a9c42c9b46d5c9168913">save</a> ($forceCreate=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save an object to the database.  <a href="#af538ec5d04f3a9c42c9b46d5c9168913"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ac14d8327da2e4004940a4bfba0f37f2d">id</a> ($value=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the primary key for this object.  <a href="#ac14d8327da2e4004940a4bfba0f37f2d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Validity check to be called before saving.  <a href="#abb9f0d6adf1eb9b3b55712056861a247"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">load</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the rest of the details into a partial model.  <a href="#a4dcaa8f72c8423d4de25a9e87fa6f3e4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7516ca30af0db3cdbf9a7739b48ce91d">__toString</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">For debugging, return the model name and primary key value when casting an <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> object to string.  <a href="#a7516ca30af0db3cdbf9a7739b48ce91d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">beforeSave</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an action <em>before</em> an object is saved to the database (creating and updating).  <a href="#a3fbb1a1567b714334cbe3d56dd66abde"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">beforeUpdate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an action <em>before</em> an existing object is updated in the database.  <a href="#a70a4db65b19348b3903ae88a82baee62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">beforeCreate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an action <em>before</em> a new object is created in the database.  <a href="#a140d17dbf0c901bcbfb09dfcc9c66baf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">afterCreate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an <em>after</em> before a new object is created in the database.  <a href="#acfb42c80e11f54475303ae3a58a33994"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">afterUpdate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an action <em>after</em> an existing object is updated in the database.  <a href="#afae845016f4e0f43e4214a22d3567b73"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">afterSave</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to perform an action <em>after</em> an object is saved to the database (creating and updating).  <a href="#a6b689626b548ccad8dd118f5f9d085b4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find</a> ($idOrArray=array(), $findWith=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll</a> ($optionsArray=array(), $findWith=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all matching objects.  <a href="#a1916b67de952b5acdf6d90bc3fde003c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy</a> ($field, $value, $operator= '=', $findWith=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all objects where a single field meets the requirements.  <a href="#a71b7619b377afce22e3cd9d5712d8488"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">CountFindAll</a> ($optionsArray=array())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of records that exist matching the specified options.  <a href="#a7d1052227c95145088911760ed0ea6d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae0ff1a4711a8b22ea065131a99ae65b3">CountFindAllBy</a> ($field, $value, $operator= '=')</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of records that exist matching the specified options.  <a href="#ae0ff1a4711a8b22ea065131a99ae65b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a61a19cb43fb2530a2f880c0d0672c471">__callStatic</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>, $arguments)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow for specialty "FindBy" functions.  <a href="#a61a19cb43fb2530a2f880c0d0672c471"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">FindBy</a> ($field, $value, $findWith=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first object where field equals value.  <a href="#aa639cd55bf6eb80947fe0092180c7e21"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba">FindByOptions</a> ($optionsArray, $findWith=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a single object using the supplied options array.  <a href="#a00d14ca7ece1c97a7de5a98ee364d2ba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">Destroy</a> ($id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a single item from the database without having to fetch it first.  <a href="#a7fa0e6c62a193ce3cf03a38bc9de16b5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">DescribeTable</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an array listing all the fields stored in the database for this object.  <a href="#abe03666916397799f98cac4ae3df12c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ac8f3b167a3abd9e7bbc7e6eabf2d1961">DatabaseConfigName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the database configuration group name for this model.  <a href="#ac8f3b167a3abd9e7bbc7e6eabf2d1961"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">DataFactory</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the datafactory classname for this model.  <a href="#a72df8c2ffb2018f945432d9c449338d4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">TableName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the table name for a given model.  <a href="#a0b81fc29b186e2532065eed32dbdde8c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">PrimaryKeyName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the primary key for a given table.  <a href="#ab2dd35c631da7f37493f431acad10be8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">ForeignKey</a> ($modelName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the foreign key that relates another model to this one.  <a href="#a4780d0cc1ed63faf43304819b32a10f4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a062da757939285c507c9ff3f455446b3">ClassName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the base classname.  <a href="#a062da757939285c507c9ff3f455446b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">PossibleValues</a> ($fieldName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the possible values of an ENUM field.  <a href="#aa97bf176463ca79411580d7d38f1210f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a6553482f1f1275d424d1359666edf4e8">QUERY_COUNT_ONLY</a> = 1</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Only return the total number of matches, not the items.  <a href="#a6553482f1f1275d424d1359666edf4e8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9b27d678cc84e2785f62c4ac9763a9f9">QUERY_REGULAR</a> = 2</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default setting, just perform a query with joins and return the results.  <a href="#a9b27d678cc84e2785f62c4ac9763a9f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afc155b5adf82574e67ce0e3da0bf1e04">QUERY_PROFILE_ONLY</a> = 3</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Placeholder constant for profiling a query.  <a href="#afc155b5adf82574e67ce0e3da0bf1e04"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL</a> ($optionsArray, $table, $findWith=false, $queryOption=self::QUERY_REGULAR)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for creating SQL statements based on the options array.  <a href="#acd32b5c02309af36ca2d36a72e82d45c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a29677eb271ebb0d147de7674c241f2da">_BuildSQLFindWith</a> ($table, $findWith)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the SELECT statement for a fetch request with specified foreign keys.  <a href="#a29677eb271ebb0d147de7674c241f2da"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a5772e7e73764ef9cffdb7ddbf3857384">$_id</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map the value of the unique identifier to $_id for simplicity.  <a href="#a5772e7e73764ef9cffdb7ddbf3857384"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#af9983414374dd40b269e6a94177e5f08">_update</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an existing object.  <a href="#af9983414374dd40b269e6a94177e5f08"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57">_create</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new record in the database.  <a href="#a50defc2110196e3caed66d4f61ca4d57"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa3d15f8df9e44f4099aa8b3587401935">_includedFields</a> ($allFields)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter field names to only include fields that are in this object.  <a href="#aa3d15f8df9e44f4099aa8b3587401935"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a97db9915b796970dcda9d10e11683dcc">_LowercaseFirst</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the first character of a string to lowercase.  <a href="#a97db9915b796970dcda9d10e11683dcc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">_makeTableName</a> ($model_name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assume the name of the table from a given model name.  <a href="#a88e38f74b44053bbf191d071ecbddff7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base class for ordinary <a class="el" href="namespace_o_r_m.html">ORM</a> classes</p>
+<div class="textblock"><p>Base class for ordinary <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> classes. </p>
 <p>It is very similar to the old base_model class but has been simplified to have a more consistent interface and require less code to create model classes.</p>
 <p><br/>
 <br/>
  <b>Basic Usage</b></p>
-<p>If the default configuration is correct for a model, then all is required is to create a subclass of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a></p>
+<p>If the default configuration is correct for a model, then all is required is to create a subclass of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a></p>
 <div class="fragment"><pre class="fragment">&lt;?php
 use \ORM\ORM_Model;
 
@@ -266,20 +310,20 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </pre></div><p><br/>
 <br/>
  <b>Counting and Pagination</b></p>
-<p>For "paging" data (i.e. splitting into fixed sized sequential groups) you simply need to use the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">CountFindAll()</a> function and the <code>limit</code> and <code>offset</code> options.</p>
+<p>For "paging" data (i.e. splitting into fixed sized sequential groups) you simply need to use the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8" title="Get the number of records that exist matching the specified options.">CountFindAll()</a> function and the <code>limit</code> and <code>offset</code> options.</p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// How may items per page</span>
 <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a> = 10;
 
 <span class="comment">// How many pages will there be?</span>
-<a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a> = ceil( <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">Owner::CountFindAll</a>() / $pageSize );
+<a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a> = ceil( <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8" title="Get the number of records that exist matching the specified options.">Owner::CountFindAll</a>() / $pageSize );
 
 <span class="comment">// Get all the pages (this is a trivial example, you wouldn&#39;t fetch all the pages</span>
 <span class="comment">// at once</span>
 <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a> = array();
 <span class="keywordflow">for</span>( $i = 1; $i &lt;= <a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a>; $i++ ) {
     <span class="comment">// Get the next 10 items</span>
-    <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a>[$i] = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Owner::FindAll</a>(array(
+    <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a>[$i] = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Owner::FindAll</a>(array(
         <span class="stringliteral">&#39;limit&#39;</span>  =&gt; $pageSize,
         <span class="stringliteral">&#39;offset&#39;</span> =&gt; ($i-1) * $pageSize
     ));
@@ -287,9 +331,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </pre></div><p><br/>
 <br/>
  </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><a class="el" href="namespace_o_r_m_1_1_exceptions.html">Exceptions</a> - if model is poorly coded, it should raise a more descriptive exception than a PDOException</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><a class="el" href="namespace_o_r_m_1_1_exceptions.html" title="Custom flexible-orm exceptions.">Exceptions</a> - if model is poorly coded, it should raise a more descriptive exception than a PDOException</dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00058">58</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00057">57</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa04f3da25ef86f670a4094c4fe6da144"></a><!-- doxytag: member="ORM::ORM_Model::__construct" ref="aa04f3da25ef86f670a4094c4fe6da144" args="($values=array())" -->
 <div class="memitem">
@@ -305,8 +349,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Create a new <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>, optionally with some preset options</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">ORM_Core::__construct()</a> </dd></dl>
+
+<p>Create a new <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a>, optionally with some preset options. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144" title="Instantiate the object with supplied default values.">ORM_Core::__construct()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$values</td><td></td></tr>
@@ -316,7 +361,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">ORM_Core</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00092">92</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00091">91</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -345,12 +390,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Allow for specialty "FindBy" functions</p>
+
+<p>Allow for specialty "FindBy" functions. </p>
 <p>Objects can retrieved using (for example)</p>
 <div class="fragment"><pre class="fragment"> Car::FindByColour( <span class="stringliteral">&#39;red&#39;</span> );
  Car::FindAllByColour( <span class="stringliteral">&#39;red&#39;</span> );
  Car::FindAllByDoors( 3, <span class="stringliteral">&#39;&gt;=&#39;</span> );
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">FindBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae0ff1a4711a8b22ea065131a99ae65b3">CountFindAllBy()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21" title="Find the first object where field equals value.">FindBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488" title="Find all objects where a single field meets the requirements.">FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae0ff1a4711a8b22ea065131a99ae65b3" title="Get the number of records that exist matching the specified options.">CountFindAllBy()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
@@ -360,7 +406,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00298">298</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00297">297</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -377,10 +423,11 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>For debugging, return the model name and primary key value when casting an <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> object to string</p>
+
+<p>For debugging, return the model name and primary key value when casting an <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> object to string. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00961">961</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00960">960</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -420,8 +467,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Helper function for creating SQL statements based on the options array</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> </dd></dl>
+
+<p>Helper function for creating SQL statements based on the options array. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba" title="Find a single object using the supplied options array.">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>Array of options. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
@@ -433,7 +481,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string SQL Query string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00422">422</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00421">421</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -461,9 +509,10 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Build the SELECT statement for a fetch request with specified foreign keys.</p>
-<p>Called by <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL()</a> if you specify $findWith</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL()</a> </dd></dl>
+
+<p>Build the SELECT statement for a fetch request with specified foreign keys. </p>
+<p>Called by <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c" title="Helper function for creating SQL statements based on the options array.">_BuildSQL()</a> if you specify $findWith</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c" title="Helper function for creating SQL statements based on the options array.">_BuildSQL()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$table</td><td>Table name </td></tr>
@@ -475,7 +524,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a29677eb271ebb0d147de7674c241f2da">ORMModelSDB</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00464">464</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00463">463</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -492,7 +541,8 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Create a new record in the database</p>
+
+<p>Create a new record in the database. </p>
 <p>If the primary key is an <code>autoincrement</code> key and it was not specified in the object, the assigned primary key will be retrieved and added to the object.</p>
 <div class="fragment"><pre class="fragment"> $car = <span class="keyword">new</span> <a class="code" href="class_car.html">Car</a>();
  <span class="comment">// ... setup properties here</span>
@@ -509,7 +559,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </ul>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on succesful update </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00679">679</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00678">678</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -527,18 +577,19 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Filter field names to only include fields that are in this object</p>
+
+<p>Filter field names to only include fields that are in this object. </p>
 <p>This allows for database defaults to work.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57">_create()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">DescribeTable()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57" title="Create a new record in the database.">_create()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7" title="Get an array listing all the fields stored in the database for this object.">DescribeTable()</a></dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$allFields</td><td>Array of all field names (from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">ORM_Model::DescribeTable()</a>) </td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$allFields</td><td>Array of all field names (from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7" title="Get an array listing all the fields stored in the database for this object.">ORM_Model::DescribeTable()</a>) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array Array of fields names representing each database field that is actually present in this object </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00723">723</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00722">722</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -556,7 +607,8 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Convert the first character of a string to lowercase</p>
+
+<p>Convert the first character of a string to lowercase. </p>
 <p>Used by __callStatic for FindByFieldName calls.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -566,7 +618,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string With the first character changed to lowercase </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00330">330</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00329">329</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -584,10 +636,11 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Assume the name of the table from a given model name</p>
+
+<p>Assume the name of the table from a given model name. </p>
 <p>Basically just a plural lowercase version of the model name</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Currently this only allows for some simple plurals ('ies' or 's')</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">TableName()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c" title="Get the table name for a given model.">TableName()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$model_name</td><td>The name of the model. </td></tr>
@@ -596,7 +649,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00866">866</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00865">865</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -613,19 +666,20 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Update an existing object</p>
+
+<p>Update an existing object. </p>
 <p><b>How this works:</b></p>
 <ul>
-<li>call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4">load()</a> Compare to existing</li>
+<li>call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4" title="Load the rest of the details into a partial model.">load()</a> Compare to existing</li>
 <li>Generate query</li>
 <li>Bind params</li>
 <li>Execute</li>
 </ul>
-<dl class="note"><dt><b>Note:</b></dt><dd>If the key value is set but not record exists, this method will exit and invoke <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57">_create()</a> instead</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a> </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>If the key value is set but not record exists, this method will exit and invoke <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57" title="Create a new record in the database.">_create()</a> instead</dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Save the changes to (or create) this object.">save()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean true on successful update </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00615">615</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00614">614</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -642,11 +696,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an <em>after</em> before a new object is created in the database. Only called on success. The object will have its $_id field populated. </p>
+
+<p>Override this method to perform an <em>after</em> before a new object is created in the database. </p>
+<p>Only called on success. The object will have its $_id field populated. </p>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#acfb42c80e11f54475303ae3a58a33994">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00997">997</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00996">996</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -663,11 +719,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an action <em>after</em> an object is saved to the database (creating and updating). Only called on success. </p>
+
+<p>Override this method to perform an action <em>after</em> an object is saved to the database (creating and updating). </p>
+<p>Only called on success. </p>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#a6b689626b548ccad8dd118f5f9d085b4">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l01009">1009</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l01008">1008</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -684,11 +742,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an action <em>after</em> an existing object is updated in the database. Only called on success. </p>
+
+<p>Override this method to perform an action <em>after</em> an existing object is updated in the database. </p>
+<p>Only called on success. </p>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#afae845016f4e0f43e4214a22d3567b73">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l01003">1003</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l01002">1002</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -705,12 +765,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an action <em>before</em> a new object is created in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when creating </dd></dl>
+
+<p>Override this method to perform an action <em>before</em> a new object is created in the database. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when creating </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#a140d17dbf0c901bcbfb09dfcc9c66baf">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00990">990</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00989">989</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -727,10 +788,11 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>A pre-delete hook</p>
-<p>This method is called before an object is deleted (only if it is called using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">delete()</a>, not <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">Destroy()</a> </p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00539">539</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>A pre-delete hook. </p>
+<p>This method is called before an object is deleted (only if it is called using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01" title="Delete a single item from the database.">delete()</a>, not <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5" title="Delete a single item from the database without having to fetch it first.">Destroy()</a> </p>
+
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00538">538</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -747,12 +809,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an action <em>before</em> an object is saved to the database (creating and updating).</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when saving </dd></dl>
+
+<p>Override this method to perform an action <em>before</em> an object is saved to the database (creating and updating). </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when saving </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session.html#a3fbb1a1567b714334cbe3d56dd66abde">SDBSession</a>, and <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#a3fbb1a1567b714334cbe3d56dd66abde">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00972">972</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00971">971</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -769,12 +832,13 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Override this method to perform an action <em>before</em> an existing object is updated in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when updating </dd></dl>
+
+<p>Override this method to perform an action <em>before</em> an existing object is updated in the database. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when updating </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#a70a4db65b19348b3903ae88a82baee62">Elephant</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00981">981</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00980">980</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -791,10 +855,11 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the base classname</p>
+
+<p>Get the base classname. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string The class name that is calling this function, stripped of namespacing </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00882">882</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00881">881</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -812,8 +877,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the number of records that exist matching the specified options</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae0ff1a4711a8b22ea065131a99ae65b3">CountFindAllBy()</a> </dd></dl>
+
+<p>Get the number of records that exist matching the specified options. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae0ff1a4711a8b22ea065131a99ae65b3" title="Get the number of records that exist matching the specified options.">CountFindAllBy()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>[optional] An array of options for finding objects. If not supplied, this will return all objects of this type stored in the database. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
@@ -822,7 +888,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int The total number of values that match this query </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00238">238</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00237">237</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -856,8 +922,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the number of records that exist matching the specified options</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">CountFindAll()</a> </dd></dl>
+
+<p>Get the number of records that exist matching the specified options. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488" title="Find all objects where a single field meets the requirements.">FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8" title="Get the number of records that exist matching the specified options.">CountFindAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$field</td><td>The field name to search on </td></tr>
@@ -868,7 +935,7 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int The total number of values that match this query </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00262">262</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00261">261</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -885,11 +952,12 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the database configuration group name for this model</p>
+
+<p>Get the database configuration group name for this model. </p>
 <p>See <a class="el" href="intro_step2.html#intro_step2_advanced">Multiple Databases</a> for more information</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00786">786</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00785">785</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -906,11 +974,12 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Get the datafactory classname for this model</p>
-<p>Advanced feature that allows you to use an alternative to the <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a> class. The class should implement the DataFactory interface.</p>
+
+<p>Get the datafactory classname for this model. </p>
+<p>Advanced feature that allows you to use an alternative to the <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html" title="A singleton database managing class that acts as a factory for prepared statements.">PDOFactory</a> class. The class should implement the DataFactory interface.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string Normally returns "PDOFactory" </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00799">799</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00798">798</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -927,8 +996,9 @@ echo <span class="stringliteral">&quot;This blue car is owned by &quot;</span>, 
       </table>
 </div>
 <div class="memdoc">
-<p>Delete a single item from the database</p>
-<p>The object will remain populated. Calls <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340">beforeDelete()</a> before the object is removed.</p>
+
+<p>Delete a single item from the database. </p>
+<p>The object will remain populated. Calls <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340" title="A pre-delete hook.">beforeDelete()</a> before the object is removed.</p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Fetch a car and delete it</span>
 $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
@@ -947,7 +1017,7 @@ var_dump($car);
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_cached_o_r_m_model.html#a13bdffdd926f26b825ea57066334ff01">CachedORMModel</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00518">518</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00517">517</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -964,12 +1034,13 @@ var_dump($car);
       </table>
 </div>
 <div class="memdoc">
-<p>Get an array listing all the fields stored in the database for this object</p>
+
+<p>Get an array listing all the fields stored in the database for this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array An array of field names representing each database field </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abe03666916397799f98cac4ae3df12c7">ORMModelSDB</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00736">736</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00735">735</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -987,9 +1058,10 @@ var_dump($car);
       </table>
 </div>
 <div class="memdoc">
-<p>Delete a single item from the database without having to fetch it first</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This function is faster than <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">ORM_Model::delete()</a> because it does not fetch the object first, however as a result it does not call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340">beforeDelete()</a>.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">delete()</a> </dd></dl>
+
+<p>Delete a single item from the database without having to fetch it first. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This function is faster than <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01" title="Delete a single item from the database.">ORM_Model::delete()</a> because it does not fetch the object first, however as a result it does not call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340" title="A pre-delete hook.">beforeDelete()</a>.</dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01" title="Delete a single item from the database.">delete()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$id</td><td>The primary key value specifying which item to delete </td></tr>
@@ -1001,7 +1073,7 @@ var_dump($car);
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_cached_o_r_m_model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">CachedORMModel</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00495">495</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00494">494</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1122,7 @@ var_dump($car);
 <div class="fragment"><pre class="fragment"> <span class="comment">// Fetch the car with id 1 and include the Owner object</span>
  @car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 1, <span class="stringliteral">&#39;Owner&#39;</span> );
  echo <span class="stringliteral">&quot;This car is owned by &quot;</span>, $car-&gt;Owner-&gt;name;
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba" title="Find a single object using the supplied options array.">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">FindAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$idOrArray</td><td>Either an array of search options or a primary key value. If nothing is supplied, the first database entry is returned </td></tr>
@@ -1058,11 +1130,11 @@ var_dump($car);
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505">CachedORMModel</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00148">148</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00147">147</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1090,9 +1162,10 @@ var_dump($car);
       </table>
 </div>
 <div class="memdoc">
-<p>Find all matching objects</p>
-<p>Same syntax as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> except will return a <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> of all matched items, rather than just the first matching object.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy()</a> </dd></dl>
+
+<p>Find all matching objects. </p>
+<p>Same syntax as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> except will return a <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> of all matched items, rather than just the first matching object.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488" title="Find all objects where a single field meets the requirements.">FindAllBy()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>[optional] An array of options for finding objects. If not supplied, this will return all objects of this type stored in the database. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
@@ -1100,9 +1173,9 @@ var_dump($car);
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> A collection of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> subclasses </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> A collection of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> subclasses </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00174">174</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00173">173</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1215,8 @@ var_dump($car);
       </table>
 </div>
 <div class="memdoc">
-<p>Find all objects where a single field meets the requirements</p>
+
+<p>Find all objects where a single field meets the requirements. </p>
 <p>This would not be called directly ordinarily, instead call the "magic" method as shown below.</p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment">&lt;?php
@@ -1169,9 +1243,9 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> Return the <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> of objects </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> Return the <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> of objects </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00208">208</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00207">207</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1205,7 +1279,8 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
       </table>
 </div>
 <div class="memdoc">
-<p>Find the first object where field equals value</p>
+
+<p>Find the first object where field equals value. </p>
 <p>This would not be called directly ordinarily, instead call the "magic" method as shown below. It is also called by <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, which is a shortcut to <code>FindById()</code> (assuming that the primary key is "id").</p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment"> <span class="comment">// Get the first car owned by owner_id 4</span>
@@ -1218,9 +1293,9 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00357">357</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00356">356</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1323,8 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
       </table>
 </div>
 <div class="memdoc">
-<p>Find a single object using the supplied options array</p>
+
+<p>Find a single object using the supplied options array. </p>
 <p>See the instructions for <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a></p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -1257,9 +1333,9 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00388">388</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00387">387</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1353,8 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
       </table>
 </div>
 <div class="memdoc">
-<p>Get the name of the foreign key that relates another model to this one</p>
+
+<p>Get the name of the foreign key that relates another model to this one. </p>
 <p>Defaults to <em>modelName</em>_<em>modelPrimaryKey</em> (lowercase). Can be overriden by defining constant <code>FOREIGN_KEY_<em>{modelName}</em></code> to the foreign key name.</p>
 <p>See <a class="el" href="intro_step2.html">Getting Started: 2. Define Model Classes</a> for more information</p>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -1288,7 +1365,7 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00845">845</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00844">844</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1383,8 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
       </table>
 </div>
 <div class="memdoc">
-<p>Get the value of the primary key for this object</p>
+
+<p>Get the value of the primary key for this object. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$value</td><td>[optional] If specified, set the primary key value for this object </td></tr>
@@ -1315,7 +1393,7 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00755">755</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00754">754</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1410,8 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
       </table>
 </div>
 <div class="memdoc">
-<p>Load the rest of the details into a partial model</p>
+
+<p>Load the rest of the details into a partial model. </p>
 <p>The _originalValues array will be updated to reflect the values retrieved from the database.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment">&lt;?php
@@ -1354,7 +1433,7 @@ echo $person-&gt;age;
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Throw an exception if this is called on an object with no _id</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean true if an existing object existed </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00937">937</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00936">936</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1372,7 +1451,8 @@ echo $person-&gt;age;
       </table>
 </div>
 <div class="memdoc">
-<p>Get the possible values of an ENUM field</p>
+
+<p>Get the possible values of an ENUM field. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Only works for MySQL ENUM datatypes</dd></dl>
 <p>This is useful for rapid development as it allows you to only change the ENUM values at the SQL side, but it is going to be slightly slower and cause higer database load. If using this in production cache the result.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -1383,7 +1463,7 @@ echo $person-&gt;age;
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array Array of strings containing the valid field values. Is indexed from 1 to match the MYSQL index. Will be empty if it cannot determine values (ie it's not a MySQL table or it's not an ENUM field). </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00903">903</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00902">902</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1400,12 +1480,13 @@ echo $person-&gt;age;
       </table>
 </div>
 <div class="memdoc">
-<p>Get the primary key for a given table</p>
+
+<p>Get the primary key for a given table. </p>
 <p>This is assumed to be <em>"id"</em> except for models where the constant <code>PRIMARY_KEY</code> has been set.</p>
 <p>See <a class="el" href="intro_step2.html">Getting Started: 2. Define Model Classes</a> for more information</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00828">828</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00827">827</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1423,8 +1504,9 @@ echo $person-&gt;age;
       </table>
 </div>
 <div class="memdoc">
-<p>Save an object to the database</p>
-<p>Either creates a new item or updates an existing one. First checks that the object is valid (see <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>). Returns false if not valid and will not attempt to save the object.</p>
+
+<p>Save an object to the database. </p>
+<p>Either creates a new item or updates an existing one. First checks that the object is valid (see <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>). Returns false if not valid and will not attempt to save the object.</p>
 <p><b>Usage:</b> </p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Update existing record</span>
@@ -1457,31 +1539,28 @@ $car = <span class="keyword">new</span> <a class="code" href="class_car.html">Ca
 ));
 
 $car-&gt;save();
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Changing the primary key on an existing object will create a new record and leave the old one still in the database. If you want to change the primary key, first call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01">delete()</a> then change the key and call <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a></dd></dl>
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Changing the primary key on an existing object will create a new record and leave the old one still in the database. If you want to change the primary key, first call <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a13bdffdd926f26b825ea57066334ff01" title="Delete a single item from the database.">delete()</a> then change the key and call <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Save the changes to (or create) this object.">save()</a></dd></dl>
 <p><br/>
  <b>Pre- or Post-Processing Hooks</b></p>
 <p>There are 6 pre and post processing hooks available for this method, to allow for special processing to be done before or after saving. They are called in the following order:</p>
 <ul>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde">beforeSave()</a> <p>Override this method to perform an action <em>before</em> an object is saved to the database (creating and updating).</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when saving </dd></dl>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a3fbb1a1567b714334cbe3d56dd66abde" title="Override this method to perform an action before an object is saved to the database (creating and upd...">beforeSave()</a> <dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when saving </dd></dl>
 </li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62">beforeUpdate()</a> <p>Override this method to perform an action <em>before</em> an existing object is updated in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when updating </dd></dl>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a70a4db65b19348b3903ae88a82baee62" title="Override this method to perform an action before an existing object is updated in the database...">beforeUpdate()</a> <dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when updating </dd></dl>
 </li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf">beforeCreate()</a> <p>Override this method to perform an action <em>before</em> a new object is created in the database.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247">valid()</a>, meaning it is always called when creating </dd></dl>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a140d17dbf0c901bcbfb09dfcc9c66baf" title="Override this method to perform an action before a new object is created in the database.">beforeCreate()</a> <dl class="note"><dt><b>Note:</b></dt><dd>This is called <em>before</em> <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#abb9f0d6adf1eb9b3b55712056861a247" title="Validity check to be called before saving.">valid()</a>, meaning it is always called when creating </dd></dl>
 </li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73">afterUpdate()</a> <p>Override this method to perform an action <em>after</em> an existing object is updated in the database. Only called on success. </p>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#afae845016f4e0f43e4214a22d3567b73" title="Override this method to perform an action after an existing object is updated in the database...">afterUpdate()</a> <p>Only called on success. </p>
 </li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994">afterCreate()</a> <p>Override this method to perform an <em>after</em> before a new object is created in the database. Only called on success. The object will have its $_id field populated. </p>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acfb42c80e11f54475303ae3a58a33994" title="Override this method to perform an after before a new object is created in the database.">afterCreate()</a> <p>Only called on success. The object will have its $_id field populated. </p>
 </li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4">afterSave()</a> <p>Override this method to perform an action <em>after</em> an object is saved to the database (creating and updating). Only called on success. </p>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a6b689626b548ccad8dd118f5f9d085b4" title="Override this method to perform an action after an object is saved to the database (creating and upda...">afterSave()</a> <p>Only called on success. </p>
 </li>
 </ul>
 <p><br/>
 <br/>
 </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#af9983414374dd40b269e6a94177e5f08">_update()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57">_create()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#af9983414374dd40b269e6a94177e5f08" title="Update an existing object.">_update()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a50defc2110196e3caed66d4f61ca4d57" title="Create a new record in the database.">_create()</a></dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">boolean</td><td class="paramname">$forceCreate</td><td>Skips the load test for speed, always resulting in a new object </td></tr>
@@ -1490,7 +1569,7 @@ $car-&gt;save();
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True if successful </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00585">585</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00584">584</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1507,13 +1586,14 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Get the table name for a given model</p>
+
+<p>Get the table name for a given model. </p>
 <p>The table name is either guessed from the model name or explicitly defined by creating a constant <code>TABLE</code> in the class.</p>
 <p>See <a class="el" href="intro_step2.html">Getting Started: 2. Define Model Classes</a> for more information</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7">_makeTableName()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a88e38f74b44053bbf191d071ecbddff7" title="Assume the name of the table from a given model name.">_makeTableName()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00814">814</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00813">813</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1530,16 +1610,17 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Validity check to be called before saving.</p>
-<p>Override this for individual models to check for validity. The default implementation looks for error messages that have been set by <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935">validationError()</a></p>
+
+<p>Validity check to be called before saving. </p>
+<p>Override this for individual models to check for validity. The default implementation looks for error messages that have been set by <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error regarding validation.">validationError()</a></p>
 <p>See <a class="el" href="validation.html">Model Validation</a> for more information.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>boolean If this method returns false for a particular object, it is considered not in a "valid" state and so it cannot be saved using <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>boolean If this method returns false for a particular object, it is considered not in a "valid" state and so it cannot be saved using <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Save the changes to (or create) this object.">save()</a> </dd></dl>
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#abb9f0d6adf1eb9b3b55712056861a247">ORMInterface</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html#abb9f0d6adf1eb9b3b55712056861a247">Elephant</a>, and <a class="el" href="class_car.html#abb9f0d6adf1eb9b3b55712056861a247">Car</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00775">775</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00774">774</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1554,10 +1635,11 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Map the value of the unique identifier to $_id for simplicity </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a087060b582403885d08e89ad894ecc5d">id()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00064">64</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Map the value of the unique identifier to $_id for simplicity. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#a087060b582403885d08e89ad894ecc5d" title="Return the unique identifier for this object.">id()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00063">63</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1571,10 +1653,11 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Only return the total number of matches, not the items </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00070">70</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Only return the total number of matches, not the items. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c" title="Helper function for creating SQL statements based on the options array.">_BuildSQL()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00069">69</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1588,11 +1671,12 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Placeholder constant for profiling a query</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Not currently implemented, will behave like QUERY_REGULAR </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00084">84</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Placeholder constant for profiling a query. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Not currently implemented, will behave like QUERY_REGULAR </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c" title="Helper function for creating SQL statements based on the options array.">_BuildSQL()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00083">83</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1606,10 +1690,11 @@ $car-&gt;save();
       </table>
 </div>
 <div class="memdoc">
-<p>Default setting, just perform a query with joins and return the results </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c">_BuildSQL()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00076">76</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
+<p>Default setting, just perform a query with joins and return the results. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#acd32b5c02309af36ca2d36a72e82d45c" title="Helper function for creating SQL statements based on the options array.">_BuildSQL()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00075">75</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1707,7 @@ $car-&gt;save();
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

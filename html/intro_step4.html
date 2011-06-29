@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </p>
 <h2><a class="anchor" id="intro_step4_find"></a>
 Finding &amp; Manipulating A Single Object</h2>
-<p>There are a number of ways to find a single object from the database. You can search by id (<a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>), a simple comparison (<a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">ORM_Model::FindBy()</a>) or a more complex query (using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a> with an options array).</p>
+<p>There are a number of ways to find a single object from the database. You can search by id (<a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>), a simple comparison (<a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21" title="Find the first object where field equals value.">ORM_Model::FindBy()</a>) or a more complex query (using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a> with an options array).</p>
 <p><br/>
 <br/>
  </p>
@@ -150,7 +150,7 @@ Find</h3>
 <div class="fragment"><pre class="fragment"> <span class="comment">// Fetch the car with id 1 and include the Owner object</span>
  @car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 1, <span class="stringliteral">&#39;Owner&#39;</span> );
  echo <span class="stringliteral">&quot;This car is owned by &quot;</span>, <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a>-&gt;Owner-&gt;name;
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">FindAll()</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a00d14ca7ece1c97a7de5a98ee364d2ba" title="Find a single object using the supplied options array.">FindByOptions()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">FindAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$idOrArray</td><td>Either an array of search options or a primary key value. If nothing is supplied, the first database entry is returned </td></tr>
@@ -158,21 +158,19 @@ Find</h3>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> </dd></dl>
  <br/>
 <br/>
 </p>
 <h3><a class="anchor" id="intro_step4_find_save"></a>
 Save</h3>
-<p>Save the changes to (or create) this object</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed </dd></dl>
  <br/>
 <br/>
 </p>
 <h3><a class="anchor" id="intro_step4_find_delete"></a>
 Delete</h3>
-<p>Delete a single item from the database</p>
-<p>The object will remain populated. Calls <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340">beforeDelete()</a> before the object is removed.</p>
+<p>The object will remain populated. Calls <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a9439df4bc17e08751f6571b30397c340" title="A pre-delete hook.">beforeDelete()</a> before the object is removed.</p>
 <div class="fragment"><pre class="fragment">&lt;?php
 <span class="comment">// Fetch a car and delete it</span>
 <a class="code" href="orm__model_8check__validation_8php.html#a789046ce0dc6a03eb1e6e037ca8dc4b8">$car</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 4 );
@@ -190,7 +188,7 @@ var_dump($car);
 Finding &amp; Manipulating Many Objects</h2>
 <p>The same options exist for finding a number of objects as for finding a single one. All the find function names are named starting with <em>FindAll</em>.</p>
 <div class="fragment"><pre class="fragment"> <span class="comment">// Increment the age off all cars by 1</span>
- <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Car::FindAll</a>();
+ <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Car::FindAll</a>();
  <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a>-&gt;each(function($car){
       $car-&gt;age++;
  });
@@ -201,9 +199,8 @@ Finding &amp; Manipulating Many Objects</h2>
  </p>
 <h3><a class="anchor" id="intro_step4_find_all"></a>
 FindAll()</h3>
-<p>Find all matching objects</p>
-<p>Same syntax as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> except will return a <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> of all matched items, rather than just the first matching object.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">FindAllBy()</a> </dd></dl>
+<p>Same syntax as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a> except will return a <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> of all matched items, rather than just the first matching object.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488" title="Find all objects where a single field meets the requirements.">FindAllBy()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$optionsArray</td><td>[optional] An array of options for finding objects. If not supplied, this will return all objects of this type stored in the database. For more information about the options array, see <a class="el" href="intro_step4.html#intro_step4_options">Options Array</a> in the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial </td></tr>
@@ -211,13 +208,12 @@ FindAll()</h3>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> A collection of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> subclasses </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> A collection of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> subclasses </dd></dl>
  <br/>
 <br/>
 </p>
 <h3><a class="anchor" id="intro_step4_find_allby"></a>
 FindAllBy()</h3>
-<p>Find all objects where a single field meets the requirements</p>
 <p>This would not be called directly ordinarily, instead call the "magic" method as shown below.</p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment">&lt;?php
@@ -244,13 +240,12 @@ $cars   = Car::FindAllByDoors( 3, <span class="charliteral">&#39;&gt;&#39;</span
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> Return the <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> of objects </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> Return the <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> of objects </dd></dl>
  <br/>
 <br/>
 </p>
 <h3><a class="anchor" id="intro_step4_find_all_save"></a>
 save()</h3>
-<p>Save each object in the collection</p>
 <p>Returns an array of ids matching the objects.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> $people = Person::FindAll();
@@ -264,8 +259,8 @@ save()</h3>
 </p>
 <h2><a class="anchor" id="intro_step4_moreinfo"></a>
 For More Information</h2>
-<dl class="see"><dt><b>See also:</b></dt><dd>Single objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21">ORM_Model::FindBy()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132">ORM_Model::save()</a> <br/>
- Multiple objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">ORM_Model::FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488">ORM_Model::FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>Single objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa639cd55bf6eb80947fe0092180c7e21" title="Find the first object where field equals value.">ORM_Model::FindBy()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Save the changes to (or create) this object.">ORM_Model::save()</a> <br/>
+ Multiple objects: <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">ORM_Model::FindAll()</a>, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a71b7619b377afce22e3cd9d5712d8488" title="Find all objects where a single field meets the requirements.">ORM_Model::FindAllBy()</a>, <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a></dd></dl>
 <h2><a class="anchor" id="intro_step4_nav"></a>
 Getting Started</h2>
 <ul>
@@ -279,7 +274,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

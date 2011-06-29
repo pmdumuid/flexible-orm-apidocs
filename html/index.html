@@ -79,12 +79,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="intro_sec"></a>
 Introduction</h2>
-<p>Simple PHP 5.3 based <a class="el" href="namespace_o_r_m.html">ORM</a> allowing cloud-based models and traditional database models to coexist. Download the source and log bugs at our <a href="http://code.google.com/p/flexible-orm/">google code site</a>.</p>
+<p>Simple PHP 5.3 based <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> allowing cloud-based models and traditional database models to coexist. Download the source and log bugs at our <a href="http://code.google.com/p/flexible-orm/">google code site</a>.</p>
 <p>It aims to simplify the relationship between the database and the application by presenting database rows in an Object-Oriented fashion.</p>
-<p>The <a class="el" href="namespace_o_r_m.html">ORM</a> package also includes some general application utilities, like the Configuration class for storing application options.</p>
+<p>The <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> package also includes some general application utilities, like the Configuration class for storing application options.</p>
 <h3><a class="anchor" id="definitions"></a>
 Definitions</h3>
-<p>The <a class="el" href="namespace_o_r_m.html">ORM</a> package fulfils the <b>Model</b> part of the <b>Model-View-Controller</b> design pattern. As such, classes that define a single <a class="el" href="namespace_o_r_m.html">ORM</a> entity (e.g. they extend <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>) are described as <em>models</em>.</p>
+<p>The <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> package fulfils the <b>Model</b> part of the <b>Model-View-Controller</b> design pattern. As such, classes that define a single <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> entity (e.g. they extend <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a>) are described as <em>models</em>.</p>
 <p>Each instance of a model refers to exactly one row in a database and each column a single property. For example if you have the database table (<em>users</em>): </p>
 <table class="doxtable">
 <tr>
@@ -102,7 +102,7 @@ Definitions</h3>
  </p>
 <h2><a class="anchor" id="instalation"></a>
 Initial Setup</h2>
-<p>To start using the <a class="el" href="namespace_o_r_m.html">ORM</a>, you will need to create an INI file that includes database details and the location of your packages. If you only have one database, you only need to define the <code></code>[database] group in the INI file.</p>
+<p>To start using the <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>, you will need to create an INI file that includes database details and the location of your packages. If you only have one database, you only need to define the <code></code>[database] group in the INI file.</p>
 <p>Then you simply require the <em>AutoLoader.php</em> file and load your config.</p>
 <p><b>INI File</b> </p>
 <div class="fragment"><pre class="fragment"> [packages]
@@ -113,10 +113,10 @@ Initial Setup</h2>
  <a class="code" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>     = <span class="stringliteral">&quot;test&quot;</span>
  user     = <span class="stringliteral">&quot;root&quot;</span>
  pass     = <span class="stringliteral">&quot;&quot;</span>
-</pre></div><p>Then all we need to do is include the <a class="el" href="namespace_o_r_m.html">ORM</a> in your PHP file and load your settings: </p>
+</pre></div><p>Then all we need to do is include the <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> in your PHP file and load your settings: </p>
 <div class="fragment"><pre class="fragment"> require <span class="stringliteral">&#39;/path/to/ORM/AutoLoader.php&#39;</span>;
- \ORM\Utilities\<a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a3260a6b443401a87d9c867c9d835f939">Configuration::Load</a>(<span class="stringliteral">&#39;test.ini&#39;</span>);
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>For more information on how the <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> finds classes, see <a class="el" href="autoloader_tut.html">AutoLoader - Managing Packages</a>.</dd></dl>
+ \ORM\Utilities\<a class="code" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a3260a6b443401a87d9c867c9d835f939" title="Load an ini file into the configuration settings.">Configuration::Load</a>(<span class="stringliteral">&#39;test.ini&#39;</span>);
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>For more information on how the <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> finds classes, see <a class="el" href="autoloader_tut.html">AutoLoader - Managing Packages</a>.</dd></dl>
 <p><br/>
 <br/>
  </p>
@@ -133,19 +133,19 @@ Getting Started</h2>
 Using This Documentation</h2>
 <p>This documentation comes in two parts, the <a class="el" href="main.html#getting_started">Getting Started</a> tutorial and the API docs.</p>
 <ul>
-<li><a class="el" href="namespace_o_r_m.html">ORM</a> Key API Classes<ul>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> is the basis for the entire <a class="el" href="namespace_o_r_m.html">ORM</a></li>
-<li><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> simplifies handling groups of objects</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___core.html">ORM_Core</a> and ORM_Interface allows you to define an alternative model class that behaves in the same way as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> (for instance for a non-database backed model).</li>
+<li><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> Key API Classes<ul>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> is the basis for the entire <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a></li>
+<li><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> simplifies handling groups of objects</li>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___core.html" title="An abstract class which defines the actions of an ORM-like object.">ORM_Core</a> and ORM_Interface allows you to define an alternative model class that behaves in the same way as <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> (for instance for a non-database backed model).</li>
 </ul>
 </li>
 <li><a class="el" href="utilities_tutorial.html">Utilities</a><ul>
 <li>Configuration in a simple class for centralising option storage</li>
-<li><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html">PDOFactory</a> handles database prepared statements</li>
-<li><a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html">ORM_PDOStatement</a> expands on the standard PDOStatement class with some convenience methods.</li>
+<li><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html" title="A singleton database managing class that acts as a factory for prepared statements.">PDOFactory</a> handles database prepared statements</li>
+<li><a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html" title="Custom PDOStatement class allowing better integration with ORM_Model.">ORM_PDOStatement</a> expands on the standard PDOStatement class with some convenience methods.</li>
 </ul>
 </li>
-<li><a class="el" href="namespace_o_r_m_1_1_tests.html">Tests</a><ul>
+<li><a class="el" href="namespace_o_r_m_1_1_tests.html" title="PHPUnit tests for flexible-orm.">Tests</a><ul>
 <li>ORMTest is the parent class of all unit tests and includes information about running and viewing. </li>
 </ul>
 </li>
@@ -154,7 +154,7 @@ Using This Documentation</h2>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

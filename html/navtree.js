@@ -9,6 +9,7 @@ var NAVTREE =
     ] ],
     [ "Related Pages", "pages.html", [
       [ "Advanced Features", "advanced_features.html", null ],
+      [ "Controller Tutorial", "controller_tutorial.html", null ],
       [ "Utilities Tutorial", "utilities_tutorial.html", [
         [ "Debug - Debugging Helpers", "debug_tutorial.html", null ],
         [ "Configuration Class", "configuration.html", null ],
@@ -26,6 +27,7 @@ var NAVTREE =
       [ "AutoLoader", "class_o_r_m_1_1_auto_loader.html", null ],
       [ "AutoLoaderTest", "class_o_r_m_1_1_tests_1_1_auto_loader_test.html", null ],
       [ "BadModel", "class_o_r_m_1_1_tests_1_1_mock_1_1_bad_model.html", null ],
+      [ "BaseController", "class_o_r_m_1_1_controller_1_1_base_controller.html", null ],
       [ "Cache", "interface_o_r_m_1_1_interfaces_1_1_cache.html", null ],
       [ "CachedCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_cached_car.html", null ],
       [ "CachedElephant", "class_o_r_m_1_1_tests_1_1_mock_1_1_cached_elephant.html", null ],
@@ -35,9 +37,11 @@ var NAVTREE =
       [ "Canary", "class_o_r_m_1_1_tests_1_1_mock_1_1_canary.html", null ],
       [ "Car", "class_car.html", null ],
       [ "Car", "class_o_r_m_1_1_tests_1_1_mock_1_1_car.html", null ],
+      [ "CarsController", "class_o_r_m_1_1_tests_1_1_mock_1_1_cars_controller.html", null ],
       [ "Configuration", "class_o_r_m_1_1_utilities_1_1_configuration.html", null ],
       [ "ConfigurationGroup", "class_o_r_m_1_1_utilities_1_1_configuration_group.html", null ],
       [ "ConfigurationTest", "class_o_r_m_1_1_tests_1_1_configuration_test.html", null ],
+      [ "ControllerTest", "class_o_r_m_1_1_tests_1_1_controller_1_1_controller_test.html", null ],
       [ "DataFactory", "interface_o_r_m_1_1_interfaces_1_1_data_factory.html", null ],
       [ "DataStatement", "interface_o_r_m_1_1_interfaces_1_1_data_statement.html", null ],
       [ "Debug", "class_o_r_m_1_1_utilities_1_1_debug.html", null ],
@@ -48,6 +52,8 @@ var NAVTREE =
       [ "Elephant", "class_elephant.html", null ],
       [ "Elephant", "class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html", null ],
       [ "File", "class_o_r_m_1_1_tests_1_1_mock_1_1_file.html", null ],
+      [ "InvalidActionException", "class_o_r_m_1_1_exceptions_1_1_invalid_action_exception.html", null ],
+      [ "JsonTemplate", "class_json_template.html", null ],
       [ "Manufacturer", "class_manufacturer.html", null ],
       [ "Manufacturer", "class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html", null ],
       [ "ModelCollection", "class_o_r_m_1_1_model_collection.html", null ],
@@ -83,6 +89,8 @@ var NAVTREE =
       [ "Owner", "class_owner.html", null ],
       [ "PDOFactory", "class_o_r_m_1_1_p_d_o_factory.html", null ],
       [ "PDOFactoryTest", "class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html", null ],
+      [ "Request", "class_o_r_m_1_1_controller_1_1_request.html", null ],
+      [ "RequestTest", "class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html", null ],
       [ "SDBCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_s_d_b_car.html", null ],
       [ "SDBFactory", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html", null ],
       [ "SDBOwner", "class_o_r_m_1_1_tests_1_1_mock_1_1_s_d_b_owner.html", null ],
@@ -94,13 +102,19 @@ var NAVTREE =
       [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ],
       [ "SDBStatementTest", "class_o_r_m_1_1_tests_1_1_s_d_b_1_1_s_d_b_statement_test.html", null ],
       [ "SDBWrapper", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html", null ],
+      [ "SmartyTemplate", "class_o_r_m_1_1_controller_1_1_smarty_template.html", null ],
       [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ],
+      [ "Template", "interface_o_r_m_1_1_interfaces_1_1_template.html", null ],
       [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ],
+      [ "Variables", "class_o_r_m_1_1_controller_1_1_request_1_1_variables.html", null ],
       [ "Window", "class_o_r_m_1_1_tests_1_1_mock_1_1_window.html", null ]
     ] ],
     [ "Data Structure Index", "classes.html", null ],
     [ "Class Hierarchy", "hierarchy.html", [
       [ "AutoLoader", "class_o_r_m_1_1_auto_loader.html", null ],
+      [ "BaseController", "class_o_r_m_1_1_controller_1_1_base_controller.html", [
+        [ "CarsController", "class_o_r_m_1_1_tests_1_1_mock_1_1_cars_controller.html", null ]
+      ] ],
       [ "Cache", "interface_o_r_m_1_1_interfaces_1_1_cache.html", [
         [ "APCCache", "class_o_r_m_1_1_utilities_1_1_cache_1_1_a_p_c_cache.html", null ],
         [ "NullCache", "class_o_r_m_1_1_utilities_1_1_cache_1_1_null_cache.html", null ]
@@ -120,6 +134,7 @@ var NAVTREE =
         [ "DebugCorrectLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html", null ]
       ] ],
       [ "DebugTestLog", "class_o_r_m_1_1_tests_1_1_mock_1_1_debug_test_log.html", null ],
+      [ "InvalidActionException", "class_o_r_m_1_1_exceptions_1_1_invalid_action_exception.html", null ],
       [ "NextTokenCache", "class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html", null ],
       [ "ObjectCollection", "class_o_r_m_1_1_object_collection.html", [
         [ "ModelCollection", "class_o_r_m_1_1_model_collection.html", null ]
@@ -177,6 +192,8 @@ var NAVTREE =
         [ "AutoLoaderTest", "class_o_r_m_1_1_tests_1_1_auto_loader_test.html", null ],
         [ "CachedORMModelTest", "class_o_r_m_1_1_tests_1_1_cached_o_r_m_model_test.html", null ],
         [ "ConfigurationTest", "class_o_r_m_1_1_tests_1_1_configuration_test.html", null ],
+        [ "ControllerTest", "class_o_r_m_1_1_tests_1_1_controller_1_1_controller_test.html", null ],
+        [ "RequestTest", "class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html", null ],
         [ "DebugTest", "class_o_r_m_1_1_tests_1_1_debug_test.html", null ],
         [ "ModelCollectionTest", "class_o_r_m_1_1_tests_1_1_model_collection_test.html", null ],
         [ "ObjectCollectionTest", "class_o_r_m_1_1_tests_1_1_object_collection_test.html", null ],
@@ -191,25 +208,33 @@ var NAVTREE =
         [ "SDBResponseTest", "class_o_r_m_1_1_tests_1_1_s_d_b_response_test.html", null ],
         [ "SDBSessionHandlerTest", "class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html", null ]
       ] ],
+      [ "Request", "class_o_r_m_1_1_controller_1_1_request.html", null ],
       [ "SDBResponse", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html", null ],
       [ "SDBSessionHandler", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler.html", null ],
       [ "SDBWrapper", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html", [
         [ "SDBStatement", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html", null ]
       ] ],
-      [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ]
+      [ "Template", "interface_o_r_m_1_1_interfaces_1_1_template.html", [
+        [ "JsonTemplate", "class_json_template.html", null ],
+        [ "SmartyTemplate", "class_o_r_m_1_1_controller_1_1_smarty_template.html", null ]
+      ] ],
+      [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ],
+      [ "Variables", "class_o_r_m_1_1_controller_1_1_request_1_1_variables.html", null ]
     ] ],
     [ "Data Fields", "functions.html", null ],
     [ "Namespace List", "namespaces.html", [
       [ "ORM", "namespace_o_r_m.html", null ],
+      [ "ORM::Controller", "namespace_o_r_m_1_1_controller.html", null ],
+      [ "ORM::Controller::Request", "namespace_o_r_m_1_1_controller_1_1_request.html", null ],
       [ "ORM::Exceptions", "namespace_o_r_m_1_1_exceptions.html", null ],
       [ "ORM::Interfaces", "namespace_o_r_m_1_1_interfaces.html", null ],
       [ "ORM::SDB", "namespace_o_r_m_1_1_s_d_b.html", null ],
       [ "ORM::Tests", "namespace_o_r_m_1_1_tests.html", null ],
+      [ "ORM::Tests::Controller", "namespace_o_r_m_1_1_tests_1_1_controller.html", null ],
       [ "ORM::Tests::Mock", "namespace_o_r_m_1_1_tests_1_1_mock.html", null ],
       [ "ORM::Tests::SDB", "namespace_o_r_m_1_1_tests_1_1_s_d_b.html", null ],
       [ "ORM::Utilities", "namespace_o_r_m_1_1_utilities.html", null ],
-      [ "ORM::Utilities::Cache", "namespace_o_r_m_1_1_utilities_1_1_cache.html", null ],
-      [ "Utilities", "namespace_utilities.html", null ]
+      [ "ORM::Utilities::Cache", "namespace_o_r_m_1_1_utilities_1_1_cache.html", null ]
     ] ],
     [ "File List", "files.html", [
       [ "C:/server/projects/flexible-orm/AutoLoader.php", "_auto_loader_8php.html", null ],
@@ -220,6 +245,11 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/ORM_Model.php", "_o_r_m___model_8php.html", null ],
       [ "C:/server/projects/flexible-orm/ORM_PDOStatement.php", "_o_r_m___p_d_o_statement_8php.html", null ],
       [ "C:/server/projects/flexible-orm/PDOFactory.php", "_p_d_o_factory_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Controller/BaseController.php", "_base_controller_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Controller/Request.php", "_request_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Controller/SmartyTemplate.php", "_smarty_template_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Controller/Request/Variables.php", "_variables_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Exceptions/InvalidActionException.php", "_invalid_action_exception_8php.html", null ],
       [ "C:/server/projects/flexible-orm/Exceptions/ORMConfigurationException.php", "_o_r_m_configuration_exception_8php.html", null ],
       [ "C:/server/projects/flexible-orm/Exceptions/ORMException.php", "_o_r_m_exception_8php.html", null ],
       [ "C:/server/projects/flexible-orm/Exceptions/ORMFetchException.php", "_o_r_m_fetch_exception_8php.html", null ],
@@ -236,6 +266,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/Interfaces/DataStatement.php", "_data_statement_8php.html", null ],
       [ "C:/server/projects/flexible-orm/Interfaces/DebugLog.php", "_debug_log_8php.html", null ],
       [ "C:/server/projects/flexible-orm/Interfaces/ORMInterface.php", "_o_r_m_interface_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/Interfaces/Template.php", "_template_8php.html", null ],
       [ "C:/server/projects/flexible-orm/SDB/NextTokenCache.php", "_next_token_cache_8php.html", null ],
       [ "C:/server/projects/flexible-orm/SDB/ORMModelSDB.php", "_o_r_m_model_s_d_b_8php.html", null ],
       [ "C:/server/projects/flexible-orm/SDB/SDBFactory.php", "_s_d_b_factory_8php.html", null ],
@@ -262,6 +293,13 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tests/PDOFactoryTest.php", "_p_d_o_factory_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/SDBResponseTest.php", "_s_d_b_response_test_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/SDBSessionHandlerTest.php", "_s_d_b_session_handler_test_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/ControllerTest.php", "_controller_test_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/RequestTest.php", "_request_test_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/templates_c/8f5db264abf232d7289031fc28629a0aed9e1a62.file.view.tpl.php", "_controller_2templates__c_28f5db264abf232d7289031fc28629a0aed9e1a62_8file_8view_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/templates_c/aaf8ee188e53eab5239141e42c7e9d4affee07dc.file.layout.tpl.php", "_controller_2templates__c_2aaf8ee188e53eab5239141e42c7e9d4affee07dc_8file_8layout_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/templates_c/cb9e2c69bc6e3af0fecfb18f44c569b6da22237c.file.index.tpl.php", "_controller_2templates__c_2cb9e2c69bc6e3af0fecfb18f44c569b6da22237c_8file_8index_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/templates_c/d3fe6f9a26ee82264700d1a2d3b4154bb60f0bd6.file.index.tpl.php", "d3fe6f9a26ee82264700d1a2d3b4154bb60f0bd6_8file_8index_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Controller/templates_c/f91cbfa71c5d8dc27f6101e30318d22ef5058259.file.view.tpl.php", "f91cbfa71c5d8dc27f6101e30318d22ef5058259_8file_8view_8tpl_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/AlternateCar.php", "_alternate_car_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/BadModel.php", "_bad_model_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/CachedCar.php", "_cached_car_8php.html", null ],
@@ -269,6 +307,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tests/Mock/CachedOwner.php", "_cached_owner_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/Canary.php", "_canary_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/Car.php", "_car_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/Mock/CarsController.php", "_cars_controller_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/DebugCorrectLog.php", "_debug_correct_log_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/DebugTestLog.php", "_debug_test_log_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/Elephant.php", "_elephant_8php.html", null ],
@@ -281,10 +320,14 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tests/Mock/UndoableCar.php", "_undoable_car_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/Mock/Window.php", "_window_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tests/SDB/SDBStatementTest.php", "_s_d_b_statement_test_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/templates_c/8f5db264abf232d7289031fc28629a0aed9e1a62.file.view.tpl.php", "templates__c_28f5db264abf232d7289031fc28629a0aed9e1a62_8file_8view_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/templates_c/aaf8ee188e53eab5239141e42c7e9d4affee07dc.file.layout.tpl.php", "templates__c_2aaf8ee188e53eab5239141e42c7e9d4affee07dc_8file_8layout_8tpl_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tests/templates_c/cb9e2c69bc6e3af0fecfb18f44c569b6da22237c.file.index.tpl.php", "templates__c_2cb9e2c69bc6e3af0fecfb18f44c569b6da22237c_8file_8index_8tpl_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/introduction.php", "introduction_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities.php", "utilities_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/validation.php", "validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/advanced/advanced.php", "advanced_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tutorials/examples/controller.json.template.php", "controller_8json_8template_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.check_validation.php", "orm__model_8check__validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.delete.example.php", "orm__model_8delete_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.example.php", "orm__model_8example_8php.html", null ],
@@ -303,6 +346,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tutorials/getting started/define_model_classes.php", "define__model__classes_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities/autoloader.php", "tutorials_2utilities_2_auto_loader_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities/configuration.php", "tutorials_2utilities_2configuration_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tutorials/utilities/controller.php", "controller_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities/debug.php", "tutorials_2utilities_2debug_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities/orm_pdo.php", "orm__pdo_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/utilities/sdb.php", "sdb_8php.html", null ],

@@ -87,29 +87,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ModelCollection Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::ModelCollection" --><!-- doxytag: inherits="ORM::ObjectCollection" --><div class="dynheader">
+<!-- doxytag: class="ORM::ModelCollection" --><!-- doxytag: inherits="ORM::ObjectCollection" -->
+<p>The <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> class is used as a container for multiple ORM_Interface classes.  
+ <a href="class_o_r_m_1_1_model_collection.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for ModelCollection:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_model_collection.png" usemap="#ModelCollection_map" alt=""/>
   <map id="ModelCollection_map" name="ModelCollection_map">
-<area href="class_o_r_m_1_1_object_collection.html" alt="ObjectCollection" shape="rect" coords="0,0,105,24"/>
+<area href="class_o_r_m_1_1_object_collection.html" title="Represents an array of anything." alt="ObjectCollection" shape="rect" coords="0,0,105,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_model_collection.html#afc8a3c62679cf00ade9f15fb2a6d6132">save</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save each object in the collection.  <a href="#afc8a3c62679cf00ade9f15fb2a6d6132"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_model_collection.html#a13bdffdd926f26b825ea57066334ff01">delete</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete each object in the collection.  <a href="#a13bdffdd926f26b825ea57066334ff01"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> class is used as a container for multiple ORM_Interface classes</p>
-<p>This allows groups of objects to be used easily, such as <code>$software-&gt;tickets-&gt;<a class="el" href="class_o_r_m_1_1_model_collection.html#afc8a3c62679cf00ade9f15fb2a6d6132">save()</a></code>;</p>
-<p>A modelcollection is returned when using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">ORM_Model::FindAll()</a>: </p>
+<div class="textblock"><p>The <a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> class is used as a container for multiple ORM_Interface classes. </p>
+<p>This allows groups of objects to be used easily, such as <code>$software-&gt;tickets-&gt;<a class="el" href="class_o_r_m_1_1_model_collection.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Save each object in the collection.">save()</a></code>;</p>
+<p>A modelcollection is returned when using <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">ORM_Model::FindAll()</a>: </p>
 <div class="fragment"><pre class="fragment"> $model_collection_of_people = People::FindAll();
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd>ORM_Interface, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>, <a class="el" href="class_o_r_m_1_1_object_collection.html">ObjectCollection</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd>ORM_Interface, <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a>, <a class="el" href="class_o_r_m_1_1_object_collection.html" title="Represents an array of anything.">ObjectCollection</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00021">21</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
+<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00019">19</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a13bdffdd926f26b825ea57066334ff01"></a><!-- doxytag: member="ORM::ModelCollection::delete" ref="a13bdffdd926f26b825ea57066334ff01" args="()" -->
 <div class="memitem">
@@ -124,14 +129,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Delete each object in the collection</p>
-<p>Convenient shortcut to writing an anonymous function to <a class="el" href="class_o_r_m_1_1_object_collection.html#a6c0a4c47b3531bcc641e0aa02e155f00">ObjectCollection::each()</a></p>
+
+<p>Delete each object in the collection. </p>
+<p>Convenient shortcut to writing an anonymous function to <a class="el" href="class_o_r_m_1_1_object_collection.html#a6c0a4c47b3531bcc641e0aa02e155f00" title="Apply a function to each element in the collection.">ObjectCollection::each()</a></p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> <span class="comment">// This will delete every people object in the database</span>
  $people = Person::FindAll();
  $people-&gt;delete();
 </pre></div> 
-<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00060">60</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
+<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00058">58</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
 
 </div>
 </div>
@@ -148,7 +154,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Save each object in the collection</p>
+
+<p>Save each object in the collection. </p>
 <p>Returns an array of ids matching the objects.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> $people = Person::FindAll();
@@ -158,7 +165,7 @@ Public Member Functions</h2></td></tr>
  $ids             = $people-&gt;save();
 </pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>array Of row ids. This may be especially useful when using autoincrement style keys that are generated by the database </dd></dl>
 
-<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00040">40</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
+<p>Definition at line <a class="el" href="_model_collection_8php_source.html#l00038">38</a> of file <a class="el" href="_model_collection_8php_source.html">ModelCollection.php</a>.</p>
 
 </div>
 </div>
@@ -171,7 +178,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

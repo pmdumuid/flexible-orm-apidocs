@@ -88,19 +88,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00009"></a>00009 use \ORM\Tests\Mock, \ORM\PDOFactory, \ORM\DEBUG;
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 require_once <span class="stringliteral">&#39;ORMTest.php&#39;</span>;
-<a name="l00012"></a>00012 <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f">PDOFactory::GetFactory</a>()-&gt;startProfiling();
+<a name="l00012"></a>00012 <a class="code" href="class_o_r_m_1_1_p_d_o_factory.html#ae5687c1ad361ba712c385fcf05b6f59f" title="Get the instance of PDOFactory.">PDOFactory::GetFactory</a>()-&gt;startProfiling();
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00018"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html">00018</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html">ORM_ModelTest</a> <span class="keyword">extends</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_test.html">ORMTest</a> {
+<a name="l00018"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html">00018</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html" title="Test class for ORM_Model.">ORM_ModelTest</a> <span class="keyword">extends</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_test.html" title="Description of ORMTestClass.">ORMTest</a> {
 <a name="l00019"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">00019</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2a43aa2014dfccd39c2e51500ba9763d">testTableName</a>() {
 <a name="l00020"></a>00020         $this-&gt;assertEquals(
 <a name="l00021"></a>00021             <span class="stringliteral">&#39;cars&#39;</span>,
-<a name="l00022"></a>00022             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">Car::TableName</a>()
+<a name="l00022"></a>00022             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c" title="Get the table name for a given model.">Car::TableName</a>()
 <a name="l00023"></a>00023         );
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025         $this-&gt;assertEquals(
 <a name="l00026"></a>00026             <span class="stringliteral">&#39;my_elephants&#39;</span>,
-<a name="l00027"></a>00027             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c">Elephant::TableName</a>()
+<a name="l00027"></a>00027             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c" title="Get the table name for a given model.">Elephant::TableName</a>()
 <a name="l00028"></a>00028         );
 <a name="l00029"></a>00029         
 <a name="l00030"></a>00030         $this-&gt;assertEquals(
@@ -159,8 +159,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00083"></a>00083     }
 <a name="l00084"></a>00084 
 <a name="l00085"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aec1b85294a45b09970fd13291a45effa">00085</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aec1b85294a45b09970fd13291a45effa">testForeignKey</a>() {
-<a name="l00086"></a>00086         $this-&gt;assertEquals(<span class="stringliteral">&#39;owner_id&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">Car::ForeignKey</a>(<span class="stringliteral">&#39;ORM\Tests\Mock\Owner&#39;</span>));
-<a name="l00087"></a>00087         $this-&gt;assertEquals(<span class="stringliteral">&#39;brand&#39;</span>,    Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4">Car::ForeignKey</a>(<span class="stringliteral">&#39;ORM\Tests\Mock\Manufacturer&#39;</span>));
+<a name="l00086"></a>00086         $this-&gt;assertEquals(<span class="stringliteral">&#39;owner_id&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4" title="Get the name of the foreign key that relates another model to this one.">Car::ForeignKey</a>(<span class="stringliteral">&#39;ORM\Tests\Mock\Owner&#39;</span>));
+<a name="l00087"></a>00087         $this-&gt;assertEquals(<span class="stringliteral">&#39;brand&#39;</span>,    Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a4780d0cc1ed63faf43304819b32a10f4" title="Get the name of the foreign key that relates another model to this one.">Car::ForeignKey</a>(<span class="stringliteral">&#39;ORM\Tests\Mock\Manufacturer&#39;</span>));
 <a name="l00088"></a>00088     }
 <a name="l00089"></a>00089 
 <a name="l00090"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a42bd84e3bd3d9fbcc62d38f0db749e84">00090</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a42bd84e3bd3d9fbcc62d38f0db749e84">testFindWith</a>() {
@@ -293,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00217"></a>00217     }
 <a name="l00218"></a>00218 
 <a name="l00219"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a5a5839aa27d9dd63afa3c1864d7cf59a">00219</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a5a5839aa27d9dd63afa3c1864d7cf59a">testFindAllWith</a>() {
-<a name="l00220"></a>00220         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Car::FindAll</a>(array(), <span class="stringliteral">&#39;ORM\Tests\Mock\Manufacturer&#39;</span>);
+<a name="l00220"></a>00220         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Car::FindAll</a>(array(), <span class="stringliteral">&#39;ORM\Tests\Mock\Manufacturer&#39;</span>);
 <a name="l00221"></a>00221 
 <a name="l00222"></a>00222         $this-&gt;assertEquals( <span class="stringliteral">&#39;ORM\ModelCollection&#39;</span>, get_class(<a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a>));
 <a name="l00223"></a>00223         
@@ -358,7 +358,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00288"></a>00288     }
 <a name="l00289"></a>00289 
 <a name="l00290"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2f24b1f8d5714cbbd4c5f2e2f95b3e68">00290</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a2f24b1f8d5714cbbd4c5f2e2f95b3e68">testFindAll</a>() {
-<a name="l00291"></a>00291         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Car::FindAll</a>(array(
+<a name="l00291"></a>00291         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Car::FindAll</a>(array(
 <a name="l00292"></a>00292             <span class="stringliteral">&#39;where&#39;</span>     =&gt; <span class="stringliteral">&#39;brand NOT LIKE ? AND doors &lt; ?&#39;</span>,
 <a name="l00293"></a>00293             <span class="stringliteral">&#39;values&#39;</span>    =&gt; array( <span class="stringliteral">&#39;Volkswagen&#39;</span>, 5 )
 <a name="l00294"></a>00294         ));
@@ -402,7 +402,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00332"></a>00332     }
 <a name="l00333"></a>00333 
 <a name="l00334"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a191633d4dc7e1982700a53ba6c9229d2">00334</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a191633d4dc7e1982700a53ba6c9229d2">testFindAllNoOptions</a>() {
-<a name="l00335"></a>00335         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Car::FindAll</a>();
+<a name="l00335"></a>00335         <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Car::FindAll</a>();
 <a name="l00336"></a>00336         $this-&gt;assertEquals(
 <a name="l00337"></a>00337             <span class="stringliteral">&#39;ORM\\ModelCollection&#39;</span>,
 <a name="l00338"></a>00338             get_class( <a class="code" href="orm__model_8find_all_by_8example_8php.html#a7b59ba4913a44ed59c6498d7da374dd9">$cars</a> )
@@ -440,12 +440,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00370"></a>00370     }
 <a name="l00371"></a>00371 
 <a name="l00372"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#addf06bdd0b4a76449be3f65785537107">00372</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#addf06bdd0b4a76449be3f65785537107">testPrimaryKeyName</a>() {
-<a name="l00373"></a>00373         $this-&gt;assertEquals(<span class="stringliteral">&#39;id&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">Car::PrimaryKeyName</a>() );
-<a name="l00374"></a>00374         $this-&gt;assertEquals(<span class="stringliteral">&#39;name&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8">Elephant::PrimaryKeyName</a>() );
+<a name="l00373"></a>00373         $this-&gt;assertEquals(<span class="stringliteral">&#39;id&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8" title="Get the primary key for a given table.">Car::PrimaryKeyName</a>() );
+<a name="l00374"></a>00374         $this-&gt;assertEquals(<span class="stringliteral">&#39;name&#39;</span>, Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ab2dd35c631da7f37493f431acad10be8" title="Get the primary key for a given table.">Elephant::PrimaryKeyName</a>() );
 <a name="l00375"></a>00375     }
 <a name="l00376"></a>00376 
 <a name="l00377"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a4567ce8cd700f7a74bf769d4e072d09d">00377</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a4567ce8cd700f7a74bf769d4e072d09d">testDescribeTable</a>() {
-<a name="l00378"></a>00378         $describe = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7">Elephant::DescribeTable</a>();
+<a name="l00378"></a>00378         $describe = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#abe03666916397799f98cac4ae3df12c7" title="Get an array listing all the fields stored in the database for this object.">Elephant::DescribeTable</a>();
 <a name="l00379"></a>00379 
 <a name="l00380"></a>00380         $this-&gt;assertEquals( 2, count( $describe ) );
 <a name="l00381"></a>00381         $this-&gt;assertTrue( in_array(<span class="stringliteral">&#39;name&#39;</span>, $describe) );
@@ -544,7 +544,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00474"></a>00474         <span class="comment">// Ensure it has been created for this to make sense as a test</span>
 <a name="l00475"></a>00475         $this-&gt;assertEquals( $ford-&gt;id(), Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>($ford-&gt;id())-&gt;<span class="keywordtype">id</span>() );
 <a name="l00476"></a>00476 
-<a name="l00477"></a>00477         Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">Car::Destroy</a>( $ford-&gt;id() );
+<a name="l00477"></a>00477         Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5" title="Delete a single item from the database without having to fetch it first.">Car::Destroy</a>( $ford-&gt;id() );
 <a name="l00478"></a>00478         $this-&gt;assertFalse( Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>($ford-&gt;id()) );
 <a name="l00479"></a>00479     }
 <a name="l00480"></a>00480 
@@ -576,7 +576,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00509"></a>00509         $this-&gt;assertEquals($type, $alfa-&gt;type );
 <a name="l00510"></a>00510     }
 <a name="l00511"></a>00511 
-<a name="l00516"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#af09e06713a3408d0275b6d348fced0fd">00516</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#af09e06713a3408d0275b6d348fced0fd">testBeforeAfterCreate</a>() {
+<a name="l00516"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#af09e06713a3408d0275b6d348fced0fd">00516</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#af09e06713a3408d0275b6d348fced0fd" title="Test by ensuring the correct global variables were set and that they were set in order.">testBeforeAfterCreate</a>() {
 <a name="l00517"></a>00517         $fred = <span class="keyword">new</span> Mock\<a class="code" href="class_elephant.html">Elephant</a>(array(<span class="stringliteral">&#39;name&#39;</span> =&gt; <span class="stringliteral">&#39;Fred&#39;</span>, <span class="stringliteral">&#39;weight&#39;</span> =&gt; 123454));
 <a name="l00518"></a>00518 
 <a name="l00519"></a>00519         $this-&gt;assertTrue( $fred-&gt;save() );
@@ -647,16 +647,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00584"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#ade7409f7cbd984563e3257cd5ec5c9d6">00584</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#ade7409f7cbd984563e3257cd5ec5c9d6">testPossibleValues</a>() {
 <a name="l00585"></a>00585         $this-&gt;assertEquals(
 <a name="l00586"></a>00586             array( 1=&gt; <span class="stringliteral">&#39;Sedan&#39;</span>, 2=&gt; <span class="stringliteral">&#39;Coupe&#39;</span>),
-<a name="l00587"></a>00587             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">Car::PossibleValues</a>(<span class="stringliteral">&#39;type&#39;</span>)
+<a name="l00587"></a>00587             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f" title="Get the possible values of an ENUM field.">Car::PossibleValues</a>(<span class="stringliteral">&#39;type&#39;</span>)
 <a name="l00588"></a>00588         );
 <a name="l00589"></a>00589 
 <a name="l00590"></a>00590         $this-&gt;assertEquals(
 <a name="l00591"></a>00591             array(),
-<a name="l00592"></a>00592             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f">Car::PossibleValues</a>(<span class="stringliteral">&#39;doors&#39;</span>)
+<a name="l00592"></a>00592             Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#aa97bf176463ca79411580d7d38f1210f" title="Get the possible values of an ENUM field.">Car::PossibleValues</a>(<span class="stringliteral">&#39;doors&#39;</span>)
 <a name="l00593"></a>00593         );
 <a name="l00594"></a>00594     }
 <a name="l00595"></a>00595 
-<a name="l00599"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aea09e73fb70164a853f599fb27e3f4b9">00599</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aea09e73fb70164a853f599fb27e3f4b9">testCreateWithDefaults</a>() {
+<a name="l00599"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aea09e73fb70164a853f599fb27e3f4b9">00599</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#aea09e73fb70164a853f599fb27e3f4b9" title="Create a new object but don&#39;t include all fields.">testCreateWithDefaults</a>() {
 <a name="l00600"></a>00600         <a class="code" href="orm__model__foreign_8example_8php.html#a9aabf46bdb166877480b2094d7ca01a7">$owner</a> = <span class="keyword">new</span> Mock\<a class="code" href="class_owner.html">Owner</a>();
 <a name="l00601"></a>00601         <a class="code" href="orm__model__foreign_8example_8php.html#a9aabf46bdb166877480b2094d7ca01a7">$owner</a>-&gt;name = <span class="stringliteral">&#39;Fred&#39;</span>;
 <a name="l00602"></a>00602         <a class="code" href="orm__model__foreign_8example_8php.html#a9aabf46bdb166877480b2094d7ca01a7">$owner</a>-&gt;age  = rand(0,120);
@@ -665,13 +665,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00605"></a>00605     }
 <a name="l00606"></a>00606     
 <a name="l00607"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a854294448d3361e3cc1ac7b00f8f97b9">00607</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a854294448d3361e3cc1ac7b00f8f97b9">testFindAllWithLimit</a>() {
-<a name="l00608"></a>00608         <a class="code" href="orm__model_8find_all_by_8example_8php.html#aa83755b1a609d683cbae030d2e406659">$owners</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Owner::FindAll</a>(array(
+<a name="l00608"></a>00608         <a class="code" href="orm__model_8find_all_by_8example_8php.html#aa83755b1a609d683cbae030d2e406659">$owners</a> = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Owner::FindAll</a>(array(
 <a name="l00609"></a>00609             <span class="stringliteral">&#39;limit&#39;</span> =&gt; 2
 <a name="l00610"></a>00610         ));
 <a name="l00611"></a>00611         
 <a name="l00612"></a>00612         $this-&gt;assertEquals( 2, count(<a class="code" href="orm__model_8find_all_by_8example_8php.html#aa83755b1a609d683cbae030d2e406659">$owners</a>) );
 <a name="l00613"></a>00613         
-<a name="l00614"></a>00614         $moreOwners = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Owner::FindAll</a>(array(
+<a name="l00614"></a>00614         $moreOwners = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Owner::FindAll</a>(array(
 <a name="l00615"></a>00615             <span class="stringliteral">&#39;limit&#39;</span>  =&gt; 2,
 <a name="l00616"></a>00616             <span class="stringliteral">&#39;offset&#39;</span> =&gt; 2
 <a name="l00617"></a>00617         ));
@@ -681,7 +681,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00621"></a>00621     }
 <a name="l00622"></a>00622     
 <a name="l00623"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a4b37ae3e62efcdd5ed332948c7495d30">00623</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m___model_test.html#a4b37ae3e62efcdd5ed332948c7495d30">testCountFindAll</a>() {
-<a name="l00624"></a>00624         $carCount = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">Car::CountFindAll</a>();
+<a name="l00624"></a>00624         $carCount = Mock\<a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8" title="Get the number of records that exist matching the specified options.">Car::CountFindAll</a>();
 <a name="l00625"></a>00625         
 <a name="l00626"></a>00626         $this-&gt;assertEquals( 4, $carCount );
 <a name="l00627"></a>00627     }
@@ -698,7 +698,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_o_r_m___model_test_8php.html">ORM_ModelTest.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

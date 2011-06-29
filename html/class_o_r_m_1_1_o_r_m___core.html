@@ -88,29 +88,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ORM_Core Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::ORM_Core" --><div class="dynheader">
+<!-- doxytag: class="ORM::ORM_Core" -->
+<p>An abstract class which defines the actions of an ORM-like object.  
+ <a href="class_o_r_m_1_1_o_r_m___core.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for ORM_Core:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_o_r_m___core.png" usemap="#ORM_Core_map" alt=""/>
   <map id="ORM_Core_map" name="ORM_Core_map">
-<area href="class_o_r_m_1_1_o_r_m___model.html" alt="ORM_Model" shape="rect" coords="0,56,120,80"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html" alt="Staff" shape="rect" coords="130,56,250,80"/>
+<area href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes." alt="ORM_Model" shape="rect" coords="0,56,120,80"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html" title="Description of Staff." alt="Staff" shape="rect" coords="130,56,250,80"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="130,112,250,136"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="130,168,250,192"/>
 <area href="class_car.html" alt="Car" shape="rect" coords="130,224,250,248"/>
 <area href="class_elephant.html" alt="Elephant" shape="rect" coords="130,280,250,304"/>
 <area href="class_manufacturer.html" alt="Manufacturer" shape="rect" coords="130,336,250,360"/>
-<area href="class_o_r_m_1_1_cached_o_r_m_model.html" alt="CachedORMModel" shape="rect" coords="130,392,250,416"/>
-<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" alt="ORMModelSDB" shape="rect" coords="130,448,250,472"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_alternate_car.html" alt="AlternateCar" shape="rect" coords="130,504,250,528"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_bad_model.html" alt="BadModel" shape="rect" coords="130,560,250,584"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_canary.html" alt="Canary" shape="rect" coords="130,616,250,640"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_car.html" alt="Car" shape="rect" coords="130,672,250,696"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html" alt="Elephant" shape="rect" coords="130,728,250,752"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html" alt="Manufacturer" shape="rect" coords="130,784,250,808"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html" alt="Owner" shape="rect" coords="130,840,250,864"/>
-<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_window.html" alt="Window" shape="rect" coords="130,896,250,920"/>
+<area href="class_o_r_m_1_1_cached_o_r_m_model.html" title="An ORM Model class that implements caching on Find/FindAll actions and keeps the cache updated on sav..." alt="CachedORMModel" shape="rect" coords="130,392,250,416"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service." alt="ORMModelSDB" shape="rect" coords="130,448,250,472"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_alternate_car.html" title="Description of AlternateCar." alt="AlternateCar" shape="rect" coords="130,504,250,528"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_bad_model.html" title="Description of Car." alt="BadModel" shape="rect" coords="130,560,250,584"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_canary.html" title="Description of Canary." alt="Canary" shape="rect" coords="130,616,250,640"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_car.html" title="Description of Car." alt="Car" shape="rect" coords="130,672,250,696"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_elephant.html" title="Description of Elephant." alt="Elephant" shape="rect" coords="130,728,250,752"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html" title="Description of Manufacturer." alt="Manufacturer" shape="rect" coords="130,784,250,808"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html" title="Description of Owner." alt="Owner" shape="rect" coords="130,840,250,864"/>
+<area href="class_o_r_m_1_1_tests_1_1_mock_1_1_window.html" title="Description of AlternateCar." alt="Window" shape="rect" coords="130,896,250,920"/>
 <area href="class_owner.html" alt="Owner" shape="rect" coords="130,952,250,976"/>
 </map>
  </div></div>
@@ -118,28 +121,43 @@ Inheritance diagram for ORM_Core:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aa04f3da25ef86f670a4094c4fe6da144">__construct</a> ($values=array())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate the object with supplied default values.  <a href="#aa04f3da25ef86f670a4094c4fe6da144"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">attributes</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of all the attributes of this object.  <a href="#abf818560327272e8a0d310101d9dcb88"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">values</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an associative array of all the values of the public attributes of this object.  <a href="#a64c4525e820a1aac3f58fa6f652280eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">errorMessages</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of all error messages.  <a href="#ad6aba19a2f147b330598fc2051bf3103"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ab2418f87284e617c3ed8c6767be0130e">errorMessagesString</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string of error messages.  <a href="#ab2418f87284e617c3ed8c6767be0130e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">errorMessage</a> ($field)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the error message for a specific field.  <a href="#aff9aeabb8fe57de69c7740d4af7192cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">validationError</a> ($field, $message)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an error to the array of error messages.  <a href="#a4e679e960f9b1fabb5eda663fae69935"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a54bf50d0a6b025bc0c856595ecb0b739">clearValidationErrors</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all existing validation errors.  <a href="#a54bf50d0a6b025bc0c856595ecb0b739"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a3026bdef520c6ce5b5db9064711b5653">changedFields</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of field names that have changed.  <a href="#a3026bdef520c6ce5b5db9064711b5653"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abb69a6799bb6e0faa77a8ad8aef89d00">originalValue</a> ($property)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the originally fetched value of a property.  <a href="#abb69a6799bb6e0faa77a8ad8aef89d00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a21e35e3d910de7cc7ee8d5d6d59f607a">originalValues</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the original values of this object.  <a href="#a21e35e3d910de7cc7ee8d5d6d59f607a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a56c3eb251d223df0b6586573bd01118e">setOriginalValue</a> ($property, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an individual properties "original" value.  <a href="#a56c3eb251d223df0b6586573bd01118e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">setValues</a> (array $values=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">(re)sets the all the attribute values for this object  <a href="#a77d38b697cce83b1e385102cdf4957f9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a29d7b705912043e6ae092a448053cb6f">$_errorMessages</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of key &gt; values of fields with errors.  <a href="#a29d7b705912043e6ae092a448053cb6f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e17e034eadb96bde40a0737dd4e8842">$_originalValues</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The values this object held originally as an associative array.  <a href="#a4e17e034eadb96bde40a0737dd4e8842"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>An abstract class which defines the actions of an ORM-like object.</p>
-<p>Allows classes to be subclassed to behave like the basics of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a>, but without the back-end database connection. To create an Alternative to <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> that can be dropped in-place, use the ORM_Interface. </p>
+<div class="textblock"><p>An abstract class which defines the actions of an ORM-like object. </p>
+<p>Allows classes to be subclassed to behave like the basics of <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a>, but without the back-end database connection. To create an Alternative to <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> that can be dropped in-place, use the ORM_Interface. </p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00020">20</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00017">17</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa04f3da25ef86f670a4094c4fe6da144"></a><!-- doxytag: member="ORM::ORM_Core::__construct" ref="aa04f3da25ef86f670a4094c4fe6da144" args="($values=array())" -->
 <div class="memitem">
@@ -155,7 +173,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Instantiate the object with supplied default values</p>
+
+<p>Instantiate the object with supplied default values. </p>
 <p>Also populates the _originalValues array</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -166,7 +185,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#aa04f3da25ef86f670a4094c4fe6da144">ORM_Model</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00044">44</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00041">41</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -184,13 +203,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Array of all the attributes of this object</p>
+
+<p>Array of all the attributes of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb">values()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a64c4525e820a1aac3f58fa6f652280eb" title="Get an associative array of all the values of the public attributes of this object.">values()</a> </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#abf818560327272e8a0d310101d9dcb88">ORMModelSDB</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00054">54</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00051">51</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -207,7 +227,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get array of field names that have changed</p>
+
+<p>Get array of field names that have changed. </p>
 <p><b>Usage:</b> </p>
 <div class="fragment"><pre class="fragment"> <a class="code" href="orm__model_8load_8example_8php.html#a0ad48d2150ff4334ca3b4dc860abe487">$person</a> = Person::find(<span class="stringliteral">&#39;last&#39;</span>);
  <a class="code" href="orm__model_8load_8example_8php.html#a0ad48d2150ff4334ca3b4dc860abe487">$person</a>-&gt;name = <span class="stringliteral">&#39;Different Name&#39;</span>;
@@ -217,7 +238,7 @@ Protected Attributes</h2></td></tr>
  <span class="comment">// Outputs--&gt; array( &#39;name&#39; )</span>
 </pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00201">201</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00198">198</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -234,10 +255,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Clear all existing validation errors</p>
+
+<p>Clear all existing validation errors. </p>
 <p>See <a class="el" href="validation.html">Model Validation</a> for more information. </p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00182">182</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00179">179</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -255,7 +277,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Return the error message for a specific field</p>
+
+<p>Return the error message for a specific field. </p>
 <p>Will return false if no error exists for the selected field</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"> <span class="keywordflow">if</span>( $error_msg = <a class="code" href="orm__model_8load_8example_8php.html#a0ad48d2150ff4334ca3b4dc860abe487">$person</a>-&gt;errorMessage( <span class="stringliteral">&#39;name&#39;</span> ) ) {
@@ -272,7 +295,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00147">147</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00144">144</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -289,7 +312,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Return array of all error messages</p>
+
+<p>Return array of all error messages. </p>
 <p>If there are no error messages, this will return an empty array.</p>
 <p>The array will be associative, with the keys being object properties and the values being the actual error message.</p>
 <p><b>Usage</b> </p>
@@ -302,11 +326,11 @@ Protected Attributes</h2></td></tr>
      <span class="comment">// Log all the errors to a log file</span>
      error_log( $car-&gt;errorMessagesString() );
  }
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>This is only populated if you use <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">validationError()</a>. See <a class="el" href="validation.html">Model Validation</a> for more information.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">errorMessage()</a> </dd></dl>
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>This is only populated if you use <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error to the array of error messages.">validationError()</a>. See <a class="el" href="validation.html">Model Validation</a> for more information.</dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc" title="Return the error message for a specific field.">errorMessage()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00104">104</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00101">101</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -323,13 +347,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Return a string of error messages</p>
+
+<p>Return a string of error messages. </p>
 <p>Each error is listed comma seperated as "'PropertyName' ErrorMessage"</p>
 <p>See <a class="el" href="validation.html">Model Validation</a> for more information.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">errorMessages()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103" title="Return array of all error messages.">errorMessages()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00119">119</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00116">116</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -347,7 +372,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the originally fetched value of a property</p>
+
+<p>Get the originally fetched value of a property. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$property</td><td>Name of the property </td></tr>
@@ -356,7 +382,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed The original value of the property or NULL if there is none </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00223">223</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00220">220</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -373,10 +399,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the original values of this object </p>
+
+<p>Get the original values of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00231">231</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00228">228</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -404,7 +431,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Set an individual properties "original" value</p>
+
+<p>Set an individual properties "original" value. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$property</td><td>The name of the attribute to set </td></tr>
@@ -413,7 +441,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00243">243</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00240">240</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -431,7 +459,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>(re)sets the all the attribute values for this object</p>
+
+<p>(re)sets the all the attribute values for this object </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$values</td><td>Associative array of field names and their values </td></tr>
@@ -441,7 +470,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#a77d38b697cce83b1e385102cdf4957f9">ORMModelSDB</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00253">253</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00250">250</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -469,14 +498,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Add an error to the array of error messages</p>
+
+<p>Add an error to the array of error messages. </p>
 <p><b>Usage</b></p>
 <div class="fragment"><pre class="fragment"> <span class="comment">// Usually within a classes valid() function...</span>
  <span class="keywordflow">if</span>( strlen( $this-&gt;name ) &lt; 5 ) {
-   $this-&gt;<a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935">validationError</a>( <span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;Must be at least 5 characters long&#39;</span> );
+   $this-&gt;<a class="code" href="class_o_r_m_1_1_o_r_m___core.html#a4e679e960f9b1fabb5eda663fae69935" title="Add an error to the array of error messages.">validationError</a>( <span class="stringliteral">&#39;name&#39;</span>, <span class="stringliteral">&#39;Must be at least 5 characters long&#39;</span> );
  }
 
- echo $this-&gt;<a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc">errorMessage</a>( <span class="stringliteral">&#39;name&#39;</span> );
+ echo $this-&gt;<a class="code" href="class_o_r_m_1_1_o_r_m___core.html#aff9aeabb8fe57de69c7740d4af7192cc" title="Return the error message for a specific field.">errorMessage</a>( <span class="stringliteral">&#39;name&#39;</span> );
  <span class="comment">// will print &#39;Must be at least 5 characters long&#39; if name was less than 5 chars long</span>
 </pre></div><p>See <a class="el" href="validation.html">Model Validation</a> for more information.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -488,7 +518,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>base_model::errorMessage(), base_model::valid() </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00172">172</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00169">169</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -505,12 +535,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get an associative array of all the values of the public attributes of this object</p>
+
+<p>Get an associative array of all the values of the public attributes of this object. </p>
 <p>Keys will be attribute names</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">attributes()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88" title="Array of all the attributes of this object.">attributes()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00066">66</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00063">63</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -525,10 +556,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Array of key &gt; values of fields with errors.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103">errorMessages()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00027">27</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>Array of key &gt; values of fields with errors. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___core.html#ad6aba19a2f147b330598fc2051bf3103" title="Return array of all error messages.">errorMessages()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00024">24</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -542,9 +574,10 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The values this object held originally as an associative array </p>
 
-<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00034">34</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
+<p>The values this object held originally as an associative array. </p>
+
+<p>Definition at line <a class="el" href="_o_r_m___core_8php_source.html#l00031">31</a> of file <a class="el" href="_o_r_m___core_8php_source.html">ORM_Core.php</a>.</p>
 
 </div>
 </div>
@@ -557,7 +590,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_o_r_m___core.html">ORM_Core</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

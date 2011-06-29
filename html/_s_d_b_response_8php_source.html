@@ -85,17 +85,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_s_d_b_response_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
 <a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\SDB;
-<a name="l00019"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">00019</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> <span class="keyword">extends</span> \CFResponse implements \Iterator, \ArrayAccess, \Countable {
+<a name="l00019"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">00019</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> <span class="keyword">extends</span> \CFResponse implements \Iterator, \ArrayAccess, \Countable {
 <a name="l00024"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab4245160c23666d9aa52d9718c8796c0">00024</a>     <span class="keyword">const</span> MAX_QUERIES = 30;
 <a name="l00029"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a7bd28e0b68c9cd1497ce1302a77a9d5d">00029</a>     <span class="keyword">private</span> $_items = array();
 <a name="l00030"></a>00030 
-<a name="l00039"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">00039</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">$_currentKey</a>;
+<a name="l00039"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997">00039</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6822cb5dc5f37d0b74609a40fc7de997" title="The current key from the $_items array.">$_currentKey</a>;
 <a name="l00040"></a>00040 
-<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab79a49ee0d8173b40aafa1599b39a5f6">00045</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab79a49ee0d8173b40aafa1599b39a5f6">$_itemNames</a>;
+<a name="l00045"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab79a49ee0d8173b40aafa1599b39a5f6">00045</a>     <span class="keyword">private</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ab79a49ee0d8173b40aafa1599b39a5f6" title="Array of keys from $_items.">$_itemNames</a>;
 <a name="l00046"></a>00046 
 <a name="l00051"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afe1d43000525a1f23884931bf7d6c98d">00051</a>     <span class="keyword">private</span> $_position = 0;
 <a name="l00052"></a>00052     
-<a name="l00060"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717">00060</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717">__construct</a>( $header, $body, $status = null ) {
+<a name="l00060"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717">00060</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a68f82c5d0ede4dcee8705afbfe630717" title="Read the XML response into the $_items array if this is a supported action.">__construct</a>( $header, $body, $status = null ) {
 <a name="l00061"></a>00061         parent::__construct( $header, $body, $status );
 <a name="l00062"></a>00062         
 <a name="l00063"></a>00063         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;GetAttributesResult) ) {
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00069"></a>00069         $this-&gt;rewind();
 <a name="l00070"></a>00070     }
 <a name="l00071"></a>00071 
-<a name="l00076"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">00076</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">_getSelectResult</a>()  {
+<a name="l00076"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880">00076</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac8723974466341091b9be51b0fc89880" title="Iterpret the result of a select operation into a 2-dimensional array of items and their attributes...">_getSelectResult</a>()  {
 <a name="l00077"></a>00077         <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> = $this-&gt;body-&gt;SelectResult-&gt;Item();
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079         <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#a737abdef83dabb219182c1e88887c6c3">$items</a> ) {
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00083"></a>00083         }
 <a name="l00084"></a>00084     }
 <a name="l00085"></a>00085 
-<a name="l00093"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">00093</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">_getObject</a>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
+<a name="l00093"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a">00093</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa52f7962e3d3efefdfdc6fd2a7929c3a" title="Convert an XML attribute tree to array of key-value pairs.">_getObject</a>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
 <a name="l00094"></a>00094         $att_array = array();
 <a name="l00095"></a>00095         $toFlatten = array();
 <a name="l00096"></a>00096 
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00122"></a>00122         <span class="keywordflow">return</span> $att_array;
 <a name="l00123"></a>00123     }
 <a name="l00124"></a>00124 
-<a name="l00129"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">00129</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">_getAttributesResult</a>() {
+<a name="l00129"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a">00129</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa6255d0ff1ffd3a5018762ffb1d5b48a" title="Interpret the result of a get_attributes() operation into an associative array of attribute names and...">_getAttributesResult</a>() {
 <a name="l00130"></a>00130         <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> = $this-&gt;body-&gt;GetAttributesResult-&gt;Attribute();
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132         <span class="keywordflow">if</span>( <a class="code" href="sdb_8sdbresponse_8example_8php.html#adc851f7a62250e75df0490c0280aef4c">$attributes</a> ) {
@@ -157,15 +157,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00134"></a>00134         }
 <a name="l00135"></a>00135     }
 <a name="l00136"></a>00136 
-<a name="l00141"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">00141</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">itemNames</a>() {
+<a name="l00141"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b">00141</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#afdef380a732927764a0e29dfbba1cf6b" title="Get a list of itemName() values from SDB.">itemNames</a>() {
 <a name="l00142"></a>00142         <span class="keywordflow">return</span> $this-&gt;_itemNames;
 <a name="l00143"></a>00143     }
 <a name="l00144"></a>00144 
-<a name="l00149"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">00149</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">items</a>() {
+<a name="l00149"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982">00149</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a5d2c6ea97e26121f29be3601d32af982" title="Get the returned items as an array.">items</a>() {
 <a name="l00150"></a>00150         <span class="keywordflow">return</span> $this-&gt;_items;
 <a name="l00151"></a>00151     }
 <a name="l00152"></a>00152     
-<a name="l00186"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">00186</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">getAll</a>($consistentRead = <span class="keyword">false</span>, $resultsLimit = null, $offset = 0, $currentOffset = 0) {
+<a name="l00186"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30">00186</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a66a42e88aca321e256b8e790d0bd2b30" title="Ensure the query is complete.">getAll</a>($consistentRead = <span class="keyword">false</span>, $resultsLimit = null, $offset = 0, $currentOffset = 0) {
 <a name="l00187"></a>00187         <span class="keywordflow">if</span>( isset($this-&gt;body-&gt;SelectResult) ) {
 <a name="l00188"></a>00188             $result = $this;
 <a name="l00189"></a>00189             <a class="code" href="sdb_8sdbstatement_8example_8php.html#af59a5f7cd609e592c41dc3643efd3c98">$query</a>  = $this-&gt;getQuery();
@@ -204,12 +204,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00222"></a>00222         <span class="keywordflow">return</span> $this;
 <a name="l00223"></a>00223     }
 <a name="l00224"></a>00224     
-<a name="l00232"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505">00232</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505">clear</a>() {
+<a name="l00232"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505">00232</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#aa821bec12eaa7e0f649397c9675ff505" title="Clear all the items in the _items array.">clear</a>() {
 <a name="l00233"></a>00233         $this-&gt;_items = array();
 <a name="l00234"></a>00234         $this-&gt;rewind();
 <a name="l00235"></a>00235     }
 <a name="l00236"></a>00236     
-<a name="l00248"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a8f45779ba67e1fbf259c99cec1f539fb">00248</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a8f45779ba67e1fbf259c99cec1f539fb">_limitRemaining</a>( $limit, $targetOffset, $currentOffset ) {
+<a name="l00248"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a8f45779ba67e1fbf259c99cec1f539fb">00248</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a8f45779ba67e1fbf259c99cec1f539fb" title="Helper function to tidy up the getAll() function.">_limitRemaining</a>( $limit, $targetOffset, $currentOffset ) {
 <a name="l00249"></a>00249         <span class="keywordflow">if</span>( $targetOffset &lt;= $currentOffset ) {
 <a name="l00250"></a>00250             <span class="keywordflow">return</span> $limit - count($this-&gt;_items);
 <a name="l00251"></a>00251         } <span class="keywordflow">else</span> {
@@ -218,9 +218,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00254"></a>00254         }
 <a name="l00255"></a>00255     }
 <a name="l00256"></a>00256     
-<a name="l00261"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">00261</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">_setItems</a>( <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> $response ) {
+<a name="l00261"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238">00261</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a6db21e51ce46e2984b7adf65b23b4238" title="Get items from a query and add them to this query.">_setItems</a>( <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> $response ) {
 <a name="l00262"></a>00262         <span class="keywordflow">if</span>( !$response-&gt;isOK() ) {
-<a name="l00263"></a>00263             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOException( $response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">errorMessage</a>().<span class="stringliteral">&#39; - &#39;</span>.$response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a>() );
+<a name="l00263"></a>00263             <span class="keywordflow">throw</span> <span class="keyword">new</span> \ORM\Exceptions\ORMPDOException( $response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a" title="Get the error details (if there are errors)">errorMessage</a>().<span class="stringliteral">&#39; - &#39;</span>.$response-&gt;<a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2" title="Get the SELECT query used to generate this reponse.">getQuery</a>() );
 <a name="l00264"></a>00264         }
 <a name="l00265"></a>00265         
 <a name="l00266"></a>00266         <span class="keywordflow">foreach</span>( $response as $key =&gt; $item ) {
@@ -228,12 +228,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00268"></a>00268         }
 <a name="l00269"></a>00269     }
 <a name="l00270"></a>00270 
-<a name="l00276"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">00276</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">nextToken</a>() {
+<a name="l00276"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7">00276</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a28f33aeda1185cf6afaddf8d0a5c10c7" title="Get the nextToken if it exists for completing this SDB request.">nextToken</a>() {
 <a name="l00277"></a>00277         <span class="keywordflow">return</span> empty($this-&gt;body-&gt;SelectResult-&gt;NextToken) ?
 <a name="l00278"></a>00278                     null : (string)$this-&gt;body-&gt;SelectResult-&gt;NextToken;
 <a name="l00279"></a>00279     }
 <a name="l00280"></a>00280 
-<a name="l00287"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">00287</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">getQuery</a>() {
+<a name="l00287"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2">00287</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a55f162785567258fe5138af282e588c2" title="Get the SELECT query used to generate this reponse.">getQuery</a>() {
 <a name="l00288"></a>00288         $marker         = <span class="stringliteral">&#39;&amp;SelectExpression=&#39;</span>;
 <a name="l00289"></a>00289         $pos            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], $marker );
 <a name="l00290"></a>00290         $end            = strpos( $this-&gt;header[<span class="stringliteral">&#39;x-aws-body&#39;</span>], <span class="charliteral">&#39;&amp;&#39;</span>, $pos+10 );
@@ -243,27 +243,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00294"></a>00294         <span class="keywordflow">return</span> urldecode($encodedQuery);
 <a name="l00295"></a>00295     }
 <a name="l00296"></a>00296     
-<a name="l00302"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">00302</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">errorMessage</a>() {
+<a name="l00302"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a">00302</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a01effa419e1a208366c688d817379f1a" title="Get the error details (if there are errors)">errorMessage</a>() {
 <a name="l00303"></a>00303         <span class="keywordflow">if</span>( !$this-&gt;isOK() ) {
 <a name="l00304"></a>00304             $errors = $this-&gt;body-&gt;Message();
 <a name="l00305"></a>00305             <span class="keywordflow">return</span>  (<span class="keywordtype">string</span>)$errors[0];
 <a name="l00306"></a>00306         }
 <a name="l00307"></a>00307     }
 <a name="l00308"></a>00308 
-<a name="l00314"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">00314</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">current</a>() {
+<a name="l00314"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c">00314</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#af343507d1926e6ecf964625d41db528c" title="Get the current item array.">current</a>() {
 <a name="l00315"></a>00315         <span class="keywordflow">return</span> $this-&gt;_items[$this-&gt;_currentKey];
 <a name="l00316"></a>00316     }
 <a name="l00317"></a>00317 
-<a name="l00324"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">00324</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">key</a>() {
+<a name="l00324"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0">00324</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a729e946b4ef600e71740113c6d4332c0" title="Get the current (in iteration) key.">key</a>() {
 <a name="l00325"></a>00325         <span class="keywordflow">return</span> $this-&gt;_currentKey;
 <a name="l00326"></a>00326     }
 <a name="l00327"></a>00327 
-<a name="l00332"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">00332</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">next</a>() {
+<a name="l00332"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a">00332</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#acea62048bfee7b3cd80ed446c86fb78a" title="Advance the internal pointer and return the new key.">next</a>() {
 <a name="l00333"></a>00333         $this-&gt;_currentKey = ++$this-&gt;_position &gt;= count($this-&gt;_items) ? null : $this-&gt;_itemNames[$this-&gt;_position];
 <a name="l00334"></a>00334         <span class="keywordflow">return</span> $this-&gt;_currentKey;
 <a name="l00335"></a>00335     }
 <a name="l00336"></a>00336 
-<a name="l00342"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">00342</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">rewind</a>() {
+<a name="l00342"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c">00342</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ae619dcf2218c21549cb65d875bbc6c9c" title="Reset the internal pointer to the start.">rewind</a>() {
 <a name="l00343"></a>00343         $this-&gt;_position    = 0;
 <a name="l00344"></a>00344         $this-&gt;_itemNames   = array_keys($this-&gt;_items);
 <a name="l00345"></a>00345         <span class="keywordflow">if</span>( count($this-&gt;_items) ) {
@@ -271,28 +271,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00347"></a>00347         }
 <a name="l00348"></a>00348     }
 <a name="l00349"></a>00349 
-<a name="l00354"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">00354</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">valid</a>() {
+<a name="l00354"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247">00354</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#abb9f0d6adf1eb9b3b55712056861a247" title="Ensure the the current key position is valid.">valid</a>() {
 <a name="l00355"></a>00355         <span class="keywordflow">return</span> $this-&gt;offsetExists($this-&gt;_currentKey);
 <a name="l00356"></a>00356     }
 <a name="l00357"></a>00357 
-<a name="l00367"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">00367</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">offsetExists</a>($offset) {
+<a name="l00367"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e">00367</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a24ff257ec0c2221bc6fd7b1b4388e26e" title="Check if the requested key exists in the result set.">offsetExists</a>($offset) {
 <a name="l00368"></a>00368         <span class="keywordflow">return</span> array_key_exists($offset, $this-&gt;_items);
 <a name="l00369"></a>00369     }
 <a name="l00370"></a>00370 
-<a name="l00387"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">00387</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">offsetGet</a>($offset) {
+<a name="l00387"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87">00387</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a59aee6e89465b48f014699f41b521f87" title="Get an item&#39;s key pairs.">offsetGet</a>($offset) {
 <a name="l00388"></a>00388         <span class="keywordflow">return</span> $this-&gt;_items[$offset];
 <a name="l00389"></a>00389     }
 <a name="l00390"></a>00390 
-<a name="l00394"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">00394</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">offsetSet</a>($offset, $value) {
+<a name="l00394"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3">00394</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac6bde6b1eb50eb5377e91771fe46b7a3" title="Add or modify an array item.">offsetSet</a>($offset, $value) {
 <a name="l00395"></a>00395         $this-&gt;_items[$offset]  = $value;
 <a name="l00396"></a>00396         $this-&gt;_itemNames       = array_keys($this-&gt;_items);
 <a name="l00397"></a>00397     }
 <a name="l00398"></a>00398 
-<a name="l00408"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">00408</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">offsetUnset</a>($offset) {
+<a name="l00408"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563">00408</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#a2411227ea7118b13495de9839fd4b563" title="Delete a value from a resultset - will throw error.">offsetUnset</a>($offset) {
 <a name="l00409"></a>00409         <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Can&#39;t change values of SDB Result!&quot;</span>);
 <a name="l00410"></a>00410     }
 <a name="l00411"></a>00411 
-<a name="l00418"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">00418</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">count</a>() {
+<a name="l00418"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755">00418</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html#ac751e87b3d4c4bf2feb03bee8b092755" title="The total number of items returned.">count</a>() {
 <a name="l00419"></a>00419         <span class="keywordflow">return</span> count( $this-&gt;_items );
 <a name="l00420"></a>00420     }
 <a name="l00421"></a>00421 }
@@ -301,7 +301,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_s_d_b_response_8php.html">SDBResponse.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

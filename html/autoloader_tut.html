@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="autoloader_intro"></a>
 Introduction</h2>
-<p>The <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> class simplifies this including of files, especially when using namespaces. The basic rules for the <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> are:</p>
+<p>The <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> class simplifies this including of files, especially when using namespaces. The basic rules for the <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> are:</p>
 <ul>
 <li>Nested namespaces are treated as subfolders, and are case-sensitive</li>
 <li>Classes are stored with the extension '.php'</li>
@@ -89,8 +89,8 @@ Introduction</h2>
  </p>
 <h3><a class="anchor" id="autoloader_packages"></a>
 Packages</h3>
-<p>The <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> class uses the idea of <em>packages</em>. That is that the root namespace of a class is the package name. For example, the class <code><a class="el" href="namespace_o_r_m.html">ORM</a>\<a class="el" href="namespace_o_r_m_1_1_utilities.html">Utilities</a>\Configuration</code> is in the package <em><a class="el" href="namespace_o_r_m.html">ORM</a></em> whilst <code>Helpdesk\Models\Issue</code> is in the <em>Helpdesk</em> package. The <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> will then use this package to determine where the class will be.</p>
-<p>To define the location of packages, simply add a <code></code>[packages] group to the INI file and define the package names and locations. For example, the following would define where the <a class="el" href="namespace_o_r_m.html">ORM</a> and Helpdesk packages are located. </p>
+<p>The <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> class uses the idea of <em>packages</em>. That is that the root namespace of a class is the package name. For example, the class <code><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>\<a class="el" href="namespace_o_r_m_1_1_utilities.html" title="Utility classes for configuration, caching, debug etc.">Utilities</a>\Configuration</code> is in the package <em><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a></em> whilst <code>Helpdesk\Models\Issue</code> is in the <em>Helpdesk</em> package. The <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> will then use this package to determine where the class will be.</p>
+<p>To define the location of packages, simply add a <code></code>[packages] group to the INI file and define the package names and locations. For example, the following would define where the <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> and Helpdesk packages are located. </p>
 <div class="fragment"><pre class="fragment"> [packages]
  ORM      = <span class="stringliteral">&quot;/path/to/ORM&quot;</span>
  Helpdesk = <span class="stringliteral">&quot;/MyApps/helpdesk&quot;</span>
@@ -110,7 +110,7 @@ Utilities Tutorial</h2>
 <li><b><a class="el" href="debug_tutorial.html">Debug - Debugging Helpers</a></b></li>
 <li><b><a class="el" href="configuration.html">Configuration - Managing Settings</a></b></li>
 <li><b><a class="el" href="orm_pdo_tutorial.html">ORM_PDO Extension - Database Helper</a></b></li>
-<li><b><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> - Managing Packages</b></li>
+<li><b><a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> - Managing Packages</b></li>
 <li><b><a class="el" href="utilities__s_d_b.html">AmazonSDB Utilities</a></b> </li>
 </ul>
 </div></div>
@@ -118,7 +118,7 @@ Utilities Tutorial</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="utilities_tutorial.html">Utilities Tutorial</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

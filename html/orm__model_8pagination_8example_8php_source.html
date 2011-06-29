@@ -88,14 +88,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a><a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">00003</a> <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a> = 10;
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// How many pages will there be?</span>
-<a name="l00006"></a><a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">00006</a> <a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a> = ceil( <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8">Owner::CountFindAll</a>() / <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a> );
+<a name="l00006"></a><a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">00006</a> <a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a> = ceil( <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a7d1052227c95145088911760ed0ea6d8" title="Get the number of records that exist matching the specified options.">Owner::CountFindAll</a>() / <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a> );
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// Get all the pages (this is a trivial example, you wouldn&#39;t fetch all the pages</span>
 <a name="l00009"></a>00009 <span class="comment">// at once</span>
 <a name="l00010"></a><a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">00010</a> <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a> = array();
 <a name="l00011"></a>00011 <span class="keywordflow">for</span>( $i = 1; $i &lt;= <a class="code" href="orm__model_8pagination_8example_8php.html#a9ed234f7ff9e26b939157033414546d0">$pageCount</a>; $i++ ) {
 <a name="l00012"></a>00012     <span class="comment">// Get the next 10 items</span>
-<a name="l00013"></a>00013     <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a>[$i] = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c">Owner::FindAll</a>(array(
+<a name="l00013"></a>00013     <a class="code" href="orm__model_8pagination_8example_8php.html#a263621399c53f2952c2329ee13ad8e4e">$pages</a>[$i] = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">Owner::FindAll</a>(array(
 <a name="l00014"></a>00014         <span class="stringliteral">&#39;limit&#39;</span>  =&gt; <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a>,
 <a name="l00015"></a>00015         <span class="stringliteral">&#39;offset&#39;</span> =&gt; ($i-1) * <a class="code" href="orm__model_8pagination_8example_8php.html#aba05ad69ff0d70b7b236fdf3570955a9">$pageSize</a>
 <a name="l00016"></a>00016     ));
@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="orm__model_8pagination_8example_8php.html">orm_model.pagination.example.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

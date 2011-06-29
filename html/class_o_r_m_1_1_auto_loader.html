@@ -91,32 +91,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">AutoLoader Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::AutoLoader" --><table class="memberdecls">
+<!-- doxytag: class="ORM::AutoLoader" -->
+<p>Simple autoloading class for <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>.  
+ <a href="class_o_r_m_1_1_auto_loader.html#details">More...</a></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">load</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the class files if they can be found.  <a href="#af916111cf2b46e3284dae3c9a28e5246"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a8011242eb4fcbeae8d237b3a769137c8">loadZend</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">An alternative loader that loads classes using the Zend method where underscores are folder names.  <a href="#a8011242eb4fcbeae8d237b3a769137c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a1f62f2818512807410df640f2ea46608">locate</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Locate where the files would be if this autoloader could locate them.  <a href="#a1f62f2818512807410df640f2ea46608"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a36bc09333bff58548970377b2ad988de">locatePackage</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path of a package.  <a href="#a36bc09333bff58548970377b2ad988de"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">Get</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> instance.  <a href="#a6cdcf3f729832371ad436e144fee7fe1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#af84c79888af6984bf124befe26fabe1d">RegisterAutoloaders</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the autoloaders.  <a href="#af84c79888af6984bf124befe26fabe1d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a946f0934b6d4dce0bc46dbdb9119a624">EXTENSION</a> = '.php'</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The extensions to add to the class name for finding class files.  <a href="#a946f0934b6d4dce0bc46dbdb9119a624"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a095c5d389db211932136b53f25f39685">__construct</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> is a singleton class.  <a href="#a095c5d389db211932136b53f25f39685"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#ab3fb0a7bf0e14fc961a395c85985879a">_rootNamespace</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the root namespace of a class name.  <a href="#ab3fb0a7bf0e14fc961a395c85985879a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a10c8da1b8748ecf0bb56bc13e89b4e52">_locateInIncludePath</a> ($class)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Locate a file using the include path as it was not in the known package locations.  <a href="#a10c8da1b8748ecf0bb56bc13e89b4e52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#ac1db95989c3d4c523c1fb6644032a1fc">_setToLowerCaseIfRequired</a> ($pathName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the file name with match case exists, if it does not then return a lowercase version.  <a href="#ac1db95989c3d4c523c1fb6644032a1fc"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_auto_loader.html#a1ecea745525a7c8335b9e5dda79a1ab9">$_autoLoader</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Simple autoloading class for <a class="el" href="namespace_o_r_m.html">ORM</a></p>
+<div class="textblock"><p>Simple autoloading class for <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>. </p>
 <p>Rules followed:</p>
 <ul>
 <li>If there is no namespace for the class, then it will try to <code>require</code> the file with <code>EXTENSION</code> in both lower and uppercase</li>
@@ -132,10 +146,10 @@ Static Private Attributes</h2></td></tr>
 <span class="preprocessor"></span> [packages]
  ORM          = <span class="stringliteral">&quot;/path/to/orm&quot;</span>
  MyNamespace  = <span class="stringliteral">&quot;/path/to/my/namespace&quot;</span>
-</pre></div><p>This INI file defines that if the root namespace of a class is <code><a class="el" href="namespace_o_r_m.html">ORM</a></code>, then look in <code>/path/to/orm</code>. It will then use further namespaces as folders within this path. For example it would look for <code><a class="el" href="namespace_o_r_m.html">ORM</a>\Mock\<a class="el" href="class_car.html">Car</a></code> in <code>/path/to/orm/Mock/Car.php</code> (or <code>/path/to/orm/mock/car.php</code> if the former does not exist).</p>
+</pre></div><p>This INI file defines that if the root namespace of a class is <code><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a></code>, then look in <code>/path/to/orm</code>. It will then use further namespaces as folders within this path. For example it would look for <code><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>\Mock\<a class="el" href="class_car.html">Car</a></code> in <code>/path/to/orm/Mock/Car.php</code> (or <code>/path/to/orm/mock/car.php</code> if the former does not exist).</p>
 <p>For more information see the <a class="el" href="autoloader_tut.html">Autoloader Tutorial</a>. </p>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00042">42</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00046">46</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a095c5d389db211932136b53f25f39685"></a><!-- doxytag: member="ORM::AutoLoader::__construct" ref="a095c5d389db211932136b53f25f39685" args="()" -->
 <div class="memitem">
@@ -150,10 +164,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> is a singleton class</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1">Get()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00058">58</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p><a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> is a singleton class. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html#a6cdcf3f729832371ad436e144fee7fe1" title="Get the AutoLoader instance.">Get()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00062">62</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -172,7 +187,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Locate a file using the include path as it was not in the known package locations</p>
+
+<p>Locate a file using the include path as it was not in the known package locations. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$class</td><td></td></tr>
@@ -181,7 +197,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00163">163</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00167">167</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -199,7 +215,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the root namespace of a class name</p>
+
+<p>Get the root namespace of a class name. </p>
 <p>If the class is not namespaced, it will be '.'</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -209,7 +226,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00152">152</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00156">156</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -227,7 +244,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Checks if the file name with match case exists, if it does not then return a lowercase version.</p>
+
+<p>Checks if the file name with match case exists, if it does not then return a lowercase version. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>This mainly exists for backwards compatibility. File and pathnames should match the case of the namespaces and classes. This function has no effect on windows machines.</dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -237,7 +255,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00188">188</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00192">192</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -254,10 +272,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the <a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> instance</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00065">65</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Get the <a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> instance. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html" title="Simple autoloading class for ORM.">AutoLoader</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00069">69</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -275,9 +294,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Load the class files if they can be found</p>
+
+<p>Load the class files if they can be found. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>This is the function that should be registered with spl_autoload_register()</dd></dl>
-<p>Simple autoloading class for <a class="el" href="namespace_o_r_m.html">ORM</a></p>
+<p>Simple autoloading class for <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>. </p>
 <p>Rules followed:</p>
 <ul>
 <li>If there is no namespace for the class, then it will try to <code>require</code> the file with <code>EXTENSION</code> in both lower and uppercase</li>
@@ -293,7 +313,7 @@ Static Private Attributes</h2></td></tr>
 <span class="preprocessor"></span> [packages]
  ORM          = <span class="stringliteral">&quot;/path/to/orm&quot;</span>
  MyNamespace  = <span class="stringliteral">&quot;/path/to/my/namespace&quot;</span>
-</pre></div><p>This INI file defines that if the root namespace of a class is <code><a class="el" href="namespace_o_r_m.html">ORM</a></code>, then look in <code>/path/to/orm</code>. It will then use further namespaces as folders within this path. For example it would look for <code><a class="el" href="namespace_o_r_m.html">ORM</a>\Mock\<a class="el" href="class_car.html">Car</a></code> in <code>/path/to/orm/Mock/Car.php</code> (or <code>/path/to/orm/mock/car.php</code> if the former does not exist).</p>
+</pre></div><p>This INI file defines that if the root namespace of a class is <code><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a></code>, then look in <code>/path/to/orm</code>. It will then use further namespaces as folders within this path. For example it would look for <code><a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a>\Mock\<a class="el" href="class_car.html">Car</a></code> in <code>/path/to/orm/Mock/Car.php</code> (or <code>/path/to/orm/mock/car.php</code> if the former does not exist).</p>
 <p>For more information see the <a class="el" href="autoloader_tut.html">Autoloader Tutorial</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -302,7 +322,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00082">82</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00086">86</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -320,7 +340,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>An alternative loader that loads classes using the Zend method where underscores are folder names</p>
+
+<p>An alternative loader that loads classes using the Zend method where underscores are folder names. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$class</td><td></td></tr>
@@ -328,7 +349,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00096">96</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00100">100</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -346,8 +367,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Locate where the files would be if this autoloader could locate them</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246">load()</a> </dd></dl>
+
+<p>Locate where the files would be if this autoloader could locate them. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_auto_loader.html#af916111cf2b46e3284dae3c9a28e5246" title="Load the class files if they can be found.">load()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$class</td><td></td></tr>
@@ -356,7 +378,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00111">111</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00115">115</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -374,7 +396,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the path of a package</p>
+
+<p>Get the path of a package. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>test this </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -384,7 +407,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false Returns path or false if unknown package </dd></dl>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00132">132</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00136">136</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -401,9 +424,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Register the autoloaders </p>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00199">199</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Register the autoloaders. </p>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00203">203</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -419,7 +443,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00051">51</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00055">55</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -433,9 +457,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The extensions to add to the class name for finding class files </p>
 
-<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00046">46</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
+<p>The extensions to add to the class name for finding class files. </p>
+
+<p>Definition at line <a class="el" href="_auto_loader_8php_source.html#l00050">50</a> of file <a class="el" href="_auto_loader_8php_source.html">AutoLoader.php</a>.</p>
 
 </div>
 </div>
@@ -448,7 +473,7 @@ Static Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_auto_loader.html">AutoLoader</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

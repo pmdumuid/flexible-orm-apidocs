@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="intro_step2_basic"></a>
 Basic Model Class</h2>
-<p>The simplest model class definition (i.e. when the default conditions are met) is simply extending the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> class.</p>
+<p>The simplest model class definition (i.e. when the default conditions are met) is simply extending the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> class.</p>
 <p>Assuming you had the tables defined in <a class="el" href="intro_step1.html">Step 1: Define Data Structures</a> you could define the model for <em><a class="el" href="class_owner.html">Owner</a></em> as:</p>
 <div class="fragment"><pre class="fragment"> <span class="keyword">class </span><a class="code" href="class_owner.html">Owner</a> <span class="keyword">extends</span> \ORM\ORM_Model {
       <span class="comment">// any custom code could be added to enhance the model</span>
@@ -95,7 +95,7 @@ Basic Model Class</h2>
 </pre></div><p>For more details on accessing and modifying your data, see <a class="el" href="intro_step4.html">Access your data!</a></p>
 <h2><a class="anchor" id="intro_step2_custom"></a>
 Custom Table Format</h2>
-<p>When the table format does not match the standard format (i.e. table name plural of model name and primary key "id"), you have to tell the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> class what those values are.</p>
+<p>When the table format does not match the standard format (i.e. table name plural of model name and primary key "id"), you have to tell the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> class what those values are.</p>
 <p>This is done by defining class constants. The two most important constants are:</p>
 <ul>
 <li>TABLE<br/>
@@ -122,7 +122,7 @@ Multiple Databases</h2>
  name = <span class="stringliteral">&quot;test2_db&quot;</span>
  user = <span class="stringliteral">&quot;test2&quot;</span>
  pass = <span class="stringliteral">&quot;none&quot;</span>
-</pre></div><p>To create a prepared statement on an alternative database, simply call <code><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory::Get</a>( $sql, 'secondDatabase' )</code>.</p>
+</pre></div><p>To create a prepared statement on an alternative database, simply call <code><a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a" title="Get a prepared PDOStatement matching the supplied string.">PDOFactory::Get</a>( $sql, 'secondDatabase' )</code>.</p>
 <p>To get a model class to use a separate database, simple define the <code>DATABASE</code> constant to match the config group name. For example:</p>
 <div class="fragment"><pre class="fragment"> <span class="keyword">class </span>ExternalJobs <span class="keyword">extends</span> \ORM\ORM_Model {
       <span class="keyword">const</span> DATABASE = <span class="stringliteral">&#39;secondDatabase&#39;</span>;
@@ -148,7 +148,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -85,103 +85,102 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_cached_o_r_m_model_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
 <a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM;
-<a name="l00019"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html">00019</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html">CachedORMModel</a> <span class="keyword">extends</span> <a class="code" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> {
-<a name="l00023"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a5e591727e4b0953ce51396491df143a7">00023</a>     <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a5e591727e4b0953ce51396491df143a7">$_cache</a>;
-<a name="l00024"></a>00024 
-<a name="l00028"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab90d740474f4455b7ec760cdaa2ae741">00028</a>     <span class="keyword">const</span> CACHE_TTL = 180;
-<a name="l00029"></a>00029 
-<a name="l00041"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505">00041</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505">Find</a>( $idOrArray = array(), $findWith = <span class="keyword">false</span> ) {
-<a name="l00042"></a>00042         <span class="keywordflow">if</span>( is_array($idOrArray) ) {
-<a name="l00043"></a>00043             $object = static::FindByOptions( $idOrArray, $findWith );
-<a name="l00044"></a>00044             static::_AddToCache( $object, $findWith );
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046         } <span class="keywordflow">else</span> {
-<a name="l00047"></a>00047             $object = static::RetrieveFromCache( $idOrArray, $findWith );
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049             <span class="keywordflow">if</span>( !$object ) {
-<a name="l00050"></a>00050                 $object = static::FindBy( static::PrimaryKeyName(), $idOrArray, $findWith );
-<a name="l00051"></a>00051                 static::_AddToCache( $object, $findWith );
-<a name="l00052"></a>00052             }
-<a name="l00053"></a>00053         }
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055         <span class="keywordflow">return</span> $object;
-<a name="l00056"></a>00056     }
-<a name="l00057"></a>00057 
-<a name="l00068"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a6030cf83bc5b218d521766d2d391265d">00068</a>     <span class="keyword">protected</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a6030cf83bc5b218d521766d2d391265d">_AddToCache</a>( $fetchedObject, $findWith ) {
-<a name="l00069"></a>00069         <span class="keywordflow">if</span>( $fetchedObject ) {
-<a name="l00070"></a>00070             $object = clone $fetchedObject;
-<a name="l00071"></a>00071             
-<a name="l00072"></a>00072             <span class="keywordflow">if</span>( $findWith ) {
-<a name="l00073"></a>00073                 $findWithArray = (array)$findWith;
-<a name="l00074"></a>00074                 <span class="keywordflow">foreach</span>( $findWithArray as $nsFetchClass ) {
-<a name="l00075"></a>00075                     $fetchClass = basename( $nsFetchClass );
-<a name="l00076"></a>00076                     self::_cache()-&gt;add( (<span class="keywordtype">string</span>)$object-&gt;$fetchClass, $object-&gt;$fetchClass, self::CACHE_TTL );
-<a name="l00077"></a>00077                     unset($object-&gt;$fetchClass);
-<a name="l00078"></a>00078                 }
-<a name="l00079"></a>00079             }
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081             self::_cache()-&gt;add( (<span class="keywordtype">string</span>)$object, $object, self::CACHE_TTL );
-<a name="l00082"></a>00082         }
-<a name="l00083"></a>00083     }
-<a name="l00084"></a>00084 
-<a name="l00100"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a35e08f81c2446aecb0056aaa94ef3e5a">00100</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a35e08f81c2446aecb0056aaa94ef3e5a">RetrieveFromCache</a>( $id, $findWith = <span class="keyword">false</span> ) {
-<a name="l00101"></a>00101         $object = self::_cache()-&gt;get( static::CacheId($id) );
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103         <span class="keywordflow">if</span>( $object &amp;&amp; $findWith ) {
-<a name="l00104"></a>00104             $findWithArray = (array)$findWith;
-<a name="l00105"></a>00105             <span class="keywordflow">foreach</span>( $findWithArray as $nsFetchClass ) {
-<a name="l00106"></a>00106                 $fetchClass     = basename( $nsFetchClass );
-<a name="l00107"></a>00107                 $foreignKey     = static::ForeignKey( $nsFetchClass );
-<a name="l00108"></a>00108                 $id             = $object-&gt;$foreignKey;
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110                 <span class="comment">// Either fetch from cache or get it from the database</span>
-<a name="l00111"></a>00111                 $relatedObject  = self::_cache()-&gt;get( $nsFetchClass::CacheId( $id ) );
-<a name="l00112"></a>00112                 $object-&gt;$fetchClass = $relatedObject ?: $nsFetchClass::Find( $id );
-<a name="l00113"></a>00113             }
-<a name="l00114"></a>00114         }
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116         <span class="keywordflow">return</span> $object;
-<a name="l00117"></a>00117     }
-<a name="l00118"></a>00118 
-<a name="l00127"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#afc8a3c62679cf00ade9f15fb2a6d6132">00127</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#afc8a3c62679cf00ade9f15fb2a6d6132">save</a>() {
-<a name="l00128"></a>00128         $result = parent::save();
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130         <span class="keywordflow">if</span>( $result ) {
-<a name="l00131"></a>00131             $this-&gt;_cache()-&gt;set( (<span class="keywordtype">string</span>)$this, $this, self::CACHE_TTL );
-<a name="l00132"></a>00132         }
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134         <span class="keywordflow">return</span> $result;
-<a name="l00135"></a>00135     }
-<a name="l00136"></a>00136 
-<a name="l00142"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a13bdffdd926f26b825ea57066334ff01">00142</a>     <span class="keyword">public</span> function <span class="keyword">delete</span>() {
-<a name="l00143"></a>00143         $this-&gt;_cache()-&gt;delete( (<span class="keywordtype">string</span>)$this );
-<a name="l00144"></a>00144         parent::delete();
-<a name="l00145"></a>00145     }
-<a name="l00146"></a>00146 
-<a name="l00154"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">00154</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">Destroy</a>( $id ) {
-<a name="l00155"></a>00155         $this-&gt;_cache()-&gt;delete( static::CacheId($id) );
-<a name="l00156"></a>00156         parent::Destroy($id);
-<a name="l00157"></a>00157     }
-<a name="l00158"></a>00158 
-<a name="l00165"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a48ba6a3fa98018e37c16b39a3d359966">00165</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a48ba6a3fa98018e37c16b39a3d359966">_cache</a>() {
-<a name="l00166"></a>00166         <span class="keywordflow">if</span>( is_null(self::$_cache) ) {
-<a name="l00167"></a>00167             self::$_cache = <span class="keyword">new</span> Utilities\Cache\APCCache();
-<a name="l00168"></a>00168         }
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170         <span class="keywordflow">return</span> self::$_cache;
-<a name="l00171"></a>00171     }
-<a name="l00172"></a>00172 
-<a name="l00180"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab8e2cca8649132e3152fb83faa6e34e2">00180</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab8e2cca8649132e3152fb83faa6e34e2">CacheId</a>( $id ) {
-<a name="l00181"></a>00181         <span class="keywordflow">return</span> get_called_class().<span class="stringliteral">&quot; [$id]&quot;</span>;
-<a name="l00182"></a>00182     }
-<a name="l00183"></a>00183 }
-<a name="l00184"></a>00184 ?&gt;
+<a name="l00017"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html">00017</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html" title="An ORM Model class that implements caching on Find/FindAll actions and keeps the cache updated on sav...">CachedORMModel</a> <span class="keyword">extends</span> <a class="code" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> {
+<a name="l00021"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a5e591727e4b0953ce51396491df143a7">00021</a>     <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a5e591727e4b0953ce51396491df143a7">$_cache</a>;
+<a name="l00022"></a>00022 
+<a name="l00026"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab90d740474f4455b7ec760cdaa2ae741">00026</a>     <span class="keyword">const</span> CACHE_TTL = 180;
+<a name="l00027"></a>00027 
+<a name="l00039"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505">00039</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Wrap the Find() method with caching.">Find</a>( $idOrArray = array(), $findWith = <span class="keyword">false</span> ) {
+<a name="l00040"></a>00040         <span class="keywordflow">if</span>( is_array($idOrArray) ) {
+<a name="l00041"></a>00041             $object = static::FindByOptions( $idOrArray, $findWith );
+<a name="l00042"></a>00042             static::_AddToCache( $object, $findWith );
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         } <span class="keywordflow">else</span> {
+<a name="l00045"></a>00045             $object = static::RetrieveFromCache( $idOrArray, $findWith );
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047             <span class="keywordflow">if</span>( !$object ) {
+<a name="l00048"></a>00048                 $object = static::FindBy( static::PrimaryKeyName(), $idOrArray, $findWith );
+<a name="l00049"></a>00049                 static::_AddToCache( $object, $findWith );
+<a name="l00050"></a>00050             }
+<a name="l00051"></a>00051         }
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053         <span class="keywordflow">return</span> $object;
+<a name="l00054"></a>00054     }
+<a name="l00055"></a>00055 
+<a name="l00066"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a6030cf83bc5b218d521766d2d391265d">00066</a>     <span class="keyword">protected</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a6030cf83bc5b218d521766d2d391265d" title="Cache an object and any related models that were found with it.">_AddToCache</a>( $fetchedObject, $findWith ) {
+<a name="l00067"></a>00067         <span class="keywordflow">if</span>( $fetchedObject ) {
+<a name="l00068"></a>00068             $object = clone $fetchedObject;
+<a name="l00069"></a>00069             
+<a name="l00070"></a>00070             <span class="keywordflow">if</span>( $findWith ) {
+<a name="l00071"></a>00071                 $findWithArray = (array)$findWith;
+<a name="l00072"></a>00072                 <span class="keywordflow">foreach</span>( $findWithArray as $nsFetchClass ) {
+<a name="l00073"></a>00073                     $fetchClass = basename( $nsFetchClass );
+<a name="l00074"></a>00074                     self::_cache()-&gt;add( (<span class="keywordtype">string</span>)$object-&gt;$fetchClass, $object-&gt;$fetchClass, self::CACHE_TTL );
+<a name="l00075"></a>00075                     unset($object-&gt;$fetchClass);
+<a name="l00076"></a>00076                 }
+<a name="l00077"></a>00077             }
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079             self::_cache()-&gt;add( (<span class="keywordtype">string</span>)$object, $object, self::CACHE_TTL );
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081     }
+<a name="l00082"></a>00082 
+<a name="l00098"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a35e08f81c2446aecb0056aaa94ef3e5a">00098</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a35e08f81c2446aecb0056aaa94ef3e5a" title="Get an object from cache if it exists.">RetrieveFromCache</a>( $id, $findWith = <span class="keyword">false</span> ) {
+<a name="l00099"></a>00099         $object = self::_cache()-&gt;get( static::CacheId($id) );
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101         <span class="keywordflow">if</span>( $object &amp;&amp; $findWith ) {
+<a name="l00102"></a>00102             $findWithArray = (array)$findWith;
+<a name="l00103"></a>00103             <span class="keywordflow">foreach</span>( $findWithArray as $nsFetchClass ) {
+<a name="l00104"></a>00104                 $fetchClass     = basename( $nsFetchClass );
+<a name="l00105"></a>00105                 $foreignKey     = static::ForeignKey( $nsFetchClass );
+<a name="l00106"></a>00106                 $id             = $object-&gt;$foreignKey;
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108                 <span class="comment">// Either fetch from cache or get it from the database</span>
+<a name="l00109"></a>00109                 $relatedObject  = self::_cache()-&gt;get( $nsFetchClass::CacheId( $id ) );
+<a name="l00110"></a>00110                 $object-&gt;$fetchClass = $relatedObject ?: $nsFetchClass::Find( $id );
+<a name="l00111"></a>00111             }
+<a name="l00112"></a>00112         }
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <span class="keywordflow">return</span> $object;
+<a name="l00115"></a>00115     }
+<a name="l00116"></a>00116 
+<a name="l00125"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#afc8a3c62679cf00ade9f15fb2a6d6132">00125</a>     <span class="keyword">public</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#afc8a3c62679cf00ade9f15fb2a6d6132" title="Cached object save.">save</a>() {
+<a name="l00126"></a>00126         $result = parent::save();
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         <span class="keywordflow">if</span>( $result ) {
+<a name="l00129"></a>00129             $this-&gt;_cache()-&gt;set( (<span class="keywordtype">string</span>)$this, $this, self::CACHE_TTL );
+<a name="l00130"></a>00130         }
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132         <span class="keywordflow">return</span> $result;
+<a name="l00133"></a>00133     }
+<a name="l00134"></a>00134 
+<a name="l00140"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a13bdffdd926f26b825ea57066334ff01">00140</a>     <span class="keyword">public</span> function <span class="keyword">delete</span>() {
+<a name="l00141"></a>00141         $this-&gt;_cache()-&gt;delete( (<span class="keywordtype">string</span>)$this );
+<a name="l00142"></a>00142         parent::delete();
+<a name="l00143"></a>00143     }
+<a name="l00144"></a>00144 
+<a name="l00152"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5">00152</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a7fa0e6c62a193ce3cf03a38bc9de16b5" title="Delete object and remove it from the Cache.">Destroy</a>( $id ) {
+<a name="l00153"></a>00153         $this-&gt;_cache()-&gt;delete( static::CacheId($id) );
+<a name="l00154"></a>00154         parent::Destroy($id);
+<a name="l00155"></a>00155     }
+<a name="l00156"></a>00156 
+<a name="l00163"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a48ba6a3fa98018e37c16b39a3d359966">00163</a>     <span class="keyword">private</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#a48ba6a3fa98018e37c16b39a3d359966" title="Get the cache object.">_cache</a>() {
+<a name="l00164"></a>00164         <span class="keywordflow">if</span>( is_null(self::$_cache) ) {
+<a name="l00165"></a>00165             self::$_cache = <span class="keyword">new</span> Utilities\Cache\APCCache();
+<a name="l00166"></a>00166         }
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168         <span class="keywordflow">return</span> self::$_cache;
+<a name="l00169"></a>00169     }
+<a name="l00170"></a>00170 
+<a name="l00178"></a><a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab8e2cca8649132e3152fb83faa6e34e2">00178</a>     <span class="keyword">public</span> <span class="keyword">static</span> function <a class="code" href="class_o_r_m_1_1_cached_o_r_m_model.html#ab8e2cca8649132e3152fb83faa6e34e2" title="Get a string to identify an object in cache.">CacheId</a>( $id ) {
+<a name="l00179"></a>00179         <span class="keywordflow">return</span> get_called_class().<span class="stringliteral">&quot; [$id]&quot;</span>;
+<a name="l00180"></a>00180     }
+<a name="l00181"></a>00181 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_cached_o_r_m_model_8php.html">CachedORMModel.php</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:17 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:44 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

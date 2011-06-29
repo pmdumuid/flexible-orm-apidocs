@@ -91,42 +91,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SDBWrapper Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::SDB::SDBWrapper" --><div class="dynheader">
+<!-- doxytag: class="ORM::SDB::SDBWrapper" -->
+<p>Manage connection to and settings for an AmazonSDB connection.  
+ <a href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for SDBWrapper:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.png" usemap="#SDBWrapper_map" alt=""/>
   <map id="SDBWrapper_map" name="SDBWrapper_map">
-<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" alt="SDBStatement" shape="rect" coords="0,56,91,80"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB." alt="SDBStatement" shape="rect" coords="0,56,91,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a095c5d389db211932136b53f25f39685">__construct</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection when instantiating.  <a href="#a095c5d389db211932136b53f25f39685"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#ae29ef14e8120c428c947f5aa8da1ec33">SDBRegion</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> region from the ini file.  <a href="#ae29ef14e8120c428c947f5aa8da1ec33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a8517a16f9eadb6e0f4920d72b9c869c8">GetSDBConnection</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the active <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection.  <a href="#a8517a16f9eadb6e0f4920d72b9c869c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#acd0880bd208499a52267cce71b947e51">DecodeValue</a> ($sanitizedValue)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Un-escape a value stored using <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a>.  <a href="#acd0880bd208499a52267cce71b947e51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a0fd1251051d1f36225b5c85844aef6ed">Query</a> ($queryString, $consistentRead=false, $nextToken=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a SELECT statement directly on the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> service.  <a href="#a0fd1251051d1f36225b5c85844aef6ed"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#af3d54ad6d21ba560b2aba58334b23000">MAX_ATTRIBUTE_SIZE</a> = 1024</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum size a single attribute is allowed to be (in bytes) Currently the Amazon SimpleDB limit is 1K.  <a href="#af3d54ad6d21ba560b2aba58334b23000"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a10c9b14fb1bb739a3236abb7f0456dae">$_sdb</a></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a5d7d121cf5f92158683390db7459ba03">_InitSDBConnection</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection.  <a href="#a5d7d121cf5f92158683390db7459ba03"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a45ffe9e1385bd0405def7956a4628af0">_InitSDBSettings</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the settings for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> object that may change from system to system.  <a href="#a45ffe9e1385bd0405def7956a4628af0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a08f1bbbc6483d42febb52a837023b970">_GetAWSKeys</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array containing the public and private keys for accessing AmazonSDB.  <a href="#a08f1bbbc6483d42febb52a837023b970"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Manage connection to and settings for an AmazonSDB connection</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a> </dd></dl>
+<div class="textblock"><p>Manage connection to and settings for an AmazonSDB connection. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00014">14</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00017">17</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a095c5d389db211932136b53f25f39685"></a><!-- doxytag: member="ORM::SDB::SDBWrapper::__construct" ref="a095c5d389db211932136b53f25f39685" args="()" -->
 <div class="memitem">
@@ -141,9 +153,10 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Initialise the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> connection when instantiating </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00029">29</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Initialise the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection when instantiating. </p>
+
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00032">32</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -161,7 +174,8 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get array containing the public and private keys for accessing AmazonSDB</p>
+
+<p>Get array containing the public and private keys for accessing AmazonSDB. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>These can be retrieved through the Accounts panel of the AWS website.</dd></dl>
 <p>Looks for ini settings below, or the constants AWS_KEY and AWS_SECRET_KEY </p>
 <div class="fragment"><pre class="fragment"> [AWS]
@@ -169,7 +183,7 @@ Static Private Member Functions</h2></td></tr>
  secret_key = <span class="stringliteral">&quot;aaaaa&quot;</span>
 </pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>array 2 elements to the array: [0] =&gt; public, [1] =&gt; private </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00113">113</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00116">116</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -186,9 +200,10 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Setup the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> connection</p>
+
+<p>Setup the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection. </p>
 <ul>
-<li>Use the Configuration value AWS-&gt;region to set the region for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a></li>
+<li>Use the Configuration value AWS-&gt;region to set the region for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a></li>
 <li>Use the Configuration value AWS-&gt;apc_enabled to enable/disable APC</li>
 </ul>
 <p>Valid regions for AWS-&gt;region are:</p>
@@ -200,9 +215,9 @@ Static Private Member Functions</h2></td></tr>
 <li>eu-west</li>
 </ul>
 <p>All other values will be ignored.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a45ffe9e1385bd0405def7956a4628af0">_InitSDBSettings()</a> for environment specific <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> configuration </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a45ffe9e1385bd0405def7956a4628af0" title="Initialise the settings for the SDB object that may change from system to system.">_InitSDBSettings()</a> for environment specific <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> configuration </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00050">50</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00053">53</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -219,10 +234,11 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Initialise the settings for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> object that may change from system to system</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a5d7d121cf5f92158683390db7459ba03">_InitSDBConnection()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00064">64</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Initialise the settings for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> object that may change from system to system. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a5d7d121cf5f92158683390db7459ba03" title="Setup the SDB connection.">_InitSDBConnection()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00067">67</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -240,7 +256,8 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Un-escape a value stored using <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a></p>
+
+<p>Un-escape a value stored using <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a>. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>bindValue() </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -250,7 +267,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string That should match the originally saved data </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00140">140</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00143">143</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -267,10 +284,11 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the active <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> connection </p>
+
+<p>Get the active <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> connection. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>AmazonSDB </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00125">125</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00128">128</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -304,18 +322,19 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Perform a SELECT statement directly on the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> service</p>
+
+<p>Perform a SELECT statement directly on the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> service. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$queryString</td><td>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> compatible SELECT querystring </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$queryString</td><td>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> compatible SELECT querystring </td></tr>
     <tr><td class="paramtype">boolean</td><td class="paramname">$consistentRead</td><td>Should read consistency be enforced </td></tr>
     <tr><td class="paramtype">string</td><td class="paramname">$nextToken</td><td>Next token for continuing requests </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00159">159</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00162">162</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -332,12 +351,13 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> region from the ini file</p>
+
+<p>Get the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> region from the ini file. </p>
 <p>Converts from short form names (like 'us-west') to urls ('sdb.us-west-1.amazonaws.com')</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a5d7d121cf5f92158683390db7459ba03">_InitSDBConnection()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#a5d7d121cf5f92158683390db7459ba03" title="Setup the SDB connection.">_InitSDBConnection()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00082">82</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00085">85</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -353,7 +373,7 @@ Static Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00024">24</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00027">27</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -367,9 +387,10 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The maximum size a single attribute is allowed to be (in bytes) Currently the Amazon SimpleDB limit is 1K </p>
 
-<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00019">19</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
+<p>The maximum size a single attribute is allowed to be (in bytes) Currently the Amazon SimpleDB limit is 1K. </p>
+
+<p>Definition at line <a class="el" href="_s_d_b_wrapper_8php_source.html#l00022">22</a> of file <a class="el" href="_s_d_b_wrapper_8php_source.html">SDBWrapper.php</a>.</p>
 
 </div>
 </div>
@@ -383,7 +404,7 @@ Static Private Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html">SDBWrapper</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

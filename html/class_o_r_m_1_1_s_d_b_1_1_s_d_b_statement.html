@@ -93,83 +93,134 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SDBStatement Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::SDB::SDBStatement" --><!-- doxytag: inherits="ORM::SDB::SDBWrapper,ORM::Interfaces::DataStatement" --><div class="dynheader">
+<!-- doxytag: class="ORM::SDB::SDBStatement" --><!-- doxytag: inherits="ORM::SDB::SDBWrapper,ORM::Interfaces::DataStatement" -->
+<p>Mimick the behaviour of <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html" title="Custom PDOStatement class allowing better integration with ORM_Model.">ORM_PDOStatement</a> for AmazonSDB.  
+ <a href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for SDBStatement:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.png" usemap="#SDBStatement_map" alt=""/>
   <map id="SDBStatement_map" name="SDBStatement_map">
-<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html" alt="SDBWrapper" shape="rect" coords="0,0,92,24"/>
-<area href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html" alt="DataStatement" shape="rect" coords="102,0,194,24"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html" title="Manage connection to and settings for an AmazonSDB connection." alt="SDBWrapper" shape="rect" coords="0,0,92,24"/>
+<area href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html" title="All prepared statements returned by a DataFactory class must implement this interface." alt="DataStatement" shape="rect" coords="102,0,194,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a77342b77b0a0687c08d3aa4948529b41">__construct</a> ($sql)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a> object for a query.  <a href="#a77342b77b0a0687c08d3aa4948529b41"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a2443f5f49be6e2857d08de0b58dcfd55">bindParam</a> ($placeholder, &amp;$variable)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a paramater to a placeholder.  <a href="#a2443f5f49be6e2857d08de0b58dcfd55"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a87d6f14af0fa990c1a134f66c643d5d4">bindValue</a> ($placeholder, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a value to a placeholder in the query string.  <a href="#a87d6f14af0fa990c1a134f66c643d5d4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aa382d6534eeaa7d01a77b4a061f670f0">bindValues</a> ($values)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a series of values at once.  <a href="#aa382d6534eeaa7d01a77b4a061f670f0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a75192514fe1e2a784634fc1b4b03450a">bindObject</a> ($object, array $params=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind all of an object's properties to corresponding placeholders.  <a href="#a75192514fe1e2a784634fc1b4b03450a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a776103178a6652d8f5e55b27cd7ac1af">placeholders</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all the placeholders in the current query string.  <a href="#a776103178a6652d8f5e55b27cd7ac1af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a32d1c2c8578cef899ad5a9ed77b767e4">execute</a> (array $values=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the query.  <a href="#a32d1c2c8578cef899ad5a9ed77b767e4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a066d5bdf2a07dda9d681f6cc65de68af">setConsistentRead</a> ($consistentRead)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force read (in)consistency.  <a href="#a066d5bdf2a07dda9d681f6cc65de68af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583">queryType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of SQL statement.  <a href="#a843220bf34116ad4329cab9707522583"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">fetchInto</a> ($className)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch results into the specified class.  <a href="#a1ea669da3b9c1e2d1b92a703386ecc36"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch</a> ($fetch_style=self::FETCH_BOTH)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a row from simpleDB.  <a href="#a60e210ba538280f02821f18db821f00b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll</a> ($fetch_style=self::FETCH_BOTH)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all returned results in an array.  <a href="#a298aff4588eb149cc0c6988858d064ab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#acc2b78f55ad595459f24778071daebf3">fetchAllInto</a> ($className)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch results into the specified class objects.  <a href="#acc2b78f55ad595459f24778071daebf3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a7516ca30af0db3cdbf9a7739b48ce91d">__toString</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The queryString value is output when this class is cast to string.  <a href="#a7516ca30af0db3cdbf9a7739b48ce91d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#abf818560327272e8a0d310101d9dcb88">attributes</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a description of the attributes being modified in an update or insert statement.  <a href="#abf818560327272e8a0d310101d9dcb88"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the autogenerated itemName value from the last insert operation.  <a href="#a11d223633dcff325658bab3969c0b158"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a0e5b2dc9c31f9998c7ac85676507a23e">FETCH_BOTH</a> = 1</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch as both associative and indexed array.  <a href="#a0e5b2dc9c31f9998c7ac85676507a23e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a8ce33098aa8472004be871503377a577">FETCH_ASSOC</a> = 2</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch as associative array.  <a href="#a8ce33098aa8472004be871503377a577"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ae89584ce14ce525aafb653b3e9aa2c02">FETCH_ARRAY</a> = 3</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch as indexed array.  <a href="#ae89584ce14ce525aafb653b3e9aa2c02"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a6068e3086cc1c2b1e54fda74cafca201">$findWith</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ugly method of implementing the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> findWith option.  <a href="#a6068e3086cc1c2b1e54fda74cafca201"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a69941db4b79d2b8ea4c0157b4fa3157e">_bindAnonymousValue</a> ($value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a value to an anonymous placeholder.  <a href="#a69941db4b79d2b8ea4c0157b4fa3157e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a9f660fd604da8ca3dd06b939ee4b69af">_bindToSQL</a> ($placeholder, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the requested parameter by inserting the escaped value into the query.  <a href="#a9f660fd604da8ca3dd06b939ee4b69af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ab92438c7c9ba40adecde2d906e62b946">_bindToArray</a> ($placeholder, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">For updates and inserts, the parameters to be bound are stored in an array rather than in the query string for simplicity.  <a href="#ab92438c7c9ba40adecde2d906e62b946"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a2b72a8424f930958634b2a156821bd5f">_chunkLargeAttributes</a> (array $attributes)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deal with attributes that are too large for <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> by splitting them up.  <a href="#a2b72a8424f930958634b2a156821bd5f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af0ebe9da24cbb49977397f19e475f054">_sanitizeValue</a> ($value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitize string for use with <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>.  <a href="#af0ebe9da24cbb49977397f19e475f054"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a5a51b38fbf3aa3a41591ff46f48154b4">_removeQuotedValues</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the any values in the query string that are between quotes and return the resulting string.  <a href="#a5a51b38fbf3aa3a41591ff46f48154b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a63f189fe0d498fc7a289d35cce675445">_extractQuotedValues</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstruct a query to determine which bits are inside single quotes.  <a href="#a63f189fe0d498fc7a289d35cce675445"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad130c8a887a5dc651321a6e771b1b7eb">_emulateInsert</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emulate the SQL INSERT functionality.  <a href="#ad130c8a887a5dc651321a6e771b1b7eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a799cc1bca351c9c2ef1c4d63c50f57a0">_getAttributesFromInsertQuery</a> ($query)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a SQL INSERT statment to an array for use with AmazonSDB.  <a href="#a799cc1bca351c9c2ef1c4d63c50f57a0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a4c1efa04c0502b7b9f5a1dbf848c171d">_getAttributesFromUpdateQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a SQL UPDATE statment to an array for use with AmazonSDB.  <a href="#a4c1efa04c0502b7b9f5a1dbf848c171d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a40ba1448b1baafab214ce1251c24bc25">_getDomainFromQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the domain name (the table name in normal SQL) from the current queryString.  <a href="#a40ba1448b1baafab214ce1251c24bc25"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a99b465e5bde17bb83caba25f8ed3747b">_getItemNameFromQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the itemName from the query.  <a href="#a99b465e5bde17bb83caba25f8ed3747b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a08b4f899eba01b6b6a24acdb2830ac7f">_emulateUpdate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emulate the SQL UPDATE functionality.  <a href="#a08b4f899eba01b6b6a24acdb2830ac7f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a6f53b75d9a313b565aac0013ffe2b9bf">_emulateDelete</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emulate the SQL DELETE functionality.  <a href="#a6f53b75d9a313b565aac0013ffe2b9bf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#abd2dbc5d81eb925a0c8adec9ac8fbd2a">_generateItemName</a> ($domain)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a unique itemName for a specific domain.  <a href="#abd2dbc5d81eb925a0c8adec9ac8fbd2a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aba855717769a19473a028b3c0029be0b">_fetchWith</a> (<a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a> &amp;$object)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add requested foreign key objects to this object.  <a href="#aba855717769a19473a028b3c0029be0b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a5e88a72eaa88d7a2ff23ef0aec529ff2">_simplifyQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Alter the querystring so that it works with Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>.  <a href="#a5e88a72eaa88d7a2ff23ef0aec529ff2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#aa771ce4b13fbb36572453998f2523665">_executeFetchQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a fetchAll query and deal with offsets and limits.  <a href="#aa771ce4b13fbb36572453998f2523665"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a335c145f1aa356dc65e1bef8215b0853">$_queryString</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL statement.  <a href="#a335c145f1aa356dc65e1bef8215b0853"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a680b43aa8dbc8f14530a0dc1789bd827">$_binds</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">An associative array of placeholders and values.  <a href="#a680b43aa8dbc8f14530a0dc1789bd827"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a319244159be70ece977fe3309e9e153c">$_anonymousBinds</a> = array()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A numerically index array of values to bind in order to anonymous placeholders.  <a href="#a319244159be70ece977fe3309e9e153c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ade114fe364b4f22eede3939996134df6">$_result</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a7bd28e0b68c9cd1497ce1302a77a9d5d">$_items</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store the results.  <a href="#a7bd28e0b68c9cd1497ce1302a77a9d5d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#af6dd6b9e4ba64ed4eb99b6864b971a54">$_queryType</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to reduce the number of regular expressions executed in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583" title="Get the type of SQL statement.">queryType()</a>  <a href="#af6dd6b9e4ba64ed4eb99b6864b971a54"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a90b62ee34ad9f0959bfd04627ca7b20b">$_consistentRead</a> = false</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true to force consistent reads.  <a href="#a90b62ee34ad9f0959bfd04627ca7b20b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad7f01bddcb334e5854624bc75d695bb9">$_findWith</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The instance property version of the static $findWith, this is used internally to represent the statically set array of models when the objec is intantiated.  <a href="#ad7f01bddcb334e5854624bc75d695bb9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a21ac53c9832263d6b5ee2efbb3eae7cd">$_limit</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of results to return, if null then return all.  <a href="#a21ac53c9832263d6b5ee2efbb3eae7cd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a13f739e58b700b119c8785c035865fb5">$_offset</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of records to skip (for pagination in combination with LIMIT.  <a href="#a13f739e58b700b119c8785c035865fb5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ab4a32b710cfcd69cb3abb738f3dcf1a7">$_lastInsertID</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The last inserted itemName()  <a href="#ab4a32b710cfcd69cb3abb738f3dcf1a7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Mimick the behaviour of <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html">ORM_PDOStatement</a> for AmazonSDB</p>
+<div class="textblock"><p>Mimick the behaviour of <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html" title="Custom PDOStatement class allowing better integration with ORM_Model.">ORM_PDOStatement</a> for AmazonSDB. </p>
 <p>Adds SQL support for <code>UPDATE</code>, <code>INSERT</code> and <code>DELETE</code>, which are not natively supported AmazonSDB operations.</p>
 <p>For more information see <a class="el" href="utilities__s_d_b.html#utilities_SDB_statement">SDBStatement Class Tutorial</a>.</p>
 <p><b>Limitations</b></p>
@@ -221,7 +272,7 @@ $query-&gt;bindObject( $car );
 $query-&gt;execute();
 
 <span class="comment">// The autogenerated itemName is</span>
-echo <span class="stringliteral">&quot;ID: &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158">SDBStatement::LastInsertId</a>();
+echo <span class="stringliteral">&quot;ID: &quot;</span>, <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158" title="Get the autogenerated itemName value from the last insert operation.">SDBStatement::LastInsertId</a>();
 
 
 <span class="comment">// -------</span>
@@ -249,7 +300,7 @@ $query-&gt;bindValue( <span class="stringliteral">&#39;:colour&#39;</span>, <spa
 $query-&gt;execute();
 
 <span class="comment">// The query &quot;SELECT * FROM cars WHERE colour = red&#39;&quot; will now return zero results</span>
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html">SDBFactory</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html">SDBResponse</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html" title="An alternative DataFactory for use with Amazon SDB backed models.">SDBFactory</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service.">ORMModelSDB</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_response.html" title="Represent retrieved items and attributes from AmazonSDB as an array.">SDBResponse</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00035">35</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -267,10 +318,11 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Create an <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a> object for a query</p>
+
+<p>Create an <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a> object for a query. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$sql</td><td>Simple SQL statement. See class description for detailed information about the types of SQL statements that are available for <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>. </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$sql</td><td>Simple SQL statement. See class description for detailed information about the types of SQL statements that are available for <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,7 +345,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>The queryString value is output when this class is cast to string</p>
+
+<p>The queryString value is output when this class is cast to string. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string The SQL with bound placeholders if they have been replaced already </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00989">989</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -314,7 +367,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind a value to an anonymous placeholder</p>
+
+<p>Bind a value to an anonymous placeholder. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$value</td><td>The value to bind to the first anonymous placeholder </td></tr>
@@ -350,7 +404,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>For updates and inserts, the parameters to be bound are stored in an array rather than in the query string for simplicity</p>
+
+<p>For updates and inserts, the parameters to be bound are stored in an array rather than in the query string for simplicity. </p>
 <p>This is entirely redudant if the values were bound as params already</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -388,7 +443,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind the requested parameter by inserting the escaped value into the query</p>
+
+<p>Bind the requested parameter by inserting the escaped value into the query. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>_bindValue() </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -416,7 +472,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Deal with attributes that are too large for <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> by splitting them up</p>
+
+<p>Deal with attributes that are too large for <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> by splitting them up. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$attributes</td><td>An array of key pairs </td></tr>
@@ -442,8 +499,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Emulate the SQL DELETE functionality</p>
-<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> does not natively support <code>DELETE</code>, so we emulate it here. Converts the <code>DELETE</code> string into a delete_attributes() operation.</p>
+
+<p>Emulate the SQL DELETE functionality. </p>
+<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> does not natively support <code>DELETE</code>, so we emulate it here. Converts the <code>DELETE</code> string into a delete_attributes() operation.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Only has very primative support for deleting items using constraints other than itemName (primary key). Will only delete a maximum of 25 results at a time.</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on success </dd></dl>
 
@@ -464,9 +522,10 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Emulate the SQL INSERT functionality</p>
-<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> does not natively support <code>INSERT</code>, so we emulate it here. Converts the <code>INSERT INTO</code> string into a put_attributes() operation.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This function will set the $_lastInsertID value. See <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158">SDBStatement::LastInsertId()</a></dd></dl>
+
+<p>Emulate the SQL INSERT functionality. </p>
+<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> does not natively support <code>INSERT</code>, so we emulate it here. Converts the <code>INSERT INTO</code> string into a put_attributes() operation.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This function will set the $_lastInsertID value. See <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a11d223633dcff325658bab3969c0b158" title="Get the autogenerated itemName value from the last insert operation.">SDBStatement::LastInsertId()</a></dd></dl>
 <dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
     <tr><td class="paramname">ORMInsertException</td><td>if there is an error putting the attributes </td></tr>
@@ -492,8 +551,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Emulate the SQL UPDATE functionality</p>
-<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> does not natively support <code>UPDATE</code>, so we emulate it here. Converts the <code>UPDATE</code> string into a put_attributes() operation.</p>
+
+<p>Emulate the SQL UPDATE functionality. </p>
+<p><a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> does not natively support <code>UPDATE</code>, so we emulate it here. Converts the <code>UPDATE</code> string into a put_attributes() operation.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean True on success </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00657">657</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -513,8 +573,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Execute a fetchAll query and deal with offsets and limits</p>
-<p>Populates the _result variable. Uses the $_consistentRead property to determine whether consistency needs to be enforced for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> request</p>
+
+<p>Execute a fetchAll query and deal with offsets and limits. </p>
+<p>Populates the _result variable. Uses the $_consistentRead property to determine whether consistency needs to be enforced for the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> request</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean <code>true</code> on success </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00954">954</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -534,7 +595,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Deconstruct a query to determine which bits are inside single quotes</p>
+
+<p>Deconstruct a query to determine which bits are inside single quotes. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array First key is the parts of the query not inside of quotes, the second is those parts that are. </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00402">402</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -555,11 +617,12 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Add requested foreign key objects to this object</p>
-<p>All fetch class options must be classes that extend <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a></p>
+
+<p>Add requested foreign key objects to this object. </p>
+<p>All fetch class options must be classes that extend <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a></p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramtype"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a></td><td class="paramname">$object</td><td></td></tr>
+    <tr><td class="paramtype"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service.">ORMModelSDB</a></td><td class="paramname">$object</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -582,8 +645,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Generate a unique itemName for a specific domain</p>
-<p>There is no <code>AUTOINCREMENT</code> option for Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>, so we implement this simple random name generator. It checks to ensure it hasn't randomly selected an existing name.</p>
+
+<p>Generate a unique itemName for a specific domain. </p>
+<p>There is no <code>AUTOINCREMENT</code> option for Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>, so we implement this simple random name generator. It checks to ensure it hasn't randomly selected an existing name.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>This would not be very good for extremely large tables, as the chance of selecting existing names increases with table size.</dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -611,7 +675,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Convert a SQL INSERT statment to an array for use with AmazonSDB</p>
+
+<p>Convert a SQL INSERT statment to an array for use with AmazonSDB. </p>
 <p>"Binds" should be used to ensure that this function works</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -638,7 +703,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Convert a SQL UPDATE statment to an array for use with AmazonSDB</p>
+
+<p>Convert a SQL UPDATE statment to an array for use with AmazonSDB. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array Associative array where keys will be used as field names. Large values will be split over mutiple keys </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00587">587</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -658,7 +724,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get the domain name (the table name in normal SQL) from the current queryString</p>
+
+<p>Get the domain name (the table name in normal SQL) from the current queryString. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Currently only works for INSERT and UPDATE statements (because it is not needed for SELECT or DELETE</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
@@ -679,7 +746,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get the itemName from the query</p>
+
+<p>Get the itemName from the query. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|false The itemName value or false if it is not discoverable from the current query string </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00638">638</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -699,7 +767,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Remove the any values in the query string that are between quotes and return the resulting string</p>
+
+<p>Remove the any values in the query string that are between quotes and return the resulting string. </p>
 <p>Used to get the placeholders from the query string and make sure that any placeholders in the data are removed.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string An altered version of the query string that has removed all items in quotes </dd></dl>
 
@@ -724,7 +793,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Sanitize string for use with <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a></p>
+
+<p>Sanitize string for use with <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$value</td><td></td></tr>
@@ -750,9 +820,10 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Alter the querystring so that it works with Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a></p>
+
+<p>Alter the querystring so that it works with Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a>. </p>
 <p>Remove backticks and aliases. Removes offset so that the inbuilt limit option works.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>string Returns the possible classname found in the SQL. This comes from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> SELECT statements that alias the table name with the model name, eg "SELECT * FROM cars AS Car" would return 'Car'. Returns empty string if no class; </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>string Returns the possible classname found in the SQL. This comes from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> SELECT statements that alias the table name with the model name, eg "SELECT * FROM cars AS Car" would return 'Car'. Returns empty string if no class; </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00800">800</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -771,7 +842,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get a description of the attributes being modified in an update or insert statement.</p>
+
+<p>Get a description of the attributes being modified in an update or insert statement. </p>
 <p>Returns an empty array for other query types.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array </dd></dl>
 
@@ -803,8 +875,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind all of an object's properties to corresponding placeholders</p>
-<p>See <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a75192514fe1e2a784634fc1b4b03450a">ORM_PDOStatement::bindObject()</a></p>
+
+<p>Bind all of an object's properties to corresponding placeholders. </p>
+<p>See <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a75192514fe1e2a784634fc1b4b03450a" title="Bind an entire object to a prepared statement.">ORM_PDOStatement::bindObject()</a></p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">object</td><td class="paramname">$object</td><td>Object whose properties will be bound to the querystring </td></tr>
@@ -812,7 +885,7 @@ $query-&gt;execute();
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html" title="Mimick the behaviour of ORM_PDOStatement for AmazonSDB.">SDBStatement</a> </dd></dl>
 
 <p><p>&lt;- This is needed for the anonymous function, which cannot use $this </p>
 </p>
@@ -847,7 +920,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind a paramater to a placeholder</p>
+
+<p>Bind a paramater to a placeholder. </p>
 <p>Behaves exactly like PDOStatement::bindParam();</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -887,8 +961,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind a value to a placeholder in the query string</p>
-<p>Behaves exactly like PDOStatement::bindValue(); Escapes the values, so values have to be decoded (see <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#acd0880bd208499a52267cce71b947e51">DecodeValue()</a>).</p>
+
+<p>Bind a value to a placeholder in the query string. </p>
+<p>Behaves exactly like PDOStatement::bindValue(); Escapes the values, so values have to be decoded (see <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html#acd0880bd208499a52267cce71b947e51" title="Un-escape a value stored using SDBStatement.">DecodeValue()</a>).</p>
 <p>Bind is different for update and create actions</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -918,7 +993,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Bind a series of values at once</p>
+
+<p>Bind a series of values at once. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$values</td><td>Array of values to bind. Associative arrays are bound to named keys, indexed arrays are bound to anonymous placeholders ('?'). Mixed arrays attempts to do both </td></tr>
@@ -944,8 +1020,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Execute the query</p>
-<p>Designed so that this class mimicks <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#ad36cfe4840d97203ac9f24505b6075f8">ORM_PDOStatement::execute()</a>. For retrieving data, you will need to call one of the fetch*() functions to actually get the data.</p>
+
+<p>Execute the query. </p>
+<p>Designed so that this class mimicks <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#ad36cfe4840d97203ac9f24505b6075f8" title="Override the execute function to add some custom error handling.">ORM_PDOStatement::execute()</a>. For retrieving data, you will need to call one of the fetch*() functions to actually get the data.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">throw an exception if all placeholders aren't bound yet </p>
 <p class="enddd">Define exception for this action</p>
 </dd></dl>
@@ -977,7 +1054,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch a row from simpleDB</p>
+
+<p>Fetch a row from simpleDB. </p>
 <p>Does not return itemName() properties</p>
 <dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
@@ -985,7 +1063,7 @@ $query-&gt;execute();
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab" title="Fetch all returned results in an array.">fetchAll()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">int</td><td class="paramname">$fetch_style</td><td>[optional] What type of array to return. Defaults to <code>FETCH_BOTH</code> <code>FETCH_ASSOC</code> An associative array where keys are attributes. <code>FETCH_BOTH</code> Both associative keys and zero-indexed keys returned <code>FETCH_ARRAY</code> Return a zero-indexed array of attributes. Since the attribute order is unpredictable on a "*" request, only use when you know the return order. </td></tr>
@@ -1014,15 +1092,16 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch all returned results in an array</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a> </dd></dl>
+
+<p>Fetch all returned results in an array. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">int</td><td class="paramname">$fetch_style</td><td>[optional] What type of array to return. Defaults to <code>FETCH_BOTH</code> <code>FETCH_ASSOC</code> An associative array where keys are attributes. Each row will have it's itemName as key <code>FETCH_BOTH</code> Both associative keys and zero-indexed keys returned <code>FETCH_ARRAY</code> Return a zero-indexed array of attributes. Since the attribute order is unpredictable on a "*" request, only use when you know the return order. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>array An array of results, each one the same as calling <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>. If there are no results, an empty array is returned. The array will be associative with keys being itemNames if the fetch type is <code>FETCH_ASSOC</code>, otherwise it will be zero-indexed </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>array An array of results, each one the same as calling <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a>. If there are no results, an empty array is returned. The array will be associative with keys being itemNames if the fetch type is <code>FETCH_ASSOC</code>, otherwise it will be zero-indexed </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00893">893</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1042,8 +1121,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch results into the specified class objects</p>
-<p>Behaves like <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#acc2b78f55ad595459f24778071daebf3">ORM_PDOStatement::fetchAllInto()</a>.</p>
+
+<p>Fetch results into the specified class objects. </p>
+<p>Behaves like <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#acc2b78f55ad595459f24778071daebf3" title="Get a collection of objects representing a number of rows in the database.">ORM_PDOStatement::fetchAllInto()</a>.</p>
 <dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
     <tr><td class="paramname">Exceptions\ORMFetchIntoClassNotFoundException</td><td>for invalid classname </td></tr>
@@ -1057,7 +1137,7 @@ $query-&gt;execute();
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html">ModelCollection</a> Collection of objects of type $className </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="class_o_r_m_1_1_model_collection.html" title="The ModelCollection class is used as a container for multiple ORM_Interface classes.">ModelCollection</a> Collection of objects of type $className </dd></dl>
 
 <p>Implements <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html#acc2b78f55ad595459f24778071daebf3">DataStatement</a>.</p>
 
@@ -1079,9 +1159,10 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch results into the specified class</p>
-<p>Actually peform the lookup and return the result as an object of the specified class. Behaves like <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36">ORM_PDOStatement::fetchInto()</a>.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>This function is effected by the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770">ORMModelSDB::EnforceReadConsistency()</a> setting.</dd></dl>
+
+<p>Fetch results into the specified class. </p>
+<p>Actually peform the lookup and return the result as an object of the specified class. Behaves like <a class="el" href="class_o_r_m_1_1_o_r_m___p_d_o_statement.html#a1ea669da3b9c1e2d1b92a703386ecc36" title="Return an object representing the result of the database query.">ORM_PDOStatement::fetchInto()</a>.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This function is effected by the <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html#aa8ba863086af66f9630803e188222770" title="Check if this model should enforce SDB read consistency.">ORMModelSDB::EnforceReadConsistency()</a> setting.</dd></dl>
 <dl><dt><b>Exceptions:</b></dt><dd>
   <table class="exception">
     <tr><td class="paramname">Exceptions\ORMFetchIntoClassNotFoundException</td><td></td></tr>
@@ -1115,8 +1196,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get the autogenerated itemName value from the last insert operation</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad130c8a887a5dc651321a6e771b1b7eb">SDBStatement::_emulateInsert()</a> </dd></dl>
+
+<p>Get the autogenerated itemName value from the last insert operation. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#ad130c8a887a5dc651321a6e771b1b7eb" title="Emulate the SQL INSERT functionality.">SDBStatement::_emulateInsert()</a> </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string|null If there has been an <code>INSERT</code> statement executed, this will return the autogenerated id. </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l01001">1001</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -1136,7 +1218,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get all the placeholders in the current query string</p>
+
+<p>Get all the placeholders in the current query string. </p>
 <p>That is <code>"SELECT * FROM cars WHERE doors &gt; :doors AND brand = :brand"</code> would return <code>array( 'doors', 'brand' )</code></p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>array of placeholder names or an empty array if there are no named placeholders </dd></dl>
 
@@ -1157,7 +1240,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Get the type of SQL statement</p>
+
+<p>Get the type of SQL statement. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string Either 'DELETE', 'INSERT', 'UPDATE' or 'SELECT' </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00492">492</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -1178,7 +1262,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Force read (in)consistency.</p>
+
+<p>Force read (in)consistency. </p>
 <p>Defaults to inconsistent reads.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -1202,7 +1287,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>A numerically index array of values to bind in order to anonymous placeholders </p>
+
+<p>A numerically index array of values to bind in order to anonymous placeholders. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00074">74</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1218,7 +1304,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>An associative array of placeholders and values </p>
+
+<p>An associative array of placeholders and values. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00068">68</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1234,7 +1321,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Set to true to force consistent reads </p>
+
+<p>Set to true to force consistent reads. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00098">98</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1250,7 +1338,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>The instance property version of the static $findWith, this is used internally to represent the statically set array of models when the objec is intantiated </p>
+
+<p>The instance property version of the static $findWith, this is used internally to represent the statically set array of models when the objec is intantiated. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00121">121</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1266,8 +1355,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
+
 <p>Used to store the results. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab" title="Fetch all returned results in an array.">fetchAll()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00086">86</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1283,6 +1373,7 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
+
 <p>The last inserted itemName() </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00104">104</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -1299,7 +1390,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>The maximum number of results to return, if null then return all </p>
+
+<p>The maximum number of results to return, if null then return all. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00127">127</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1315,7 +1407,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>The number of records to skip (for pagination in combination with LIMIT </p>
+
+<p>The number of records to skip (for pagination in combination with LIMIT. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00133">133</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1331,8 +1424,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>SQL statement</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a> only supports a simple subset of SQL. See class description for more details. </dd></dl>
+
+<p>SQL statement. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Amazon <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> only supports a simple subset of SQL. See class description for more details. </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00062">62</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1348,7 +1442,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Used to reduce the number of regular expressions executed in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583">queryType()</a> </p>
+
+<p>Used to reduce the number of regular expressions executed in <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a843220bf34116ad4329cab9707522583" title="Get the type of SQL statement.">queryType()</a> </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00092">92</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1379,7 +1474,8 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Ugly method of implementing the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html">ORM_Model</a> findWith option</p>
+
+<p>Ugly method of implementing the <a class="el" href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes.">ORM_Model</a> findWith option. </p>
 <p>Set this value to an array of models to fetch for each base model class fetched. It will be reset to a blank array after fetching. </p>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00114">114</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
@@ -1396,8 +1492,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch as indexed array </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Fetch as indexed array. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab" title="Fetch all returned results in an array.">fetchAll()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00052">52</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1413,8 +1510,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch as associative array </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Fetch as associative array. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab" title="Fetch all returned results in an array.">fetchAll()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00046">46</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1430,8 +1528,9 @@ $query-&gt;execute();
       </table>
 </div>
 <div class="memdoc">
-<p>Fetch as both associative and indexed array </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab">fetchAll()</a> </dd></dl>
+
+<p>Fetch as both associative and indexed array. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a60e210ba538280f02821f18db821f00b" title="Fetch a row from simpleDB.">fetch()</a>, <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html#a298aff4588eb149cc0c6988858d064ab" title="Fetch all returned results in an array.">fetchAll()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_s_d_b_statement_8php_source.html#l00040">40</a> of file <a class="el" href="_s_d_b_statement_8php_source.html">SDBStatement.php</a>.</p>
 
@@ -1447,7 +1546,7 @@ $query-&gt;execute();
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_statement.html">SDBStatement</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

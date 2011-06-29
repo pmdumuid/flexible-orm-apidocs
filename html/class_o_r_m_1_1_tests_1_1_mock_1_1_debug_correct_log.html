@@ -88,31 +88,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DebugCorrectLog Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::Tests::Mock::DebugCorrectLog" --><!-- doxytag: inherits="ORM::SDB::ORMModelSDB,ORM::Interfaces::DebugLog" --><div class="dynheader">
+<!-- doxytag: class="ORM::Tests::Mock::DebugCorrectLog" --><!-- doxytag: inherits="ORM::SDB::ORMModelSDB,ORM::Interfaces::DebugLog" -->
+<p>A mock debug log class that uses <a class="el" href="namespace_o_r_m_1_1_tests_1_1_s_d_b.html" title="Tests specific to AmazonSDB packages (SDB)">SDB</a> to store logs.  
+ <a href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for DebugCorrectLog:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.png" usemap="#DebugCorrectLog_map" alt=""/>
   <map id="DebugCorrectLog_map" name="DebugCorrectLog_map">
-<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" alt="ORMModelSDB" shape="rect" coords="61,112,174,136"/>
-<area href="interface_o_r_m_1_1_interfaces_1_1_debug_log.html" alt="DebugLog" shape="rect" coords="184,112,297,136"/>
-<area href="class_o_r_m_1_1_o_r_m___model.html" alt="ORM_Model" shape="rect" coords="61,56,174,80"/>
-<area href="class_o_r_m_1_1_o_r_m___core.html" alt="ORM_Core" shape="rect" coords="0,0,113,24"/>
-<area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" alt="ORMInterface" shape="rect" coords="123,0,236,24"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html" title="An model class where the backend is the Amazon simpleDB service." alt="ORMModelSDB" shape="rect" coords="61,112,174,136"/>
+<area href="interface_o_r_m_1_1_interfaces_1_1_debug_log.html" title="Interface for classes used to store debug logs." alt="DebugLog" shape="rect" coords="184,112,297,136"/>
+<area href="class_o_r_m_1_1_o_r_m___model.html" title="Base class for ordinary ORM classes." alt="ORM_Model" shape="rect" coords="61,56,174,80"/>
+<area href="class_o_r_m_1_1_o_r_m___core.html" title="An abstract class which defines the actions of an ORM-like object." alt="ORM_Core" shape="rect" coords="0,0,113,24"/>
+<area href="interface_o_r_m_1_1_interfaces_1_1_o_r_m_interface.html" title="The interface to define the minimum external methods implemented by an ORM object." alt="ORMInterface" shape="rect" coords="123,0,236,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#a6221a0139063da1d2b1fa70d1d1fbe9c">store</a> ($object)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Store object for later analysis.  <a href="#a6221a0139063da1d2b1fa70d1d1fbe9c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#afaef8af059cc40efde398c06f031a88f">object</a> ($object=null)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get or set the object for this log.  <a href="#afaef8af059cc40efde398c06f031a88f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#a2b69de9676dd97c675cd4d9bcceb684c">$timestamp</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html#a89b90fc0664b547838d7dbf60f42f93c">$serializedObject</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>A mock debug log class that uses <a class="el" href="namespace_o_r_m_1_1_tests_1_1_s_d_b.html">SDB</a> to store logs</p>
+<div class="textblock"><p>A mock debug log class that uses <a class="el" href="namespace_o_r_m_1_1_tests_1_1_s_d_b.html" title="Tests specific to AmazonSDB packages (SDB)">SDB</a> to store logs. </p>
 <dl class="author"><dt><b>Author:</b></dt><dd>jarrod.swift </dd></dl>
 
 <p>Definition at line <a class="el" href="_debug_correct_log_8php_source.html#l00013">13</a> of file <a class="el" href="_debug_correct_log_8php_source.html">DebugCorrectLog.php</a>.</p>
@@ -131,7 +136,8 @@ Data Fields</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get or set the object for this log</p>
+
+<p>Get or set the object for this log. </p>
 <p>Serializes (and unserializes) the object, so this can be any serializable object.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -159,7 +165,8 @@ Data Fields</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Store object for later analysis </p>
+
+<p>Store object for later analysis. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$object</td><td></td></tr>
@@ -215,7 +222,7 @@ Data Fields</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_tests.html">Tests</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_tests_1_1_mock.html">Mock</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_tests_1_1_mock_1_1_debug_correct_log.html">DebugCorrectLog</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:19 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:47 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

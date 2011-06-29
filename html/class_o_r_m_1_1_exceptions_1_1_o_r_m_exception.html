@@ -85,30 +85,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ORMException Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::Exceptions::ORMException" --><div class="dynheader">
+<!-- doxytag: class="ORM::Exceptions::ORMException" -->
+<p>Basic exception for flexible-orm.  
+ <a href="class_o_r_m_1_1_exceptions_1_1_o_r_m_exception.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for ORMException:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_r_m_1_1_exceptions_1_1_o_r_m_exception.png" usemap="#ORMException_map" alt=""/>
   <map id="ORMException_map" name="ORMException_map">
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_configuration_exception.html" alt="ORMConfigurationException" shape="rect" coords="0,56,289,80"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_find_by_invalid_field_exception.html" alt="ORMFindByInvalidFieldException" shape="rect" coords="299,56,588,80"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_p_d_o_exception.html" alt="ORMPDOException" shape="rect" coords="598,56,887,80"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_exception.html" alt="ORMFetchException" shape="rect" coords="0,112,289,136"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_exception.html" alt="ORMFetchIntoException" shape="rect" coords="299,112,588,136"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_insert_exception.html" alt="ORMInsertException" shape="rect" coords="598,112,887,136"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_p_d_o_invalid_database_configuration_exception.html" alt="ORMPDOInvalidDatabaseConfigurationException" shape="rect" coords="897,112,1186,136"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_update_exception.html" alt="ORMUpdateException" shape="rect" coords="1196,112,1485,136"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_class_not_found_exception.html" alt="ORMFetchIntoClassNotFoundException" shape="rect" coords="149,168,438,192"/>
-<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_related_class_not_found_exception.html" alt="ORMFetchIntoRelatedClassNotFoundException" shape="rect" coords="448,168,737,192"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_configuration_exception.html" title="Thrown by problems with the Configuration class." alt="ORMConfigurationException" shape="rect" coords="0,56,289,80"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_find_by_invalid_field_exception.html" title="Raised if FindBy is called on a field that does not exist." alt="ORMFindByInvalidFieldException" shape="rect" coords="299,56,588,80"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_p_d_o_exception.html" title="Base class for data expections." alt="ORMPDOException" shape="rect" coords="598,56,887,80"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_exception.html" title="Raised when unable to fetch an object from the datastorage." alt="ORMFetchException" shape="rect" coords="0,112,289,136"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_exception.html" title="Raised when fetching data into a class." alt="ORMFetchIntoException" shape="rect" coords="299,112,588,136"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_insert_exception.html" title="Raised when unable to insert an object into the datastore." alt="ORMInsertException" shape="rect" coords="598,112,887,136"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_p_d_o_invalid_database_configuration_exception.html" title="Thrown when attempt to connect to a database with invalid connection details or none at all..." alt="ORMPDOInvalidDatabaseConfigurationException" shape="rect" coords="897,112,1186,136"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_update_exception.html" title="Raised when unable to update an record in datastorage." alt="ORMUpdateException" shape="rect" coords="1196,112,1485,136"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_class_not_found_exception.html" title="Raised when the class specifiec for fetching into is not defined." alt="ORMFetchIntoClassNotFoundException" shape="rect" coords="149,168,438,192"/>
+<area href="class_o_r_m_1_1_exceptions_1_1_o_r_m_fetch_into_related_class_not_found_exception.html" title="When doing complex fetches with multiple classes, it is possible that one of the related classes cann..." alt="ORMFetchIntoRelatedClassNotFoundException" shape="rect" coords="448,168,737,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Description of <a class="el" href="class_o_r_m_1_1_exceptions_1_1_o_r_m_exception.html">ORMException</a> </p>
+<div class="textblock"><p>Basic exception for flexible-orm. </p>
+<p>All other exceptions inherit from this, except where there exists a more descriptive Standard PHP (SPL) exception </p>
 
-<p>Definition at line <a class="el" href="_o_r_m_exception_8php_source.html#l00012">12</a> of file <a class="el" href="_o_r_m_exception_8php_source.html">ORMException.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_exception_8php_source.html#l00018">18</a> of file <a class="el" href="_o_r_m_exception_8php_source.html">ORMException.php</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/server/projects/flexible-orm/Exceptions/<a class="el" href="_o_r_m_exception_8php_source.html">ORMException.php</a></li>
 </ul>
@@ -119,7 +123,7 @@ Inheritance diagram for ORMException:</div>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_exceptions.html">Exceptions</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_exceptions_1_1_o_r_m_exception.html">ORMException</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

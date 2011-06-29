@@ -87,25 +87,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DataFactory Interface Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::Interfaces::DataFactory" --><div class="dynheader">
+<!-- doxytag: class="ORM::Interfaces::DataFactory" -->
+<p>Interface for SQL prepared statement factory classes.  
+ <a href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for DataFactory:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="interface_o_r_m_1_1_interfaces_1_1_data_factory.png" usemap="#DataFactory_map" alt=""/>
   <map id="DataFactory_map" name="DataFactory_map">
-<area href="class_o_r_m_1_1_p_d_o_factory.html" alt="PDOFactory" shape="rect" coords="0,56,83,80"/>
-<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html" alt="SDBFactory" shape="rect" coords="93,56,176,80"/>
+<area href="class_o_r_m_1_1_p_d_o_factory.html" title="A singleton database managing class that acts as a factory for prepared statements." alt="PDOFactory" shape="rect" coords="0,56,83,80"/>
+<area href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html" title="An alternative DataFactory for use with Amazon SDB backed models." alt="SDBFactory" shape="rect" coords="93,56,176,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a56c88768135657349a2ce5a3b8082703">Get</a> ($sql, $database, $callingClass)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a prepared statement that can be executed / bound.  <a href="#a56c88768135657349a2ce5a3b8082703"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html#a11d223633dcff325658bab3969c0b158">LastInsertId</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver.  <a href="#a11d223633dcff325658bab3969c0b158"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Interface for SQL prepared statement factory classes</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4">ORM_Model::DataFactory()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> </dd></dl>
+<div class="textblock"><p>Interface for SQL prepared statement factory classes. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a72df8c2ffb2018f945432d9c449338d4" title="Get the datafactory classname for this model.">ORM_Model::DataFactory()</a>, <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html" title="All prepared statements returned by a DataFactory class must implement this interface.">DataStatement</a> </dd></dl>
 <dl class="author"><dt><b>Author:</b></dt><dd>jarrod.swift </dd></dl>
 
 <p>Definition at line <a class="el" href="_data_factory_8php_source.html#l00013">13</a> of file <a class="el" href="_data_factory_8php_source.html">DataFactory.php</a>.</p>
@@ -140,7 +145,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get a prepared statement that can be executed / bound</p>
+
+<p>Get a prepared statement that can be executed / bound. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$sql</td><td></td></tr>
@@ -149,7 +155,7 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> A <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a> should return a prepared statement class that implements the <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html">DataStatement</a> interface. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html" title="All prepared statements returned by a DataFactory class must implement this interface.">DataStatement</a> A <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html" title="Interface for SQL prepared statement factory classes.">DataFactory</a> should return a prepared statement class that implements the <a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_statement.html" title="All prepared statements returned by a DataFactory class must implement this interface.">DataStatement</a> interface. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a0b01f3c995380c8f3a6eada85c8a496a">PDOFactory</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html#a2ef93d1408c18b32da5ee23f2f6c4e87">SDBFactory</a>.</p>
 
@@ -168,7 +174,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver.</p>
+
+<p>Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed Key value </dd></dl>
 
 <p>Implemented in <a class="el" href="class_o_r_m_1_1_p_d_o_factory.html#a11d223633dcff325658bab3969c0b158">PDOFactory</a>, and <a class="el" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_factory.html#a11d223633dcff325658bab3969c0b158">SDBFactory</a>.</p>
@@ -185,7 +192,7 @@ Static Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_interfaces.html">Interfaces</a>      </li>
       <li class="navelem"><a class="el" href="interface_o_r_m_1_1_interfaces_1_1_data_factory.html">DataFactory</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

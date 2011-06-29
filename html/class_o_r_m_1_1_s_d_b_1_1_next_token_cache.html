@@ -89,22 +89,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">NextTokenCache Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ORM::SDB::NextTokenCache" --><table class="memberdecls">
+<!-- doxytag: class="ORM::SDB::NextTokenCache" -->
+<p>Simple container for some token caching.  
+ <a href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#details">More...</a></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#af2bd86088d71135e6e4d24d05adb1064">Store</a> ($query, $limit, $offset, $token)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a discovered nextToken.  <a href="#af2bd86088d71135e6e4d24d05adb1064"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9de82f43b1e4ed378039d3917f418eb9">GetToken</a> ($query, $limit, $offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "nextToken" for a query/offset/limit combination if known.  <a href="#a9de82f43b1e4ed378039d3917f418eb9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9aab64e813dedae26f7bd5eadc730245">GetNearestToken</a> ($query, $limit, $offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the closest nextToken value for a given query and offset.  <a href="#a9aab64e813dedae26f7bd5eadc730245"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a1ef8772bcfda5493278f05feb1f0f664">_Cache</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cache object.  <a href="#a1ef8772bcfda5493278f05feb1f0f664"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#adcf50c262357ea0a31ebd281bc78aad3">_CacheName</a> ($query, $limit, $offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a name to use in cache for this combination.  <a href="#adcf50c262357ea0a31ebd281bc78aad3"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a5e591727e4b0953ce51396491df143a7">$_cache</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Simple container for some token caching</p>
+<div class="textblock"><p>Simple container for some token caching. </p>
 <p>Currently requires a cache class to be defined in Configuration for caching </p>
 
 <p>Definition at line <a class="el" href="_next_token_cache_8php_source.html#l00016">16</a> of file <a class="el" href="_next_token_cache_8php_source.html">NextTokenCache.php</a>.</p>
@@ -122,8 +130,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the cache object</p>
-<p>Cache object defined by <a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef">Configuration::SetCacheClass()</a> </p>
+
+<p>Get the cache object. </p>
+<p>Cache object defined by <a class="el" href="class_o_r_m_1_1_utilities_1_1_configuration.html#a0193e5a12492f863516d16a22cc239ef" title="Set the cache class for the whole system to use.">Configuration::SetCacheClass()</a> </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Cache </dd></dl>
 
 <p>Definition at line <a class="el" href="_next_token_cache_8php_source.html#l00081">81</a> of file <a class="el" href="_next_token_cache_8php_source.html">NextTokenCache.php</a>.</p>
@@ -160,7 +169,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Generate a name to use in cache for this combination</p>
+
+<p>Generate a name to use in cache for this combination. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$query</td><td></td></tr>
@@ -205,9 +215,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the closest nextToken value for a given query and offset</p>
+
+<p>Get the closest nextToken value for a given query and offset. </p>
 <p>Search the cache for any known tokens to limit the number of requests required to reach the requested offset.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9de82f43b1e4ed378039d3917f418eb9">GetToken()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9de82f43b1e4ed378039d3917f418eb9" title="Get the &quot;nextToken&quot; for a query/offset/limit combination if known.">GetToken()</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$query</td><td></td></tr>
@@ -252,8 +263,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the "nextToken" for a query/offset/limit combination if known</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9aab64e813dedae26f7bd5eadc730245">GetNearestToken</a> </dd></dl>
+
+<p>Get the "nextToken" for a query/offset/limit combination if known. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html#a9aab64e813dedae26f7bd5eadc730245" title="Get the closest nextToken value for a given query and offset.">GetNearestToken</a> </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$query</td><td></td></tr>
@@ -304,7 +316,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Store a discovered nextToken </p>
+
+<p>Store a discovered nextToken. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$query</td><td></td></tr>
@@ -345,7 +358,7 @@ Static Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_next_token_cache.html">NextTokenCache</a>      </li>
-      <li class="footer">Generated on Tue Jun 21 2011 15:42:18 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
