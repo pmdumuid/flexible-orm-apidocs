@@ -85,8 +85,8 @@ var NAVTREE =
       [ "ORMSecondDatabaseTest", "class_o_r_m_1_1_tests_1_1_o_r_m_second_database_test.html", null ],
       [ "ORMTest", "class_o_r_m_1_1_tests_1_1_o_r_m_test.html", null ],
       [ "ORMUpdateException", "class_o_r_m_1_1_exceptions_1_1_o_r_m_update_exception.html", null ],
-      [ "Owner", "class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html", null ],
       [ "Owner", "class_owner.html", null ],
+      [ "Owner", "class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html", null ],
       [ "PDOFactory", "class_o_r_m_1_1_p_d_o_factory.html", null ],
       [ "PDOFactoryTest", "class_o_r_m_1_1_tests_1_1_p_d_o_factory_test.html", null ],
       [ "Request", "class_o_r_m_1_1_controller_1_1_request.html", null ],
@@ -104,6 +104,7 @@ var NAVTREE =
       [ "SDBWrapper", "class_o_r_m_1_1_s_d_b_1_1_s_d_b_wrapper.html", null ],
       [ "SmartyTemplate", "class_o_r_m_1_1_controller_1_1_smarty_template.html", null ],
       [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ],
+      [ "Table", "class_table.html", null ],
       [ "Template", "interface_o_r_m_1_1_interfaces_1_1_template.html", null ],
       [ "UndoableCar", "class_o_r_m_1_1_tests_1_1_mock_1_1_undoable_car.html", null ],
       [ "Variables", "class_o_r_m_1_1_controller_1_1_request_1_1_variables.html", null ],
@@ -166,7 +167,8 @@ var NAVTREE =
           [ "Manufacturer", "class_o_r_m_1_1_tests_1_1_mock_1_1_manufacturer.html", null ],
           [ "Owner", "class_o_r_m_1_1_tests_1_1_mock_1_1_owner.html", null ],
           [ "Window", "class_o_r_m_1_1_tests_1_1_mock_1_1_window.html", null ],
-          [ "Owner", "class_owner.html", null ]
+          [ "Owner", "class_owner.html", null ],
+          [ "Table", "class_table.html", null ]
         ] ],
         [ "Staff", "class_o_r_m_1_1_tests_1_1_mock_1_1_staff.html", null ]
       ] ],
@@ -335,6 +337,7 @@ var NAVTREE =
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.load.example.php", "orm__model_8load_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.pagination.example.php", "orm__model_8pagination_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.save.example.php", "orm__model_8save_8example_8php.html", null ],
+      [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.serialised.example.php", "orm__model_8serialised_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model.validation.php", "orm__model_8validation_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model_custom.example.php", "orm__model__custom_8example_8php.html", null ],
       [ "C:/server/projects/flexible-orm/tutorials/examples/orm_model_foreign.example.php", "orm__model__foreign_8example_8php.html", null ],

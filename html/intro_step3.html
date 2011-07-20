@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.8</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.9</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Introduction</h2>
 <p>In the case when two or more database tables are related, the <a class="el" href="namespace_o_r_m.html" title="The base namespace for flexible-orm.">ORM</a> can simplify retrieving related objects. For example, in our tutorial tables defined in <a class="el" href="intro_step1.html">Step 1: Define Data Structures</a> the owners and cars tables are related (car <em>has one</em> owner).</p>
 <p>Currently the system only automatically deals with the <em>has one</em> relationship, where the table has a foreign key of the related record in another table (e.g. <em>owner_id</em>). In this example, we would be able to call <code>$car-&gt;<a class="el" href="class_owner.html">Owner</a></code> to get an owner object from a <a class="el" href="class_car.html">Car</a> object (if it was fetched with <a class="el" href="class_owner.html">Owner</a>, see below).</p>
-<div class="fragment"><pre class="fragment"> $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 2, <span class="stringliteral">&#39;Owner&#39;</span> );
+<div class="fragment"><pre class="fragment"> $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Find a single object.">Car::Find</a>( 2, <span class="stringliteral">&#39;Owner&#39;</span> );
  echo get_class($car-&gt;Owner-&gt;name);
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>To find two or more objects together in this way, all models must be in the same database.</dd></dl>
 <h2><a class="anchor" id="intro_step3_basic"></a>
@@ -100,15 +100,15 @@ Custom Foreign Key Format</h2>
 Using A Model With Foreign Keys</h2>
 <p>Model objects are not automatically fetched with their related models included to improve performance. If you want the foreign model objects to be included, you must use the findWith parameters.</p>
 <p>For example: </p>
-<div class="fragment"><pre class="fragment"> $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 2 );
+<div class="fragment"><pre class="fragment"> $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Find a single object.">Car::Find</a>( 2 );
  echo get_class($car-&gt;Owner); <span class="comment">// Will be null as it wasn&#39;t fetched</span>
 
- $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 2, <span class="stringliteral">&#39;Owner&#39;</span> );
+ $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Find a single object.">Car::Find</a>( 2, <span class="stringliteral">&#39;Owner&#39;</span> );
  echo get_class($car-&gt;Owner); <span class="comment">// Will echo &#39;Owner&#39;</span>
 
- $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">Car::Find</a>( 2, array(<span class="stringliteral">&#39;Owner&#39;</span>, <span class="stringliteral">&#39;Manufacturer&#39;</span>) );
+ $car = <a class="code" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Find a single object.">Car::Find</a>( 2, array(<span class="stringliteral">&#39;Owner&#39;</span>, <span class="stringliteral">&#39;Manufacturer&#39;</span>) );
  echo get_class($car-&gt;Manufacturer); <span class="comment">// Will echo &#39;Manufacturer&#39;</span>
-</pre></div><p>For more information see <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505">ORM_Model::Find()</a> and <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">ORM_Model::FindAll()</a>.</p>
+</pre></div><p>For more information see <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#ae8a5fcda85309a91a5c9278d1c38a505" title="Find a single object.">ORM_Model::Find()</a> and <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a1916b67de952b5acdf6d90bc3fde003c" title="Find all matching objects.">ORM_Model::FindAll()</a>.</p>
 <h2><a class="anchor" id="intro_step3_nav"></a>
 Getting Started</h2>
 <ul>
@@ -122,7 +122,7 @@ Getting Started</h2>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main.html">Introduction to flexible-orm</a>      </li>
-      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jul 20 2011 10:24:21 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

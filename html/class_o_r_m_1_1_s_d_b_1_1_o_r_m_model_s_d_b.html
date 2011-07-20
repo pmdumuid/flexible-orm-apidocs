@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.8</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.9</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -181,7 +181,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a29677eb271ebb0d147de7674c241f2da">ORM_Model</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00131">131</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00133">133</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -204,7 +204,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#abf818560327272e8a0d310101d9dcb88">ORM_Core</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00116">116</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00118">118</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -223,10 +223,11 @@ Static Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Create the <a class="el" href="namespace_o_r_m_1_1_s_d_b.html" title="Amazon Simple DB resources.">SDB</a> domain for this model. </p>
-<p>This action is idempotent (can be called repeatedly with no ill-effect) though it should not be called every time the script is run, since it may be slightly slower.</p>
+<p>This action is idempotent (can be called repeatedly with no side-effect) though it should not be called every time the script is run, since it may be slightly slower.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Uses the [AWS]region setting to chose where to create the domain.</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string Returns the domain name created (will be the same as calling <a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a0b81fc29b186e2532065eed32dbdde8c" title="Get the table name for a given model.">ORM_Model::TableName()</a>) </dd></dl>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00087">87</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00089">89</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -304,7 +305,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_o_r_m_1_1_o_r_m___core.html#a77d38b697cce83b1e385102cdf4957f9">ORM_Core</a>.</p>
 
-<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00102">102</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
+<p>Definition at line <a class="el" href="_o_r_m_model_s_d_b_8php_source.html#l00104">104</a> of file <a class="el" href="_o_r_m_model_s_d_b_8php_source.html">ORMModelSDB.php</a>.</p>
 
 </div>
 </div>
@@ -353,7 +354,7 @@ Static Protected Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespace_o_r_m.html">ORM</a>      </li>
       <li class="navelem"><a class="el" href="namespace_o_r_m_1_1_s_d_b.html">SDB</a>      </li>
       <li class="navelem"><a class="el" href="class_o_r_m_1_1_s_d_b_1_1_o_r_m_model_s_d_b.html">ORMModelSDB</a>      </li>
-      <li class="footer">Generated on Wed Jun 29 2011 16:43:46 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jul 20 2011 10:24:22 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

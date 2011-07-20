@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.8</span></div>
+   <div id="projectname">flexible-orm&#160;<span id="projectnumber">0.9</span></div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
  </tr>
@@ -105,6 +105,21 @@ Introduction</h2>
 <h2><a class="anchor" id="ctrl_basic"></a>
 Basic Concepts</h2>
 <p>A controller class defines <em>actions</em> (as public methods) and assigns resulting values to a <em>template</em> (the view layer). All public methods are callable as actions. All public properties are assigned to the template.</p>
+<p>The basic process is:</p>
+<ol type="1">
+<li>Get the request variables and create a <a class="el" href="class_o_r_m_1_1_controller_1_1_request.html" title="Represents the request parameters.">Request</a> object</li>
+<li>Create and setup a Template object (such as <a class="el" href="class_o_r_m_1_1_controller_1_1_smarty_template.html" title="Class wrapper for Smarty to implement the Template interface.">SmartyTemplate</a>)</li>
+<li>Create a new controller object from a class that extends <a class="el" href="class_o_r_m_1_1_controller_1_1_base_controller.html" title="Simple controller class for implementing a MVC stack.">BaseController</a><ul>
+<li>Pass the controller object the <a class="el" href="class_o_r_m_1_1_controller_1_1_request.html" title="Represents the request parameters.">Request</a> and Template objects</li>
+</ul>
+</li>
+<li>Call performAction() on the controller object</li>
+<li>Do something with the output (usually just <code>echo</code> it out).</li>
+</ol>
+<h3><a class="anchor" id="ctrl_layout"></a>
+Layouts</h3>
+<p>Usually you would want most templates on a site to contain a lot of identical code (navigation, layout, etc). To avoid having to write this into every template you simply create a template file named 'layout' in your route template folder. This template will be called for every action unless the property <code>_useLayout</code> is set to <code>FALSE</code> .</p>
+<p>The layout will get all the assigned variables from the action, plus a special variable named <code>$action_content</code> which is the output of the template.</p>
 <p><b>Basic <a class="el" href="namespace_o_r_m_1_1_controller.html" title="Package for implementing the controller part of the Model-View-Controller pattern.">Controller</a> Class</b> </p>
 <div class="fragment"><pre class="fragment"> <span class="keyword">class </span>MyController <span class="keyword">extends</span> BaseController {
       <span class="keyword">public</span> $variable = <span class="stringliteral">&#39;value&#39;</span>;
@@ -159,6 +174,7 @@ Basic Concepts</h2>
  </p>
 <h2><a class="anchor" id="ctrl_options"></a>
 Overriding The Defaults</h2>
+<p>By default each action will attempt to load a template 'controllerName/actionName'. You can change this in the action by setting the <code>$_templateName</code> variable to the template you wish to load.</p>
 <p><br/>
 <br/>
  </p>
@@ -229,7 +245,7 @@ Implementing Your Own Template Class</h2>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Wed Jun 29 2011 16:43:45 for flexible-orm by&#160;
+      <li class="footer">Generated on Wed Jul 20 2011 10:24:21 for flexible-orm by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
