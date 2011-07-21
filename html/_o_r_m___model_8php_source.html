@@ -186,13 +186,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00326"></a>00326 
 <a name="l00327"></a>00327             <span class="keywordflow">return</span> static::FindBy( self::_LowercaseFirst($matches[1]), $arguments[0], $findWith );
 <a name="l00328"></a>00328 
-<a name="l00329"></a>00329         } elseif( preg_match(<span class="stringliteral">&#39;/^FindAllBy(.+)$/&#39;</span>, $name, $matches) ) {
+<a name="l00329"></a>00329         } elseif ( preg_match(<span class="stringliteral">&#39;/^FindAllBy(.+)$/&#39;</span>, $name, $matches) ) {
 <a name="l00330"></a>00330             $findWith = isset( $arguments[2] ) ? $arguments[2] : <span class="keyword">false</span>;
 <a name="l00331"></a>00331             $operator = isset( $arguments[1] ) ? $arguments[1] : <span class="charliteral">&#39;=&#39;</span>;
 <a name="l00332"></a>00332 
 <a name="l00333"></a>00333             <span class="keywordflow">return</span> static::FindAllBy( self::_LowercaseFirst($matches[1]), $arguments[0], $operator, $findWith );
 <a name="l00334"></a>00334             
-<a name="l00335"></a>00335         } elseif( preg_match(<span class="stringliteral">&#39;/^CountFindAllBy(.+)$/&#39;</span>, $name, $matches) ) {
+<a name="l00335"></a>00335         } elseif ( preg_match(<span class="stringliteral">&#39;/^CountFindAllBy(.+)$/&#39;</span>, $name, $matches) ) {
 <a name="l00336"></a>00336             $findWith = isset( $arguments[2] ) ? $arguments[2] : <span class="keyword">false</span>;
 <a name="l00337"></a>00337             $operator = isset( $arguments[1] ) ? $arguments[1] : <span class="charliteral">&#39;=&#39;</span>;
 <a name="l00338"></a>00338             
