@@ -32,7 +32,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">flexible-orm
-   &#160;<span id="projectnumber">0.10-beta</span>
+   &#160;<span id="projectnumber">0.11-beta</span>
    </div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
@@ -97,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Request Class Reference</div>  </div>
@@ -106,6 +107,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Represents the request parameters.  
  <a href="class_o_r_m_1_1_controller_1_1_request.html#details">More...</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_controller_1_1_request_1_1_variables_test.html">VariablesTest</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test class for <a class="el" href="class_o_r_m_1_1_controller_1_1_request_1_1_variables.html" title="Read-only variable access with filters and defaults.">Variables</a>.  <a href="class_o_r_m_1_1_controller_1_1_request_1_1_variables_test.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_controller_1_1_request.html#a2030f88c078d96d041f05f3689d1dcb6">__construct</a> (array $get=array(), array $post=array(), array $cookies=array())</td></tr>
@@ -116,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the request params or a specific value.  <a href="#abc8e9e31bb15c8a44c3210ec551407c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_controller_1_1_request.html#a83c2703c91959192f759992ad5640b67">__set</a> ($<a class="el" href="orm__model__foreign_8example_8php.html#ab1f13af57b0ffe29b28002f6b4f3543b">name</a>, $value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent altering of request values.  <a href="#a83c2703c91959192f759992ad5640b67"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_m_1_1_controller_1_1_request.html#a00d2a2ae63b45a9a7d85394780dffc01">requestOrder</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the request order specified in the PHP settings.  <a href="#a00d2a2ae63b45a9a7d85394780dffc01"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents the request parameters. </p>
@@ -134,7 +141,7 @@ Public Member Functions</h2></td></tr>
  $id = $request-&gt;get-&gt;id( null, <span class="stringliteral">&#39;ctype_digit&#39;</span> );
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="class_o_r_m_1_1_controller_1_1_request_1_1_variables.html" title="Read-only variable access with filters and defaults.">Variables</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_request_8php_source.html#l00035">35</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00036">36</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2030f88c078d96d041f05f3689d1dcb6"></a><!-- doxytag: member="ORM::Controller::Request::__construct" ref="a2030f88c078d96d041f05f3689d1dcb6" args="(array $get=array(), array $post=array(), array $cookies=array())" -->
 <div class="memitem">
@@ -178,7 +185,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_request_8php_source.html#l00096">96</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00097">97</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
 
 </div>
 </div>
@@ -222,7 +229,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="_request_8php_source.html#l00118">118</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00119">119</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
 
 </div>
 </div>
@@ -260,7 +267,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Variables|string Either a set of variables or the value of a request variable (see usage). The value from a html form is always a string. </dd></dl>
 
-<p>Definition at line <a class="el" href="_request_8php_source.html#l00146">146</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00147">147</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
 
 </div>
 </div>
@@ -305,12 +312,34 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_request_8php_source.html#l00168">168</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00169">169</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00d2a2ae63b45a9a7d85394780dffc01"></a><!-- doxytag: member="ORM::Controller::Request::requestOrder" ref="a00d2a2ae63b45a9a7d85394780dffc01" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">requestOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the request order specified in the PHP settings. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>_initRequest() </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>string </dd></dl>
+
+<p>Definition at line <a class="el" href="_request_8php_source.html#l00207">207</a> of file <a class="el" href="_request_8php_source.html">Request.php</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/server/projects/flexible-orm/Controller/<a class="el" href="_request_8php_source.html">Request.php</a></li>
+<li>/Users/jarrodswift/projects/flexible-orm/Controller/<a class="el" href="_request_8php_source.html">Request.php</a></li>
 </ul>
 </div>
 </div>
@@ -334,7 +363,7 @@ Public Member Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Wed Nov 9 2011 03:02:25 for flexible-orm by
+    <li class="footer">Generated on Mon Nov 21 2011 17:13:23 for flexible-orm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

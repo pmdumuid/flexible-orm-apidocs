@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>flexible-orm: C:/server/projects/flexible-orm/Tests/Controller/RequestTest.php Source File</title>
+<title>flexible-orm: /Users/jarrodswift/projects/flexible-orm/Tests/Controller/RequestTest.php Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">flexible-orm
-   &#160;<span id="projectnumber">0.10-beta</span>
+   &#160;<span id="projectnumber">0.11-beta</span>
    </div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
@@ -95,52 +95,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">C:/server/projects/flexible-orm/Tests/Controller/RequestTest.php</div>  </div>
+<div class="title">/Users/jarrodswift/projects/flexible-orm/Tests/Controller/RequestTest.php</div>  </div>
 </div>
 <div class="contents">
 <a href="_request_test_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\Tests\Controller;
-<a name="l00007"></a>00007 use \ORM\Controller\Request;
+<a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\Controller;
+<a name="l00007"></a>00007 use ORM\Controller\Request;
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 set_include_path(get_include_path(). PATH_SEPARATOR . __DIR__.<span class="stringliteral">&#39;/..&#39;</span>);
-<a name="l00010"></a>00010 require_once <span class="stringliteral">&#39;ORMTest.php&#39;</span>;
+<a name="l00009"></a>00009 require_once <span class="stringliteral">&#39;../ORMTest.php&#39;</span>;
+<a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00017"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html">00017</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html" title="Description of RequestTest.">RequestTest</a> <span class="keyword">extends</span> \ORM\Tests\<a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_test.html" title="Description of ORMTestClass.">ORMTest</a> {
-<a name="l00021"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a24ad736ad3ce0537fe3dea22743a6cc3">00021</a>     <span class="keyword">protected</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a24ad736ad3ce0537fe3dea22743a6cc3">$object</a>;
-<a name="l00022"></a>00022     
-<a name="l00023"></a>00023     <span class="keyword">private</span> $get  = array( <span class="stringliteral">&#39;id&#39;</span> =&gt; 123, <span class="stringliteral">&#39;name&#39;</span> =&gt; <span class="stringliteral">&#39;jarrod&#39;</span> );
-<a name="l00024"></a>00024     <span class="keyword">private</span> $post = array( <span class="stringliteral">&#39;name&#39;</span> =&gt; <span class="stringliteral">&#39;steve&#39;</span>, <span class="stringliteral">&#39;age&#39;</span> =&gt; <span class="stringliteral">&#39;1notvalid&#39;</span>);
-<a name="l00025"></a>00025     
-<a name="l00026"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a0bc688732d2b3b162ffebaf7812e78da">00026</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a0bc688732d2b3b162ffebaf7812e78da">setUp</a>() {
-<a name="l00027"></a>00027         $this-&gt;<span class="keywordtype">object</span> = <span class="keyword">new</span> Request( $this-&gt;<span class="keyword">get</span>, $this-&gt;post );
+<a name="l00016"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html">00016</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html" title="Description of RequestTest.">RequestTest</a> <span class="keyword">extends</span> \ORM\Tests\ORMTest {
+<a name="l00020"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a24ad736ad3ce0537fe3dea22743a6cc3">00020</a>     <span class="keyword">protected</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a24ad736ad3ce0537fe3dea22743a6cc3">$object</a>;
+<a name="l00021"></a>00021     
+<a name="l00022"></a>00022     <span class="keyword">private</span> $get  = array( <span class="stringliteral">&#39;id&#39;</span>     =&gt; 123,     <span class="stringliteral">&#39;name&#39;</span>  =&gt; <span class="stringliteral">&#39;jarrod&#39;</span> );
+<a name="l00023"></a>00023     <span class="keyword">private</span> $post = array( <span class="stringliteral">&#39;name&#39;</span>   =&gt; <span class="stringliteral">&#39;steve&#39;</span>, <span class="stringliteral">&#39;age&#39;</span>   =&gt; <span class="stringliteral">&#39;1notvalid&#39;</span>);
+<a name="l00024"></a>00024     
+<a name="l00025"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a0bc688732d2b3b162ffebaf7812e78da">00025</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a0bc688732d2b3b162ffebaf7812e78da">setUp</a>() {
+<a name="l00026"></a>00026         ini_set(<span class="stringliteral">&#39;request_order&#39;</span>, <span class="stringliteral">&#39;GP&#39;</span>);
+<a name="l00027"></a>00027         $this-&gt;<span class="keywordtype">object</span> = <span class="keyword">new</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request.html" title="Represents the request parameters.">Request</a>( $this-&gt;<span class="keyword">get</span>, $this-&gt;post );
 <a name="l00028"></a>00028     }
 <a name="l00029"></a>00029     
-<a name="l00030"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#ab00fac901b467f36e42d131984ff7355">00030</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#ab00fac901b467f36e42d131984ff7355">testGetAsProperty</a>() {
+<a name="l00030"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#ab00fac901b467f36e42d131984ff7355">00030</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#ab00fac901b467f36e42d131984ff7355">testGetAsProperty</a>() {
 <a name="l00031"></a>00031         $this-&gt;assertEquals(
 <a name="l00032"></a>00032             $this-&gt;<span class="keyword">get</span>[<span class="stringliteral">&#39;id&#39;</span>], $this-&gt;object-&gt;get-&gt;id
 <a name="l00033"></a>00033         );
 <a name="l00034"></a>00034     }
 <a name="l00035"></a>00035     
-<a name="l00036"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a1b975be28b6102cecb6455bf1d135e83">00036</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a1b975be28b6102cecb6455bf1d135e83">testGetAsMethod</a>() {
+<a name="l00036"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a1b975be28b6102cecb6455bf1d135e83">00036</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a1b975be28b6102cecb6455bf1d135e83">testGetAsMethod</a>() {
 <a name="l00037"></a>00037         $this-&gt;assertEquals(
 <a name="l00038"></a>00038             $this-&gt;<span class="keyword">get</span>[<span class="stringliteral">&#39;name&#39;</span>], $this-&gt;object-&gt;get-&gt;name()
 <a name="l00039"></a>00039         );
 <a name="l00040"></a>00040     }
 <a name="l00041"></a>00041     
-<a name="l00042"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a2e8c10c2ee882b42b7d2c0f7a06366ff">00042</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a2e8c10c2ee882b42b7d2c0f7a06366ff">testPostAsProperty</a>() {
+<a name="l00042"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a2e8c10c2ee882b42b7d2c0f7a06366ff">00042</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a2e8c10c2ee882b42b7d2c0f7a06366ff">testPostAsProperty</a>() {
 <a name="l00043"></a>00043         $this-&gt;assertEquals(
 <a name="l00044"></a>00044             $this-&gt;post[<span class="stringliteral">&#39;name&#39;</span>], $this-&gt;object-&gt;post-&gt;name
 <a name="l00045"></a>00045         );
 <a name="l00046"></a>00046     }
 <a name="l00047"></a>00047     
-<a name="l00048"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a9e43e3dc1f86699df145f1ac76a7b1fd">00048</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a9e43e3dc1f86699df145f1ac76a7b1fd">testPostAsMethod</a>() {
+<a name="l00048"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a9e43e3dc1f86699df145f1ac76a7b1fd">00048</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a9e43e3dc1f86699df145f1ac76a7b1fd">testPostAsMethod</a>() {
 <a name="l00049"></a>00049         $this-&gt;assertEquals(
 <a name="l00050"></a>00050             $this-&gt;post[<span class="stringliteral">&#39;name&#39;</span>], $this-&gt;object-&gt;post-&gt;name()
 <a name="l00051"></a>00051         );
 <a name="l00052"></a>00052     }
 <a name="l00053"></a>00053     
-<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a0e29f0a1bee1471cd8096188d3b7301b">00054</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a0e29f0a1bee1471cd8096188d3b7301b">testRequestGet</a>() {
+<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a0e29f0a1bee1471cd8096188d3b7301b">00054</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a0e29f0a1bee1471cd8096188d3b7301b">testRequestGet</a>() {
 <a name="l00055"></a>00055         $this-&gt;assertEquals(
 <a name="l00056"></a>00056             $this-&gt;post[<span class="stringliteral">&#39;name&#39;</span>], $this-&gt;object-&gt;name()
 <a name="l00057"></a>00057         );
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00060"></a>00060         );
 <a name="l00061"></a>00061     }
 <a name="l00062"></a>00062     
-<a name="l00063"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a825e08127e58100a66498e49915cb8f6">00063</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a825e08127e58100a66498e49915cb8f6">testRules</a>() {
+<a name="l00063"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a825e08127e58100a66498e49915cb8f6">00063</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a825e08127e58100a66498e49915cb8f6">testRules</a>() {
 <a name="l00064"></a>00064         $this-&gt;assertNull( $this-&gt;object-&gt;post-&gt;age(null, <span class="stringliteral">&#39;ctype_digit&#39;</span>) );
 <a name="l00065"></a>00065         $this-&gt;assertEquals( 0, $this-&gt;object-&gt;post-&gt;age(0, <span class="stringliteral">&#39;ctype_digit&#39;</span>) );
 <a name="l00066"></a>00066         $this-&gt;assertEquals( $this-&gt;post[<span class="stringliteral">&#39;age&#39;</span>], $this-&gt;object-&gt;post-&gt;age() );
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00069"></a>00069         $this-&gt;assertEquals( $this-&gt;post[<span class="stringliteral">&#39;age&#39;</span>], $this-&gt;object-&gt;post-&gt;age(10), <span class="stringliteral">&#39;/^\d/&#39;</span> );
 <a name="l00070"></a>00070     }
 <a name="l00071"></a>00071     
-<a name="l00072"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a4e411b15767e89d52e309063411ae33e">00072</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_controller_1_1_request_test.html#a4e411b15767e89d52e309063411ae33e">testDefault</a>() {
+<a name="l00072"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a4e411b15767e89d52e309063411ae33e">00072</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a4e411b15767e89d52e309063411ae33e">testDefault</a>() {
 <a name="l00073"></a>00073         $this-&gt;assertEquals(
 <a name="l00074"></a>00074             25, $this-&gt;object-&gt;get-&gt;idontexist(25)
 <a name="l00075"></a>00075         );
@@ -167,7 +167,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00078"></a>00078             $this-&gt;<span class="keyword">get</span>[<span class="stringliteral">&#39;id&#39;</span>], $this-&gt;object-&gt;get-&gt;id(25)
 <a name="l00079"></a>00079         );
 <a name="l00080"></a>00080     }
-<a name="l00081"></a>00081 }
+<a name="l00081"></a>00081     
+<a name="l00085"></a><a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a7990f383174edbd4b04ea9298e6be80b">00085</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_controller_1_1_request_test.html#a7990f383174edbd4b04ea9298e6be80b" title="LogicException">testSet</a>() {
+<a name="l00086"></a>00086         $this-&gt;<span class="keywordtype">object</span>-&gt;x = 100;
+<a name="l00087"></a>00087     }
+<a name="l00088"></a>00088     
+<a name="l00089"></a>00089 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -188,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Wed Nov 9 2011 03:02:23 for flexible-orm by
+    <li class="footer">Generated on Mon Nov 21 2011 17:13:22 for flexible-orm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

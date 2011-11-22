@@ -32,7 +32,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">flexible-orm
-   &#160;<span id="projectnumber">0.10-beta</span>
+   &#160;<span id="projectnumber">0.11-beta</span>
    </div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
@@ -251,7 +251,7 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><pre class="fragment"></pre></div><p><br/>
 <br/>
  </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><a class="el" href="namespace_o_r_m_1_1_exceptions.html" title="Custom flexible-orm exceptions.">Exceptions</a> - if model is poorly coded, it should raise a more descriptive exception than a PDOException</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><a class="el" href="namespace_o_r_m_1_1_exceptions.html" title="Custom flexible-orm exceptions.">Exceptions</a> - if model is poorly coded, it should raise a more descriptive exception than a PDOException</dd></dl>
 
 <p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l00057">57</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -1006,7 +1006,7 @@ Protected Attributes</h2></td></tr>
 <p>This would not be called directly ordinarily, instead call the "magic" method as shown below.</p>
 <p><b>Usage</b>: </p>
 <div class="fragment"><pre class="fragment"></pre></div><dl class="note"><dt><b>Note:</b></dt><dd>There is a hook for all <em>get</em> methods named <code><a class="el" href="class_o_r_m_1_1_o_r_m___model.html#a8a53abd3db84cd7346697ac1335675d8" title="Override this method to perform an action after an object is retrieved from the database (Find()...">afterGet()</a></code>, to allow actions to be performed when an object is fetched (as opposed to the constructor, which is called both when a new object is created or fetched).</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><p class="startdd">if operator is IN then allow $value to be an array </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><p class="startdd">if operator is IN then allow $value to be an array </p>
 <p class="enddd">verify operator type</p>
 </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
@@ -1191,7 +1191,7 @@ Protected Attributes</h2></td></tr>
 <p>The _originalValues array will be updated to reflect the values retrieved from the database.</p>
 <p><b>Usage</b> </p>
 <div class="fragment"><pre class="fragment"></pre></div><dl class="note"><dt><b>Note:</b></dt><dd>If no there is no pre-existing object, nothing is loaded</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Throw an exception if this is called on an object with no _id</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Throw an exception if this is called on an object with no _id</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>boolean true if an existing object existed </dd></dl>
 
 <p>Definition at line <a class="el" href="_o_r_m___model_8php_source.html#l01004">1004</a> of file <a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a>.</p>
@@ -1448,7 +1448,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/server/projects/flexible-orm/<a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a></li>
+<li>/Users/jarrodswift/projects/flexible-orm/<a class="el" href="_o_r_m___model_8php_source.html">ORM_Model.php</a></li>
 </ul>
 </div>
 </div>
@@ -1471,7 +1471,7 @@ Protected Attributes</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Wed Nov 9 2011 03:02:25 for flexible-orm by
+    <li class="footer">Generated on Mon Nov 21 2011 17:13:23 for flexible-orm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

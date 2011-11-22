@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>flexible-orm: C:/server/projects/flexible-orm/Tests/SDBSessionHandlerTest.php Source File</title>
+<title>flexible-orm: /Users/jarrodswift/projects/flexible-orm/Tests/SDB/SDBSessionHandlerTest.php Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">flexible-orm
-   &#160;<span id="projectnumber">0.10-beta</span>
+   &#160;<span id="projectnumber">0.11-beta</span>
    </div>
    <div id="projectbrief">Simple, flexible ORM framework with Amazon AWS SimpleDB libraries</div>
   </td>
@@ -95,79 +95,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">C:/server/projects/flexible-orm/Tests/SDBSessionHandlerTest.php</div>  </div>
+<div class="title">/Users/jarrodswift/projects/flexible-orm/Tests/SDB/SDBSessionHandlerTest.php</div>  </div>
 </div>
 <div class="contents">
 <a href="_s_d_b_session_handler_test_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\Tests;
-<a name="l00007"></a>00007 use \ORM\SDB;
-<a name="l00008"></a>00008 require_once <span class="stringliteral">&#39;ORMTest.php&#39;</span>;
-<a name="l00009"></a>00009 
-<a name="l00014"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html">00014</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html" title="Description of SDBSessionHandlerTest.">SDBSessionHandlerTest</a> <span class="keyword">extends</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_o_r_m_test.html" title="Description of ORMTestClass.">ORMTest</a>{
-<a name="l00015"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#adfe3f2ff62fe93eee830f9333cded9cc">00015</a>     <span class="keyword">public</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#adfe3f2ff62fe93eee830f9333cded9cc">$session_id</a>;
-<a name="l00016"></a>00016     <span class="keyword">private</span> $_savedData = array(
-<a name="l00017"></a>00017         <span class="stringliteral">&#39;some&#39;</span> =&gt; array(<span class="stringliteral">&#39;saved&#39;</span>, <span class="stringliteral">&#39;data&#39;</span>)
-<a name="l00018"></a>00018     );
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a0bc688732d2b3b162ffebaf7812e78da">00020</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a0bc688732d2b3b162ffebaf7812e78da">setUp</a>() {
-<a name="l00021"></a>00021         SDB\SDBStatement::GetSDBConnection()-&gt;create_domain(SDB\SDBSession::TableName());
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023         <span class="comment">// Setup a fake session</span>
-<a name="l00024"></a>00024         $this-&gt;session_id   = <span class="stringliteral">&quot;My-test-&quot;</span>.rand();
-<a name="l00025"></a>00025         $data               = serialize($this-&gt;_savedData);
-<a name="l00026"></a>00026         $session            = <span class="keyword">new</span> SDB\SDBSession();
-<a name="l00027"></a>00027         $session-&gt;data      = $data;
-<a name="l00028"></a>00028         $session-&gt;id( $this-&gt;session_id );
-<a name="l00029"></a>00029         $session-&gt;save();
-<a name="l00030"></a>00030     }
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a80fe3d17e658907fc75346a0ec9d6fc7">00032</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a80fe3d17e658907fc75346a0ec9d6fc7">tearDown</a>() {
-<a name="l00033"></a>00033         SDB\SDBStatement::GetSDBConnection()-&gt;delete_domain(SDB\SDBSession::TableName());
-<a name="l00034"></a>00034     }
-<a name="l00035"></a>00035 
-<a name="l00036"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a21ba109cac25766104644b11982265e1">00036</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a21ba109cac25766104644b11982265e1">testRegister</a>() {
-<a name="l00037"></a>00037         $this-&gt;assertTrue( SDB\SDBSessionHandler::Register() );
-<a name="l00038"></a>00038     }
-<a name="l00039"></a>00039 
-<a name="l00040"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">00040</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">testWrite</a>() {
-<a name="l00041"></a>00041         $data = array(<span class="stringliteral">&#39;my&#39;</span> =&gt; <span class="stringliteral">&#39;data&#39;</span>, <span class="stringliteral">&#39;for&#39;</span> =&gt; <span class="stringliteral">&#39;testing&#39;</span> );
-<a name="l00042"></a>00042         $id   = <span class="stringliteral">&quot;testWrite-&quot;</span>.rand();
-<a name="l00043"></a>00043         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data) );
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045         $session = SDB\SDBSession::Find($id);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047         $this-&gt;assertEquals( serialize($data), $session-&gt;data );
-<a name="l00048"></a>00048     }
-<a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">00050</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">testRead</a>() {
-<a name="l00051"></a>00051         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($this-&gt;session_id);
-<a name="l00052"></a>00052         $this-&gt;assertEquals($this-&gt;_savedData, unserialize($serializedData));
-<a name="l00053"></a>00053     }
-<a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a307010c15ba5977805260eb512feabec">00055</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#a307010c15ba5977805260eb512feabec">testDestroy</a>() {
-<a name="l00056"></a>00056         SDB\SDBSessionHandler::Get()-&gt;destroy($this-&gt;session_id);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058         $this-&gt;assertFalse( SDB\SDBSession::Find($this-&gt;session_id), <span class="stringliteral">&#39;Found session that should be deleted&#39;</span> );
-<a name="l00059"></a>00059     }
-<a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#ad30624ffbbbd1dd34b21c147a2766388">00061</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_tests_1_1_s_d_b_session_handler_test.html#ad30624ffbbbd1dd34b21c147a2766388">testRepeatWrites</a>() {
-<a name="l00062"></a>00062         $data = array(<span class="stringliteral">&#39;my&#39;</span> =&gt; <span class="stringliteral">&#39;data&#39;</span>, <span class="stringliteral">&#39;for&#39;</span> =&gt; <span class="stringliteral">&#39;testing&#39;</span> );
-<a name="l00063"></a>00063         $id   = <span class="stringliteral">&quot;testRepeatWrites-&quot;</span>.rand();
-<a name="l00064"></a>00064         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data));
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066         $data[] = array(<span class="stringliteral">&#39;more&#39;</span>, <span class="stringliteral">&#39;stuff&#39;</span>);
-<a name="l00067"></a>00067         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data) );
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($id);
-<a name="l00070"></a>00070         $this-&gt;assertEquals($data, unserialize($serializedData));
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072         $data = <span class="stringliteral">&#39;none&#39;</span>;
-<a name="l00073"></a>00073         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data));
-<a name="l00074"></a>00074         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($id);
-<a name="l00075"></a>00075         $this-&gt;assertEquals($data, unserialize($serializedData));
-<a name="l00076"></a>00076     }
-<a name="l00077"></a>00077 }
-<a name="l00078"></a>00078 ?&gt;
+<a name="l00006"></a>00006 <span class="keyword">namespace </span>ORM\SDB;
+<a name="l00007"></a>00007 require_once <span class="stringliteral">&#39;../ORMTest.php&#39;</span>;
+<a name="l00008"></a>00008 
+<a name="l00013"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html">00013</a> <span class="keyword">class </span><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html" title="Description of SDBSessionHandlerTest.">SDBSessionHandlerTest</a> <span class="keyword">extends</span> \ORM\Tests\ORMTest {
+<a name="l00014"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#adfe3f2ff62fe93eee830f9333cded9cc">00014</a>     <span class="keyword">public</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#adfe3f2ff62fe93eee830f9333cded9cc">$session_id</a>;
+<a name="l00015"></a>00015     <span class="keyword">private</span> $_savedData = array(
+<a name="l00016"></a>00016         <span class="stringliteral">&#39;some&#39;</span> =&gt; array(<span class="stringliteral">&#39;saved&#39;</span>, <span class="stringliteral">&#39;data&#39;</span>)
+<a name="l00017"></a>00017     );
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a0bc688732d2b3b162ffebaf7812e78da">00019</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a0bc688732d2b3b162ffebaf7812e78da">setUp</a>() {
+<a name="l00020"></a>00020         SDB\SDBStatement::GetSDBConnection()-&gt;create_domain(SDB\SDBSession::TableName());
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <span class="comment">// Setup a fake session</span>
+<a name="l00023"></a>00023         $this-&gt;session_id   = <span class="stringliteral">&quot;My-test-&quot;</span>.rand();
+<a name="l00024"></a>00024         $data               = serialize($this-&gt;_savedData);
+<a name="l00025"></a>00025         $session            = <span class="keyword">new</span> SDB\SDBSession();
+<a name="l00026"></a>00026         $session-&gt;data      = $data;
+<a name="l00027"></a>00027         $session-&gt;id( $this-&gt;session_id );
+<a name="l00028"></a>00028         $session-&gt;save();
+<a name="l00029"></a>00029     }
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a80fe3d17e658907fc75346a0ec9d6fc7">00031</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a80fe3d17e658907fc75346a0ec9d6fc7">tearDown</a>() {
+<a name="l00032"></a>00032         SDB\SDBStatement::GetSDBConnection()-&gt;delete_domain(SDB\SDBSession::TableName());
+<a name="l00033"></a>00033     }
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a21ba109cac25766104644b11982265e1">00035</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a21ba109cac25766104644b11982265e1">testRegister</a>() {
+<a name="l00036"></a>00036         $this-&gt;assertTrue( SDB\SDBSessionHandler::Register() );
+<a name="l00037"></a>00037     }
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">00039</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a8e40254a5a08199e3b4fde257ceebd31">testWrite</a>() {
+<a name="l00040"></a>00040         $data = array(<span class="stringliteral">&#39;my&#39;</span> =&gt; <span class="stringliteral">&#39;data&#39;</span>, <span class="stringliteral">&#39;for&#39;</span> =&gt; <span class="stringliteral">&#39;testing&#39;</span> );
+<a name="l00041"></a>00041         $id   = <span class="stringliteral">&quot;testWrite-&quot;</span>.rand();
+<a name="l00042"></a>00042         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data) );
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         $session = SDB\SDBSession::Find($id);
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046         $this-&gt;assertEquals( serialize($data), $session-&gt;data );
+<a name="l00047"></a>00047     }
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">00049</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a8c969dbd866764a5d7db3b2013514384">testRead</a>() {
+<a name="l00050"></a>00050         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($this-&gt;session_id);
+<a name="l00051"></a>00051         $this-&gt;assertEquals($this-&gt;_savedData, unserialize($serializedData));
+<a name="l00052"></a>00052     }
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a307010c15ba5977805260eb512feabec">00054</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#a307010c15ba5977805260eb512feabec">testDestroy</a>() {
+<a name="l00055"></a>00055         SDB\SDBSessionHandler::Get()-&gt;destroy($this-&gt;session_id);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057         $this-&gt;assertFalse( SDB\SDBSession::Find($this-&gt;session_id), <span class="stringliteral">&#39;Found session that should be deleted&#39;</span> );
+<a name="l00058"></a>00058     }
+<a name="l00059"></a>00059 
+<a name="l00060"></a><a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#ad30624ffbbbd1dd34b21c147a2766388">00060</a>     <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_o_r_m_1_1_s_d_b_1_1_s_d_b_session_handler_test.html#ad30624ffbbbd1dd34b21c147a2766388">testRepeatWrites</a>() {
+<a name="l00061"></a>00061         $data = array(<span class="stringliteral">&#39;my&#39;</span> =&gt; <span class="stringliteral">&#39;data&#39;</span>, <span class="stringliteral">&#39;for&#39;</span> =&gt; <span class="stringliteral">&#39;testing&#39;</span> );
+<a name="l00062"></a>00062         $id   = <span class="stringliteral">&quot;testRepeatWrites-&quot;</span>.rand();
+<a name="l00063"></a>00063         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data));
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065         $data[] = array(<span class="stringliteral">&#39;more&#39;</span>, <span class="stringliteral">&#39;stuff&#39;</span>);
+<a name="l00066"></a>00066         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data) );
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($id);
+<a name="l00069"></a>00069         $this-&gt;assertEquals($data, unserialize($serializedData));
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         $data = <span class="stringliteral">&#39;none&#39;</span>;
+<a name="l00072"></a>00072         SDB\SDBSessionHandler::Get()-&gt;write($id, serialize($data));
+<a name="l00073"></a>00073         $serializedData = SDB\SDBSessionHandler::Get()-&gt;read($id);
+<a name="l00074"></a>00074         $this-&gt;assertEquals($data, unserialize($serializedData));
+<a name="l00075"></a>00075     }
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 ?&gt;
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -188,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Wed Nov 9 2011 03:02:24 for flexible-orm by
+    <li class="footer">Generated on Mon Nov 21 2011 17:13:22 for flexible-orm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>
