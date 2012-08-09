@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^latest/(.*) 0.17/$1
+RewriteRule ^latest/(.*) 0.18/$1
